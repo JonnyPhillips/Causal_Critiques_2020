@@ -1,0 +1,30 @@
+name: "Making Causal Critiques 2020"
+output_dir: "."
+navbar:
+  title: "Making Causal Critiques 2020"
+  left:
+    - text: "Overview"
+      icon: fa-home
+      href: index.html
+    - text: "Syllabus"
+      icon: fa-book-open
+      href: Syllabus.html
+    - text: "Day 1"
+      href: Day_1.html
+    - text: "Day 2"
+      href: Day_2.html
+    - text: "Day 3"
+      href: Day_3.html
+    - text: "Day 4"
+      href: Day_4.html
+    - text: "Day 5"
+      href: Day_5.html
+    - text: "Links"
+      href: Links.html
+
+
+output:
+  html_document:
+    theme: paper
+    css: style.css
+    highlight: tango

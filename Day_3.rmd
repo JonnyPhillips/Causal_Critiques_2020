@@ -1,0 +1,44 @@
+---
+title: "Day 3 - Assessing Causal Evidence"
+#author: "JP"
+#date: "January 22, 2019"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+## Morning
+
+1. [Lecture Slides](https://jonnyphillips.github.io/Causal_Critiques/Day 3/Slides_Day_3_v4.pdf)
+2. [Exercises on Causal Methods](https://jonnyphillips.github.io/Causal_Critiques/Day 3/Exercises_on_Causal_Methods.html)
+
+## Afternoon - Practicing Critiques
+
+For each of the papers below:
+
+(a) Identify what type of methodology the author is using.
+(b) Write a critique of the methodology, highlighting the assumptions that are made and whether there is any evidence those assumptions are met. 
+(c) Suggest any alternative explanations which might also be consistent with the research findings.
+(d) On a scale of 0-10, how much do you believe the findings of the paper?
+
+1. [De La O 2013](https://jonnyphillips.github.io/Causal_Critiques/Day 3/Papers for Critique/De_la_O_Do.pdf)
+2. [Titiunik 2011](https://jonnyphillips.github.io/Causal_Critiques/Day 1/Papers/Titiunik 2011.pdf)
+3. [Acemoglu et al 2001](https://jonnyphillips.github.io/Causal_Critiques/Day 3/Papers for Critique/AJR 2001.pdf)
+
+## Afternoon - Critiquing the Data
+
+To overcome the causal problems we saw yesterday, Titiunik implements a regression discontinuity. 
+
+1. Implement the regression discontinuity using your measure of 'close elections', your indicator of incumbency status and your measure of electoral performance in 2004.
+
+2. Interpret the findings of the regression discontinuity. How do they differ from the observational results in Day 2?
+
+3. One assumption of our regression discontinuity is that comparing incumbents that just won and lost elections in 2000 will produce 'balance' on potential omitted variables. There are thousands of variables we could check, but let's assess balance on the size of the municipality by comparing the number of voters in 2000 within 5\% of a tied election.
+
+4. How does the balance close to the threshold compare with the balance of winners and losers in the full dataset?
+
+5. Another assumption of regression discontinuity is continuity in the distribution of the variable measuring distance to the threshold, in our case winning margin in 2000. Test this assumption by implementing a McCrary density test (DCdensity in the 'rdd' library). What do the results show?
+
+6. If our theory is correct, we should *only* find an effect at the threshold (distance=0). Use the 'RDestimate' function (in the 'rdd' library) to perform **placebo tests** with the threshold set to distance=0.1,-0.1,0.05 and -0.05. What do we learn from this test?

@@ -1,0 +1,22 @@
+---
+title: "Exercises on Generalizability"
+#author: "JP"
+#date: "January 22, 2019"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+Write a carefully worded sentence to interpret the results from the following studies, emphasizing the scope of our conclusions, i.e. who they apply to:
+
+1. A survey experiment in a representative household survey that shows that when respondents are 'randomly' shown images of female politicians instead of male candidates, they report 20\% higher trust in government.
+
+2. A regression discontinuity study where Brazilian municipalities were assigned to receive a government health program if they had an average income per capita of R$1000 per capita. The health program was estimated to raise life expectancy by 0.5 years.
+
+3. An instrumental variables study in Uganda of how information affects turnout in elections. The instrument for information is distance to the nearest newspaper seller (assume there is no TV/radio in rural areas). The estimated effect is positive.
+
+4. A field experiment in which university students in the city of Milan were 'treated' by being offered the chance to receive an impact evaluation briefing about the success of a new education project, where half of the treated group accepted to receive the briefing. Later, attitudes towards government were on average 5\% more positive among those in the treated group.
+
+5. A difference-in-differences study of how the gradual rollout of a new health insurance program in Indonesia raised average incomes by 10\%.  

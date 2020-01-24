@@ -1,0 +1,5 @@
+\beamer@sectionintoc {1}{Introduction}{2}{0}{1}
+\beamer@sectionintoc {2}{Effective argument}{17}{0}{2}
+\beamer@sectionintoc {3}{Consistent Theories}{62}{0}{3}
+\beamer@sectionintoc {4}{Deconstructing Papers}{80}{0}{4}
+\beamer@sectionintoc {5}{Fundamental Critiques}{108}{0}{5}

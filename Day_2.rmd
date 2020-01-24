@@ -1,0 +1,43 @@
+---
+title: "Day 2 - Fundamental Critiques"
+#author: "JP"
+#date: "January 22, 2019"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+## Morning
+
+1. [Lecture Slides](https://jonnyphillips.github.io/Causal_Critiques/Day 2/Slides_Day_2_v3.pdf)
+2. [Exercises on Fundamental Critiques](https://jonnyphillips.github.io/Causal_Critiques/Day 2/Day_2_exercises.html)
+
+## Afternoon - Practicing Critiques
+
+Imagine you are asked to review some articles for a journal. In pairs, actively read the following papers and prepare multiple critiques of each study, which you will present later. Try to critique each paper for (i) omitted variable bias, (ii) self-selection bias and (iii) reverse causation. Include a causal diagram which highlights the problems you have identified.
+
+a. [Maoz and Russett 1993](https://jonnyphillips.github.io/Causal_Critiques/Day 2/Papers for Critique/Maoz and Russett 1993.pdf)
+b. [Mancuso et al 2016 (focus on argument 01)](https://jonnyphillips.github.io/Causal_Critiques/Day 2/Papers for Critique/Mancuso et al 2016.pdf)
+c. [Li and Reuveny 2003](https://jonnyphillips.github.io/Causal_Critiques/Day 2/Papers for Critique/Li and Reuveny 2003.pdf)
+
+## Afternoon - Critiquing the Data
+
+Using your dataset from Day 1, what would the answer to our research question be using an 'observational' methodology? 
+
+1. Conduct a basic regression of incumbency status on (your measure of) electoral performance in 2004. Interpret the results. (Hint: Make sure your measure of distance to the tied election has negative values for the losers).
+
+2. Are these results consistent with the findings in Titiunik 2011? 
+
+3. Briefly describe the treatment assignment process for all of the units in the data. How is the treatment assignment process different for units close to the discontinuity threshold (where winning margin is close to zero)?
+
+4. One causal critique might be that there is omitted variable bias: More effective or popular parties are more likely to become incumbents and also to perform better at the next election. To try and adjust for this, add a control for party (equivalently, a fixed effect for party). How does this affect the results?
+
+5. We probably want a wider range of controls. There are some for each municipality in [this file from IBGE](https://jonnyphillips.github.io/Causal_Critiques/Replication/Mun_data.csv). Download this file, merge it into your existing dataset and add controls for population, IDHM (Human Development Index) and PIB (GDP per capita) to your regression, one at a time. How does this affect your results? 
+
+6. What happens if you add all the controls at the same time?
+
+7. A different causal critique is that there may be selection bias. Perhaps incumbent parties who realized they are unpopular decided not to run again? We do not have these parties in our 2004 dataset. To estimate how severe this problem *might* be, calculate what percentage of incumbent parties who ran in 2000 decided NOT to run again in 2004. (You may have to open the original datasets from Day 1 again, depending on how you joined your data). Is this high or low?
+
+8. We don't have any polling data from just before the 2004 elections to understand if weak parties were more likely to not run, but we can use the results of the 2000 election to try and identify 'weaker' and 'stronger' parties. Did parties that ran again in 2004 receive a higher share of the vote in 2000 that those that decided not to run again in 2004?

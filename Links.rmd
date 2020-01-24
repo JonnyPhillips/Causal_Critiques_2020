@@ -1,0 +1,17 @@
+---
+title: "Links"
+#author: "JP"
+#date: "January 22, 2019"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+## Useful Links
+
+1. [R Course](https://jonnyphillips.github.io/Curso_R/)
+2. [R Cheatsheets](https://www.rstudio.com/resources/cheatsheets/)
+3. [Stata Cheatsheets](https://geocenter.github.io/StataTraining/portfolio/01_resource/)
+4. [EGAP Pre-Registration](https://egap.org/design-registrations)

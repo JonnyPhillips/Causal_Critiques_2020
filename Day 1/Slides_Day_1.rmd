@@ -1,0 +1,70 @@
+---
+title: "Making Causal Critiques"
+subtitle: "Day 1 - Deconstructing"
+author: "Jonathan Phillips"
+date: "January, 2019"
+output:
+  revealjs::revealjs_presentation:
+    incremental: yes
+    widescreen: yes
+    center: false
+    transition: slide
+    reveal_options:
+      slideNumber: true
+  beamer_presentation:
+css: styles.css
+---
+
+
+<style>
+.column-left{
+  float: left;
+  width: 50%;
+  text-align: left;
+}
+.column-right{
+  float: right;
+  width: 50%;
+  text-align: right;
+}
+</style>
+
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = FALSE, warning=F, message=F)
+library(tidyverse)
+library(knitr)
+#world <- read_sf("world_shapefile/ne_50m_admin_0_countries.shp")
+```
+
+## Causal Critiques
+
+- Political science is about *explaining* outcomes
+    - Do parliamentary systems last longer than presidential ones?
+    - Does development lead to democracy?
+    - Does democracy prevent war?
+    - Why is populism growing?
+    - Why did people vote for President Obama?
+
+-  Explanation requires:
+    1. Theory
+    2. Evidence
+
+## Causal Critiques
+
+- What is a causal critique?
+    - "Parliamentary systems last longer because they are in Europe, not because they are parliamentary"
+    - 
+
+- Every paper ever written has many causal critiques!
+
+## Causal Critiques
+
+- What is a causal critique?
+    - A comment at a seminar
+    - A critique of a policy
+    - A response as a journal referee
+    - 
+    - A worry about your own research paper
+
+

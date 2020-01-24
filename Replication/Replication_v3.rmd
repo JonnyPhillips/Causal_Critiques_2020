@@ -1,0 +1,311 @@
+---
+title: "Replication"
+#author: "JP"
+#date: "January 26, 2019"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+library(tidyverse)
+```
+
+## Day 1 - Concepts and Measures
+
+The research question is "Does incumbency in Brazil improve your performance at the next election?". The research methodology is a regression discontinuity comparing close winners and losers. You have been provided with the raw data and need to prepare it for the analysis (but not do the analysis itself). 
+
+1. What is the data sample used to answer the research question? What alternative data samples might have been used?
+
+2. Filter both datasets to exlude the data from second-round elections. How does this alter the data sample?
+
+3. What is the unit of analysis in the dataset? What alternative units of analysis could have been used?
+
+4. With the 2004 data, calculate the outcome variable, "performance at the next election". What different measures are available?
+
+5. With the 2000 data, create a measure of how "close" were the winners and losers to the threshold (of a tied election). What alternative measures could have been used?
+
+6. With the 2000 data, create a measure of 'incumbency' for the period 2000-2004. What are the alternative measures available?
+
+7. Merge the 2000 and 2004 data into a single dataset. What 'keys' do you need to use? What type of join did you perform?
+
+8. Save your processed dataset! We will use it tomorrow.
+
+```{r, echo=FALSE, warning=FALSE, message=FALSE}
+library(cepespR)
+
+d_2000 <- get_elections(year=2000, position="Mayor", regional_aggregation="Municipality", political_aggregation="Party")
+
+d_2000_processed <- d_2000 %>% select(ANO_ELEICAO,NUM_TURNO,UF,COD_MUN_IBGE,NOME_MUNICIPIO,SIGLA_PARTIDO,QTDE_VOTOS)
+
+d_2000_processed %>% write_csv("2000 Mayoral Elections Data.csv")
+
+d_2004 <- get_elections(year=2004, position="Mayor", regional_aggregation="Municipality", political_aggregation="Party")
+
+d_2004_processed <- d_2004 %>% select(ANO_ELEICAO,NUM_TURNO,UF,COD_MUN_IBGE,NOME_MUNICIPIO,SIGLA_PARTIDO,QTDE_VOTOS)
+
+d_2004_processed %>% write_csv("2004 Mayoral Elections Data.csv")
+```
+
+```{r}
+d_2000 <- read_csv("2000 Mayoral Elections Data.csv")
+d_2004 <- read_csv("2004 Mayoral Elections Data.csv")
+```
+
+
+```{r}
+d_2000 <- d_2000 %>% filter(NUM_TURNO==1) %>% group_by(COD_MUN_IBGE) %>%
+  mutate(vote_pct_2000=QTDE_VOTOS/sum(QTDE_VOTOS))
+
+
+d_2000 <- d_2000 %>% group_by(COD_MUN_IBGE) %>% 
+  
+  mutate(vote_pct_2000=QTDE_VOTOS/sum(QTDE_VOTOS)) %>%
+  
+  mutate(rank_2000=rank(-QTDE_VOTOS)) %>%
+  
+  arrange(COD_MUN_IBGE,rank_2000) %>% 
+  
+  mutate(first_rank_vote_pct=max(vote_pct_2000), 
+         second_rank_vote_pct=nth(vote_pct_2000,2)) %>%
+  
+  mutate(win_margin=ifelse(rank_2000==1,
+                           vote_pct_2000-second_rank_vote_pct,
+                           vote_pct_2000-first_rank_vote_pct)) %>%
+  
+  mutate(Incumbent=ifelse(rank_2000==1,1,0))
+
+
+
+
+
+
+
+
+d_2004 <- d_2004 %>% filter(NUM_TURNO==1) %>% 
+  select(COD_MUN_IBGE,SIGLA_PARTIDO,QTDE_VOTOS) %>% 
+  group_by(COD_MUN_IBGE) %>% 
+  mutate(vote_pct_2004=QTDE_VOTOS/sum(QTDE_VOTOS))
+
+d <- d_2000 %>% left_join(d_2004,by=c("COD_MUN_IBGE","SIGLA_PARTIDO"))
+
+
+```
+
+## Day 2 - Observational regression
+
+Using your dataset from Day 1, what would the answer to the research question (Does incumbency affect eletoral performance?) be using an 'observational' methodology? 
+
+1. Conduct a basic regression of incumbency status on (your measure of) electoral performance in 2004. Interpret the results. (Hint: Make sure your measure of winning margin has negative values for the losers).
+
+2. Are these results consistent with the findings in Titiunik 2011? 
+
+3. Briefly describe the treatment assignment process for all of the units in the data. How is the treatment assignment process different for units close to the discontinuity threshold (where winning margin is close to zero)?
+
+3. One causal critique might be that there is omitted variable bias: More effective or popular parties are more likely to become incumbents and also to perform better at the next election. To try and adjust for this, add a control for party (equivalently, a fixed effect for party). How does this affect the results?
+
+4. What happens if we add a control for state ('UF')?
+
+5. A different causal critique is that there may be selection bias. Perhaps incumbent parties who realized they are unpopular decided not to run again. So we do not have these parties in our 2004 dataset. To estimate how severe this problem *might* be, calculate what percentage of parties decided to run again in 2004. (You may have to open the original datasets from Day 1 again, depending on how you joined your data).
+
+
+```{r}
+d %>% lm(vote_pct_2004~Incumbent, data=.) %>% summary()
+```
+
+```{r}
+d %>% lm(vote_pct_2004~Incumbent + SIGLA_PARTIDO, data=.) %>% summary()
+
+```
+
+```{r}
+Mun_data <- read_csv("Mun_Data.csv")
+
+d <- d %>% left_join(Mun_data, by="COD_MUN_IBGE")
+
+
+d %>% lm(vote_pct_2004~Incumbent + POP_201, data=.) %>% summary()
+d %>% lm(vote_pct_2004~Incumbent + IDHM_10, data=.) %>% summary()
+d %>% lm(vote_pct_2004~Incumbent + PIB_PER, data=.) %>% summary()
+
+d %>% lm(vote_pct_2004~Incumbent + POP_201 + IDHM_10 + PIB_PER, data=.) %>% summary()
+
+```
+
+
+```{r}
+d %>% filter(Incumbent==1) %>% 
+  mutate(ran_in_2004=ifelse(is.na(vote_pct_2004),"No","Yes")) %>% 
+  group_by(ran_in_2004) %>% 
+  count() %>% 
+  ungroup() %>% 
+  mutate(pct_ran_in_2004=n/sum(n))
+
+d %>% filter(Incumbent==1) %>% 
+  mutate(ran_in_2004=ifelse(is.na(vote_pct_2004),"No","Yes")) %>% 
+  group_by(ran_in_2004) %>% 
+  summarize(avg_vote_share_2000=mean(vote_pct_2000))
+```
+
+
+## Day 3 - Causal regression
+
+To overcome the causal problems we saw yesterday, Titiunik implements a regression discontinuity. 
+
+1. Implement the regression discontinuity using your measure of 'close elections', your indicator of incumbency status and your measure of electoral performance in 2004.
+
+2. Interpret the findings of the regression discontinuity. How do they differ from the observational results in Day 2?
+
+3. One assumption of our regression discontinuity is that comparing incumbents that just won and lost elections in 2000 will produce 'balance' on potential omitted variables. There are thousands of variables we could check, but let's assess balance on the size of the municipality by comparing the number of voters in 2000 within 5\% of a tied election.
+
+4. How does the balance close to the threshold compare with the balance of winners and losers in the full dataset?
+
+5. Another assumption of regression discontinuity is continuity in the distribution of the variable measuring distance to the threshold. Test this assumption by implementing a McCrary density test. What do the results show?
+
+
+```{r}
+d %>% lm(vote_pct_2004~Incumbent + win_margin, data=.) %>% summary()
+```
+
+
+```{r, echo=FALSE, warning=FALSE, message=FALSE}
+d <- d %>% group_by(ANO_ELEICAO,NUM_TURNO,COD_MUN_IBGE) %>% mutate(Electorate=sum(QTDE_VOTOS.x))
+
+balance_test <- d %>% filter(win_margin<0.05 & win_margin>-0.05) %>% 
+  group_by(Incumbent) %>% 
+  summarise(Electorate_3pct=mean(Electorate))
+
+balance_test_all <- d %>% 
+  group_by(Incumbent) %>% 
+  summarise(Electorate_all=mean(Electorate))
+
+```
+
+```{r}
+library(rdd)
+mccrary <- DCdensity(d$win_margin,cutpoint=0,verbose=TRUE)
+```
+
+
+## Day 4 - Generalizability
+
+How much do we learn from the regression discontinuity results estimated in Day 3? First, we will implement some robustness checks:
+
+1. Our regression discontinuity assumed a *linear* relationship between distance to a tied election and subsequent electoral performance. Implement an alternative regression discontinuity with a more flexible quadratic relationship. How do the results differ?
+
+2. What about a cubic relationship?
+
+3. An alternative way to implement the regression discontinuity is to limit the data to only those units 'close' to the threshold of a tied election. Remove any data that is more than +/-5\% from the threshold and run your (linear) regression discontinuity again. How do the results change?
+
+4. Estimating the uncertainty (standard errors) for regression discontinuities is tricky. The 'correct' way to do it has been programmed in the 'rdrobust' package. Implement the (linear) regression discontinuity in rdrobust and compare the standard errors 
+
+We can also replicate the study with a different data sample:
+
+5. Use the data for the 2012 and 2016 elections to implement a new regression discontinuity. Is the relationship the same as the results you estimated for 2000-04?
+
+What about the scope of our conclusions?
+
+6. To assess how different units near the threshold might be, let's compare which parties are most represented near to the threshold (+/-5\%) with those that win or lose by a landslide (win or lose by more than 20\%).
+
+7. Based on the above tests, how generalizable do you believe the findings in Titiunik 2011 to be?
+
+```{r}
+d %>% lm(vote_pct_2004~Incumbent + win_margin + I(win_margin^2), data=.) %>% summary()
+
+d %>% lm(vote_pct_2004~Incumbent + win_margin + I(win_margin^2) + I(win_margin^3), data=.) %>% summary()
+```
+
+```{r}
+window <- 0.05
+d_subset <- d %>% filter(win_margin<window & win_margin>-window)
+
+d_subset %>% lm(vote_pct_2004~win_margin+Incumbent,data=.) %>% summary()
+```
+
+```{r}
+library(rdrobust)
+robust <- rdrobust(d$vote_pct_2004, d$win_margin, c=0, all=T)
+robust$coef
+robust$se
+```
+
+```{r}
+d %>% filter(win_margin<0.05 & win_margin>-0.05) %>% 
+  group_by(SIGLA_PARTIDO) %>% 
+  count() %>% 
+  ungroup() %>% 
+  mutate(Pct=n/sum(n)) %>% 
+  arrange(-Pct)
+
+d %>% filter(win_margin>0.2 | win_margin < -0.2) %>% 
+  group_by(SIGLA_PARTIDO) %>% 
+  count() %>% 
+  ungroup() %>% 
+  mutate(Pct=n/sum(n)) %>% 
+  arrange(-Pct)
+
+#Note PT
+
+```
+
+
+```{r}
+#d_2012 <- get_elections(year=2012, position="Mayor", regional_aggregation="Municipality", political_aggregation="Party")
+#d_2012_processed <- d_2012 %>% select(ANO_ELEICAO,NUM_TURNO,UF,COD_MUN_IBGE,NOME_MUNICIPIO,SIGLA_PARTIDO,QTDE_VOTOS)
+#d_2012_processed %>% write_csv("2012 Mayoral Elections Data.csv")
+d_2012 <- read_csv("2012 Mayoral Elections Data.csv")
+
+#d_2016 <- get_elections(year=2016, position="Mayor", regional_aggregation="Municipality", political_aggregation="Party")
+#d_2016_processed <- d_2016 %>% select(ANO_ELEICAO,NUM_TURNO,UF,COD_MUN_IBGE,NOME_MUNICIPIO,SIGLA_PARTIDO,QTDE_VOTOS)
+#d_2016_processed %>% write_csv("2016 Mayoral Elections Data.csv")
+d_2016 <- read_csv("2016 Mayoral Elections Data.csv")
+
+d_2012 <- d_2012 %>% filter(NUM_TURNO==1) %>% 
+  group_by(COD_MUN_IBGE) %>% 
+  mutate(vote_pct_2012=QTDE_VOTOS/sum(QTDE_VOTOS)) %>% 
+  mutate(rank_2012=rank(-QTDE_VOTOS)) %>%
+  arrange(COD_MUN_IBGE,rank_2012) %>% 
+  mutate(first_rank_vote_pct=max(vote_pct_2012), second_rank_vote_pct=nth(vote_pct_2012,2)) %>%
+  mutate(win_margin=ifelse(rank_2012==1,vote_pct_2012-second_rank_vote_pct,vote_pct_2012-first_rank_vote_pct)) %>%
+  mutate(Incumbent=ifelse(rank_2012==1,1,0))
+
+d_2016 <- d_2016 %>% filter(NUM_TURNO==1) %>% 
+  select(COD_MUN_IBGE,SIGLA_PARTIDO,QTDE_VOTOS) %>% 
+  group_by(COD_MUN_IBGE) %>% 
+  mutate(vote_pct_2016=QTDE_VOTOS/sum(QTDE_VOTOS))
+
+d_alt <- d_2012 %>% left_join(d_2016,by=c("COD_MUN_IBGE","SIGLA_PARTIDO"))
+
+d_alt %>% lm(vote_pct_2016~Incumbent, data=.) %>% summary()
+d_alt %>% lm(vote_pct_2016~Incumbent + win_margin, data=.) %>% summary()
+```
+
+
+## Day 5 - Constructive Critiques
+
+1. If our theory is correct, we should *only* find an effect at the threshold (distance=0). Use the 'RDestimate' package to perform placebo tests with the threshold set to distance=0.1,-0.1,0.05 and -0.05. What do we learn from this test?
+
+2. One theory for why incumbents may do better at the next election is due to access to state resouces. So we might expect the incumbency effect to be more positive (less negative) where state resources are more important, i.e. in the North/Northeast, and more negative in the Southeast. Implement a heterogeneity test to compare the results for just Minas Gerais (MG) and Piaui (PI).
+
+3. Design an additional test that we could implement that would provide additional evidence that incumbency has a negative electoral impact.
+
+```{r}
+RDestimate(vote_pct_2004~win_margin, data=d, cutpoint=0) %>% summary()
+
+RDestimate(vote_pct_2004~win_margin, data=d, cutpoint=0.1) %>% summary()
+RDestimate(vote_pct_2004~win_margin, data=d, cutpoint=-0.1) %>% summary()
+RDestimate(vote_pct_2004~win_margin, data=d, cutpoint=0.05) %>% summary()
+RDestimate(vote_pct_2004~win_margin, data=d, cutpoint=-0.05) %>% summary()
+```
+
+```{r}
+library(broom)
+
+d %>% filter(UF %in% c("MG","PI")) %>% 
+  group_by(UF) %>%
+  do(tidy(lm(vote_pct_2004~win_margin+Incumbent,data=.))) %>%
+  filter(term=="Incumbent") %>%
+  arrange(p.value)
+
+
+```
+

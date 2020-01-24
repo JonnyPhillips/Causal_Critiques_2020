@@ -1,0 +1,31 @@
+---
+title: "Exercises on Evaluating Arguments and Evidence"
+#author: "JP"
+#date: "January 22, 2019"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = F)
+library(knitr)
+```
+
+Evaluate these causal arguments based on Gerring's (2005) criteria for a good causal argument (Specificity, Parsimony, Power, Precision, Scope, Differentiation, Normality, Mechanism, Consistency, Policy-Relevance):
+
+1. Every extra \$1000 of income per person makes democracy 10\% more stable, +/-8%
+
+2. Tall presidents are more successful
+
+3. Non-African countries with open-list proportional representation in the Southern hemisphere always pass their budgets late
+
+4. Membership of international organizations creates the support networks and institutions to give judges the confidence to be independent in twice as many decisions
+
+Evaluate these pieces of evidence based on Gerring's (2005) criteria for good causal evidence (Sample size, Variation, Representative, Independence, Comparability, Transparency, Replicability):
+
+1. 30 interviews with elderly male politicians in Southern Iraq to understand whether education levels affect how they govern
+
+2. Analysis of secondary data from Africa to understand if drought (measured as rainfall/$km^2$) causes more violence (measured as number of terrorist attacks)
+
+3. Representative household survey of 20,000 Mexican voters to assess whether perceptions of the economy affect voting behaviour
+
+4. 200 interviews with a random sample of teachers in different municipalities to understand whether Mayors from different parties engage differently with teachers

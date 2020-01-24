@@ -1,0 +1,3 @@
+\beamer@sectionintoc {1}{Introduction}{2}{0}{1}
+\beamer@sectionintoc {2}{Logical Consistency}{10}{0}{2}
+\beamer@sectionintoc {3}{Deconstructing Papers}{18}{0}{3}

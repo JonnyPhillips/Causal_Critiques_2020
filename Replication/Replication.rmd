@@ -1,0 +1,75 @@
+---
+title: "Replication"
+#author: "JP"
+#date: "January 26, 2019"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+library(tidyverse)
+```
+
+## Day 1 - Concepts and Measures
+
+The research question is "Does being an incumbent in Brazil improve your performance at the next election?". The research methodology is a regression discontinuity comparing close winners and losers. 
+
+1. What is the data source and sample used to answer the research question? What alternative data samples might have been used?
+
+2. What is the unit of analysis? What alternative units of analysis could have been used?
+
+3. What is the measure of "performance at the next election" used in the code? What alternative measures could have been used?
+
+4. How is the concept of 'incumbent' measured? Are their any risks with this measure?
+
+5. How is the comcept of 'close winner and loser' measured in the code? What alternative measures could have been used?
+
+What dataset are we testing this argument on?
+What are our units of analysis? Parties/candidates/coalitions?
+How do we measure the concepts? Winning vote margin in number/pct
+What units are the data in?
+How do we clean the data?
+Missing data?
+
+```{r, echo=FALSE, warning=FALSE, message=FALSE}
+library(cepespR)
+
+d_2000 <- get_elections(year=2000, position="Mayor", regional_aggregation="Municipality", political_aggregation="Candidate")
+
+d_2004 <- get_elections(year=2004, position="Mayor", regional_aggregation="Municipality", political_aggregation="Candidate")
+```
+
+```{r}
+d_2000 <- d_2000 %>% filter(NUM_TURNO==1) %>% 
+  group_by(COD_MUN_IBGE) %>% 
+  mutate(vote_pct_2000=QTDE_VOTOS/sum(QTDE_VOTOS), Electorate=sum(QTDE_VOTOS)) %>% 
+  mutate(rank_2000=rank(-QTDE_VOTOS)) %>%
+  arrange(COD_MUN_IBGE,rank_2000) %>% 
+  mutate(first_rank_vote_pct=max(vote_pct_2000), second_rank_vote_pct=nth(vote_pct_2000,2)) %>%
+  mutate(win_margin=ifelse(rank_2000==1,vote_pct_2000-second_rank_vote_pct,vote_pct_2000-first_rank_vote_pct)) %>%
+  mutate(Incumbent=ifelse(rank_2000==1,1,0))
+```
+
+
+## Day 2 - Observational regression
+
+What does basic regression look like? 
+What happens when we add control variables?
+What happens when we change the selection of data?
+
+## Day 3 - Causal regression
+
+What does the RDD regression look like?
+Balance tests
+Continuity tests
+
+## Day 4 - Generalizability
+
+Robustness checks to alternative specifics, samples (maybe another year?)
+How different are those candidates/muns near the threshold?
+
+## Day 5 - Constructive Critiques
+
+Placebo tests
+Heterogeneity tests
+Mechanisms

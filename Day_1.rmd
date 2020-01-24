@@ -1,0 +1,47 @@
+---
+title: "Day 1 - Deconstructing an Argument"
+#author: "JP"
+#date: "January 22, 2019"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+## Morning
+
+1. Introduction to the Course
+2. [Lecture Slides](https://jonnyphillips.github.io/Causal_Critiques/Day 1/Slides_Day_1_v6.pdf)
+3. [Logic Exercises](https://jonnyphillips.github.io/Causal_Critiques/Logic_exercises.html)
+4. [Evaluating Aguments Exercise](https://jonnyphillips.github.io/Causal_Critiques/Day 1/Evaluation_Exercises.html)
+
+## Afternoon - Practicing Critiques
+
+We will practice rapidly reading, understanding and summarizing academic arguments. You should complete the [Paper Summary Template](https://jonnyphillips.github.io/Causal_Critiques/Day 1/Paper_summary_template.pdf) for each of the following papers:  
+a. [Maoz and Russett 1993](https://jonnyphillips.github.io/Causal_Critiques/Day 1/Papers/Maoz and Russett 1993.pdf)  
+b. [Avelino et al 2005](https://jonnyphillips.github.io/Causal_Critiques/Day 1/Papers/Avelino et al 2005.pdf)  
+c. [Darden and Gryzmala-Busse 2006](https://jonnyphillips.github.io/Causal_Critiques/Day 1/Papers/Darden and Gryzmala-Busse 2006.pdf)  
+d. [Titiunik 2011](https://jonnyphillips.github.io/Causal_Critiques/Day 1/Papers/Titiunik 2011.pdf)
+
+## Afternoon - Critiquing the Data
+
+For the next five days we will use the study by [Titiunik 2011](https://jonnyphillips.github.io/Causal_Critiques/Day 1/Papers/Titiunik 2011.pdf) to help understand what is happening in the data when we make a causal argument/critique.
+
+The research question is "Does incumbency in Brazil improve your performance at the next election?". The research methodology is a regression discontinuity comparing close winners and losers. Use the [Mayoral Election Data from 2000](https://jonnyphillips.github.io/Causal_Critiques/Replication/2000 Mayoral Elections Data.csv) and [Mayoral Election Data from 2004](https://jonnyphillips.github.io/Causal_Critiques/Replication/2004 Mayoral Elections Data.csv) and need to prepare them for the analysis by following the questions below (but do not do the analysis itself). 
+
+1. What is the data sample used to answer the research question? What alternative data samples might have been used?
+
+2. Filter both datasets to exlude the data from second-round elections. How does this alter the data sample?
+
+3. What is the unit of analysis in the dataset? What alternative units of analysis could have been used?
+
+4. With the 2004 data, calculate the outcome variable, "performance at the next election". What different measures are available?
+
+5. With the 2000 data, create a measure of how "close" were the winners and losers to the threshold (of a tied election). What alternative measures could have been used?
+
+6. With the 2000 data, create a measure of 'incumbency' for the period 2000-2004. What are the alternative measures available?
+
+7. Merge the 2000 and 2004 data into a single dataset. What 'keys' do you need to use? What type of join did you perform?
+
+8. Save your processed dataset! We will use it tomorrow.

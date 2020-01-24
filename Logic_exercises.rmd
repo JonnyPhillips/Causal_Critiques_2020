@@ -1,0 +1,43 @@
+---
+title: "Exercises on Valid Arguments"
+#author: "JP"
+#date: "January 22, 2019"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+The following questions are designed to help you understand what makes an argument logically consistent. For each question you should answer 'Consistent' or 'Inconsistent'. Remember, an argument is consistent if the conclusion follows *automatically* from the premises.
+
+1. Socrates is a man. All men are mortal. Therefore Socrates is mortal
+
+2. I’m not dreaming if I can see the computer in front of me. I can see the computer in front of me. Therefore I’m not dreaming.
+
+3. Zeno is a tortoise. All tortoises are toothless. Therefore Zeno has teeth.
+
+4. 2+2=5
+
+5. Every EU citizen can enter the US without a visa. Max is a citizen
+of Norway. Therefore Max can enter the US without a visa.
+
+6. That heavy vehicle crossed the bridge without any problem. And the bridge has not collapsed for more than three years. Therefore the bridge must have been well built. 
+
+7. If the creature in the box has eight legs, it’s a spider. The creature in the box is a spider. Therefore the creature in the box has eight legs. 
+
+8. Our data says that Peter has three daughters and four sons, but Peter believes that people should not have more than two children. Therefore our data are wrong.
+
+9.  The BFG believes Charles Dickens is called Darles Chickens. Charles Dickens is the author of Great Expectations. Therefore, The BFG believes the author of Great Expectations is called Darles Chickens.
+
+10. It is a crime to vote for the Radical Party. John voted for the Radical Party. Therefore John is a criminal.
+
+11. Some Brazilian states are bankrupt. Some bankrupt companies have been guilty of corruption. Therefore Brazilian states are guilty of corruption.
+
+12. Students do not like to work. Therefore we must either force them to work or expel them.
+
+13. Legislators should vote for the Bill if it will help more people than it hurts. Official estimates suggest 40\% of people will benefit from the Bill. Therefore, legislators should vote against the Bill.
+
+14. The USA invaded Iraq. Then ISIS became powerful. Therefore the USA created ISIS.
+
+15. Most students prefer the Brazilian summer school to the Asian, European and Mexican summer schools. Therefore the Brazilian summer school is the best in the world.

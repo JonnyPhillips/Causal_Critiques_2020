@@ -1,0 +1,22 @@
+---
+title: "Day 1 - Deconstructing an Argument"
+#author: "JP"
+#date: "January 22, 2019"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+# Morning
+
+1. Introduction to the Course
+2. [Lecture Slides](https://jonnyphillips.github.io/Causal_Critiques/Day 1/Slides_Day_2_v2.pdf)
+
+## Afternoon
+
+In pairs, actively read the following papers and prepare multiple critiques of each study, which you will present later. Try to make critiques of each of (i) omitted variable bias, (ii) self-selection bias and (iii) reverse causation.
+
+a. 
+b. 

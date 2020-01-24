@@ -1,0 +1,530 @@
+% Font options: 10pm, 11pt, 12pt
+% Align headings left instead of center: nocenter
+\documentclass[xcolor=x11names,compress]{beamer}\usepackage[]{graphicx}\usepackage[]{color}
+%% maxwidth is the original width if it is less than linewidth
+%% otherwise use linewidth (to make sure the graphics do not exceed the margin)
+\makeatletter
+\def\maxwidth{ %
+  \ifdim\Gin@nat@width>\linewidth
+    \linewidth
+  \else
+    \Gin@nat@width
+  \fi
+}
+\makeatother
+
+\definecolor{fgcolor}{rgb}{0.345, 0.345, 0.345}
+\newcommand{\hlnum}[1]{\textcolor[rgb]{0.686,0.059,0.569}{#1}}%
+\newcommand{\hlstr}[1]{\textcolor[rgb]{0.192,0.494,0.8}{#1}}%
+\newcommand{\hlcom}[1]{\textcolor[rgb]{0.678,0.584,0.686}{\textit{#1}}}%
+\newcommand{\hlopt}[1]{\textcolor[rgb]{0,0,0}{#1}}%
+\newcommand{\hlstd}[1]{\textcolor[rgb]{0.345,0.345,0.345}{#1}}%
+\newcommand{\hlkwa}[1]{\textcolor[rgb]{0.161,0.373,0.58}{\textbf{#1}}}%
+\newcommand{\hlkwb}[1]{\textcolor[rgb]{0.69,0.353,0.396}{#1}}%
+\newcommand{\hlkwc}[1]{\textcolor[rgb]{0.333,0.667,0.333}{#1}}%
+\newcommand{\hlkwd}[1]{\textcolor[rgb]{0.737,0.353,0.396}{\textbf{#1}}}%
+\let\hlipl\hlkwb
+
+\usepackage{framed}
+\makeatletter
+\newenvironment{kframe}{%
+ \def\at@end@of@kframe{}%
+ \ifinner\ifhmode%
+  \def\at@end@of@kframe{\end{minipage}}%
+  \begin{minipage}{\columnwidth}%
+ \fi\fi%
+ \def\FrameCommand##1{\hskip\@totalleftmargin \hskip-\fboxsep
+ \colorbox{shadecolor}{##1}\hskip-\fboxsep
+     % There is no \\@totalrightmargin, so:
+     \hskip-\linewidth \hskip-\@totalleftmargin \hskip\columnwidth}%
+ \MakeFramed {\advance\hsize-\width
+   \@totalleftmargin\z@ \linewidth\hsize
+   \@setminipage}}%
+ {\par\unskip\endMakeFramed%
+ \at@end@of@kframe}
+\makeatother
+
+\definecolor{shadecolor}{rgb}{.97, .97, .97}
+\definecolor{messagecolor}{rgb}{0, 0, 0}
+\definecolor{warningcolor}{rgb}{1, 0, 1}
+\definecolor{errorcolor}{rgb}{1, 0, 0}
+\newenvironment{knitrout}{}{} % an empty environment to be redefined in TeX
+
+\usepackage{alltt}
+%\documentclass[xcolor=x11names,compress,handout]{beamer}
+\usepackage[]{graphicx}
+\usepackage[]{color}
+\usepackage{booktabs}
+\usepackage{hyperref}
+\usepackage{tikz}
+\usepackage{multirow}
+\usepackage{dcolumn}
+\usepackage{bigstrut}
+\usepackage{amsmath} 
+\usepackage{xcolor,colortbl}
+\usepackage{amssymb}
+%\newcommand{\done}{\cellcolor{teal}#1}
+
+%% Beamer Layout %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\useoutertheme[subsection=false,shadow]{miniframes}
+\useinnertheme{default}
+\usefonttheme{serif}
+\usepackage{Arev}
+\usepackage{pdfpages}
+
+\setbeamerfont{title like}{shape=\scshape}
+\setbeamerfont{frametitle}{shape=\scshape, size=\normalsize}
+
+\definecolor{dkblue}{RGB}{0,0,102}
+
+\setbeamercolor*{lower separation line head}{bg=dkblue} 
+\setbeamercolor*{normal text}{fg=black,bg=white} 
+\setbeamercolor*{alerted text}{fg=red} 
+\setbeamercolor*{example text}{fg=black} 
+\setbeamercolor*{structure}{fg=black} 
+ 
+\setbeamercolor*{palette tertiary}{fg=black,bg=black!10} 
+\setbeamercolor*{palette quaternary}{fg=black,bg=black!10} 
+
+\renewcommand{\(}{\begin{columns}}
+\renewcommand{\)}{\end{columns}}
+\newcommand{\<}[1]{\begin{column}{#1}}
+\renewcommand{\>}{\end{column}}
+
+\setbeamertemplate{navigation symbols}{} 
+\setbeamertemplate{footline}[frame number]
+\setbeamertemplate{caption}{\raggedright\insertcaption\par}
+
+\setbeamersize{text margin left=5pt,text margin right=5pt}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+
+
+\title{Making Causal Critiques}
+\subtitle{Day 3 - Assessing Causal Evidence}
+\author{Jonathan Phillips}
+\IfFileExists{upquote.sty}{\usepackage{upquote}}{}
+\begin{document}
+
+\frame{\titlepage}
+
+\section{Introduction}
+
+\begin{frame}
+\frametitle{Solving the Problem of Causal Inference}
+\begin{itemize}
+\item We cannot!
+\item But we can try and minimize the risks
+\item Selecting units that provide appropriate counterfactuals, avoiding:
+\begin{itemize}
+\item Omitted variable bias
+\item Selection Bias
+\item Reverse Causation
+\end{itemize}
+\end{itemize}
+\end{frame}
+
+\begin{frame} 
+\frametitle{Field Experiments}
+\begin{itemize}
+\item Field experiments provide confidence because treatment assignment is \textbf{controlled by the researcher}
+\item But still take place in real-world environments, so they identify (hopefully) meaningful treatment effects
+\end{itemize}
+\end{frame}
+
+\begin{frame}
+\frametitle{Field Experiments}
+\begin{itemize}
+\item Why does randomization help us achieve causal inference?
+\pause
+\begin{itemize}
+\item A treatment assignment mechanism that balances potential outcomes
+\begin{itemize}
+\item Every unit has \textbf{exactly the same} probability of treatment
+\item No omitted variable bias
+\item No self-selection
+\item No reverse causation
+\end{itemize}
+\end{itemize}
+\end{itemize}
+\end{frame}
+
+\begin{frame}
+\frametitle{Field Experiments}
+\begin{itemize}
+\item Why does randomization help us achieve causal inference?
+\begin{itemize}
+\item We want to estimate:
+\end{itemize}
+\begin{eqnarray}
+E(Y_1 - Y_0)
+\end{eqnarray}
+\pause
+\begin{itemize}
+\item Our data provides:
+\end{itemize}
+\begin{eqnarray}
+E(Y_1|D=1)\text{ ,  }E(Y_0|D=0)
+\end{eqnarray}
+\pause
+\begin{itemize}
+\item With randomization, $Y_1, Y_0 \perp D$:
+\end{itemize}
+\begin{eqnarray}
+E(Y_1|D=1) &=& E(Y_1) \\
+E(Y_0|D=0) &=& E(Y_0) \\
+E(Y_1|D=1) - E(Y_0|D=0) &=& E(Y_1) - E(Y_0) \\
+&=& E(Y_1 - Y_0)
+\end{eqnarray}
+\end{itemize}
+\end{frame}
+
+\begin{frame}
+\frametitle{Field Experiments}
+\begin{itemize}
+\item But these are just \textbf{expectations} (averages)
+\pause
+\begin{itemize}
+\item On average, potential outcomes will be balanced
+\item More likely in larger samples
+\item We cannot verify potential outcomes
+\item But we can assess balance in \textit{observable} covariates
+\item What if some covariates are imbalanced? %Expected 1/20. Still need to correct as could be real bias.
+\end{itemize}
+\end{itemize}
+\end{frame}
+
+\begin{frame}
+\frametitle{Field Experiments}
+\begin{itemize}
+\item Analysing field experiments
+\begin{itemize}
+\item Comparison of means: t-test to test significance
+\item Regression achieves the same thing
+\begin{itemize}
+\item $Y_i \sim \alpha + \beta D_i + \epsilon_i$ 
+\item $Y_i= Y_{0i} + (Y_{1i} - Y_{0i}) D_i + \epsilon_i$
+\item Just the conditional expectation function: $E(Y|D=d)$
+\end{itemize}
+\item Include covariates if:
+\begin{itemize}
+\item There is residual imbalance
+\item To increase precision of standard errors
+\end{itemize}
+\end{itemize}
+\end{itemize}
+\end{frame}
+
+\begin{frame}
+\frametitle{Field Experiments}
+\begin{itemize}
+\item Assumptions
+\begin{itemize}
+\item \textbf{Compliance with randomization} - Treatment was truly random and accepted
+\item \textbf{SUTVA} - Treatment of one unit doesn't affect potential outcomes of other units
+\item \textbf{Excludability} - Effects of treatment assignment operate \textbf{only} through treatment
+\begin{itemize}
+\item Depends if these effects are part of the causal chain
+\end{itemize}
+\end{itemize}
+\end{itemize}
+\end{frame}
+
+\begin{frame}
+\frametitle{Field Experiments}
+\begin{itemize}
+\item Limitations of Field Experiments: \textbf{Answerable Questions}
+\pause
+\begin{itemize}
+\item Small sample sizes still prevent inference
+\item Ethics
+\item Logistics/Finance
+\item Some treatments can't be manipulated (history)
+\item Lack of control over treatment content and context - is it informative?
+\item Long-term effects/adaptation?
+\end{itemize}
+\end{itemize}
+\end{frame}
+
+\begin{frame}
+\frametitle{Field Experiments}
+\begin{itemize}
+\item Limitations of Field Experiments: \textbf{Internal Validity}
+\pause
+\begin{itemize}
+\item No guarantee of actual balance (and Inefficient if we already know confounders)
+\item Hawthorne effect: participants adapt behaviour in experiments
+\item Biased measurement if not double-blind (non-excludability)
+\item Average Treatment Effect can be skewed by Outliers
+\item Always complications of non-compliance, SUTVA, attrition
+\item Publication/Selection bias
+\item Unbiased but imprecise; variation still high if lots of other variables also affect Y
+\item Treatment assignment mechanism itself affects outcomes
+\end{itemize}
+\end{itemize}
+\end{frame}
+
+\begin{frame}
+\frametitle{Field Experiments}
+\begin{itemize}
+\item All these complications mean we need lots of assumptions and background knowledge
+\item Just as with other methodologies
+\end{itemize}
+\end{frame}
+
+\begin{frame}
+\frametitle{Lab Experiments}
+\begin{itemize}
+\item Causal Inference
+\pause
+\item Why lab experiments?
+\pause
+\begin{itemize}
+\item Treatments we cannot administer in reality
+\item Outcome measurements that are hard to take in reality
+\item Random treatment assignment not permitted in reality
+\end{itemize}
+\end{itemize}
+\end{frame}
+
+\begin{frame}
+\frametitle{Lab Experiments}
+\begin{itemize}
+\item \textbf{Treatment Assignment}: Same as a Field Experiment
+\pause
+\item \textbf{Treatment}: Not a manipulation of real world political or economic processes, but establishing controlled 'lab' conditions
+\pause
+\begin{itemize}
+\item The advantage: Control over context helps isolate mechanisms
+\item The disadvantage: Can we generalize to the real world from this artificial context?
+\end{itemize}
+\end{itemize}
+\end{frame}
+
+\begin{frame}
+\frametitle{Natural Experiments}
+\begin{itemize}
+\item What is a natural experiment?
+\pause
+\begin{itemize}
+\item Treatment assignment is independent of potential outcomes
+\begin{itemize}
+\item So randomized or 'as-if' random ('exogenous')
+\end{itemize}
+\pause
+\item BUT The researcher doesn't control the treatment assignment process or treatment itself
+\begin{itemize}
+\item So not a field experiment
+\end{itemize}
+\item Can make possible analysis of questions that researchers might find unethical or impractical
+\end{itemize}
+\end{itemize}
+\end{frame}
+
+\begin{frame}
+\frametitle{Natural Experiments}
+\begin{table}[htbp]
+  \centering
+  \caption{Analysis Types and Assumptions}
+    \resizebox*{1.1\textheight}{!}{\begin{tabular}{|r|l|p{2.5cm}|p{2.5cm}|p{2.5cm}|p{6cm}|}
+    \hline
+    \multicolumn{1}{|r|}{\textbf{Week}} & \multicolumn{1}{l|}{\textbf{Assumption:
+}} & \textbf{Researcher Controls Treatment Assignment?} & \textbf{Treatment Assignment Independent of Potential Outcomes} & \textbf{SUTVA} & \multicolumn{1}{p{2cm}|}{\textbf{Additional Assumptions}} \bigstrut\\
+    \hline
+          & \textbf{Controlled Experiments} &       &       &       &  \bigstrut\\
+    \hline
+    1     &    Field Experiments & \checkmark & \checkmark & \checkmark &  \bigstrut\\
+    \hline
+    2     &    Survey and Lab Experiments &  \checkmark & \checkmark & \checkmark & Controlled Environment for treatment exposure \bigstrut\\
+    \hline
+          & \textbf{Natural Experiments} &       &       &       &  \bigstrut\\
+    \hline
+    3     &    Randomized Natural Experiments & X     & \checkmark & \checkmark &  \bigstrut\\
+    \hline
+    4     &    Instrumental Variables & X     & \checkmark & \checkmark & First stage and Exclusion Restriction (Instrument explains treatment but not outcome) \bigstrut\\
+    \hline
+    5     &    Regression Discontinuity & X     & \checkmark & \checkmark & Continuity of covariates; No manipulation; No compounding discontinuities \bigstrut\\
+    \hline
+          & \textbf{Observational Studies} &       &       &       &  \bigstrut\\
+    \hline
+    6     &    Difference-in-Differences & X     & X     & \checkmark & No Time-varying confounders; Parallel Trends \bigstrut\\
+    \hline
+    7     &    Controlling for Confounding & X     & X     & \checkmark & Blocking all Back-door paths \bigstrut\\
+    \hline
+    8     &    Matching & X     & X     & \checkmark & Overlap in sample characteristics \bigstrut\\
+    \hline
+    \end{tabular}}%
+\end{table}%
+\end{frame}
+
+\begin{frame}
+\frametitle{Natural Experiments}
+\begin{itemize}
+\item Three types of natural experiments
+\begin{itemize}
+\item 'Pure' natural experiments, where policy is as-if random
+\item Instrumental Variables
+\item Regression Discontinuities
+\end{itemize}
+\end{itemize}
+\end{frame}
+
+\begin{frame}
+\frametitle{Natural Experiments}
+\begin{itemize}
+\item Because we don't control assignment, we need to verify the assumptions behind natural experiments
+\begin{itemize}
+\item How do we know assignment was truly random?
+\item How was the treatment applied? Consistently?
+\end{itemize}
+\item We need 'Causal-process observations'
+\end{itemize}
+\end{frame}
+
+\begin{frame}
+\frametitle{Natural Experiments}
+\begin{itemize}
+\item Challenges due to lack of control over treatment:
+\pause
+\begin{itemize}
+\item We must be lucky to 'find' natural experiments; what if the treatments/experiments that exist don't answer useful political economy questions?
+\item The treatment and control groups produced by 'nature' may not produce treatment and control groups which differ in ways that represent a causal effect of interest (Sekhon and Titiunik 2012)
+\item We also must be lucky to find a sample that is relevant and interesting - unlike a controlled trial we don't control the recipients either (eg. if we care about states, not municipalities, the audits are no use)
+\end{itemize}
+\end{itemize}
+\end{frame}
+
+\begin{frame}
+\frametitle{Natural Experiments}
+\begin{itemize}
+\item Challenges due to lack of control over treatment: 
+\begin{itemize}
+\item Spillovers can be an issue - treatment units affect control units' potential outcomes (eg. women's quotas discourage women in non-reserved seats)
+\item Generalizability a very open question; what causal process does the experiment really capture?
+\item The treatment assignment of a natural experiment might have unique effects (excludability)
+\end{itemize}
+\end{itemize}
+\end{frame}
+
+
+
+\begin{frame}
+\frametitle{Instrumental Variables}
+\begin{itemize}
+\item What can we do when the treatment assignment mechanism is not 'as-if' random?
+\pause
+\item Natural experiments focus on a specific \textbf{part} of treatment assignment that is 'as-if' random
+\pause
+\item An 'instrument' is a variable which assigns treatment in an 'as-if' random way
+\pause
+\begin{itemize}
+\item Or at least in a way which is 'exogenous' - not related to confounders
+\item Even if other confounding variables \textbf{also} affect treatment
+\end{itemize}
+\end{itemize}
+\end{frame}
+
+\begin{frame}
+\frametitle{Instrumental Variables}
+\begin{itemize}
+\item We can use the instrument to isolate 'as-if' random variation in treatment, and use that to estimate the effect of treatment on the outcome
+\pause
+\item NOT the effect of the instrument on the outcome
+\end{itemize}
+\end{frame}
+
+\begin{frame}
+\frametitle{Instrumental Variables}
+\begin{itemize}
+\item Example Instruments:
+\begin{itemize}
+\item Rainfall for conflict 
+\item Sex-composition for effect of third child
+\item Distance from the coast for exposure to slave trade
+\end{itemize}
+\end{itemize}
+\end{frame}
+
+\begin{frame}
+\frametitle{Instrumental Variables}
+\begin{itemize}
+\item Instrumental Variables Assumptions
+\begin{itemize}
+\item \textbf{Strong First Stage:} The Instrument must \textbf{affect} the treatment
+\pause
+\item We can test this with a simple regression: $Treatment \sim Instrument$
+\pause
+\item The instrument should be a significant predictor of treatment
+\item Rule-of-thumb: $F-statistic > 10$
+\end{itemize}
+\end{itemize}
+\end{frame}
+
+\begin{frame}
+\frametitle{Instrumental Variables}
+\begin{itemize}
+\item Instrumental Variables Assumptions:
+\begin{itemize}
+\item \textbf{Exclusion Restriction:} The Instrument \textbf{ONLY} affects the outcome through its effect on treatment, and not directly
+\pause
+\item Formally, $cov(Instrument,\text{errors in main regression Y }\sim D)=0$
+\pause
+\item \textbf{We cannot test or prove this assumption!}
+\pause
+\item Theory and qualitative evidence needed to argue that the instrument is not correlated with any other factors affecting the outcome
+\item Sometimes, the exclusion restriction may be more credible if we include controls
+\end{itemize}
+\end{itemize}
+\end{frame}
+
+\begin{frame}
+\frametitle{Instrumental Variables}
+\begin{itemize}
+\item Instrumental Variables Methodology:
+\pause
+\begin{enumerate}
+\item Use an all-in-one package, eg. \textit{ivreg} in the \textit{AER} package
+\begin{itemize}
+\item Specify the formula: $Y ~ D | Instrument$
+\pause
+\end{itemize}
+\item Conduct 2-Stage Least Squares: 
+\pause
+\begin{itemize}
+\item Isolate the variation in treatment caused by the instrument: $D \sim Instrument$
+\pause
+\item Save the predicted values from this regression: $\hat{D} = D \sim Instrument$
+\pause
+\item Estimate how the predicted values affect the outcome: $Y \sim \hat{D}$
+\pause
+\item Interpret the coefficient on $\hat{D}$
+\end{itemize}
+\end{enumerate}
+\end{itemize}
+\end{frame}
+
+\begin{frame}
+\frametitle{Instrumental Variables}
+\begin{itemize}
+\item IV Interpretation:
+\pause
+\begin{itemize}
+\item Your coefficient is a causal estimate ONLY for units that were actually treated \textbf{because of the instrument}
+\pause
+\item They don't tell us about the causal effect for other units that never responded to the instrument
+\pause
+\item We call our causal effect estimate a 'Local Average Treatment Effect' (LATE)
+\item 'Local' to the units whose treatment status actually changed
+\pause
+\end{itemize}
+\item Remember, those 'Local' units are not representative so we can't generalize
+\end{itemize}
+\end{frame}
+
+
+
+\end{document}
+ 
+ % effects of causes vs. reverse

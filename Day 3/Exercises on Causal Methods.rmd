@@ -1,0 +1,24 @@
+---
+title: "Exercises on Causal Methodologies"
+#author: "JP"
+#date: "January 22, 2019"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+The following are observational studies that have been conducted by political scientists. Propose an alternative methodology (an experiment or quasi-experiment) that might support a more convincing causal argument in each context, and describe the assumptions required for the methodology to be successful:
+
+1. Voters with more information about politicians' performance are more likely to reward good governance.
+
+2. Municipalities with biometric voting have highter turnout.
+
+3. Voters prefer indigenous candidates to black candidates
+
+4. Receiving government news broadcasts makes you more trusting in government.
+
+5. Natural resource revenues discourage investments in education.
+
+6. Reforming the police can reduce violence.

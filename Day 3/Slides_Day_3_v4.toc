@@ -1,0 +1,5 @@
+\beamer@sectionintoc {1}{Introduction}{2}{0}{1}
+\beamer@sectionintoc {2}{Experiments}{5}{0}{2}
+\beamer@sectionintoc {3}{Instrumental Variables}{33}{0}{3}
+\beamer@sectionintoc {4}{Regression Discontinuities}{58}{0}{4}
+\beamer@sectionintoc {5}{Difference-in-Differences}{107}{0}{5}
