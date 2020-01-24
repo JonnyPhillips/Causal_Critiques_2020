@@ -14,7 +14,7 @@ output: html_document
 }
 .column-right{
   float: right;
-  width: 50%;
+  width: 45%;
   text-align: right;
 }
 </style>
@@ -31,11 +31,9 @@ Does development cause democracy? Do proportional representation systems generat
 
 Participants will gain confidence in contributing to seminars, conferences and as referees, and will also gain new perspectives on how to design and execute their own research.
 </div>
-
-
 <div class="column-right">
-```{r, fig.width=4}
-include_graphics("logo_completo.png")
+```{r, fig.width=3}
+include_graphics("banner_summer.jpg")
 ```
 </div>
 
