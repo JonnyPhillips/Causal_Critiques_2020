@@ -19,10 +19,11 @@ knitr::opts_chunk$set(echo = TRUE)
 ## Afternoon - Practicing Critiques
 
 We will practice rapidly reading, understanding and summarizing academic arguments. You should complete the [Paper Summary Template](https://jonnyphillips.github.io/Causal_Critiques/Day 1/Paper_summary_template.pdf) for each of the following papers:  
-a. [Titiunik 2011](https://jonnyphillips.github.io/Causal_Critiques/Day 1/Papers/Titiunik 2011.pdf)
+a. [Titiunik 2011](https://jonnyphillips.github.io/Causal_Critiques/Day 1/Papers/Titiunik 2011.pdf)  
 b. [Maoz and Russett 1993](https://jonnyphillips.github.io/Causal_Critiques/Day 1/Papers/Maoz and Russett 1993.pdf)  
 b. [Cruz and Schneider 2017](https://jonnyphillips.github.io/Causal_Critiques/Day 1/Papers/Cruz and Schneider 2017.pdf)   
 c. [Knutsen et al 2017](https://jonnyphillips.github.io/Causal_Critiques/Day 1/Papers/Knutsen et al 2017.pdf)  
+
 ## Afternoon - Critiquing the Data
 
 For the next five days we will use the study by [Titiunik 2011](https://jonnyphillips.github.io/Causal_Critiques/Day 1/Papers/Titiunik 2011.pdf) to help understand what is happening in the data when we make a causal argument/critique.
