@@ -11,7 +11,7 @@ knitr::opts_chunk$set(echo = TRUE)
 
 ## Morning
 
-1. [Lecture Slides](https://jonnyphillips.github.io/Causal_Critiques/Day 5/Slides_Day_5_v1.pdf)
+1. [Lecture Slides](https://jonnyphillips.github.io/Causal_Critiques_2020/Day 5/Slides_Day_5_v1.pdf)
 
 ## Afternoon - Practicing Critiques
 

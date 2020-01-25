@@ -11,16 +11,16 @@ knitr::opts_chunk$set(echo = TRUE)
 
 ## Morning
 
-1. [Lecture Slides](https://jonnyphillips.github.io/Causal_Critiques/Day 2/Slides_Day_2_v3.pdf)
-2. [Exercises on Fundamental Critiques](https://jonnyphillips.github.io/Causal_Critiques/Day 2/Day_2_exercises.html)
+1. [Lecture Slides](https://jonnyphillips.github.io/Causal_Critiques_2020/Day 2/Slides_Day_2_v3.pdf)
+2. [Exercises on Fundamental Critiques](https://jonnyphillips.github.io/Causal_Critiques_2020/Day 2/Day_2_exercises.html)
 
 ## Afternoon - Practicing Critiques
 
 Imagine you are asked to review some articles for a journal. In pairs, actively read the following papers and prepare multiple critiques of each study, which you will present later. Try to critique each paper for (i) omitted variable bias, (ii) self-selection bias and (iii) reverse causation. Include a causal diagram which highlights the problems you have identified.
 
-a. [Maoz and Russett 1993](https://jonnyphillips.github.io/Causal_Critiques/Day 2/Papers for Critique/Maoz and Russett 1993.pdf)
-b. [Ross 2001](https://jonnyphillips.github.io/Causal_Critiques/Day 2/Papers for Critique/Ross 2001.pdf)
-c. [Cruz and Schneider 2017](https://jonnyphillips.github.io/Causal_Critiques_2020/Day 2/Papers for Critique/Cruz_Schneider_2017.pdf)   
+a. [Maoz and Russett 1993](https://jonnyphillips.github.io/Causal_Critiques_2020/Day 2/Papers for Critique/Maoz and Russett 1993.pdf)
+b. [Ross 2001](https://jonnyphillips.github.io/Causal_Critiques_2020/Day 2/Papers for Critique/Ross 2001.pdf)
+c. [Cruz and Schneider 2017](https://jonnyphillips.github.io/Causal_Critiques_2020_2020/Day 2/Papers for Critique/Cruz_Schneider_2017.pdf)   
 
 ## Afternoon - Critiquing the Data
 
@@ -34,7 +34,7 @@ Using your dataset from Day 1, what would the answer to our research question be
 
 4. One causal critique might be that there is omitted variable bias: More effective or popular parties are more likely to become incumbents and also to perform better at the next election. To try and adjust for this, add a control for party (equivalently, a fixed effect for party). How does this affect the results?
 
-5. We probably want a wider range of controls. There are some for each municipality in [this file from IBGE](https://jonnyphillips.github.io/Causal_Critiques/Replication/Mun_data.csv). Download this file, merge it into your existing dataset and add controls for population, IDHM (Human Development Index) and PIB (GDP per capita) to your regression, one at a time. How does this affect your results? 
+5. We probably want a wider range of controls. There are some for each municipality in [this file from IBGE](https://jonnyphillips.github.io/Causal_Critiques_2020/Replication/Mun_data.csv). Download this file, merge it into your existing dataset and add controls for population, IDHM (Human Development Index) and PIB (GDP per capita) to your regression, one at a time. How does this affect your results? 
 
 6. What happens if you add all the controls at the same time?
 

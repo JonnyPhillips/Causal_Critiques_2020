@@ -11,12 +11,12 @@ knitr::opts_chunk$set(echo = TRUE)
 
 ## Morning
 
-1. [Lecture Slides](https://jonnyphillips.github.io/Causal_Critiques/Day 4/Slides_Day_4_v1.pdf)
-2. [Exercises in Generalizability](https://jonnyphillips.github.io/Causal_Critiques/Day 4/Exercises_on_Generalizability.html)
+1. [Lecture Slides](https://jonnyphillips.github.io/Causal_Critiques_2020/Day 4/Slides_Day_4_v1.pdf)
+2. [Exercises in Generalizability](https://jonnyphillips.github.io/Causal_Critiques_2020/Day 4/Exercises_on_Generalizability.html)
 
 ## Afternoon - Practicing Critiques
 
-Based on [this paper by Boas and Hidalgo 2010](https://jonnyphillips.github.io/Causal_Critiques/Day 4/Boas and Hidalgo airwaves.pdf), the Ministry of Communications has proposed to ban all politicians from owning radio licences. Your task is to write a report for the Ministry: Should this ban go ahead? Does the evidence from Boas and Hidalgo provide strong justification for this ban? What do we learn and what do we *not* learn from their research? You may wish to fill in the summary template first.
+Based on [this paper by Boas and Hidalgo 2010](https://jonnyphillips.github.io/Causal_Critiques_2020/Day 4/Boas and Hidalgo airwaves.pdf), the Ministry of Communications has proposed to ban all politicians from owning radio licences. Your task is to write a report for the Ministry: Should this ban go ahead? Does the evidence from Boas and Hidalgo provide strong justification for this ban? What do we learn and what do we *not* learn from their research? You may wish to fill in the summary template first.
 
 Later, we will begin your individual presentations of your own/assigned papers, and the rest of the class will be tasked with providing constructive critiques.
 
@@ -40,5 +40,5 @@ What about the scope of our conclusions?
 
 We can also replicate the study with a different data sample:
 
-7. Use the data for the [2012](https://jonnyphillips.github.io/Causal_Critiques/Replication/2012 Mayoral Elections Data.csv) and [2016](https://jonnyphillips.github.io/Causal_Critiques/Replication/2016 Mayoral Elections Data.csv) elections to implement a new (linear) regression discontinuity. Is the relationship the same as the results you estimated for 2000-04?
+7. Use the data for the [2012](https://jonnyphillips.github.io/Causal_Critiques_2020/Replication/2012 Mayoral Elections Data.csv) and [2016](https://jonnyphillips.github.io/Causal_Critiques_2020/Replication/2016 Mayoral Elections Data.csv) elections to implement a new (linear) regression discontinuity. Is the relationship the same as the results you estimated for 2000-04?
 
