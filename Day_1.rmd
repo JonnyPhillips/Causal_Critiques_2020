@@ -13,17 +13,16 @@ knitr::opts_chunk$set(echo = TRUE)
 
 1. Introduction to the Course
 2. [Lecture Slides](https://jonnyphillips.github.io/Causal_Critiques/Day 1/Slides_Day_1_v6.pdf)
-3. [Logic Exercises](https://jonnyphillips.github.io/Causal_Critiques/Logic_exercises.html)
-4. [Evaluating Aguments Exercise](https://jonnyphillips.github.io/Causal_Critiques/Day 1/Evaluation_Exercises.html)
+3. [Evaluating Aguments Exercise](https://jonnyphillips.github.io/Causal_Critiques/Day 1/Evaluation_Exercises.html)
+4. [Consistent Conclusions Exercises](https://jonnyphillips.github.io/Causal_Critiques/Logic_exercises.html)
 
 ## Afternoon - Practicing Critiques
 
 We will practice rapidly reading, understanding and summarizing academic arguments. You should complete the [Paper Summary Template](https://jonnyphillips.github.io/Causal_Critiques/Day 1/Paper_summary_template.pdf) for each of the following papers:  
-a. [Maoz and Russett 1993](https://jonnyphillips.github.io/Causal_Critiques/Day 1/Papers/Maoz and Russett 1993.pdf)  
-b. [Avelino et al 2005](https://jonnyphillips.github.io/Causal_Critiques/Day 1/Papers/Avelino et al 2005.pdf)  
-c. [Darden and Gryzmala-Busse 2006](https://jonnyphillips.github.io/Causal_Critiques/Day 1/Papers/Darden and Gryzmala-Busse 2006.pdf)  
-d. [Titiunik 2011](https://jonnyphillips.github.io/Causal_Critiques/Day 1/Papers/Titiunik 2011.pdf)
-
+a. [Titiunik 2011](https://jonnyphillips.github.io/Causal_Critiques/Day 1/Papers/Titiunik 2011.pdf)
+b. [Maoz and Russett 1993](https://jonnyphillips.github.io/Causal_Critiques/Day 1/Papers/Maoz and Russett 1993.pdf)  
+b. [Cruz and Schneider 2017](https://jonnyphillips.github.io/Causal_Critiques/Day 1/Papers/Cruz and Schneider 2017.pdf)   
+c. [Knutsen et al 2017](https://jonnyphillips.github.io/Causal_Critiques/Day 1/Papers/Knutsen et al 2017.pdf)  
 ## Afternoon - Critiquing the Data
 
 For the next five days we will use the study by [Titiunik 2011](https://jonnyphillips.github.io/Causal_Critiques/Day 1/Papers/Titiunik 2011.pdf) to help understand what is happening in the data when we make a causal argument/critique.
