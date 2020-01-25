@@ -20,7 +20,7 @@ Imagine you are asked to review some articles for a journal. In pairs, actively 
 
 a. [Maoz and Russett 1993](https://jonnyphillips.github.io/Causal_Critiques_2020/Day 2/Papers for Critique/Maoz and Russett 1993.pdf)
 b. [Ross 2001](https://jonnyphillips.github.io/Causal_Critiques_2020/Day 2/Papers for Critique/Ross 2001.pdf)
-c. [Cruz and Schneider 2017](https://jonnyphillips.github.io/Causal_Critiques_2020_2020/Day 2/Papers for Critique/Cruz_Schneider_2017.pdf)   
+c. [Cruz and Schneider 2017](https://jonnyphillips.github.io/Causal_Critiques_2020/Day 2/Papers for Critique/Cruz_Schneider_2017.pdf)   
 
 ## Afternoon - Critiquing the Data
 

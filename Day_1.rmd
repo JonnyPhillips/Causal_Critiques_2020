@@ -12,7 +12,7 @@ knitr::opts_chunk$set(echo = TRUE)
 ## Morning
 
 1. Introduction to the Course
-2. [Lecture Slides](https://jonnyphillips.github.io/Causal_Critiques_2020_2020/Day 1/Slides_Day_1_v6.pdf)
+2. [Lecture Slides](https://jonnyphillips.github.io/Causal_Critiques_2020/Day 1/Slides_Day_1_v8.pdf)
 3. [Evaluating Aguments Exercise](https://jonnyphillips.github.io/Causal_Critiques_2020/Day 1/Evaluation_Exercises.html)
 4. [Consistent Conclusions Exercises](https://jonnyphillips.github.io/Causal_Critiques_2020/Logic_exercises.html)
 
@@ -21,9 +21,9 @@ knitr::opts_chunk$set(echo = TRUE)
 We will practice rapidly reading, understanding and summarizing academic arguments. You should complete the [Paper Summary Template](https://jonnyphillips.github.io/Causal_Critiques_2020/Day 1/Paper_summary_template.pdf) for each of the following papers:  
 a. [Titiunik 2011](https://jonnyphillips.github.io/Causal_Critiques_2020/Day 1/Papers/Titiunik 2011.pdf)  
 b. [Maoz and Russett 1993](https://jonnyphillips.github.io/Causal_Critiques_2020/Day 1/Papers/Maoz and Russett 1993.pdf)  
-c. [Ross 2001](https://jonnyphillips.github.io/Causal_Critiques_2020/Day 1/Papers/Ross 2001.pdf)
-d. [Cruz and Schneider 2017](https://jonnyphillips.github.io/Causal_Critiques_2020/Day 1/Papers/Cruz_Schneider_2017.pdf)   
-e. [Acemoglu et al 2001](https://jonnyphillips.github.io/Causal_Critiques_2020/Day 1/Papers/Knutsen_2017.pdf)  
+c. [Ross 2001](https://jonnyphillips.github.io/Causal_Critiques_2020/Day 1/Papers/Ross 2001.pdf)  
+d. [Cruz and Schneider 2017](https://jonnyphillips.github.io/Causal_Critiques_2020/Day 1/Papers/Cruz_Schneider_2017.pdf)     
+e. [Acemoglu et al 2001](https://jonnyphillips.github.io/Causal_Critiques_2020/Day 1/Papers/Knutsen_2017.pdf)    
 ## Afternoon - Critiquing the Data
 
 For the next five days we will use the study by [Titiunik 2011](https://jonnyphillips.github.io/Causal_Critiques_2020/Day 1/Papers/Titiunik 2011.pdf) to help understand what is happening in the data when we make a causal argument/critique.
