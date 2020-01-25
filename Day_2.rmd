@@ -19,8 +19,8 @@ knitr::opts_chunk$set(echo = TRUE)
 Imagine you are asked to review some articles for a journal. In pairs, actively read the following papers and prepare multiple critiques of each study, which you will present later. Try to critique each paper for (i) omitted variable bias, (ii) self-selection bias and (iii) reverse causation. Include a causal diagram which highlights the problems you have identified.
 
 a. [Maoz and Russett 1993](https://jonnyphillips.github.io/Causal_Critiques/Day 2/Papers for Critique/Maoz and Russett 1993.pdf)
-b. [Mancuso et al 2016 (focus on argument 01)](https://jonnyphillips.github.io/Causal_Critiques/Day 2/Papers for Critique/Mancuso et al 2016.pdf)
-c. [Li and Reuveny 2003](https://jonnyphillips.github.io/Causal_Critiques/Day 2/Papers for Critique/Li and Reuveny 2003.pdf)
+b. [Ross 2001](https://jonnyphillips.github.io/Causal_Critiques/Day 2/Papers for Critique/Ross 2001.pdf)
+c. [Cruz and Schneider 2017](https://jonnyphillips.github.io/Causal_Critiques_2020/Day 2/Papers for Critique/Cruz_Schneider_2017.pdf)   
 
 ## Afternoon - Critiquing the Data
 
