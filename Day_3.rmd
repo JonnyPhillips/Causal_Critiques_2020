@@ -32,14 +32,16 @@ For each of the papers below:
 
 To overcome the causal problems we saw yesterday, Titiunik implements a regression discontinuity. 
 
-1. Implement the regression discontinuity using your measure of 'close elections', your indicator of incumbency status and your measure of electoral performance in 2004.
+1. Draw the causal diagram (DAG) which Titiunik is assuming to be true in close elections.
 
-2. Interpret the findings of the regression discontinuity. How do they differ from the observational results in Day 2?
+2. Implement the regression discontinuity using your measure of 'close elections', your indicator of incumbency status and your measure of electoral performance in 2004.
 
-3. One assumption of our regression discontinuity is that comparing incumbents that just won and lost elections in 2000 will produce 'balance' on potential omitted variables. There are thousands of variables we could check, but let's assess balance on the size of the municipality by comparing the number of voters in 2000 within 5\% of a tied election.
+3. Interpret the findings of the regression discontinuity. How do they differ from the observational results in Day 2?
 
-4. How does the balance close to the threshold compare with the balance of winners and losers in the full dataset?
+4. One assumption of our regression discontinuity is that comparing incumbents that just won and lost elections in 2000 will produce 'balance' on potential omitted variables. There are thousands of variables we could check, but let's assess balance on the size of the municipality by comparing the number of voters in 2000 within 5\% of a tied election.
 
-5. Another assumption of regression discontinuity is continuity in the distribution of the variable measuring distance to the threshold, in our case winning margin in 2000. Test this assumption by implementing a McCrary density test (DCdensity in the 'rdd' library). What do the results show?
+5. How does the balance close to the threshold compare with the balance of winners and losers in the full dataset?
 
-6. If our theory is correct, we should *only* find an effect at the threshold (distance=0). Use the 'RDestimate' function (in the 'rdd' library) to perform **placebo tests** with the threshold set to distance=0.1,-0.1,0.05 and -0.05. What do we learn from this test?
+6. Another assumption of regression discontinuity is continuity in the distribution of the variable measuring distance to the threshold, in our case winning margin in 2000. Test this assumption by implementing a McCrary density test (DCdensity in the 'rdd' library). What do the results show?
+
+7. If our theory is correct, we should *only* find an effect at the threshold (distance=0). Use the 'RDestimate' function (in the 'rdd' library) to perform **placebo tests** with the threshold set to distance=0.1,-0.1,0.05 and -0.05. What do we learn from this test?

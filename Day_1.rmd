@@ -24,6 +24,8 @@ b. [Maoz and Russett 1993](https://jonnyphillips.github.io/Causal_Critiques_2020
 c. [Ross 2001](https://jonnyphillips.github.io/Causal_Critiques_2020/Day 1/Papers/Ross 2001.pdf)  
 d. [Cruz and Schneider 2017](https://jonnyphillips.github.io/Causal_Critiques_2020/Day 1/Papers/Cruz_Schneider_2017.pdf)     
 e. [Acemoglu et al 2001](https://jonnyphillips.github.io/Causal_Critiques_2020/Day 1/Papers/Knutsen_2017.pdf)    
+  
+  
 ## Afternoon - Critiquing the Data
 
 For the next five days we will use the study by [Titiunik 2011](https://jonnyphillips.github.io/Causal_Critiques_2020/Day 1/Papers/Titiunik 2011.pdf) to help understand what is happening in the data when we make a causal argument/critique.
