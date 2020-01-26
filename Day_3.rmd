@@ -26,7 +26,7 @@ For each of the papers below:
 1. [Titiunik 2011](https://jonnyphillips.github.io/Causal_Critiques_2020/Day 1/Papers/Titiunik 2011.pdf)
 2. [De La O 2013](https://jonnyphillips.github.io/Causal_Critiques_2020/Day 3/Papers for Critique/De_la_O_Do.pdf)
 3. [Kane et al 2004](https://jonnyphillips.github.io/Causal_Critiques_2020/Day 3/Papers for Critique/Kane et al 2004.pdf)
-4. [Acemoglu et al 2001](https://jonnyphillips.github.io/Causal_Critiques_2020/Day 3/Papers for Critique/AJR 2001.pdf)
+4. [Knutsen et al 2017](https://jonnyphillips.github.io/Causal_Critiques_2020/Day 3/Papers for Critique/Knutsen_2017.pdf)
 
 ## Afternoon - Critiquing the Data
 
