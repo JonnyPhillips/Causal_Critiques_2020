@@ -23,7 +23,7 @@ a. [Titiunik 2011](https://jonnyphillips.github.io/Causal_Critiques_2020/Day 1/P
 b. [Maoz and Russett 1993](https://jonnyphillips.github.io/Causal_Critiques_2020/Day 1/Papers/Maoz and Russett 1993.pdf)  
 c. [Ross 2001](https://jonnyphillips.github.io/Causal_Critiques_2020/Day 1/Papers/Ross 2001.pdf)  
 d. [Cruz and Schneider 2017](https://jonnyphillips.github.io/Causal_Critiques_2020/Day 1/Papers/Cruz_Schneider_2017.pdf)     
-e. [Knutsen et al 2017](https://jonnyphillips.github.io/Causal_Critiques_2020/Day 1/Papers/Knutsen_2017.pdf)    
+e. [Carnegie and Marinov 2017](https://jonnyphillips.github.io/Causal_Critiques_2020/Day 1/Papers/Carnegie and Marinov 2017.pdf)    
   
   
 ## Afternoon - Critiquing the Data
