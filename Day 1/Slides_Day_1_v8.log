@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.20 (MiKTeX 2.9.7000 64-bit) (preloaded format=pdflatex 2019.4.28)  26 JAN 2020 10:19
+This is pdfTeX, Version 3.14159265-2.6-1.40.20 (MiKTeX 2.9.7000 64-bit) (preloaded format=pdflatex 2019.4.28)  26 JAN 2020 10:28
 entering extended mode
 **./Slides_Day_1_v8.tex
 (Slides_Day_1_v8.tex
@@ -2242,11 +2242,7 @@ Overfull \vbox (377.03534pt too high) detected at line 524
 
 ] [135
 
-]
-Overfull \vbox (53.48297pt too high) detected at line 699
- []
-
-[136
+] [136
 
 ] [137
 
@@ -2266,12 +2262,12 @@ Overfull \vbox (53.48297pt too high) detected at line 699
 
 ] [145
 
-] [146
+]
+[146
 
 ] [147
 
-]
-[148
+] [148
 
 ] [149
 
@@ -2297,7 +2293,7 @@ clusion: found PDF version <1.7>, but at most version <1.5> allowed
 File: Paper_summary_template_Putnam.pdf Graphic file (type pdf)
 <use Paper_summary_template_Putnam.pdf>
 Package pdftex.def Info: Paper_summary_template_Putnam.pdf  used on input line 
-771.
+773.
 (pdftex.def)             Requested size: 614.29349pt x 794.96806pt.
 
 
@@ -2306,7 +2302,7 @@ clusion: found PDF version <1.7>, but at most version <1.5> allowed
 File: Paper_summary_template_Putnam.pdf Graphic file (type pdf)
 <use Paper_summary_template_Putnam.pdf>
 Package pdftex.def Info: Paper_summary_template_Putnam.pdf  used on input line 
-771.
+773.
 (pdftex.def)             Requested size: 614.29349pt x 794.96806pt.
 
 
@@ -2320,27 +2316,27 @@ clusion: found PDF version <1.7>, but at most version <1.5> allowed
 File: Paper_summary_template_Putnam.pdf Graphic file (type pdf)
 <use Paper_summary_template_Putnam.pdf, page 1>
 Package pdftex.def Info: Paper_summary_template_Putnam.pdf , page1 used on inpu
-t line 771.
+t line 773.
 (pdftex.def)             Requested size: 614.29349pt x 794.96806pt.
 File: Paper_summary_template_Putnam.pdf Graphic file (type pdf)
 <use Paper_summary_template_Putnam.pdf, page 1>
 Package pdftex.def Info: Paper_summary_template_Putnam.pdf , page1 used on inpu
-t line 771.
+t line 773.
 (pdftex.def)             Requested size: 211.32272pt x 273.47647pt.
 File: Paper_summary_template_Putnam.pdf Graphic file (type pdf)
 <use Paper_summary_template_Putnam.pdf, page 1>
 Package pdftex.def Info: Paper_summary_template_Putnam.pdf , page1 used on inpu
-t line 771.
+t line 773.
 (pdftex.def)             Requested size: 211.32272pt x 273.47647pt.
 File: Paper_summary_template_Putnam.pdf Graphic file (type pdf)
 <use Paper_summary_template_Putnam.pdf, page 1>
 Package pdftex.def Info: Paper_summary_template_Putnam.pdf , page1 used on inpu
-t line 771.
+t line 773.
 (pdftex.def)             Requested size: 211.32272pt x 273.47647pt.
 File: Paper_summary_template_Putnam.pdf Graphic file (type pdf)
 <use Paper_summary_template_Putnam.pdf, page 1>
 Package pdftex.def Info: Paper_summary_template_Putnam.pdf , page1 used on inpu
-t line 771.
+t line 773.
 (pdftex.def)             Requested size: 211.32272pt x 273.47647pt.
 [157
 
@@ -2351,7 +2347,7 @@ pdfTeX warning: pdflatex.exe (file ./Paper_summary_template.pdf): PDF inclusion
 <Paper_summary_template.pdf, id=8707, 614.295pt x 794.97pt>
 File: Paper_summary_template.pdf Graphic file (type pdf)
 <use Paper_summary_template.pdf>
-Package pdftex.def Info: Paper_summary_template.pdf  used on input line 774.
+Package pdftex.def Info: Paper_summary_template.pdf  used on input line 776.
 (pdftex.def)             Requested size: 614.29349pt x 794.96806pt.
 
 
@@ -2359,7 +2355,7 @@ pdfTeX warning: pdflatex.exe (file ./Paper_summary_template.pdf): PDF inclusion
 : found PDF version <1.7>, but at most version <1.5> allowed
 File: Paper_summary_template.pdf Graphic file (type pdf)
 <use Paper_summary_template.pdf>
-Package pdftex.def Info: Paper_summary_template.pdf  used on input line 774.
+Package pdftex.def Info: Paper_summary_template.pdf  used on input line 776.
 (pdftex.def)             Requested size: 614.29349pt x 794.96806pt.
 
 
@@ -2373,27 +2369,27 @@ pdfTeX warning: pdflatex.exe (file ./Paper_summary_template.pdf): PDF inclusion
 File: Paper_summary_template.pdf Graphic file (type pdf)
 <use Paper_summary_template.pdf, page 1>
 Package pdftex.def Info: Paper_summary_template.pdf , page1 used on input line 
-774.
+776.
 (pdftex.def)             Requested size: 614.29349pt x 794.96806pt.
 File: Paper_summary_template.pdf Graphic file (type pdf)
 <use Paper_summary_template.pdf, page 1>
 Package pdftex.def Info: Paper_summary_template.pdf , page1 used on input line 
-774.
+776.
 (pdftex.def)             Requested size: 211.32272pt x 273.47647pt.
 File: Paper_summary_template.pdf Graphic file (type pdf)
 <use Paper_summary_template.pdf, page 1>
 Package pdftex.def Info: Paper_summary_template.pdf , page1 used on input line 
-774.
+776.
 (pdftex.def)             Requested size: 211.32272pt x 273.47647pt.
 File: Paper_summary_template.pdf Graphic file (type pdf)
 <use Paper_summary_template.pdf, page 1>
 Package pdftex.def Info: Paper_summary_template.pdf , page1 used on input line 
-774.
+776.
 (pdftex.def)             Requested size: 211.32272pt x 273.47647pt.
 File: Paper_summary_template.pdf Graphic file (type pdf)
 <use Paper_summary_template.pdf, page 1>
 Package pdftex.def Info: Paper_summary_template.pdf , page1 used on input line 
-774.
+776.
 (pdftex.def)             Requested size: 211.32272pt x 273.47647pt.
 [158 <./Paper_summary_template.pdf>] [159] [160
 
@@ -2427,7 +2423,7 @@ ion <1.7>, but at most version <1.5> allowed
 <Polity.pdf, id=9458, 602.25pt x 437.38406pt>
 File: Polity.pdf Graphic file (type pdf)
 <use Polity.pdf>
-Package pdftex.def Info: Polity.pdf  used on input line 818.
+Package pdftex.def Info: Polity.pdf  used on input line 820.
 (pdftex.def)             Requested size: 602.24852pt x 437.38298pt.
 
 
@@ -2435,7 +2431,7 @@ pdfTeX warning: pdflatex.exe (file ./Polity.pdf): PDF inclusion: found PDF vers
 ion <1.7>, but at most version <1.5> allowed
 File: Polity.pdf Graphic file (type pdf)
 <use Polity.pdf>
-Package pdftex.def Info: Polity.pdf  used on input line 818.
+Package pdftex.def Info: Polity.pdf  used on input line 820.
 (pdftex.def)             Requested size: 602.24852pt x 437.38298pt.
 
 
@@ -2448,23 +2444,23 @@ ion <1.7>, but at most version <1.5> allowed
 <Polity.pdf, id=9461, page=1, 602.25pt x 437.38406pt>
 File: Polity.pdf Graphic file (type pdf)
 <use Polity.pdf, page 1>
-Package pdftex.def Info: Polity.pdf , page1 used on input line 818.
+Package pdftex.def Info: Polity.pdf , page1 used on input line 820.
 (pdftex.def)             Requested size: 602.24852pt x 437.38298pt.
 File: Polity.pdf Graphic file (type pdf)
 <use Polity.pdf, page 1>
-Package pdftex.def Info: Polity.pdf , page1 used on input line 818.
+Package pdftex.def Info: Polity.pdf , page1 used on input line 820.
 (pdftex.def)             Requested size: 364.3394pt x 264.60149pt.
 File: Polity.pdf Graphic file (type pdf)
 <use Polity.pdf, page 1>
-Package pdftex.def Info: Polity.pdf , page1 used on input line 818.
+Package pdftex.def Info: Polity.pdf , page1 used on input line 820.
 (pdftex.def)             Requested size: 364.3394pt x 264.60149pt.
 File: Polity.pdf Graphic file (type pdf)
 <use Polity.pdf, page 1>
-Package pdftex.def Info: Polity.pdf , page1 used on input line 818.
+Package pdftex.def Info: Polity.pdf , page1 used on input line 820.
 (pdftex.def)             Requested size: 364.3394pt x 264.60149pt.
 File: Polity.pdf Graphic file (type pdf)
 <use Polity.pdf, page 1>
-Package pdftex.def Info: Polity.pdf , page1 used on input line 818.
+Package pdftex.def Info: Polity.pdf , page1 used on input line 820.
 (pdftex.def)             Requested size: 364.3394pt x 264.60149pt.
 [172
 
@@ -2472,7 +2468,7 @@ Package pdftex.def Info: Polity.pdf , page1 used on input line 818.
 <Venezuala_binary.png, id=9472, 779.54158pt x 562.73157pt>
 File: Venezuala_binary.png Graphic file (type png)
 <use Venezuala_binary.png>
-Package pdftex.def Info: Venezuala_binary.png  used on input line 821.
+Package pdftex.def Info: Venezuala_binary.png  used on input line 823.
 (pdftex.def)             Requested size: 354.19536pt x 255.68262pt.
 
 Overfull \vbox (13.6916pt too high) has occurred while \output is active []
@@ -2555,11 +2551,11 @@ Overfull \vbox (13.6916pt too high) has occurred while \output is active []
 \tf@snm=\write8
 \openout8 = `Slides_Day_1_v8.snm'.
 
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 948.
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 948.
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 950.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 950.
  (Slides_Day_1_v8.aux)
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 948.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 948.
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 950.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 950.
 Package rerunfilecheck Info: File `Slides_Day_1_v8.out' has not changed.
 (rerunfilecheck)             Checksum: F0D29052F36D560EFFA32B334D985D3D;308.
 
@@ -2568,11 +2564,11 @@ LaTeX Font Warning: Some font shapes were not available, defaults substituted.
 
  ) 
 Here is how much of TeX's memory you used:
- 23205 strings out of 492893
- 441077 string characters out of 3133367
+ 23208 strings out of 492893
+ 441103 string characters out of 3133367
  561029 words of memory out of 3000000
- 26098 multiletter control sequences out of 15000+200000
- 82998 words of font info for 146 fonts, out of 3000000 for 9000
+ 26099 multiletter control sequences out of 15000+200000
+ 85243 words of font info for 149 fonts, out of 3000000 for 9000
  1141 hyphenation exceptions out of 8191
  56i,19n,58p,875b,789s stack positions out of 5000i,500n,10000p,200000b,50000s
 {C:/Program Files/MiKTeX 2.9/fonts/enc/dvips/arev/arevoms.enc}{C:/Program Fil
@@ -2584,7 +2580,7 @@ rogram Files/MiKTeX 2.9/fonts/type1/public/arev/ArevSans-Roman.pfb><C:/Program
 Files/MiKTeX 2.9/fonts/type1/mathdesign/mdbch/md-chb7t.pfb><C:/Program Files/Mi
 KTeX 2.9/fonts/type1/mathdesign/mdbch/md-chb7y.pfb><C:/Program Files/MiKTeX 2.9
 /fonts/type1/mathdesign/mdbch/md-chbma.pfb>
-Output written on Slides_Day_1_v8.pdf (206 pages, 2936105 bytes).
+Output written on Slides_Day_1_v8.pdf (206 pages, 2936088 bytes).
 PDF statistics:
  11464 PDF objects out of 12825 (max. 8388607)
  420 named destinations out of 1000 (max. 500000)

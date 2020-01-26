@@ -651,12 +651,14 @@ render_graph(graph, width=600, height=400)
 
 \begin{frame}
 \frametitle{Deconstructing a Political Science Paper}
+\scriptsize
 \begin{quotation}
 High school education is central to adolescent socialization and has important downstream consequences for adult life. However, scholars examining schooling’s political effects have struggled to reconcile education’s correlation with both more liberal social attitudes and greater income. To disentangle this relationship, I exploit a major school leaving age reform in Great Britain that caused almost half the population to
 remain at high school for at least an additional year. Using a fuzzy regression discontinuity design, I find that each additional year of late high school increases the probability of voting Conservative in later life by 12 percentage points. A similar relationship holds when pooling all cohorts, suggesting that high school education is a key determinant of voting behavior and that the reform could have significantly altered
 electoral outcomes. I provide evidence suggesting that, by increasing an individual’s income, education increases support for right-wing economic policies, and ultimately the Conservative party.
 \end{quotation}
 (Marshall 2015)
+\normalsize
 \end{frame}
 
 \begin{frame}
