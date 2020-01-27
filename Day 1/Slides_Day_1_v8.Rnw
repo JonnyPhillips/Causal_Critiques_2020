@@ -921,10 +921,10 @@ electoral outcomes. I provide evidence suggesting that, by increasing an individ
 \end{frame}
 
 \setbeamercolor{background canvas}{bg=}
-\includepdf[pages={1}]{Paper_summary_template_Putnam.pdf}
+\includepdf[pages={1}]{Paper_summary_template.pdf}
 
 \setbeamercolor{background canvas}{bg=}
-\includepdf[pages={1}]{Paper_summary_template.pdf}
+\includepdf[pages={1}]{Paper_summary_template_Putnam.pdf}
 
 \section{Fundamental Critiques}
 
