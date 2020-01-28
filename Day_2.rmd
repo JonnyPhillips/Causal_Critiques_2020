@@ -36,10 +36,10 @@ Using your dataset from Day 1, what would the answer to our research question be
 
 5. To try and adjust for omitted variable bias, add a control for party (equivalently, a fixed effect for party). How does this affect the results?
 
-6. We probably want a wider range of controls. There are some for each municipality in [this file from IBGE](https://jonnyphillips.github.io/Causal_Critiques_2020/Replication/Mun_data.csv). Download this file, merge it into your existing dataset and add controls for population, IDHM (Human Development Index) and PIB (GDP per capita) to your regression, one at a time. How does this affect your results? 
+6. We probably want a wider range of controls. There are some for each municipality in [this file from IBGE](https://jonnyphillips.github.io/Causal_Critiques_2020/Replication/Mun_data.csv). Download this file, merge it into your existing dataset using the municipality code. Then add controls for population, IDHM (Human Development Index) and PIB (GDP per capita) to your regression, one at a time. How does this affect your results? 
 
 7. What happens if you add all the controls at the same time?
 
 8. A different causal critique is that there may be selection bias. Perhaps incumbent parties who realized they are unpopular decided not to run again? We do not have these parties in our 2004 dataset. To estimate how severe this problem *might* be, calculate what percentage of incumbent parties who ran in 2000 decided NOT to run again in 2004. (You may have to open the original datasets from Day 1 again, depending on how you joined your data). Is this high or low?
 
-9. We don't have any polling data from just before the 2004 elections to understand if weak parties were more likely to not run, but we can use the results of the 2000 election to try and identify 'weaker' and 'stronger' parties. Did parties that ran again in 2004 receive a higher share of the vote in 2000 that those that decided not to run again in 2004?
+9. We don't have any polling data from just before the 2004 elections to understand if weak parties were more likely to not run, but we can use the results of the 2000 election to try and identify 'weaker' and 'stronger' parties. Did incumbent parties that ran again in 2004 receive a higher share of the vote in 2000 that those that decided not to run again in 2004?

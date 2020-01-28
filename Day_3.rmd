@@ -44,4 +44,3 @@ To overcome the causal problems we saw yesterday, Titiunik implements a regressi
 
 6. Another assumption of regression discontinuity is continuity in the distribution of the variable measuring distance to the threshold, in our case winning margin in 2000. Test this assumption by implementing a McCrary density test (DCdensity in the 'rdd' library). What do the results show?
 
-7. If our theory is correct, we should *only* find an effect at the threshold (distance=0). Use the 'RDestimate' function (in the 'rdd' library) to perform **placebo tests** with the threshold set to distance=0.1,-0.1,0.05 and -0.05. What do we learn from this test?
