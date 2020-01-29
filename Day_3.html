@@ -318,7 +318,8 @@ $(document).ready(function () {
 <p>For each of the papers below:</p>
 <ol style="list-style-type: lower-alpha">
 <li>Identify what type of methodology the author is using.</li>
-<li>Write a critique of the methodology, highlighting the assumptions that are made and whether there is any evidence those assumptions are met.</li>
+<li>Lost the assumptions that are required for the methodology to produce valid causal estimates in this context.</li>
+<li>Write a critique of the methodology, highlighting whether there is any evidence that theassumptions are met.</li>
 <li>Suggest any alternative explanations which might also be consistent with the research findings.</li>
 <li>On a scale of 0-10, how much do you believe the findings of the paper?</li>
 </ol>
@@ -338,6 +339,7 @@ $(document).ready(function () {
 <li><p>Interpret the findings of the regression discontinuity. How do they differ from the observational results in Day 2?</p></li>
 <li><p>One assumption of our regression discontinuity is that comparing incumbents that just won and lost elections in 2000 will produce ‘balance’ on potential omitted variables. There are thousands of variables we could check, but let’s assess balance on the size of the municipality by comparing the number of voters in 2000 within 5% of a tied election.</p></li>
 <li><p>How does the balance close to the threshold compare with the balance of winners and losers in the full dataset?</p></li>
+<li><p>Check for balance on other characteristics of the municipalities between treated and control units using <a href="https://jonnyphillips.github.io/Causal_Critiques_2020/Replication/Mun_data.csv">this file from IBGE</a>. The variables are population, IDHM (Human Development Index) and PIB (GDP per capita)</p></li>
 <li><p>Another assumption of regression discontinuity is continuity in the distribution of the variable measuring distance to the threshold, in our case winning margin in 2000. Test this assumption by implementing a McCrary density test (DCdensity in the ‘rdd’ library). What do the results show?</p></li>
 </ol>
 </div>

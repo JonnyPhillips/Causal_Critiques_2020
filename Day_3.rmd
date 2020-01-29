@@ -19,7 +19,8 @@ knitr::opts_chunk$set(echo = TRUE)
 For each of the papers below:
 
 (a) Identify what type of methodology the author is using.
-(b) Write a critique of the methodology, highlighting the assumptions that are made and whether there is any evidence those assumptions are met. 
+(b) Lost the assumptions that are required for the methodology to produce valid causal estimates in this context.
+(b) Write a critique of the methodology, highlighting whether there is any evidence that theassumptions are met. 
 (c) Suggest any alternative explanations which might also be consistent with the research findings.
 (d) On a scale of 0-10, how much do you believe the findings of the paper?
 
@@ -42,5 +43,7 @@ To overcome the causal problems we saw yesterday, Titiunik implements a regressi
 
 5. How does the balance close to the threshold compare with the balance of winners and losers in the full dataset?
 
-6. Another assumption of regression discontinuity is continuity in the distribution of the variable measuring distance to the threshold, in our case winning margin in 2000. Test this assumption by implementing a McCrary density test (DCdensity in the 'rdd' library). What do the results show?
+6. Check for balance on other characteristics of the municipalities between treated and control units using [this file from IBGE](https://jonnyphillips.github.io/Causal_Critiques_2020/Replication/Mun_data.csv). The variables are population, IDHM (Human Development Index) and PIB (GDP per capita)
+
+7. Another assumption of regression discontinuity is continuity in the distribution of the variable measuring distance to the threshold, in our case winning margin in 2000. Test this assumption by implementing a McCrary density test (DCdensity in the 'rdd' library). What do the results show?
 
