@@ -43,7 +43,8 @@ To overcome the causal problems we saw yesterday, Titiunik implements a regressi
 
 5. How does the balance close to the threshold compare with the balance of winners and losers in the full dataset?
 
-6. Check for balance on other characteristics of the municipalities between treated and control units using [this file from IBGE](https://jonnyphillips.github.io/Causal_Critiques_2020/Replication/Mun_data.csv). The variables are population, IDHM (Human Development Index) and PIB (GDP per capita)
+6. Check for balance within 5\% of the threshold on other characteristics of the municipalities between treated and control units using [this file from IBGE](https://jonnyphillips.github.io/Causal_Critiques_2020/Replication/Mun_data.csv). The variables are population, IDHM (Human Development Index) and PIB (GDP per capita)
 
-7. Another assumption of regression discontinuity is continuity in the distribution of the variable measuring distance to the threshold, in our case winning margin in 2000. Test this assumption by implementing a McCrary density test (DCdensity in the 'rdd' library). What do the results show?
-
+7. Another assumption of regression discontinuity is that parties cannot manipulate their 'score' on the running variable. We can assess this by checking for continuity (in contrast to lumping) in the distribution of the running variable either side of the threshold, in our case winning margin in 2000. Test this assumption by implementing a McCrary density test (DCdensity in the 'rdd' library). What do the results show?
+ 
+8. Using any qualitative knowledge you may have, do you think it is possible for parties in this context to precisely control their winning margin by one or two percentage points? 

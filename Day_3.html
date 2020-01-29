@@ -339,8 +339,9 @@ $(document).ready(function () {
 <li><p>Interpret the findings of the regression discontinuity. How do they differ from the observational results in Day 2?</p></li>
 <li><p>One assumption of our regression discontinuity is that comparing incumbents that just won and lost elections in 2000 will produce ‘balance’ on potential omitted variables. There are thousands of variables we could check, but let’s assess balance on the size of the municipality by comparing the number of voters in 2000 within 5% of a tied election.</p></li>
 <li><p>How does the balance close to the threshold compare with the balance of winners and losers in the full dataset?</p></li>
-<li><p>Check for balance on other characteristics of the municipalities between treated and control units using <a href="https://jonnyphillips.github.io/Causal_Critiques_2020/Replication/Mun_data.csv">this file from IBGE</a>. The variables are population, IDHM (Human Development Index) and PIB (GDP per capita)</p></li>
-<li><p>Another assumption of regression discontinuity is continuity in the distribution of the variable measuring distance to the threshold, in our case winning margin in 2000. Test this assumption by implementing a McCrary density test (DCdensity in the ‘rdd’ library). What do the results show?</p></li>
+<li><p>Check for balance within 5% of the threshold on other characteristics of the municipalities between treated and control units using <a href="https://jonnyphillips.github.io/Causal_Critiques_2020/Replication/Mun_data.csv">this file from IBGE</a>. The variables are population, IDHM (Human Development Index) and PIB (GDP per capita)</p></li>
+<li><p>Another assumption of regression discontinuity is that parties cannot manipulate their ‘score’ on the running variable. We can assess this by checking for continuity (in contrast to lumping) in the distribution of the running variable either side of the threshold, in our case winning margin in 2000. Test this assumption by implementing a McCrary density test (DCdensity in the ‘rdd’ library). What do the results show?</p></li>
+<li><p>Using any qualitative knowledge you may have, do you think it is possible for parties in this context to precisely control their winning margin by one or two percentage points?</p></li>
 </ol>
 </div>
 
