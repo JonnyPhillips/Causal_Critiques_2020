@@ -1,8 +1,8 @@
 % Font options: 10pm, 11pt, 12pt
 % Align headings left instead of center: nocenter
 \documentclass[xcolor=x11names,compress]{beamer}\usepackage[]{graphicx}\usepackage[]{color}
-%% maxwidth is the original width if it is less than linewidth
-%% otherwise use linewidth (to make sure the graphics do not exceed the margin)
+% maxwidth is the original width if it is less than linewidth
+% otherwise use linewidth (to make sure the graphics do not exceed the margin)
 \makeatletter
 \def\maxwidth{ %
   \ifdim\Gin@nat@width>\linewidth
@@ -120,14 +120,16 @@
 \item We \textit{learn} more from some studies than from others
 \pause
 \begin{enumerate}
-\item Reliability of the claim
+\item \textbf{Reliability} of the claim
 \pause
-\item Reproducibility of the claim
+\item \textbf{Reproducibility} of the claim
 \pause
-\item Scope (\textit{generalizability}) of the claim
+\item Scope - \textbf{Generalizability} - of the claim
 \end{enumerate}
 \end{itemize}
 \end{frame}
+
+\section{Robustness}
 
 \begin{frame}
 \frametitle{Robustness}
@@ -154,7 +156,7 @@
 \frametitle{Robustness}
 \begin{itemize}
 \item What if our assumptions were wrong?
-\\pause
+\pause
 \item How much would our results change if we used a different methodology?
 \pause
 \begin{itemize}
@@ -205,6 +207,8 @@
 \end{frame}
 
 %altonji et al sensitivity analysis
+\section{Reproducability}
+
 
 \begin{frame}
 \frametitle{Reproducibility}
@@ -276,6 +280,8 @@
 \end{itemize}
 \end{itemize}
 \end{frame}
+
+\section{Generalizability}
 
 \begin{frame}
 \frametitle{Generalizability}
@@ -380,6 +386,8 @@
 \end{itemize}
 \end{frame}
 
+\section{By Method}
+
 \begin{frame}
 \frametitle{Field Experiments}
 \begin{itemize}
@@ -402,6 +410,10 @@
 \pause
 \begin{itemize}
 \item What \textbf{theory} are we testing? We can't accumulate knowledge without theory. The causal mechanisms are still a black box.
+\pause
+\begin{itemize}
+\item ``Focused on \textit{whether} projects work instead of on \textit{why} they work'' (Deaton 2009)
+\end{itemize}
 \pause
 \item Limited \textbf{portability} of findings - context matters for the treatment effects:
 \pause
@@ -564,6 +576,11 @@
 
 \begin{frame}
 \frametitle{Regression Discontinuity}
+\includegraphics[width=0.6\textwidth]{rd_LATE_map.png}
+\end{frame}
+
+\begin{frame}
+\frametitle{Regression Discontinuity}
 \begin{itemize}
 \item Similarly, geographic regression discontinuities only tells us the effect of living on one side of the border \textit{for people who live by the border}
 \pause
@@ -602,6 +619,29 @@
 \end{itemize}
 \end{itemize}
 \end{frame}
+
+\begin{frame}
+\frametitle{Observational Studies}
+\begin{itemize}
+\item Less Internal Validity
+\pause
+\item More External Validity (the treatment effect applies to our full sample)
+\pause
+\item But even in observational studies, different units contribute differently to our estimated causal effect (Aronow and Samii 2006)
+\pause
+\begin{itemize}
+\item The 'effective sample' depends on the weights regression gives to each unit
+\pause
+\item More weight to units whose treatment values are not well explained by covariates
+\end{itemize}
+\end{itemize}
+\end{frame}
+
+\begin{frame}
+\frametitle{Regression Discontinuity}
+\includegraphics[width=\textwidth]{Effective_Sample.png}
+\end{frame}
+
 
 \begin{frame}
 \frametitle{Learning in Political Science}

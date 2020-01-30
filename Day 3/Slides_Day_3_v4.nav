@@ -1,17 +1,17 @@
 \headcommand {\slideentry {0}{0}{1}{1/1}{}{0}}
 \headcommand {\beamer@framepages {1}{1}}
-\headcommand {\sectionentry {1}{Introduction}{2}{Introduction}{0}}
 \headcommand {\beamer@sectionpages {1}{1}}
 \headcommand {\beamer@subsectionpages {1}{1}}
+\headcommand {\sectionentry {1}{Introduction}{2}{Introduction}{0}}
 \headcommand {\slideentry {1}{0}{1}{2/2}{}{0}}
 \headcommand {\beamer@framepages {2}{2}}
 \headcommand {\slideentry {1}{0}{2}{3/3}{}{0}}
 \headcommand {\beamer@framepages {3}{3}}
 \headcommand {\slideentry {1}{0}{3}{4/4}{}{0}}
 \headcommand {\beamer@framepages {4}{4}}
-\headcommand {\sectionentry {2}{Experiments}{5}{Experiments}{0}}
 \headcommand {\beamer@sectionpages {2}{4}}
 \headcommand {\beamer@subsectionpages {2}{4}}
+\headcommand {\sectionentry {2}{Experiments}{5}{Experiments}{0}}
 \headcommand {\slideentry {2}{0}{1}{5/5}{}{0}}
 \headcommand {\beamer@framepages {5}{5}}
 \headcommand {\slideentry {2}{0}{2}{6/7}{}{0}}
@@ -34,9 +34,9 @@
 \headcommand {\beamer@framepages {28}{29}}
 \headcommand {\slideentry {2}{0}{11}{30/32}{}{0}}
 \headcommand {\beamer@framepages {30}{32}}
-\headcommand {\sectionentry {3}{Instrumental Variables}{33}{Instrumental Variables}{0}}
 \headcommand {\beamer@sectionpages {5}{32}}
 \headcommand {\beamer@subsectionpages {5}{32}}
+\headcommand {\sectionentry {3}{Instrumental Variables}{33}{Instrumental Variables}{0}}
 \headcommand {\slideentry {3}{0}{1}{33/35}{}{0}}
 \headcommand {\beamer@framepages {33}{35}}
 \headcommand {\slideentry {3}{0}{2}{36/37}{}{0}}
@@ -51,9 +51,9 @@
 \headcommand {\beamer@framepages {47}{53}}
 \headcommand {\slideentry {3}{0}{7}{54/57}{}{0}}
 \headcommand {\beamer@framepages {54}{57}}
-\headcommand {\sectionentry {4}{Regression Discontinuities}{58}{Regression Discontinuities}{0}}
 \headcommand {\beamer@sectionpages {33}{57}}
 \headcommand {\beamer@subsectionpages {33}{57}}
+\headcommand {\sectionentry {4}{Regression Discontinuities}{58}{Regression Discontinuities}{0}}
 \headcommand {\slideentry {4}{0}{1}{58/60}{}{0}}
 \headcommand {\beamer@framepages {58}{60}}
 \headcommand {\slideentry {4}{0}{2}{61/61}{}{0}}
@@ -90,9 +90,9 @@
 \headcommand {\beamer@framepages {97}{99}}
 \headcommand {\slideentry {4}{0}{18}{100/106}{}{0}}
 \headcommand {\beamer@framepages {100}{106}}
-\headcommand {\sectionentry {5}{Difference-in-Differences}{107}{Difference-in-Differences}{0}}
 \headcommand {\beamer@sectionpages {58}{106}}
 \headcommand {\beamer@subsectionpages {58}{106}}
+\headcommand {\sectionentry {5}{Difference-in-Differences}{107}{Difference-in-Differences}{0}}
 \headcommand {\slideentry {5}{0}{1}{107/108}{}{0}}
 \headcommand {\beamer@framepages {107}{108}}
 \headcommand {\slideentry {5}{0}{2}{109/112}{}{0}}
@@ -129,4 +129,4 @@
 \headcommand {\beamer@subsectionpages {107}{146}}
 \headcommand {\beamer@sectionpages {107}{146}}
 \headcommand {\beamer@documentpages {146}}
-\headcommand {\def \inserttotalframenumber {56}}
+\headcommand {\gdef \inserttotalframenumber {56}}

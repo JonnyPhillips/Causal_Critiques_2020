@@ -19,8 +19,8 @@ knitr::opts_chunk$set(echo = TRUE)
 For each of the papers below:
 
 (a) Identify what type of methodology the author is using.
-(b) Lost the assumptions that are required for the methodology to produce valid causal estimates in this context.
-(b) Write a critique of the methodology, highlighting whether there is any evidence that theassumptions are met. 
+(b) List the assumptions that are required for the methodology to produce valid causal estimates in this context.
+(b) Write a critique of the methodology, highlighting whether there is any evidence that the assumptions are met. 
 (c) Suggest any alternative explanations which might also be consistent with the research findings.
 (d) On a scale of 0-10, how much do you believe the findings of the paper?
 
