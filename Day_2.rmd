@@ -9,6 +9,22 @@ output: html_document
 knitr::opts_chunk$set(echo = TRUE)
 ```
 
+## **Day 2: Fundamental Critiques** 
+
+How can we know that X causes Y? We review the framework of causal inference and why most academic studies *cannot* prove that X causes Y. We practice making the three fundamental causal critiques: omitted variables, reverse causation and selection bias.
+
+*Readings:* 
+
+- Barbara Geddes. How the Cases You Choose Affect the Answers You Get: Selection Bias in Comparative Politics. 1990.
+- King, Gary, Robert Keohane and Sidney Verba, Designing Social Inquiry (Princeton U
+Press), Ch.3
+- Guido W. Imbens and Donald B Rubin. Causal Inference for Statistics, Social, and Biomedical Sciences. 2015. Chapter 1
+- [optional] Przeworksi, Adam (2005), "Is the Science of Comparative Politics Possible?", in Carles Boix and Susan C. Stokes (eds.), Oxford Handbook of Comparative Politics
+
+*Lab Exercise:* We practice making rapid critiques of a series of political science studies.
+
+*Lab Replication Exercise:* We analyze our replication data to explore the limitations of observational research designs and understand the treatment assignment mechanism. 
+
 ## Morning
 
 1. [Lecture Slides](https://jonnyphillips.github.io/Causal_Critiques_2020/Day 2/Slides_Day_2_v7.pdf)

@@ -3,9 +3,6 @@ output_dir: "."
 navbar:
   title: "Making Causal Critiques 2020"
   left:
-    - text: "Overview"
-      icon: fa-home
-      href: index.html
     - text: "Syllabus"
       icon: fa-book-open
       href: Syllabus.html

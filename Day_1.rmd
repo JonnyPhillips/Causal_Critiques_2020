@@ -9,6 +9,23 @@ output: html_document
 knitr::opts_chunk$set(echo = TRUE)
 ```
 
+## **Day 1: Deconstructing an Argument**
+
+We discuss what constitutes a convincing argument, the nature of causation, and how a paper can contribute to learning in the discipline. Then we learn to systematically translate the text of a paper into the core elements of a research argument; the units of analysis, the comparisons, the concepts, the measures, the assumptions, the theory, the models, the evidence and the conclusions. Finally, we consider basic critiques of whether the measures reflect the concepts, whether the model captures the theory, and whether the conclusions follow from the premises and evidence.
+
+*Readings:* 
+
+- King, Gary, Robert Keohane and Sidney Verba, Designing Social Inquiry (Princeton U
+Press), pp. 3-28
+- Adcock, Robert and David Collier (2001), "Measurement Validity: A Shared Standard for Qualitative and Quantitative Research", American Political Science Review, 95:3
+- Gerring, John (2005), "Causation: A Unified Framework for the Social Sciences", Journal of Theoretical Politics, 17:2
+- [optional] Hall, Peter, “Aligning Ontology and Methodology,” in James Mahoney and Dietrich Rueschemeyer, eds. Comparative Historical Analysis in the Social Sciences (Cambridge, 2003), pp. 373-404.
+
+*Lab Exercise:* We practice quickly deconstructing the complex arguments of published papers into simple categories, causal statements and causal diagrams.
+
+*Lab Replication Exercise:* We familiarize ourselves with a published research paper to understand the research question, research design and key features of the data. 
+
+
 ## Morning
 
 1. Introduction to the Course

@@ -9,6 +9,18 @@ output: html_document
 knitr::opts_chunk$set(echo = TRUE)
 ```
 
+## **Day 5: Constructive Critiques**
+We consider various strategies and techniques for overcoming weaknesses in an argument. These include the use of alternative research designs, complementary qualitative data, deriving multiple tests from theory, uncovering ‘hidden’ units, robustness tests, heterogeneity tests and placebo tests. We also talk about how to frame and articulate critiques in ways which motivate rather than discourage.
+
+*Readings:* 
+
+- Kocker, Matthew Adam and Nuno P. Monteiro (2015), What's in a Line? Natural Experiments and the Line of Demarcation in WWII Occupied France
+- Nunn, Nathan (2011), The Slave Trade and the Origins of Mistrust in Africa, American Economic Review 101 (7) (December): 3221–3252
+- Kosec, Katrina (2011), Politics and Preschool The Political Economy of Investment in Pre-Primary Education
+- [optional] Miller, Beth et al (2017), How To Be a Peer Reviewer: A Guide for Recent and Soon-to-be PhDs, Political Science & Politics
+
+*Lab Exercise:* Students present a research paper of their own, or a paper allocated by the teacher if preferred, making the most convincing causal case possible. Other students then present constructive critiques and suggest improvements. 
+
 ## Morning
 
 1. [Lecture Slides](https://jonnyphillips.github.io/Causal_Critiques_2020/Day 5/Slides_Day_5_v1.pdf)

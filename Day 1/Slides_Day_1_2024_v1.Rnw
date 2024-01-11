@@ -1,0 +1,1081 @@
+% Font options: 10pm, 11pt, 12pt
+% Align headings left instead of center: nocenter
+\documentclass[xcolor=x11names,compress]{beamer}
+%\documentclass[xcolor=x11names,compress,handout]{beamer}
+\usepackage[]{graphicx}
+\usepackage[]{color}
+\usepackage{booktabs}
+\usepackage{hyperref}
+\usepackage{tikz}
+\usepackage{multirow}
+\usepackage{dcolumn}
+\usepackage{bigstrut}
+\usepackage{amsmath} 
+\usepackage{xcolor,colortbl}
+\usepackage{amssymb}
+%\newcommand{\done}{\cellcolor{teal}#1}
+
+%% Beamer Layout %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\useoutertheme[subsection=false,shadow]{miniframes}
+\useinnertheme{default}
+\usefonttheme{serif}
+\usepackage{Arev}
+\usepackage{pdfpages}
+\usepackage[normalem]{ulem}
+\usepackage{multicol}
+
+\setbeamerfont{title like}{shape=\scshape}
+\setbeamerfont{frametitle}{shape=\scshape, size=\normalsize}
+
+\definecolor{dkblue}{RGB}{0,0,102}
+
+\setbeamercolor*{lower separation line head}{bg=dkblue} 
+\setbeamercolor*{normal text}{fg=black,bg=white} 
+\setbeamercolor*{alerted text}{fg=red} 
+\setbeamercolor*{example text}{fg=black} 
+\setbeamercolor*{structure}{fg=black} 
+ 
+\setbeamercolor*{palette tertiary}{fg=black,bg=black!10} 
+\setbeamercolor*{palette quaternary}{fg=black,bg=black!10} 
+
+\renewcommand{\(}{\begin{columns}}
+\renewcommand{\)}{\end{columns}}
+\newcommand{\<}[1]{\begin{column}{#1}}
+\renewcommand{\>}{\end{column}}
+
+\setbeamertemplate{navigation symbols}{} 
+\setbeamertemplate{footline}[frame number]
+\setbeamertemplate{caption}{\raggedright\insertcaption\par}
+
+\setbeamersize{text margin left=5pt,text margin right=5pt}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+<<Setup,echo=FALSE,warning=FALSE,message=FALSE>>=
+library(tidyverse)
+library(broom)
+library(MatchIt)
+library(xtable)
+library(DiagrammeR)
+@
+
+
+\title{Interpreting and Critiquing Causal Evidence}
+\subtitle{Day 1 - Deconstructing an Argument}
+\author{Jonathan Phillips}
+
+\begin{document}
+
+\frame{\titlepage}
+
+\begin{frame}
+\frametitle{Objectives}
+\begin{enumerate}
+\item What makes an Explanation \textbf{Convincing}?
+\pause
+\item What \textbf{Evidence} strengthens an Explanation?
+\pause
+\item What Types of \textbf{Causation} are there?
+\pause
+\item How do we reach \textbf{Consistent} Conclusions?
+\pause
+\item How can we \textbf{Deconstruct} a Political Science Paper?
+\pause
+\item What Types of \textbf{Critiques} of an Argument can we make?
+\end{enumerate}
+\end{frame}
+
+\section{Explanation}
+
+\begin{frame}
+\frametitle{Causal Evidence}
+\begin{itemize}
+\item Political science is about \textit{explaining} outcomes
+\pause
+\begin{itemize}
+\item Do parliamentary systems last longer than presidential ones?
+\pause
+\item Does development lead to democracy?
+\pause
+\item Does democracy prevent war?
+\pause
+\item Did voters support President Trump because of jobs lost to immigration?
+\end{itemize}
+\end{itemize}
+
+\end{frame}
+
+\begin{frame}
+\frametitle{Causal Evidence}
+\begin{itemize}
+\item Causal evidence can be used to support or \textbf{critique} explanations
+\end{itemize}
+\pause
+\begin{table}[htbp]
+  \centering
+    \begin{tabular}{|>{\raggedright}p{5cm}|p{5cm}|}
+    \hline
+    Do parliamentary systems last longer than presidential ones? & "No, Parliamentary systems last longer because they are in Europe, not because they are parliamentary" \pause \\
+    \hline
+    Does development lead to democracy? & "No, democracy causes development" \pause \\
+    \hline
+    Does democracy prevent war? & "Of course not, India and Pakistan were democracies and had a war in 1999" \pause \\
+    \hline
+    Did voters support President Trump because of jobs lost to immigration? & "Obviously not, jobs were lost to technological change" \\
+    \hline
+    \end{tabular}%
+  \label{tab:addlabel}%
+\end{table}%
+\end{frame}
+
+\begin{frame}
+\frametitle{Explanation}
+\begin{itemize}
+\item What does it mean to explain something?
+\pause
+\item To give an account of what happens, \textit{and why}
+\begin{itemize}
+\item The 'chain of causation'
+\pause
+\end{itemize}
+\item If $D$ explains $Y$, we are saying that the \textit{absence} of $D$ would have led to a different outcome - a different value of $Y$
+\pause
+\item There exists a 'counterfactual' possibility that did not happen
+\end{itemize}
+\end{frame}
+
+\begin{frame}
+\frametitle{What makes an Explanation Convincing?}
+\begin{itemize}
+\item  Explanation requires:
+\begin{enumerate}
+\item  Theory
+\item  Evidence
+\end{enumerate}
+\end{itemize}
+\end{frame}
+
+\begin{frame}
+\frametitle{What makes an Explanation Convincing?}
+\textbf{Example}
+\begin{itemize}
+\item  You plug your laptop in but it does not charge
+\pause
+\item You wiggle all the wires a few times and it starts to charge
+\pause
+\item So we have a solution, but do we have an \textit{explanation} for why it stopped working?
+\pause
+\item No! We do not know if the laptop, the charger, the adapter or the socket is the problem. We do not have a \textit{theory} to support our solution
+\pause
+\item Next time the laptop fails to charge, our wiggling might not be enough and we won't know how to fix it
+\end{itemize}
+\end{frame}
+
+\begin{frame}
+\frametitle{What makes an Explanation Convincing?}
+\begin{itemize}
+\item How would we make an argument to explain why the laptop did not charge?
+\pause
+\begin{itemize}
+\item We might focus on checking if the socket is working (a \textbf{Hypothesis})
+\pause
+\item This hypothesis is backed by \textbf{theory} - that faulty electricity supply in the socket prevents the laptop from charging
+\pause
+\end{itemize}
+\item What evidence can we gather to test the theory?
+\pause
+\begin{itemize}
+\item Try connecting the laptop to a different socket
+\pause
+\item If the laptop charges, we have support for our theory (\textbf{evidence})
+\pause
+\item If the laptop does not charge, we have less support for our theory (\textbf{evidence})
+\pause
+\item Note we cannot \textit{reject} the theory - it may be that both sockets are broken
+\pause
+\end{itemize}
+\item We can design other tests to check the laptop, charger, adapter etc. 
+\end{itemize}
+\end{frame}
+
+\begin{frame}
+\frametitle{What makes an Explanation Convincing?}
+\begin{itemize}
+\item We might arrive at an explanation like:
+\begin{itemize}
+\item The socket works fine with other laptops
+\item The laptop and charger work fine in newer sockets that don't require an international adapter
+\item The problem is the same using alternative international adapters
+\item Therefore, when an international adapter is used, the electrical connection between the wires is weak and unreliable, preventing the laptop from charging reliably. 
+\end{itemize}
+\end{itemize}
+\end{frame}
+
+\begin{frame}
+\frametitle{What makes a Good Causal Argument? (Gerring 2005)}
+\begin{enumerate}
+\item \textbf{Specificity} - Is the argument clear and internally consistent?
+\pause
+\item \textbf{Parsimony} - Is the argument simple?
+\pause
+\item \textbf{Power} - How much does $Y$ change?
+\pause
+\item \textbf{Precision} - How much uncertainty is there about how much $Y$ changes?
+\pause
+\item \textbf{Scope} - What is the breadth of conditions under which the effect occurs
+\pause
+\item \textbf{Differentiation} - Is the $D$ sufficiently different from the $Y$
+\pause
+\item \textbf{Normality} - Is $D$ a common event?
+\pause
+\item \textbf{Mechanism} - Do we understand what connects $D$ to $Y$?
+\pause
+\item \textbf{Consistency} - Is the argument consistent with our other knowledge about the rest of the world?
+\pause
+\item \textbf{Policy-relevance} - Can the argument help us design better policy?
+\end{enumerate}
+\end{frame}
+
+\section{Evidence}
+
+\begin{frame}
+\frametitle{Learning from Evidence}
+\begin{itemize}
+\item Theory on its own is not enough
+\begin{itemize}
+\item There are always many possible reasons for any single outcome
+\pause
+\end{itemize}
+\item Evidence on its own is not enough
+\begin{itemize}
+\item The same evidence can be consistent with many possible mechanisms
+\item We cannot predict future behaviour, or adapt it to other contexts, without understanding the reasoning
+\item We need a chain of 'local causality' (Elster 1983)
+\pause
+\end{itemize}
+\item A \textbf{Convincing Explanation} requires evidence that supports a \textit{specific} theory
+\begin{itemize}
+\item And \textit{rejects other theories}
+\end{itemize}
+\end{itemize}
+\end{frame}
+
+\begin{frame}
+\frametitle{Learning from Evidence}
+\begin{itemize}
+\item Creating an argument requires subjecting different theories to \textbf{tests}
+\pause
+\item Some tests are more informative than others
+\pause
+\begin{itemize}
+\item If your friend plugs their own laptop and charger into the socket and it charges fine, we can rule out the socket being a problem
+\pause
+\item But we still do not know if your own laptop or charger are the problem
+\pause
+\end{itemize}
+\item We need to design tests (produce evidence) that \textit{distinguish between} specific theories
+\end{itemize}
+\end{frame}
+
+\begin{frame}
+\frametitle{Learning from Evidence}
+\begin{itemize}
+\item \textbf{Hypothesis: The charger is broken}
+\pause
+\item Types of Tests (Collier 2011):
+\pause
+\begin{enumerate}
+\item \textbf{Straw-in-the-Wind test}: Can raise or lower support for a hypothesis, but not confirm or reject
+\pause
+\begin{itemize}
+\item We obtain a receipt for the charger that shows it is high quality and only two weeks old
+\end{itemize}
+\pause
+\item \textbf{Hoop Test}: Can reject a hypothesis but not confirm it
+\pause
+\begin{itemize}
+\item We test a new laptop with the charger
+\end{itemize}
+\pause
+\item \textbf{Smoking Gun Test}: Can confirm a hypothesis but not reject
+\pause
+\begin{itemize}
+\item If we test the laptop with an alternative charger
+\end{itemize}
+\pause
+\item \textbf{Doubly Decisive Test}: Can confirm a hypothesis and reject all other hypotheses
+\pause
+\begin{itemize}
+\item If we test the charger with an entirely new socket and laptop that we have previously checked work, \textit{and} similarly for the socket and laptop
+\end{itemize}
+\end{enumerate}
+\end{itemize}
+\end{frame}
+
+\begin{frame}
+\frametitle{Learning from Evidence}
+\begin{itemize}
+\item What caused the reduction in price variation in Kerala's fishing industry?
+\pause
+\item \textbf{Hypothesis:} The introduction of mobile phone service
+\pause
+\item \textbf{Theory:} Mobile phones allowed people to quickly share the price of fish in different villages, so fishermen got the best prices more consistently
+\begin{itemize}
+\item Jensen et al (2007): Compare price dispersion with the timing of the introduction of new mobile phone masts
+\item A 'smoking gun' test at least
+\end{itemize}
+\end{itemize}
+\end{frame}
+
+\setbeamercolor{background canvas}{bg=}
+\includepdf[pages={1}]{Phone_Kerala.pdf}
+
+\setbeamercolor{background canvas}{bg=}
+\includepdf[pages={1}]{Phone_Prices.pdf}
+
+\begin{frame}
+\frametitle{What makes Good Causal Evidence? (Gerring 2005)}
+\begin{enumerate}
+\item \textbf{Sample Size} - How many cases are we learning from?
+\pause
+\item \textbf{Variation} - Do the causes and outcomes really vary in the sample?
+\pause
+\item \textbf{Representative} - Does the sample reflect the population?
+\pause
+\item \textbf{Independence} - Are the observations clustered (and therefore less useful)?
+\pause
+\item \textbf{Comparability} - Are the units of the same type?
+\pause
+\item \textbf{Transparency} - Do the data tell us about the mechanism connecting $D$ and $Y$?
+\pause
+\item \textbf{Replicability} - Can we take the same (or similar) data and reach the same conclusion?
+\end{enumerate}
+\end{frame}
+
+\begin{frame}
+\frametitle{Learning from Evidence}
+\begin{itemize}
+\item Gathering evidence in political science is particularly hard:
+\pause
+\begin{enumerate}
+\item Humans are complex and unpredictable, unlike the natural sciences
+\pause
+\item Societies are even more complex interactions of millions of humans
+\pause
+\item Everyone has an opinion, including researchers
+\pause
+\item Ethical constraints on the data we can gather
+\pause
+\item Political explanations in one place may not work in another
+\end{enumerate}
+\end{itemize}
+\end{frame}
+
+\section{Causation}
+
+\begin{frame}
+\frametitle{Types of Causation}
+\begin{itemize}
+\item When my laptop was not charging, I tried an alternative charger and it worked. But I came back later to use the same charger and it did not work! 
+\pause
+\item The charger only worked about half of the time
+\end{itemize}
+\end{frame}
+
+\begin{frame}
+\frametitle{Types of Causation}
+\begin{itemize}
+\item Given the complexity of the real world, there are few causes which are \textbf{deterministic}
+\pause
+\item Most causes operate only if certain other hard-to-measure conditions are in place
+\pause
+\item That means we need to treat causation as \textbf{probabilistic}
+\pause
+\item For example, a left-wing party in government may not guarantee the passage of social welfare legislation
+\begin{itemize}
+\item But it can make it more likely
+\end{itemize}
+\end{itemize}
+\end{frame}
+
+\begin{frame}
+\frametitle{Types of Causation}
+\begin{multicols}{2}
+\textcolor{dkblue}{Deterministic Explanation}
+\pause
+\begin{itemize}
+\item \textbf{Sufficient conditions:} Every time $D$ happens, $Y$ happens
+\pause
+\item \textbf{Necessary conditions:} $Y$ does not happen if $D$ does not happen ('\textit{but for}')
+\end{itemize}
+\pause
+\columnbreak
+\textcolor{dkblue}{Probabilistic Explanation}
+\pause
+\begin{itemize}
+\item If $D$ happens, the \textbf{probability} of $Y$ increases
+\pause
+\item Treatment effects are a distribution, not a single value
+\end{itemize}
+\end{multicols}
+\end{frame}
+
+
+\begin{frame}
+\frametitle{Types of Causation}
+\begin{enumerate}
+\item \textbf{Deterministic Causation} - If $D$ then $Y$
+\pause
+\item \textbf{Probabilistic Causation} - If $D$ then the probability of $Y$ increases
+\pause
+\item \textbf{Conjuctural Causation} - If $D1$ and $D2$ then $Y$
+\pause
+\item \textbf{Equifinality Causation} - If $D1$ or $D2$ then $Y$
+\pause
+\item \textbf{Non-Linear Causation} - If $D>1000$ then $Y$
+\pause
+\item \textbf{Path-Dependent Causation} - If $D1$ in $t=1$ and $D2$ in $t=5$ then $Y$ in $t=5$
+\pause
+\item \textbf{Granger Causation} - If $D$ causes $Y$, $D$ must occur before $Y$ in time 
+\end{enumerate}
+\end{frame}
+
+\begin{frame}
+\frametitle{Causal Diagrams}
+\begin{itemize}
+\item Using Causal Diagrams to clarify arguments
+\pause
+\item Technically, "Directed Acyclical Graphs" (DAGs)
+\pause
+\begin{itemize}
+\item Write down all the variables used in an argument
+\pause
+\item Connecting them with arrows to represent the author's \textbf{causal} argument
+\pause
+\item And also the \textit{threats} to the author's argument
+\begin{itemize}
+\item Even if they can't be measured
+\end{itemize}
+\end{itemize}
+\end{itemize}
+\end{frame}
+
+\begin{frame}
+\frametitle{Causal Diagrams}
+<<echo=F, fig.align='center', fig.width="200%">>=
+graph <-
+  create_graph() %>%
+  add_global_graph_attrs("graph", "rankdir", "LR") %>%
+  add_node(label="Civil \n Society", node_aes=node_aes(fixedsize=F, fontcolor="black")) %>% 
+  add_node(label="Quality of \n Government", node_aes=node_aes(fixedsize=F, fontcolor="black")) %>%  add_edge(from="Civil \n Society",to="Quality of \n Government", edge_aes=edge_aes(color="black"))
+
+render_graph(graph)
+@
+\end{frame}
+
+\begin{frame}
+\frametitle{Causal Diagrams}
+<<echo=F, fig.align='center'>>=
+graph <-
+  create_graph() %>%
+  add_global_graph_attrs("graph", "rankdir", "LR") %>%
+  add_node(label="Civil \n Society", node_aes=node_aes(fixedsize=F, fontcolor="black")) %>% add_node(label="Trust", node_aes=node_aes(fixedsize=F, fill="MediumSeaGreen", fontcolor="black"))  %>% 
+  add_node(label="Quality of \n Government", node_aes=node_aes(fixedsize=F, fontcolor="black")) %>% add_edge(from="Civil \n Society",to="Trust", edge_aes=edge_aes(color="black")) %>% add_edge(from="Trust",to="Quality of \n Government", edge_aes=edge_aes(color="black"))
+render_graph(graph, width=2400, height=1400)
+@
+\end{frame}
+
+
+\begin{frame}
+\frametitle{Causal Diagrams}
+<<echo=F, fig.align='center', fig.width=24>>=
+graph <-
+  create_graph() %>%
+  add_global_graph_attrs("graph", "rankdir", "LR") %>%
+  add_node(label="Civil \n Society", node_aes=node_aes(fixedsize=F, fontcolor="black")) %>% add_node(label="Quality of \n Government",node_aes=node_aes(fixedsize=F, fontcolor="black")) %>% add_edge(from="Civil \n Society",to="Quality of \n Government", edge_aes=edge_aes(color="black")) %>% add_node(label="Wealth",node_aes=node_aes(fixedsize=F, fill="Coral", fontcolor="black")) %>% add_edge(from="Wealth", to="Civil \n Society", edge_aes=edge_aes(color="black")) %>% add_edge(from="Wealth", to="Quality of \n Government", edge_aes=edge_aes(color="black"))
+render_graph(graph)
+
+@
+\end{frame}
+
+\begin{frame}
+\frametitle{Causal Diagrams}
+\begin{itemize}
+\item We can always break causal connections into smaller chunks
+\pause
+\item At some point we rely on theory to provide the causal power:
+\begin{itemize}
+\item Physical processes (gravity, momentum)
+\item Behavioural theory (incentives, psychology)
+\end{itemize}
+\end{itemize}
+\end{frame}
+
+\begin{frame}
+\frametitle{Types of Explanation}
+\begin{itemize}
+\item Two perspectives on explanation:
+\end{itemize}
+\pause
+\begin{table}[htbp]
+  \centering
+    \begin{tabular}{|>{\raggedright}p{5cm}|p{5cm}|}
+    \toprule
+    \textbf{Causes of Effects} & \textbf{Effects of Causes} \\
+    \midrule
+    What caused Y? & Does D cause Y? \\
+    \midrule
+    Why does Switzerland have so many Nobel laureates? & Does chocolate cause more Nobel laureates? \\
+    \midrule
+    Backward-looking & Forward-looking \\
+    \bottomrule
+    \end{tabular}%
+  \label{tab:addlabel}%
+\end{table}%
+\end{frame}
+
+\begin{frame}
+\frametitle{Types of Explanation}
+\begin{itemize}
+\item Two perspectives on explanation:
+\end{itemize}
+\begin{multicols}{2}
+<<explanation1,echo=FALSE,warning=FALSE,message=FALSE,fig.keep='high',fig.height=4, fig.width=6>>=
+nodes <- tibble(id=1:5,
+                label=c("Nobel \nLaureates","Chocolate","Education","Wealth","Geography"),
+                      color="aqua")
+
+edges <- tibble(from=c(2,3,4,5,5,5),
+                to=c(1,1,1,2,3,4))
+
+create_graph(nodes,edges, attr_theme = NULL) %>% add_global_graph_attrs('rankdir', 'LR', 'graph') %>% 
+    set_edge_attrs(edge_attr=color, values="black") %>% 
+  render_graph()
+@
+\pause
+\begin{itemize}
+\item Identifying the source of \textbf{ALL} of the variation in Nobel Laureates
+\pause
+\item An infinite task!
+\end{itemize}
+\pause
+\columnbreak
+<<explanation2,echo=FALSE,warning=FALSE,message=FALSE,fig.keep='high',fig.height=2.5, fig.width=4>>=
+nodes <- tibble(id=1:2,
+                label=c("Chocolate","Nobel \nLaureates"),
+                      color="aqua")
+
+edges <- tibble(from=c(1),
+                to=c(2))
+
+create_graph(nodes,edges, attr_theme = NULL) %>% add_global_graph_attrs('rankdir', 'LR', 'graph') %>% 
+  set_edge_attrs(edge_attr=color, values="black") %>% 
+  render_graph()
+@
+\pause
+\begin{itemize}
+\item Identifying how much \textbf{ONE} variable causes variation in Nobel Laureates
+\pause
+\item This we can do!
+\end{itemize}
+\end{multicols}
+\end{frame}
+
+\begin{frame}
+\frametitle{Types of Explanation}
+\begin{itemize}
+\item Two perspectives on explanation:
+\end{itemize}
+\begin{multicols}{2}
+<<explanation1b,echo=FALSE,warning=FALSE,message=FALSE,fig.keep='high',fig.height=4, fig.width=6>>=
+nodes <- tibble(id=1:5,
+                label=c("Nobel \nLaureates","Chocolate","Education","Wealth","Geography"),
+                      color="aqua")
+
+edges <- tibble(from=c(2,3,4,5,5,5),
+                to=c(1,1,1,2,3,4))
+
+create_graph(nodes,edges, attr_theme = NULL) %>% add_global_graph_attrs('rankdir', 'LR', 'graph') %>% 
+    set_edge_attrs(edge_attr=color, values="black") %>% 
+  render_graph()
+@
+\begin{itemize}
+\item Identifying the source of \textbf{ALL} of the variation in Nobel Laureates
+\item An infinite task!
+\end{itemize}
+\columnbreak
+<<explanation2b,echo=FALSE,warning=FALSE,message=FALSE,fig.keep='high',fig.height=2.5, fig.width=4>>=
+nodes <- tibble(id=1:2,
+                label=c("Chocolate","Nobel \nLaureates"),
+                      color="aqua")
+
+edges <- tibble(from=c(1),
+                to=c(2))
+
+create_graph(nodes,edges, attr_theme = NULL) %>% add_global_graph_attrs('rankdir', 'LR', 'graph') %>% 
+  set_edge_attrs(edge_attr=color, values="black") %>% 
+  set_edge_attrs(edge_attr=penwidth, values=10) %>% 
+  render_graph()
+@
+\begin{itemize}
+\item Identifying how much \textbf{ONE} variable causes variation in Nobel Laureates
+\item This we can do!
+\end{itemize}
+\end{multicols}
+\end{frame}
+
+\begin{frame}
+\frametitle{Types of Explanation}
+\begin{itemize}
+\item Two perspectives on explanation:
+\end{itemize}
+\begin{multicols}{2}
+<<explanation1c,echo=FALSE,warning=FALSE,message=FALSE,fig.keep='high',fig.height=4, fig.width=6>>=
+nodes <- tibble(id=1:5,
+                label=c("Nobel \nLaureates","Chocolate","Education","Wealth","Geography"),
+                      color="aqua")
+
+edges <- tibble(from=c(2,3,4,5,5,5),
+                to=c(1,1,1,2,3,4))
+
+create_graph(nodes,edges, attr_theme = NULL) %>% add_global_graph_attrs('rankdir', 'LR', 'graph') %>% 
+    set_edge_attrs(edge_attr=color, values="black") %>% 
+  render_graph()
+@
+\begin{itemize}
+\item Identifying the source of \textbf{ALL} of the variation in Nobel Laureates
+\item An infinite task!
+\end{itemize}
+\columnbreak
+<<explanation2c,echo=FALSE,warning=FALSE,message=FALSE,fig.keep='high',fig.height=2.5, fig.width=4>>=
+nodes <- tibble(id=1:2,
+                label=c("Chocolate","Nobel \nLaureates"),
+                      color="aqua")
+
+edges <- tibble(from=c(1),
+                to=c(2))
+
+create_graph(nodes,edges, attr_theme = NULL) %>% add_global_graph_attrs('rankdir', 'LR', 'graph') %>% 
+  set_edge_attrs(edge_attr=color, values="black") %>% 
+  set_edge_attrs(edge_attr=penwidth, values=0) %>% 
+  render_graph()
+@
+\begin{itemize}
+\item Identifying how much \textbf{ONE} variable causes variation in Nobel Laureates
+\item This we can do!
+\end{itemize}
+\end{multicols}
+\end{frame}
+
+\section{Consistent Conclusions}
+
+\begin{frame}
+\frametitle{Consistent Conclusions}
+\begin{itemize}
+\item Explanations need to be \textbf{logically consistent}
+\pause
+\begin{itemize}
+\item How we combine evidence to reach conclusions must avoid 'cheating'
+\end{itemize}
+\pause
+\item Once we establish some premises (accepted theory or evidence), the conclusion should follow \textit{automatically}
+\begin{itemize}
+\item All policemen wear hats. This person is a policeman. Therefore this person is wearing a hat.
+\pause
+\item If it's true that all policemen wear hats and this person is a policeman, then it \textit{must} be true - by logic - that this person is wearing a hat
+\pause
+\item Formally: $\forall p:  h, p \Rightarrow h$
+\end{itemize}
+\end{itemize}
+\end{frame}
+
+\begin{frame}
+\frametitle{Consistent Conclusions}
+\begin{itemize}
+\item Many explanations are \textbf{not} logically consistent:
+\pause
+\begin{itemize}
+\item All policemen wear hats. This person is wearing a hat. Therefore this person is a policeman.
+\pause
+\item $\text{\sout{\ensuremath{\forall p:  h, h \Rightarrow p}}}$
+\item This is logically inconsistent
+\end{itemize}
+\end{itemize}
+\end{frame}
+
+\begin{frame}
+\frametitle{Consistent Conclusions}
+\begin{itemize}
+\item Many explanations are \textbf{not} logically consistent:
+\pause
+\begin{itemize}
+\item All chargers are tested to make sure they are working before they are sold. So if I buy a new charger, my laptop will start charging again.
+\pause
+\item My laptop has always charged fine on Thursdays. So if I wait until Thursday, it will work again. 
+\end{itemize}
+\end{itemize}
+\end{frame}
+
+\begin{frame}
+\frametitle{Consistent Conclusions}
+\begin{itemize}
+\item Logical Fallacies
+\pause
+\begin{enumerate}
+\item \textbf{False syllogism}: Conclusions do not follow from premises
+\begin{itemize}
+\item Eg. Some cats are black. Some black things are televisions. Therefore some cats are televisions.
+\pause
+\end{itemize}
+\item \textbf{Denying the antecedent}: Negating the premise does not negate the conclusion
+\begin{itemize}
+\item All policemen wear hats. This person is not a policeman. Therefore this person is not wearing a hat.
+\item There are alternative explanations!
+\end{itemize}
+\item \textbf{False dichotomy}: Restricting the possible options to only two
+\begin{itemize}
+\item Eg. "Either we attack them first or they attack us first"
+\pause
+\end{itemize}
+\item \textbf{Circular reasoning}: The conclusions just restate the premises
+\begin{itemize}
+\item Eg. "Abortion should be legal because women have the right to an abortion."
+\end{itemize}
+\end{enumerate}
+\end{itemize}
+\end{frame}
+
+\begin{frame}
+\frametitle{Consistent Conclusions}
+\begin{itemize}
+\item Logical Fallacies
+\pause
+\begin{enumerate}
+\setcounter{enumi}{3}
+\item \textbf{Over-generalization}: Extending the conclusions beyond the scope of the evidence
+\begin{itemize}
+\item Eg. "All of my friends support party X so of course they will win the election"
+\pause
+\end{itemize}
+\item \textbf{Post hoc Fallacy}: Just because something happened earlier does not mean it was the cause
+\begin{itemize}
+\item Eg. "You moved into this apartment yesterday and now the cooker is broken. It must be your fault."
+\pause
+\end{itemize}
+\item \textbf{Appeal to Authority}: Assuming the author is right because they are senior
+\begin{itemize}
+\item Eg. Assuming that political science professors know what they are doing!
+\end{itemize}
+\end{enumerate}
+\end{itemize}
+\end{frame}
+
+\begin{frame}
+\frametitle{Consistent Conclusions}
+\begin{itemize}
+\item Logical Fallacies
+\begin{enumerate}
+\setcounter{enumi}{6}
+\item \textbf{Fallacy of Composition}: Extending what is true of part to being true of the whole
+\pause
+\begin{itemize}
+\item Eg. "If someone stands up at a football match, they can see better. Therefore, if everyone stands up, they can all see better."
+\end{itemize}
+\item \textbf{Appeal to ignorance}: Absence of evidence is not evidence of absence
+\begin{itemize}
+\item Eg. "There is no evidence that social distancing can reduce the transmission of coronavirus, therefore is does not work"
+\end{itemize}
+\end{enumerate}
+\end{itemize}
+\end{frame}
+
+\begin{frame}
+\frametitle{Consistent Conclusions}
+\begin{itemize}
+\item Some political science arguments are logically inconsistent:
+\begin{itemize}
+\item Voters are rational - they choose the politician that is best for them. Therefore we always elect the best politicians.
+\end{itemize}
+\pause
+\item Of course the other possibility is that the \textbf{premise is false}
+\begin{itemize}
+\item That the explanatory variable/assumption is not present in a specific case
+\item But that's a different critique
+\end{itemize}
+\end{itemize}
+\end{frame}
+
+\section{Deconstructing Papers}
+
+\begin{frame}
+\frametitle{Deconstructing a Political Science Paper}
+\begin{itemize}
+\item Before we can critique an argument we have to understand its content
+\pause
+\begin{itemize}
+\item What \textbf{concepts} it uses
+\pause
+\item How those concepts are \textbf{measured}
+\pause
+\item What \textbf{theory} connects the concepts
+\pause
+\item Where did the \textbf{evidence} (data) come from?
+\pause
+\item What \textbf{methodology} produced the evidence?
+\pause
+\item What is the \textbf{scope} of the argument's application?
+\end{itemize}
+\item Critiques depend on understanding the building blocks of an argument
+\end{itemize}
+\end{frame}
+
+\begin{frame}
+\frametitle{Deconstructing a Political Science Paper}
+\scriptsize
+\begin{quotation}
+High school education is central to adolescent socialization and has important downstream consequences for adult life. However, scholars examining schooling’s political effects have struggled to reconcile education’s correlation with both more liberal social attitudes and greater income. To disentangle this relationship, I exploit a major school leaving age reform in Great Britain that caused almost half the population to
+remain at high school for at least an additional year. Using a fuzzy regression discontinuity design, I find that each additional year of late high school increases the probability of voting Conservative in later life by 12 percentage points. A similar relationship holds when pooling all cohorts, suggesting that high school education is a key determinant of voting behavior and that the reform could have significantly altered
+electoral outcomes. I provide evidence suggesting that, by increasing an individual’s income, education increases support for right-wing economic policies, and ultimately the Conservative party.
+\end{quotation}
+(Marshall 2015)
+\normalsize
+\end{frame}
+
+\begin{frame}
+\frametitle{Deconstructing a Political Science Paper}
+\scriptsize
+\begin{quotation}
+\textbf{High school education} is central to \textbf{adolescent socialization} and has important downstream consequences for adult life. However, scholars examining schooling’s political effects have struggled to reconcile education’s correlation with both more \textbf{liberal social attitudes} and greater \textbf{income}. To disentangle this relationship, I exploit a major school leaving age reform in \textbf{Great Britain} that caused almost half the population to
+remain at high school for at least an additional year. Using a \textbf{fuzzy regression discontinuity design}, I find that \textbf{each additional year of late high school increases the probability of voting Conservative in later life by 12 percentage points}. A similar relationship holds when pooling all cohorts, suggesting that high school education is a key determinant of voting behavior and that the reform could have significantly altered
+electoral outcomes. I provide evidence suggesting that, \textbf{by increasing an individual’s income, education increases support for right-wing economic policies, and ultimately the Conservative party}.
+\end{quotation}
+(Marshall 2015)
+\normalsize
+\end{frame}
+
+\begin{frame}
+\frametitle{Deconstructing a Political Science Paper}
+\begin{itemize}
+\item How to read a political science paper:
+\pause
+\begin{itemize}
+\item Actively, intentionally
+\pause
+\item Not like a Harry Potter book!
+\pause
+\item Read the abstract, conclusion, charts many times
+\pause
+\item Look for keywords: "We can conclude that...", "Our argument is that..."
+\pause
+\item Make notes \textit{only} of what you have learnt
+\pause
+\item Summarize the paper in your own words
+\end{itemize}
+\end{itemize}
+\end{frame}
+
+\begin{frame}
+\frametitle{Deconstructing a Political Science Paper}
+\begin{itemize}
+\item Elements of a political science paper:
+\pause
+\begin{itemize}
+\item \textbf{Research question} - the authors are engaging with a specific literature/puzzle
+\pause
+\item \textbf{Answer/Causal argument} - "We argue that D increases Y"
+\pause
+\item \textbf{Scope of the argument} - Does the argument apply only to democracies, Asian countries, since World War II, only to women?
+\end{itemize}
+\end{itemize}
+\end{frame}
+
+\begin{frame}
+\frametitle{Deconstructing a Political Science Paper}
+\begin{itemize}
+\item Elements of a political science paper:
+\begin{itemize}
+\item \textbf{Concepts/Variables} - What political factors do the authors think matter?
+\pause
+\item \textbf{Measures} - What factors do the authors actually measure?
+\pause
+\item \textbf{Units of Analysis} - At what level are these measures taken; individuals, countries, city-years?
+\pause
+\item \textbf{Role of Variables} - Which is the outcome variable and which the explanatory? What controls are used?
+\end{itemize}
+\end{itemize}
+\end{frame}
+
+
+\begin{frame}
+\frametitle{Deconstructing a Political Science Paper}
+\begin{itemize}
+\item Elements of a political science paper:
+\begin{itemize}
+\item \textbf{Theory} - What social, economic or psychological process links the explanatory and outcome variables? 
+\pause
+\item \textbf{Methodology} - What strategy do the authors use to gather evidence to evaluate the theory?
+\pause
+\item \textbf{Evidence} - What evidence does the methodology produce?
+\end{itemize}
+\end{itemize}
+\end{frame}
+
+\setbeamercolor{background canvas}{bg=}
+\includepdf[pages={1}]{Paper_summary_template.pdf}
+
+\setbeamercolor{background canvas}{bg=}
+\includepdf[pages={1}]{Paper_summary_template_Putnam.pdf}
+
+\section{Fundamental Critiques}
+
+\begin{frame}
+\frametitle{Fundamental Critiques}
+\begin{itemize}
+\item Every component of the argument is subject to causal critique
+\pause
+\item \textbf{Conceptual Validity}
+\pause
+\item Competitive authoritarianism vs. Illiberal Democracy vs. Electoral dictatorship
+\pause
+\begin{itemize}
+\item Concepts must abstract from individual cases
+\pause
+\item But differentiate from other concepts to be precise
+\pause
+\item Avoid conceptual stetching! Eg. better to use "regimes that hold elections" instead of 'democracies'
+\pause
+\item We can move "up and down the ladder of generality" (Sartori)
+\pause
+\end{itemize}
+\end{itemize}
+\end{frame}
+
+\begin{frame}
+\frametitle{Fundamental Critiques}
+\begin{itemize}
+\item \textbf{Measurement Validity}
+\pause
+\item When scores "meaningfully capture the ideas contained in the corresponding concept"
+\pause
+\begin{itemize}
+\item Does the scale make sense? 
+\pause
+\item Is democracy binary or continuous? Positive or negative?
+\pause
+\item Are the cases (units) scored correctly? How reliable is the scoring?
+\end{itemize}
+\end{itemize}
+\end{frame}
+
+\setbeamercolor{background canvas}{bg=}
+\includepdf[pages={1}]{Polity.pdf}
+
+\setbeamercolor{background canvas}{bg=}
+\includegraphics[width=\textwidth]{Venezuala_binary.png}
+
+
+\begin{frame}
+\frametitle{Fundamental Critiques}
+\begin{itemize}
+\item \textbf{Unit of Analysis}
+\pause
+\item Does the unit of analysis match the theory?
+\pause
+\item Would the argument work at an alternative level of analysis?
+\pause
+\item Eg. Should we use annual data to assess the effect of Trump's tweets on the stock market?
+\end{itemize}
+\end{frame}
+
+\begin{frame}
+\frametitle{Fundamental Critiques}
+\begin{itemize}
+\item \textbf{Theory}
+\pause
+\item Is the theory internally consistent?
+\pause
+\item Is the theory falsifiable?
+\pause
+\item Is the theory portable?
+\end{itemize}
+\end{frame}
+
+\begin{frame}
+\frametitle{Fundamental Critiques}
+\begin{itemize}
+\item \textbf{Evidence}
+\pause
+\item Where did the dataset come from?
+\pause
+\begin{itemize}
+\item Sampling strategy
+\pause
+\item Questionnaire and survey protocol
+\pause
+\item Data entry, cleaning
+\pause
+\item Statistics/statistical model chosen
+\pause
+\end{itemize}
+\item What was the "Data Generating Process"?
+\item How does this data help us answer the question?
+\end{itemize}
+\end{frame}
+
+\begin{frame}
+\frametitle{Fundamental Critiques}
+\begin{itemize}
+\item \textbf{Methodologies/Research Designs} for gathering evidence:
+\pause
+\item Observational Studies:
+\begin{itemize}
+\item Comparative Cases
+\pause
+\item Regression with controls
+\pause
+\item Matching
+\end{itemize}
+\end{itemize}
+\begin{itemize}
+\item Methodologies for gathering evidence:
+\pause
+\item Experimental Studies:
+\pause
+\begin{itemize}
+\item Field Experiment
+\pause
+\item Lab/Survey Experiment
+\end{itemize}
+\end{itemize}
+\end{frame}
+
+\begin{frame}
+\frametitle{Methodology}
+\begin{itemize}
+\item Methodologies for gathering evidence:
+\pause
+\item Quasi-Experimental Studies:
+\pause
+\begin{itemize}
+\item Natural Experiment
+\pause
+\item Instrumental Variable
+\pause
+\item Regression Discontinuity
+\pause
+\item Difference-in-Differences
+\end{itemize}
+\end{itemize}
+\begin{itemize}
+\item Small-N Studies:
+\pause
+\begin{itemize}
+\item Comparative cases
+\pause
+\item Process Tracing
+\end{itemize}
+\end{itemize}
+\end{frame}
+
+
+\end{document}

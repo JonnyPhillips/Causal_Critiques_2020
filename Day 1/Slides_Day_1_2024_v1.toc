@@ -1,0 +1,6 @@
+\beamer@sectionintoc {1}{Explanation}{8}{0}{1}
+\beamer@sectionintoc {2}{Evidence}{48}{0}{2}
+\beamer@sectionintoc {3}{Causation}{84}{0}{3}
+\beamer@sectionintoc {4}{Consistent Conclusions}{123}{0}{4}
+\beamer@sectionintoc {5}{Deconstructing Papers}{146}{0}{5}
+\beamer@sectionintoc {6}{Fundamental Critiques}{175}{0}{6}

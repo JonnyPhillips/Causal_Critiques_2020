@@ -1,60 +1,54 @@
 <!DOCTYPE html>
 
-<html xmlns="http://www.w3.org/1999/xhtml">
+<html>
 
 <head>
 
 <meta charset="utf-8" />
-<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 <meta name="generator" content="pandoc" />
 <meta http-equiv="X-UA-Compatible" content="IE=EDGE" />
 
 
 <meta name="author" content="Jonathan Phillips" />
 
-<meta name="date" content="2020-01-24" />
+<meta name="date" content="2024-01-02" />
 
-<title>Making Causal Critiques</title>
+<title>Interpreting and Critiquing Causal Evidence</title>
 
-<script src="site_libs/jquery-1.11.3/jquery.min.js"></script>
+<script src="site_libs/header-attrs-2.25/header-attrs.js"></script>
+<script src="site_libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <link href="site_libs/bootstrap-3.3.5/css/paper.min.css" rel="stylesheet" />
 <script src="site_libs/bootstrap-3.3.5/js/bootstrap.min.js"></script>
 <script src="site_libs/bootstrap-3.3.5/shim/html5shiv.min.js"></script>
 <script src="site_libs/bootstrap-3.3.5/shim/respond.min.js"></script>
+<style>h1 {font-size: 34px;}
+       h1.title {font-size: 38px;}
+       h2 {font-size: 30px;}
+       h3 {font-size: 24px;}
+       h4 {font-size: 18px;}
+       h5 {font-size: 16px;}
+       h6 {font-size: 12px;}
+       code {color: inherit; background-color: rgba(0, 0, 0, 0.04);}
+       pre:not([class]) { background-color: white }</style>
 <script src="site_libs/navigation-1.1/tabsets.js"></script>
-<link href="site_libs/font-awesome-5.1.0/css/all.css" rel="stylesheet" />
-<link href="site_libs/font-awesome-5.1.0/css/v4-shims.css" rel="stylesheet" />
-
-
-
+<link href="site_libs/font-awesome-6.4.2/css/all.min.css" rel="stylesheet" />
+<link href="site_libs/font-awesome-6.4.2/css/v4-shims.min.css" rel="stylesheet" />
 
 <style type="text/css">
-h1 {
-  font-size: 34px;
-}
-h1.title {
-  font-size: 38px;
-}
-h2 {
-  font-size: 30px;
-}
-h3 {
-  font-size: 24px;
-}
-h4 {
-  font-size: 18px;
-}
-h5 {
-  font-size: 16px;
-}
-h6 {
-  font-size: 12px;
-}
-.table th:not([align]) {
-  text-align: left;
-}
-</style>
+  code{white-space: pre-wrap;}
+  span.smallcaps{font-variant: small-caps;}
+  span.underline{text-decoration: underline;}
+  div.column{display: inline-block; vertical-align: top; width: 50%;}
+  div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+  ul.task-list{list-style: none;}
+    </style>
+
+
+
+
+
+
 
 <link rel="stylesheet" href="style.css" type="text/css" />
 
@@ -65,10 +59,6 @@ h6 {
   max-width: 940px;
   margin-left: auto;
   margin-right: auto;
-}
-code {
-  color: inherit;
-  background-color: rgba(0, 0, 0, 0.04);
 }
 img {
   max-width:100%;
@@ -85,40 +75,16 @@ button.code-folding-btn:focus {
 summary {
   display: list-item;
 }
+details > summary > p:only-child {
+  display: inline;
+}
+pre code {
+  padding: 0;
+}
 </style>
 
 
 <style type="text/css">
-/* padding for bootstrap navbar */
-body {
-  padding-top: 64px;
-  padding-bottom: 40px;
-}
-/* offset scroll position for anchor links (for fixed navbar)  */
-.section h1 {
-  padding-top: 69px;
-  margin-top: -69px;
-}
-.section h2 {
-  padding-top: 69px;
-  margin-top: -69px;
-}
-.section h3 {
-  padding-top: 69px;
-  margin-top: -69px;
-}
-.section h4 {
-  padding-top: 69px;
-  margin-top: -69px;
-}
-.section h5 {
-  padding-top: 69px;
-  margin-top: -69px;
-}
-.section h6 {
-  padding-top: 69px;
-  margin-top: -69px;
-}
 .dropdown-submenu {
   position: relative;
 }
@@ -146,7 +112,7 @@ body {
   margin-right: -10px;
 }
 .dropdown-submenu:hover>a:after {
-  border-left-color: #ffffff;
+  border-left-color: #adb5bd;
 }
 .dropdown-submenu.pull-left {
   float: none;
@@ -158,7 +124,7 @@ body {
 }
 </style>
 
-<script>
+<script type="text/javascript">
 // manage active state of menu based on current page
 $(document).ready(function () {
   // active menu anchor
@@ -168,11 +134,28 @@ $(document).ready(function () {
     href = "index.html";
   var menuAnchor = $('a[href="' + href + '"]');
 
-  // mark it active
-  menuAnchor.parent().addClass('active');
+  // mark the anchor link active (and if it's in a dropdown, also mark that active)
+  var dropdown = menuAnchor.closest('li.dropdown');
+  if (window.bootstrap) { // Bootstrap 4+
+    menuAnchor.addClass('active');
+    dropdown.find('> .dropdown-toggle').addClass('active');
+  } else { // Bootstrap 3
+    menuAnchor.parent().addClass('active');
+    dropdown.addClass('active');
+  }
 
-  // if it's got a parent navbar menu mark it active as well
-  menuAnchor.closest('li.dropdown').addClass('active');
+  // Navbar adjustments
+  var navHeight = $(".navbar").first().height() + 15;
+  var style = document.createElement('style');
+  var pt = "padding-top: " + navHeight + "px; ";
+  var mt = "margin-top: -" + navHeight + "px; ";
+  var css = "";
+  // offset scroll position for anchor links (for fixed navbar)
+  for (var i = 1; i <= 6; i++) {
+    css += ".section h" + i + "{ " + pt + mt + "}\n";
+  }
+  style.innerHTML = "body {" + pt + "padding-bottom: 40px; }\n" + css;
+  document.head.appendChild(style);
 });
 </script>
 
@@ -184,13 +167,12 @@ $(document).ready(function () {
   max-height: 500px;
   min-height: 44px;
   overflow-y: auto;
-  background: white;
   border: 1px solid #ddd;
   border-radius: 4px;
 }
 
-.tabset-dropdown > .nav-tabs > li.active:before {
-  content: "";
+.tabset-dropdown > .nav-tabs > li.active:before, .tabset-dropdown > .nav-tabs.nav-tabs-open:before {
+  content: "\e259";
   font-family: 'Glyphicons Halflings';
   display: inline-block;
   padding: 10px;
@@ -198,16 +180,9 @@ $(document).ready(function () {
 }
 
 .tabset-dropdown > .nav-tabs.nav-tabs-open > li.active:before {
-  content: "&#xe258;";
-  border: none;
-}
-
-.tabset-dropdown > .nav-tabs.nav-tabs-open:before {
-  content: "";
+  content: "\e258";
   font-family: 'Glyphicons Halflings';
-  display: inline-block;
-  padding: 10px;
-  border-right: 1px solid #ddd;
+  border: none;
 }
 
 .tabset-dropdown > .nav-tabs > li.active {
@@ -220,6 +195,7 @@ $(document).ready(function () {
   border: none;
   display: inline-block;
   border-radius: 4px;
+  background-color: transparent;
 }
 
 .tabset-dropdown > .nav-tabs.nav-tabs-open > li {
@@ -250,7 +226,7 @@ $(document).ready(function () {
 <div class="navbar navbar-default  navbar-fixed-top" role="navigation">
   <div class="container">
     <div class="navbar-header">
-      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar">
+      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-bs-toggle="collapse" data-target="#navbar" data-bs-target="#navbar">
         <span class="icon-bar"></span>
         <span class="icon-bar"></span>
         <span class="icon-bar"></span>
@@ -260,13 +236,6 @@ $(document).ready(function () {
     <div id="navbar" class="navbar-collapse collapse">
       <ul class="nav navbar-nav">
         <li>
-  <a href="index.html">
-    <span class="fa fa-home"></span>
-     
-    Overview
-  </a>
-</li>
-<li>
   <a href="Syllabus.html">
     <span class="fa fa-book-open"></span>
      
@@ -299,32 +268,34 @@ $(document).ready(function () {
   </div><!--/.container -->
 </div><!--/.navbar -->
 
-<div class="fluid-row" id="header">
+<div id="header">
 
 
 
-<h1 class="title toc-ignore">Making Causal Critiques</h1>
+<h1 class="title toc-ignore">Interpreting and Critiquing Causal Evidence</h1>
 <h4 class="author">Jonathan Phillips</h4>
-<h4 class="date">January 24, 2020</h4>
+<h4 class="date">January 2, 2024</h4>
 
 </div>
 
 
-<div id="course-logistics" class="section level1">
-<h1>Course Logistics</h1>
-<p>The course will take place between January 27 - 31, 2020 in Room 2053 in the <a href="https://www.google.com.br/maps/place/FFLCH+-+Pr%C3%A9dio+de+Letras/@-23.5618195,-46.7275296,17z/data=!3m1!4b1!4m5!3m4!1s0x94ce5640eb6f8a59:0x6f53a42abbe26c0c!8m2!3d-23.5618195!4d-46.7253409">Faculdade de Filosofia, Letras e Ciências Humanas (FFLCH)</a> from 9am - 6pm. You do not require your own laptop - where we will use computers for the replication exercises we will use a dedicated laboratory (NECI) with the necessary software pre-installed.</p>
-<p>Participants should have a basic understanding of research design, quantitative methods and causal inference techniques, ideally from participating in the previous two courses in this track of the Summer School, “Causal Inference and Field Experiments” and “Survey Experiments”.</p>
-<p>Please send any questions to <a href="jphillips@usp.br">jphillips@usp.br</a>.</p>
-</div>
 <div id="course-objectives" class="section level1">
 <h1>Course Objectives</h1>
-<p>This course will give students the tools and confidence to understand, deconstruct and critique political science research papers. By encouraging participants to ground critiques of both quantitative and qualitative research in the framework and language of causation, the course hones vital skills for identifying hidden assumptions, weighing the strength of evidence and suggesting alternative explanations. The course also underlines the importance of making these critiques constructive by suggesting alternative research designs and a wide range of robustness checks. By the end of the course, participants will be confident contributing to peer review processes as colleagues, seminar participants or as journal referees, and will also gain new perspectives on how to design and execute their own research.</p>
-<p>The teaching approach aims to systematize the types of critique we can make so that participants are able to provide multiple reasons why the account offered by an author might not be valid. While the course covers critiques of measurement, theory and modeling, we focus particularly on critiques of causation, including risks of selection, confounding and reverse causation, demystifying terms such as ‘counterfactual’, ‘complier’ and ‘external validity’. In turn, we consider how to make critiques constructive – first, in the way they are communicated, and, second, in identifying positive research strategies that can overcome or mitigate common critiques, for example alternative research designs and robustness tests.</p>
-<p>We will use the afternoon lab sessions to practice formulating effective and constructive critiques. Building on examples drawn from a wide range of papers across the fields of political science and international relations, participants will develop and compare critiques in a range of styles. Participants will also have the option (no obligation or expectation) of sharing their own research ideas and papers to receive feedback from others. The lab sessions will also include the replication of code from one or two published analyses to highlight the range of modelling options researchers are faced with and the breadth of potential critiques that this opens up. The replication exercises will be guided and can be completed in Stata or R.</p>
+<p>This course will give students the tools and confidence to understand, deconstruct, interpret and critique political science research papers. By encouraging participants to ground analysis and critiques of both quantitative and qualitative research in the framework and language of causation, the course hones vital skills for identifying hidden assumptions, weighing the strength of evidence and suggesting alternative explanations.</p>
+<p>The course also underlines the importance of making critiques constructive by suggesting alternative research designs and a wide range of robustness checks. By the end of the course, participants will be confident contributing to class discussions, peer review processes, or as journal referees, and will also gain new perspectives on how to design and execute their own research.</p>
+<p>The teaching approach aims to systematize the types of interpretation and critique we can make so that participants are able to identify plausible reasons why the account offered by an author might not be valid. While the course covers interpretation and critique of measurement, theory and modeling, we focus particularly on interpretation and critique of causation, including risks of selection, confounding and reverse causation, demystifying terms such as ‘counterfactual’, ‘complier’ and ‘external validity’. In turn, we consider how to make critiques constructive – first, in the way they are communicated, and, second, in identifying positive research strategies that can overcome or mitigate common critiques, for example alternative research designs and robustness tests.</p>
+<p>We will use the afternoon lab sessions to practice honing our interpretation of the evidence and formulating effective and constructive critiques. Building on examples drawn from a wide range of papers across the fields of political science and international relations, participants will develop and compare critiques in a range of styles and across diverse methodologies. Participants will also have the option (no obligation or expectation) of sharing their own research ideas and papers to receive feedback from others. The lab sessions will also include the replication of code from a published analysis to highlight the range of modelling options researchers are faced with and the breadth of potential critiques that this opens up. The replication exercises will be guided and can be completed in Stata or R (recommended).</p>
+</div>
+<div id="course-logistics" class="section level1">
+<h1>Course Logistics</h1>
+<p>The course will take place between January 29 - February 2, 2024 in Room [TBC] in the <a href="https://www.google.com.br/maps/place/FFLCH+-+Pr%C3%A9dio+de+Letras/@-23.5618195,-46.7275296,17z/data=!3m1!4b1!4m5!3m4!1s0x94ce5640eb6f8a59:0x6f53a42abbe26c0c!8m2!3d-23.5618195!4d-46.7253409">Faculdade de Filosofia, Letras e Ciências Humanas (FFLCH)</a> from 9am - 6pm. You do not require your own laptop - where we will use computers for the replication exercises we will use a dedicated laboratory with the necessary software pre-installed.</p>
+<p>Participants should have a basic understanding of research design and quantitative methods techniques. All courses in the second week of the IPSA-USP Summer School meet this requirement.</p>
+<p>Please send any questions to <a href="j.p.phillips@fsw.leidenuniv.nl">j.p.phillips@fsw.leidenuniv.nl</a>.</p>
 </div>
 <div id="pre-course-readings" class="section level1">
 <h1>Pre-course Readings</h1>
-<p>Because the course will involve intensive discussion and lab sessions, you may find it valuable to read some of the reading materials listed below before the start of the course. The papers that we will be discussing and critiquing during the afternoon lab sessions will be provided to you during the course.</p>
+<p>Because the course will involve intensive discussion and lab sessions, you may find it valuable to read some of the reading materials listed below before the start of the course. All readings can be found on the IPSA-USP Summer School enrollment portal.</p>
+<p>The papers that we will be discussing and critiquing during the afternoon lab sessions will be provided to you during the course.</p>
 </div>
 <div id="course-outline" class="section level1">
 <h1>Course Outline</h1>
@@ -336,9 +307,10 @@ $(document).ready(function () {
 <li>King, Gary, Robert Keohane and Sidney Verba, Designing Social Inquiry (Princeton U Press), pp. 3-28</li>
 <li>Adcock, Robert and David Collier (2001), “Measurement Validity: A Shared Standard for Qualitative and Quantitative Research”, American Political Science Review, 95:3</li>
 <li>Gerring, John (2005), “Causation: A Unified Framework for the Social Sciences”, Journal of Theoretical Politics, 17:2</li>
-<li>Hall, Peter, “Aligning Ontology and Methodology,” in James Mahoney and Dietrich Rueschemeyer, eds. Comparative Historical Analysis in the Social Sciences (Cambridge, 2003), pp. 373-404.</li>
+<li>[optional] Hall, Peter, “Aligning Ontology and Methodology,” in James Mahoney and Dietrich Rueschemeyer, eds. Comparative Historical Analysis in the Social Sciences (Cambridge, 2003), pp. 373-404.</li>
 </ul>
-<p><em>Lab Exercise:</em> We practice identifying logical fallacies, and quickly deconstructing the complex arguments of published papers into simple causal statements and causal diagrams.</p>
+<p><em>Lab Exercise:</em> We practice quickly deconstructing the complex arguments of published papers into simple categories, causal statements and causal diagrams.</p>
+<p><em>Lab Replication Exercise:</em> We familiarize ourselves with a published research paper to understand the research question, research design and key features of the data.</p>
 </div>
 <div id="day-2-fundamental-critiques" class="section level2">
 <h2><strong>Day 2: Fundamental Critiques</strong></h2>
@@ -348,9 +320,10 @@ $(document).ready(function () {
 <li>Barbara Geddes. How the Cases You Choose Affect the Answers You Get: Selection Bias in Comparative Politics. 1990.</li>
 <li>King, Gary, Robert Keohane and Sidney Verba, Designing Social Inquiry (Princeton U Press), Ch.3</li>
 <li>Guido W. Imbens and Donald B Rubin. Causal Inference for Statistics, Social, and Biomedical Sciences. 2015. Chapter 1</li>
-<li>Przeworksi, Adam (2005), “Is the Science of Comparative Politics Possible?”, in Carles Boix and Susan C. Stokes (eds.), Oxford Handbook of Comparative Politics</li>
+<li>[optional] Przeworksi, Adam (2005), “Is the Science of Comparative Politics Possible?”, in Carles Boix and Susan C. Stokes (eds.), Oxford Handbook of Comparative Politics</li>
 </ul>
-<p><em>Lab Exercise:</em> We practice making rapid written and oral critiques of a series of political science studies.</p>
+<p><em>Lab Exercise:</em> We practice making rapid critiques of a series of political science studies.</p>
+<p><em>Lab Replication Exercise:</em> We analyze our replication data to explore the limitations of observational research designs and understand the treatment assignment mechanism.</p>
 </div>
 <div id="day-3-assessing-causal-evidence" class="section level2">
 <h2><strong>Day 3: Assessing Causal Evidence</strong></h2>
@@ -359,9 +332,11 @@ $(document).ready(function () {
 <ul>
 <li>Alan S. Gerber and Donald P Green. Field Experiments: Design, Analysis and Interpretation. W.W. Norton &amp; Company, 2012. Ch. 1</li>
 <li>Dunning, Thad (2012), Natural Experiments in the Social Sciences: A Design-Based Approach, Chs. 3, 4, 8 &amp; 9</li>
-<li>Andrew Eggers, Olle Folke, Anthony Fowler, Jens Hainmueller, Andrew B Hall, and James M Snyder (2013). On the Validity of the Regression Discontinuity Design for Estimating Electoral Effects : New Evidence from Over 40,000 Close Races.</li>
+<li>Brady, Henry E. (2004), Data-Set Observations versus Causal-Process Observations: The 2000 U.S. Presidential Election</li>
+<li>[optional] Andrew Eggers, Olle Folke, Anthony Fowler, Jens Hainmueller, Andrew B Hall, and James M Snyder (2013). On the Validity of the Regression Discontinuity Design for Estimating Electoral Effects : New Evidence from Over 40,000 Close Races.</li>
 </ul>
-<p><em>Lab Exercise:</em> We work in teams to critique a paper’s assumptions. We also replicate the empirical analysis of that paper in Stata or R to highlight the assumptions made and the models chosen.</p>
+<p><em>Lab Exercise:</em> We work in teams to critique papers’ assumptions, and the evidence to support those assumptions.</p>
+<p><em>Lab Replication Exercise:</em> We interrogate the data to replicate the findings of our study and understand the validity of its assumptions.</p>
 </div>
 <div id="day-4-how-much-are-we-learning" class="section level2">
 <h2><strong>Day 4: How much are we learning?</strong></h2>
@@ -369,14 +344,15 @@ $(document).ready(function () {
 <p><em>Readings:</em></p>
 <ul>
 <li>Cartwright, Nancy (2007), Are RCTs the Gold Standard?, BioSocieties, 2, 11-20</li>
-<li>Angus S Deaton. Instruments of Development, Randomization in the Tropics and the Search for the Elusive Keps to Economic Development. 2009.</li>
+<li>Angus S Deaton. Instruments of Development, Randomization in the Tropics and the Search for the Elusive Keys to Economic Development. 2009.</li>
 <li>Steven D Levitt and John A List. What Do Laboratory Experiments Tell Us About the Real World? 2006.</li>
 <li>Hainmueller, Jens et al (2014), “Validating vignette and conjoint survey experiments against real-world behavior”, Proceedings of the National Academy of Sciences, 112:8</li>
-<li>Jasjeet S Sekhon and Rocio Titiunik. When Natural Experiments Are Neither Natural nor Experiments. American Political Science Review, 106(1):35-57, 2012.</li>
 <li>Dunning, Thad (2012), Natural Experiments in the Social Sciences: A Design-Based Approach, Ch. 10</li>
-<li>Monogan, James (2015), “Research Preregistration in Political Science: The Case, Counterarguments, and a Response to Critiques”</li>
+<li>[optional] Monogan, James (2015), “Research Preregistration in Political Science: The Case, Counterarguments, and a Response to Critiques”</li>
+<li>[optional] Jasjeet S Sekhon and Rocio Titiunik. When Natural Experiments Are Neither Natural nor Experiments. American Political Science Review, 106(1):35-57, 2012.</li>
 </ul>
-<p><em>Lab Exercise:</em> We use our judgment of the relevance and generalizability of study findings to draft policy advice on how governments should respond to a paper’s conclusions. We also conduct sensitivity analysis of the data and findings in key studies using Stata/R.</p>
+<p><em>Lab Exercise:</em> We use our judgment of the relevance and generalizability of study findings to draft policy advice on how governments should respond to a paper’s conclusions.</p>
+<p><em>Lab Replication Exercise:</em> We conduct robustness checks and sensitivity analysis of the data and findings in key studies using Stata/R.</p>
 </div>
 <div id="day-5-constructive-critiques" class="section level2">
 <h2><strong>Day 5: Constructive Critiques</strong></h2>
@@ -386,8 +362,9 @@ $(document).ready(function () {
 <li>Kocker, Matthew Adam and Nuno P. Monteiro (2015), What’s in a Line? Natural Experiments and the Line of Demarcation in WWII Occupied France</li>
 <li>Nunn, Nathan (2011), The Slave Trade and the Origins of Mistrust in Africa, American Economic Review 101 (7) (December): 3221–3252</li>
 <li>Kosec, Katrina (2011), Politics and Preschool The Political Economy of Investment in Pre-Primary Education</li>
+<li>[optional] Miller, Beth et al (2017), How To Be a Peer Reviewer: A Guide for Recent and Soon-to-be PhDs, Political Science &amp; Politics</li>
 </ul>
-<p><em>Lab Exercise:</em> Students present a research paper of their own, or a paper allocated by the teacher, making the most convincing causal case possible. Other students then present constructive critiques and suggest improvements. We also practice implementing placebo and heterogeneity tests in Stata/R.</p>
+<p><em>Lab Exercise:</em> Students present a research paper of their own, or a paper allocated by the teacher if preferred, making the most convincing causal case possible. Other students then present constructive critiques and suggest improvements.</p>
 </div>
 </div>
 
@@ -400,7 +377,7 @@ $(document).ready(function () {
 
 // add bootstrap table styles to pandoc tables
 function bootstrapStylePandocTables() {
-  $('tr.header').parent('thead').parent('table').addClass('table table-condensed');
+  $('tr.odd').parent('tbody').parent('table').addClass('table table-condensed');
 }
 $(document).ready(function () {
   bootstrapStylePandocTables();
@@ -418,7 +395,7 @@ $(document).ready(function () {
 
 $(document).ready(function () {
   $('.tabset-dropdown > .nav-tabs > li').click(function () {
-    $(this).parent().toggleClass('nav-tabs-open')
+    $(this).parent().toggleClass('nav-tabs-open');
   });
 });
 </script>

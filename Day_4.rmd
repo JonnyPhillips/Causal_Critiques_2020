@@ -9,6 +9,25 @@ output: html_document
 knitr::opts_chunk$set(echo = TRUE)
 ```
 
+## **Day 4: How much are we learning?** 
+
+We look beyond each argument’s own claims to critique the generalizability of the findings, the sensitivity of the findings to the research design, the match between theory and evidence, and support for specific causal mechanisms. We also discuss publication bias, 'p-hacking' and pre-registration.
+
+*Readings:*
+
+- Cartwright, Nancy (2007), Are RCTs the Gold Standard?, BioSocieties, 2, 11-20
+- Angus S Deaton. Instruments of Development, Randomization in the Tropics and the Search for the Elusive Keys to Economic Development. 2009.
+- Steven D Levitt and John A List. What Do Laboratory Experiments Tell Us About the Real World? 2006.
+- Hainmueller, Jens et al (2014), "Validating vignette and conjoint survey experiments against real-world behavior", Proceedings of the National Academy of Sciences, 112:8
+- Dunning, Thad (2012), Natural Experiments in the Social Sciences: A Design-Based Approach, Ch. 10
+- [optional] Monogan, James (2015),  "Research Preregistration in Political Science: The Case, Counterarguments, and a Response to Critiques"
+- [optional] Jasjeet S Sekhon and Rocio Titiunik. When Natural Experiments Are Neither Natural nor Experiments. American Political Science Review, 106(1):35-57, 2012.
+
+
+*Lab Exercise:* We use our judgment of the relevance and generalizability of study findings to draft policy advice on how governments should respond to a paper's conclusions. 
+
+*Lab Replication Exercise:* We conduct robustness checks and sensitivity analysis of the data and findings in key studies using Stata/R.
+
 ## Morning
 
 1. [Lecture Slides](https://jonnyphillips.github.io/Causal_Critiques_2020/Day 4/Slides_Day_4_v1.pdf)

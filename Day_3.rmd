@@ -9,6 +9,22 @@ output: html_document
 knitr::opts_chunk$set(echo = TRUE)
 ```
 
+## **Day 3: Assessing Causal Evidence** 
+
+We review a range of causal methodology research designs, the assumptions on which they are based and their connection to specific statistical models. We practice repeatedly assessing if these assumptions have been met.
+
+*Readings:* 
+
+- Alan S. Gerber and Donald P Green. Field Experiments: Design, Analysis and Interpretation.
+W.W. Norton & Company, 2012. Ch. 1
+- Dunning, Thad (2012), Natural Experiments in the Social Sciences: A Design-Based Approach, Chs. 3, 4, 8 & 9
+- Brady, Henry E. (2004), Data-Set Observations versus Causal-Process Observations: The 2000 U.S. Presidential Election
+- [optional] Andrew Eggers, Olle Folke, Anthony Fowler, Jens Hainmueller, Andrew B Hall, and James M Snyder (2013). On the Validity of the Regression Discontinuity Design for Estimating Electoral Effects : New Evidence from Over 40,000 Close Races.
+
+*Lab Exercise:* We work in teams to critique papers' assumptions, and the evidence to support those assumptions.
+
+*Lab Replication Exercise:* We interrogate the data to replicate the findings of our study and understand the validity of its assumptions. 
+
 ## Morning
 
 1. [Lecture Slides](https://jonnyphillips.github.io/Causal_Critiques_2020/Day 3/Slides_Day_3_v4.pdf)
