@@ -99,6 +99,20 @@
 
 \setbeamersize{text margin left=5pt,text margin right=5pt}
 
+
+\setbeamercolor{block title}{use=structure,fg=white,bg=structure.fg!75!orange}
+\setbeamercolor{block body}{parent=normal text,use=block title,bg=block title.bg!10!bg}
+
+\AtBeginSection{\frame{\sectionpage}}
+\usepackage{xcolor}
+\hypersetup{
+    colorlinks,
+    linkcolor={red!50!black},
+    citecolor={blue!50!black},
+    urlcolor={blue!80!black}
+}
+
+
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 
@@ -506,42 +520,21 @@
 
 \begin{frame}
 \frametitle{Causal Diagrams}
-\begin{knitrout}
-\definecolor{shadecolor}{rgb}{0.969, 0.969, 0.969}\color{fgcolor}
 
-{\centering \includegraphics[width=\maxwidth]{figure/unnamed-chunk-1-1} 
-
-}
-
-
-\end{knitrout}
+\includegraphics[width=0.6\textwidth]{graph1.png}
 \end{frame}
 
 \begin{frame}
 \frametitle{Causal Diagrams}
-\begin{knitrout}
-\definecolor{shadecolor}{rgb}{0.969, 0.969, 0.969}\color{fgcolor}
 
-{\centering \includegraphics[width=\maxwidth]{figure/unnamed-chunk-2-1} 
-
-}
-
-
-\end{knitrout}
+\includegraphics[width=0.6\textwidth]{graph2.png}
 \end{frame}
 
 
 \begin{frame}
 \frametitle{Causal Diagrams}
-\begin{knitrout}
-\definecolor{shadecolor}{rgb}{0.969, 0.969, 0.969}\color{fgcolor}
 
-{\centering \includegraphics[width=\maxwidth]{figure/unnamed-chunk-3-1} 
-
-}
-
-
-\end{knitrout}
+\includegraphics[width=0.6\textwidth]{graph3.png}
 \end{frame}
 
 \begin{frame}
@@ -586,10 +579,8 @@
 \item Two perspectives on explanation:
 \end{itemize}
 \begin{multicols}{2}
-\begin{knitrout}
-\definecolor{shadecolor}{rgb}{0.969, 0.969, 0.969}\color{fgcolor}
-\includegraphics[width=\maxwidth]{figure/explanation1-1} 
-\end{knitrout}
+
+\includegraphics[width=0.45\textwidth]{graph4.png}
 \pause
 \begin{itemize}
 \item Identifying the source of \textbf{ALL} of the variation in Nobel Laureates
@@ -598,10 +589,8 @@
 \end{itemize}
 \pause
 \columnbreak
-\begin{knitrout}
-\definecolor{shadecolor}{rgb}{0.969, 0.969, 0.969}\color{fgcolor}
-\includegraphics[width=\maxwidth]{figure/explanation2-1} 
-\end{knitrout}
+
+\includegraphics[width=0.45\textwidth]{graph5.png}
 \pause
 \begin{itemize}
 \item Identifying how much \textbf{ONE} variable causes variation in Nobel Laureates
@@ -617,19 +606,15 @@
 \item Two perspectives on explanation:
 \end{itemize}
 \begin{multicols}{2}
-\begin{knitrout}
-\definecolor{shadecolor}{rgb}{0.969, 0.969, 0.969}\color{fgcolor}
-\includegraphics[width=\maxwidth]{figure/explanation1b-1} 
-\end{knitrout}
+
+\includegraphics[width=0.45\textwidth]{graph6.png}
 \begin{itemize}
 \item Identifying the source of \textbf{ALL} of the variation in Nobel Laureates
 \item An infinite task!
 \end{itemize}
 \columnbreak
-\begin{knitrout}
-\definecolor{shadecolor}{rgb}{0.969, 0.969, 0.969}\color{fgcolor}
-\includegraphics[width=\maxwidth]{figure/explanation2b-1} 
-\end{knitrout}
+
+\includegraphics[width=0.45\textwidth]{graph7.png}
 \begin{itemize}
 \item Identifying how much \textbf{ONE} variable causes variation in Nobel Laureates
 \item This we can do!
@@ -643,19 +628,15 @@
 \item Two perspectives on explanation:
 \end{itemize}
 \begin{multicols}{2}
-\begin{knitrout}
-\definecolor{shadecolor}{rgb}{0.969, 0.969, 0.969}\color{fgcolor}
-\includegraphics[width=\maxwidth]{figure/explanation1c-1} 
-\end{knitrout}
+
+\includegraphics[width=0.45\textwidth]{graph8.png}
 \begin{itemize}
 \item Identifying the source of \textbf{ALL} of the variation in Nobel Laureates
 \item An infinite task!
 \end{itemize}
 \columnbreak
-\begin{knitrout}
-\definecolor{shadecolor}{rgb}{0.969, 0.969, 0.969}\color{fgcolor}
-\includegraphics[width=\maxwidth]{figure/explanation2c-1} 
-\end{knitrout}
+
+\includegraphics[width=0.45\textwidth]{graph9.png}
 \begin{itemize}
 \item Identifying how much \textbf{ONE} variable causes variation in Nobel Laureates
 \item This we can do!
@@ -1032,10 +1013,6 @@ electoral outcomes. I provide evidence suggesting that, \textbf{by increasing an
 \item Matching
 \end{itemize}
 \end{itemize}
-\end{frame}
-
-\begin{frame}
-\frametitle{Methodology}
 \begin{itemize}
 \item Methodologies for gathering evidence:
 \pause
@@ -1066,11 +1043,6 @@ electoral outcomes. I provide evidence suggesting that, \textbf{by increasing an
 \item Difference-in-Differences
 \end{itemize}
 \end{itemize}
-\end{frame}
-
-
-\begin{frame}
-\frametitle{Methodology}
 \begin{itemize}
 \item Small-N Studies:
 \pause
@@ -1083,15 +1055,4 @@ electoral outcomes. I provide evidence suggesting that, \textbf{by increasing an
 \end{frame}
 
 
-
-
-
-
-%%Types of Explanation
-
-
-
-
 \end{document}
- 
- % effects of causes vs. reverse

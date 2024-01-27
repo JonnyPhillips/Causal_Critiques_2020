@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023) (preloaded format=pdflatex 2024.1.11)  11 JAN 2024 14:53
+This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023) (preloaded format=pdflatex 2024.1.11)  12 JAN 2024 12:50
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1030,10 +1030,12 @@ Package: multicol 2023/03/30 v1.9f multicolumn formatting (FMi)
 \mult@nat@firstbox=\box132
 \colbreak@box=\box133
 \mc@col@check@num=\count367
-) (c:/Users/jonny/AppData/Roaming/TinyTeX/texmf-dist/tex/latex/upquote/upquote.sty
+)
+Package hyperref Info: Option `colorlinks' set `true' on input line 113.
+(c:/Users/jonny/AppData/Roaming/TinyTeX/texmf-dist/tex/latex/upquote/upquote.sty
 Package: upquote 2012/04/19 v1.3 upright-quote and grave-accent glyphs in verbatim
 )
-LaTeX Font Info:    Trying to load font information for T1+fav on input line 111.
+LaTeX Font Info:    Trying to load font information for T1+fav on input line 125.
 (c:/Users/jonny/AppData/Roaming/TinyTeX/texmf-dist/tex/latex/arev/t1fav.fd
 File: t1fav.fd 2006/05/30 Fontinst v1.929 font definitions for T1/fav.
 ) (c:/Users/jonny/AppData/Roaming/TinyTeX/texmf-dist/tex/latex/l3backend/l3backend-pdftex.def
@@ -1047,30 +1049,30 @@ LaTeX Warning: Label `tab:addlabel' multiply defined.
 )
 \openout1 = `Slides_Day_1_2024_v1.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 111.
-LaTeX Font Info:    ... okay on input line 111.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 111.
-LaTeX Font Info:    ... okay on input line 111.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 111.
-LaTeX Font Info:    ... okay on input line 111.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 111.
-LaTeX Font Info:    ... okay on input line 111.
-LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 111.
-LaTeX Font Info:    ... okay on input line 111.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 111.
-LaTeX Font Info:    ... okay on input line 111.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 111.
-LaTeX Font Info:    ... okay on input line 111.
-LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 111.
-LaTeX Font Info:    ... okay on input line 111.
-LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 111.
-LaTeX Font Info:    ... okay on input line 111.
-LaTeX Font Info:    Checking defaults for MDA/cmr/m/n on input line 111.
-LaTeX Font Info:    Trying to load font information for MDA+cmr on input line 111.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 125.
+LaTeX Font Info:    ... okay on input line 125.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 125.
+LaTeX Font Info:    ... okay on input line 125.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 125.
+LaTeX Font Info:    ... okay on input line 125.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 125.
+LaTeX Font Info:    ... okay on input line 125.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 125.
+LaTeX Font Info:    ... okay on input line 125.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 125.
+LaTeX Font Info:    ... okay on input line 125.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 125.
+LaTeX Font Info:    ... okay on input line 125.
+LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 125.
+LaTeX Font Info:    ... okay on input line 125.
+LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 125.
+LaTeX Font Info:    ... okay on input line 125.
+LaTeX Font Info:    Checking defaults for MDA/cmr/m/n on input line 125.
+LaTeX Font Info:    Trying to load font information for MDA+cmr on input line 125.
 (c:/Users/jonny/AppData/Roaming/TinyTeX/texmf-dist/tex/latex/mathdesign/mdacmr.fd
 File: mdacmr.fd 
 )
-LaTeX Font Info:    ... okay on input line 111.
+LaTeX Font Info:    ... okay on input line 125.
 *geometry* driver: auto-detecting
 *geometry* detected driver: pdftex
 *geometry* verbose mode - [ preamble ] result:
@@ -1111,7 +1113,7 @@ Package epstopdf-base Info: Redefining graphics rule for `.eps' on input line 48
 (c:/Users/jonny/AppData/Roaming/TinyTeX/texmf-dist/tex/latex/latexconfig/epstopdf-sys.cfg
 File: epstopdf-sys.cfg 2010/07/13 v1.3 Configuration of (r)epstopdf for TeX Live
 ))
-Package hyperref Info: Link coloring OFF on input line 111.
+Package hyperref Info: Link coloring ON on input line 125.
 (./Slides_Day_1_2024_v1.out) (./Slides_Day_1_2024_v1.out)
 \@outlinefile=\write5
 \openout5 = `Slides_Day_1_2024_v1.out'.
@@ -1136,372 +1138,808 @@ Package: pdflscape-nometadata 2022-10-28 v0.13 Display of landscape pages in PDF
 Package: lscape 2020/05/28 v3.02 Landscape Pages (DPC)
 )
 Package pdflscape Info: Auto-detected driver: pdftex on input line 81.
-)) (./Slides_Day_1_2024_v1.nav) [1{c:/Users/jonny/AppData/Roaming/TinyTeX/texmf-var/fonts/map/pdftex/updmap/pdftex.map}{c:/Users/jonny/AppData/Roaming/TinyTeX/texmf-dist/fonts/enc/dvips/base/8r.enc}
+)) (./Slides_Day_1_2024_v1.nav)
+Overfull \hbox (4.1063pt too wide) detected at line 125
+  [] [][][][][][][][][][] [][][][][][][][] [][][][][][][][][][][][][][][] [][][][][][][][][] [][][][][][][][][] [][][][][][][][][]  
+ []
+
+
+Overfull \hbox (4.1063pt too wide) detected at line 127
+  [] [][][][][][][][][][] [][][][][][][][] [][][][][][][][][][][][][][][] [][][][][][][][][] [][][][][][][][][] [][][][][][][][][]  
+ []
+
+
+Overfull \hbox (4.1063pt too wide) has occurred while \output is active
+  [] [][][][][][][][][][] [][][][][][][][] [][][][][][][][][][][][][][][] [][][][][][][][][] [][][][][][][][][] [][][][][][][][][]  
+ []
+
+[1{c:/Users/jonny/AppData/Roaming/TinyTeX/texmf-var/fonts/map/pdftex/updmap/pdftex.map}{c:/Users/jonny/AppData/Roaming/TinyTeX/texmf-dist/fonts/enc/dvips/base/8r.enc}
 
 ]
+Overfull \hbox (4.1063pt too wide) detected at line 144
+  [] [][][][][][][][][][] [][][][][][][][] [][][][][][][][][][][][][][][] [][][][][][][][][] [][][][][][][][][] [][][][][][][][][]  
+ []
+
 
 LaTeX Font Warning: Font shape `T1/fav/m/sc' undefined
-(Font)              using `T1/fav/m/n' instead on input line 130.
+(Font)              using `T1/fav/m/n' instead on input line 144.
+
+
+Overfull \hbox (4.1063pt too wide) has occurred while \output is active
+  [] [][][][][][][][][][] [][][][][][][][] [][][][][][][][][][][][][][][] [][][][][][][][][] [][][][][][][][][] [][][][][][][][][]  
+ []
 
 [2
 
-] [3
+]
+Overfull \hbox (4.1063pt too wide) has occurred while \output is active
+  [] [][][][][][][][][][] [][][][][][][][] [][][][][][][][][][][][][][][] [][][][][][][][][] [][][][][][][][][] [][][][][][][][][]  
+ []
 
-] [4
-
-] [5
-
-] [6
-
-] [7
+[3
 
 ]
-LaTeX Font Info:    Trying to load font information for OT1+zavm on input line 150.
+Overfull \hbox (4.1063pt too wide) has occurred while \output is active
+  [] [][][][][][][][][][] [][][][][][][][] [][][][][][][][][][][][][][][] [][][][][][][][][] [][][][][][][][][] [][][][][][][][][]  
+ []
+
+[4
+
+]
+Overfull \hbox (4.1063pt too wide) has occurred while \output is active
+  [] [][][][][][][][][][] [][][][][][][][] [][][][][][][][][][][][][][][] [][][][][][][][][] [][][][][][][][][] [][][][][][][][][]  
+ []
+
+[5
+
+]
+Overfull \hbox (4.1063pt too wide) has occurred while \output is active
+  [] [][][][][][][][][][] [][][][][][][][] [][][][][][][][][][][][][][][] [][][][][][][][][] [][][][][][][][][] [][][][][][][][][]  
+ []
+
+[6
+
+]
+Overfull \hbox (4.1063pt too wide) has occurred while \output is active
+  [] [][][][][][][][][][] [][][][][][][][] [][][][][][][][][][][][][][][] [][][][][][][][][] [][][][][][][][][] [][][][][][][][][]  
+ []
+
+[7
+
+]
+Overfull \hbox (4.1063pt too wide) detected at line 146
+  [] [][][][][][][][][][] [][][][][][][][] [][][][][][][][][][][][][][][] [][][][][][][][][] [][][][][][][][][] [][][][][][][][][]  
+ []
+
+
+Overfull \hbox (4.1063pt too wide) has occurred while \output is active
+  [] [][][][][][][][][][] [][][][][][][][] [][][][][][][][][][][][][][][] [][][][][][][][][] [][][][][][][][][] [][][][][][][][][]  
+ []
+
+[8
+
+]
+Overfull \hbox (4.1063pt too wide) detected at line 164
+  [] [][][][][][][][][][] [][][][][][][][] [][][][][][][][][][][][][][][] [][][][][][][][][] [][][][][][][][][] [][][][][][][][][]  
+ []
+
+LaTeX Font Info:    Trying to load font information for OT1+zavm on input line 164.
 (c:/Users/jonny/AppData/Roaming/TinyTeX/texmf-dist/tex/latex/arev/ot1zavm.fd
 File: ot1zavm.fd 2006/05/30 Fontinst v1.929 font definitions for OT1/zavm.
 )
-LaTeX Font Info:    Trying to load font information for OML+zavm on input line 150.
+LaTeX Font Info:    Trying to load font information for OML+zavm on input line 164.
 (c:/Users/jonny/AppData/Roaming/TinyTeX/texmf-dist/tex/latex/arev/omlzavm.fd
 File: omlzavm.fd 2006/05/30 Fontinst v1.929 font definitions for OML/zavm.
 )
-LaTeX Font Info:    Trying to load font information for OMS+zavm on input line 150.
+LaTeX Font Info:    Trying to load font information for OMS+zavm on input line 164.
 (c:/Users/jonny/AppData/Roaming/TinyTeX/texmf-dist/tex/latex/arev/omszavm.fd
 File: omszavm.fd 2006/05/30 Fontinst v1.929 font definitions for OMS/zavm.
 )
-LaTeX Font Info:    Trying to load font information for OMX+mdbch on input line 150.
+LaTeX Font Info:    Trying to load font information for OMX+mdbch on input line 164.
 (c:/Users/jonny/AppData/Roaming/TinyTeX/texmf-dist/tex/latex/mathdesign/mdbch/omxmdbch.fd
 File: omxmdbch.fd 2013/08/29 Fontinst v1.933 font definitions for OMX/mdbch.
 )
 LaTeX Font Info:    Font shape `OMX/mdbch/m/n' will be
-(Font)              scaled to size 10.51207pt on input line 150.
+(Font)              scaled to size 10.51207pt on input line 164.
 LaTeX Font Info:    Font shape `OMX/mdbch/m/n' will be
-(Font)              scaled to size 7.68005pt on input line 150.
+(Font)              scaled to size 7.68005pt on input line 164.
 LaTeX Font Info:    Font shape `OMX/mdbch/m/n' will be
-(Font)              scaled to size 5.76004pt on input line 150.
-LaTeX Font Info:    Trying to load font information for U+msa on input line 150.
+(Font)              scaled to size 5.76004pt on input line 164.
+LaTeX Font Info:    Trying to load font information for U+msa on input line 164.
 (c:/Users/jonny/AppData/Roaming/TinyTeX/texmf-dist/tex/latex/amsfonts/umsa.fd
 File: umsa.fd 2013/01/14 v3.01 AMS symbols A
 )
-LaTeX Font Info:    Trying to load font information for U+msb on input line 150.
+LaTeX Font Info:    Trying to load font information for U+msb on input line 164.
 (c:/Users/jonny/AppData/Roaming/TinyTeX/texmf-dist/tex/latex/amsfonts/umsb.fd
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 )
-LaTeX Font Info:    Trying to load font information for MDA+mdbch on input line 150.
+LaTeX Font Info:    Trying to load font information for MDA+mdbch on input line 164.
 (c:/Users/jonny/AppData/Roaming/TinyTeX/texmf-dist/tex/latex/mathdesign/mdbch/mdamdbch.fd
 File: mdamdbch.fd 2013/08/29 Fontinst v1.933 font definitions for MDA/mdbch.
 )
 LaTeX Font Info:    Font shape `MDA/mdbch/b/n' will be
-(Font)              scaled to size 10.51207pt on input line 150.
+(Font)              scaled to size 10.51207pt on input line 164.
 LaTeX Font Info:    Font shape `MDA/mdbch/b/n' will be
-(Font)              scaled to size 7.68005pt on input line 150.
+(Font)              scaled to size 7.68005pt on input line 164.
 LaTeX Font Info:    Font shape `MDA/mdbch/b/n' will be
-(Font)              scaled to size 5.76004pt on input line 150.
-LaTeX Font Info:    Trying to load font information for U+zavm on input line 150.
+(Font)              scaled to size 5.76004pt on input line 164.
+LaTeX Font Info:    Trying to load font information for U+zavm on input line 164.
 (c:/Users/jonny/AppData/Roaming/TinyTeX/texmf-dist/tex/latex/arev/uzavm.fd
 File: uzavm.fd 2006/05/30 Fontinst v1.929 font definitions for U/zavm.
 )
 LaTeX Font Info:    Font shape `OMX/mdbch/m/n' will be
-(Font)              scaled to size 9.60007pt on input line 150.
+(Font)              scaled to size 9.60007pt on input line 164.
 LaTeX Font Info:    Font shape `OMX/mdbch/m/n' will be
-(Font)              scaled to size 7.29605pt on input line 150.
+(Font)              scaled to size 7.29605pt on input line 164.
 LaTeX Font Info:    Font shape `MDA/mdbch/b/n' will be
-(Font)              scaled to size 9.60007pt on input line 150.
+(Font)              scaled to size 9.60007pt on input line 164.
 LaTeX Font Info:    Font shape `MDA/mdbch/b/n' will be
-(Font)              scaled to size 7.29605pt on input line 150.
-[8
+(Font)              scaled to size 7.29605pt on input line 164.
 
-] [9
+Overfull \hbox (4.1063pt too wide) has occurred while \output is active
+  [] [][][][][][][][][][] [][][][][][][][] [][][][][][][][][][][][][][][] [][][][][][][][][] [][][][][][][][][] [][][][][][][][][]  
+ []
 
-] [10
-
-] [11
-
-] [12
+[9
 
 ]
-Underfull \hbox (badness 2538) in paragraph at lines 173--173
-[]|\T1/fav/m/sc/10.95 "No, Par-lia-men-tary sys-
+Overfull \hbox (4.1063pt too wide) has occurred while \output is active
+  [] [][][][][][][][][][] [][][][][][][][] [][][][][][][][][][][][][][][] [][][][][][][][][] [][][][][][][][][] [][][][][][][][][]  
  []
 
+[10
 
-Underfull \hbox (badness 2368) in paragraph at lines 173--173
-[]|\T1/fav/m/sc/10.95 "No, democ-racy causes
+]
+Overfull \hbox (4.1063pt too wide) has occurred while \output is active
+  [] [][][][][][][][][][] [][][][][][][][] [][][][][][][][][][][][][][][] [][][][][][][][][] [][][][][][][][][] [][][][][][][][][]  
  []
 
+[11
 
-Underfull \hbox (badness 1675) in paragraph at lines 173--173
-\T1/fav/m/sc/10.95 Pak-istan were democ-ra-
+]
+Overfull \hbox (4.1063pt too wide) has occurred while \output is active
+  [] [][][][][][][][][][] [][][][][][][][] [][][][][][][][][][][][][][][] [][][][][][][][][] [][][][][][][][][] [][][][][][][][][]  
  []
 
+[12
 
-Underfull \hbox (badness 1466) in paragraph at lines 173--173
-\T1/fav/m/sc/10.95 cies and had a war in
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 173--173
-\T1/fav/m/sc/10.95 lost to tech-no-log-i-cal
- []
-
-
-Overfull \vbox (21.74472pt too high) detected at line 173
+]
+Overfull \hbox (4.1063pt too wide) has occurred while \output is active
+  [] [][][][][][][][][][] [][][][][][][][] [][][][][][][][][][][][][][][] [][][][][][][][][] [][][][][][][][][] [][][][][][][][][]  
  []
 
 [13
 
 ]
-Underfull \hbox (badness 2538) in paragraph at lines 173--173
+Overfull \hbox (4.1063pt too wide) detected at line 187
+  [] [][][][][][][][][][] [][][][][][][][] [][][][][][][][][][][][][][][] [][][][][][][][][] [][][][][][][][][] [][][][][][][][][]  
+ []
+
+
+Underfull \hbox (badness 2538) in paragraph at lines 187--187
 []|\T1/fav/m/sc/10.95 "No, Par-lia-men-tary sys-
  []
 
 
-Underfull \hbox (badness 2368) in paragraph at lines 173--173
+Underfull \hbox (badness 2368) in paragraph at lines 187--187
 []|\T1/fav/m/sc/10.95 "No, democ-racy causes
  []
 
 
-Underfull \hbox (badness 1675) in paragraph at lines 173--173
+Underfull \hbox (badness 1675) in paragraph at lines 187--187
 \T1/fav/m/sc/10.95 Pak-istan were democ-ra-
  []
 
 
-Underfull \hbox (badness 1466) in paragraph at lines 173--173
+Underfull \hbox (badness 1466) in paragraph at lines 187--187
 \T1/fav/m/sc/10.95 cies and had a war in
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 173--173
+Underfull \hbox (badness 10000) in paragraph at lines 187--187
 \T1/fav/m/sc/10.95 lost to tech-no-log-i-cal
  []
 
 
-Overfull \vbox (21.74472pt too high) detected at line 173
+Overfull \vbox (21.74472pt too high) detected at line 187
+ []
+
+
+Overfull \hbox (4.1063pt too wide) has occurred while \output is active
+  [] [][][][][][][][][][] [][][][][][][][] [][][][][][][][][][][][][][][] [][][][][][][][][] [][][][][][][][][] [][][][][][][][][]  
  []
 
 [14
 
 ]
-Underfull \hbox (badness 2538) in paragraph at lines 173--173
+Underfull \hbox (badness 2538) in paragraph at lines 187--187
 []|\T1/fav/m/sc/10.95 "No, Par-lia-men-tary sys-
  []
 
 
-Underfull \hbox (badness 2368) in paragraph at lines 173--173
+Underfull \hbox (badness 2368) in paragraph at lines 187--187
 []|\T1/fav/m/sc/10.95 "No, democ-racy causes
  []
 
 
-Underfull \hbox (badness 1675) in paragraph at lines 173--173
+Underfull \hbox (badness 1675) in paragraph at lines 187--187
 \T1/fav/m/sc/10.95 Pak-istan were democ-ra-
  []
 
 
-Underfull \hbox (badness 1466) in paragraph at lines 173--173
+Underfull \hbox (badness 1466) in paragraph at lines 187--187
 \T1/fav/m/sc/10.95 cies and had a war in
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 173--173
+Underfull \hbox (badness 10000) in paragraph at lines 187--187
 \T1/fav/m/sc/10.95 lost to tech-no-log-i-cal
  []
 
 
-Overfull \vbox (21.74472pt too high) detected at line 173
+Overfull \vbox (21.74472pt too high) detected at line 187
+ []
+
+
+Overfull \hbox (4.1063pt too wide) has occurred while \output is active
+  [] [][][][][][][][][][] [][][][][][][][] [][][][][][][][][][][][][][][] [][][][][][][][][] [][][][][][][][][] [][][][][][][][][]  
  []
 
 [15
 
 ]
-Underfull \hbox (badness 2538) in paragraph at lines 173--173
+Underfull \hbox (badness 2538) in paragraph at lines 187--187
 []|\T1/fav/m/sc/10.95 "No, Par-lia-men-tary sys-
  []
 
 
-Underfull \hbox (badness 2368) in paragraph at lines 173--173
+Underfull \hbox (badness 2368) in paragraph at lines 187--187
 []|\T1/fav/m/sc/10.95 "No, democ-racy causes
  []
 
 
-Underfull \hbox (badness 1675) in paragraph at lines 173--173
+Underfull \hbox (badness 1675) in paragraph at lines 187--187
 \T1/fav/m/sc/10.95 Pak-istan were democ-ra-
  []
 
 
-Underfull \hbox (badness 1466) in paragraph at lines 173--173
+Underfull \hbox (badness 1466) in paragraph at lines 187--187
 \T1/fav/m/sc/10.95 cies and had a war in
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 173--173
+Underfull \hbox (badness 10000) in paragraph at lines 187--187
 \T1/fav/m/sc/10.95 lost to tech-no-log-i-cal
  []
 
 
-Overfull \vbox (21.74472pt too high) detected at line 173
+Overfull \vbox (21.74472pt too high) detected at line 187
+ []
+
+
+Overfull \hbox (4.1063pt too wide) has occurred while \output is active
+  [] [][][][][][][][][][] [][][][][][][][] [][][][][][][][][][][][][][][] [][][][][][][][][] [][][][][][][][][] [][][][][][][][][]  
  []
 
 [16
 
 ]
-Underfull \hbox (badness 2538) in paragraph at lines 173--173
+Underfull \hbox (badness 2538) in paragraph at lines 187--187
 []|\T1/fav/m/sc/10.95 "No, Par-lia-men-tary sys-
  []
 
 
-Underfull \hbox (badness 2368) in paragraph at lines 173--173
+Underfull \hbox (badness 2368) in paragraph at lines 187--187
 []|\T1/fav/m/sc/10.95 "No, democ-racy causes
  []
 
 
-Underfull \hbox (badness 1675) in paragraph at lines 173--173
+Underfull \hbox (badness 1675) in paragraph at lines 187--187
 \T1/fav/m/sc/10.95 Pak-istan were democ-ra-
  []
 
 
-Underfull \hbox (badness 1466) in paragraph at lines 173--173
+Underfull \hbox (badness 1466) in paragraph at lines 187--187
 \T1/fav/m/sc/10.95 cies and had a war in
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 173--173
+Underfull \hbox (badness 10000) in paragraph at lines 187--187
 \T1/fav/m/sc/10.95 lost to tech-no-log-i-cal
  []
 
 
-Overfull \vbox (21.74472pt too high) detected at line 173
+Overfull \vbox (21.74472pt too high) detected at line 187
+ []
+
+
+Overfull \hbox (4.1063pt too wide) has occurred while \output is active
+  [] [][][][][][][][][][] [][][][][][][][] [][][][][][][][][][][][][][][] [][][][][][][][][] [][][][][][][][][] [][][][][][][][][]  
  []
 
 [17
 
-] [18
+]
+Underfull \hbox (badness 2538) in paragraph at lines 187--187
+[]|\T1/fav/m/sc/10.95 "No, Par-lia-men-tary sys-
+ []
 
-{c:/Users/jonny/AppData/Roaming/TinyTeX/texmf-dist/fonts/enc/dvips/arev/arevoml.enc}] [19
 
-] [20
+Underfull \hbox (badness 2368) in paragraph at lines 187--187
+[]|\T1/fav/m/sc/10.95 "No, democ-racy causes
+ []
 
-] [21
 
-] [22
+Underfull \hbox (badness 1675) in paragraph at lines 187--187
+\T1/fav/m/sc/10.95 Pak-istan were democ-ra-
+ []
 
-] [23
 
-] [24
+Underfull \hbox (badness 1466) in paragraph at lines 187--187
+\T1/fav/m/sc/10.95 cies and had a war in
+ []
 
-] [25
 
-] [26
+Underfull \hbox (badness 10000) in paragraph at lines 187--187
+\T1/fav/m/sc/10.95 lost to tech-no-log-i-cal
+ []
 
-] [27
 
-] [28
+Overfull \vbox (21.74472pt too high) detected at line 187
+ []
 
-] [29
 
-] [30
+Overfull \hbox (4.1063pt too wide) has occurred while \output is active
+  [] [][][][][][][][][][] [][][][][][][][] [][][][][][][][][][][][][][][] [][][][][][][][][] [][][][][][][][][] [][][][][][][][][]  
+ []
 
-] [31
-
-] [32
-
-] [33
-
-] [34
-
-] [35
-
-] [36
-
-] [37
-
-] [38
-
-] [39
-
-] [40
-
-] [41
-
-] [42
-
-] [43
-
-] [44
-
-] [45
-
-] [46
-
-] [47
-
-] [48
-
-] [49
-
-] [50
-
-] [51
-
-] [52
-
-] [53
-
-] [54
-
-] [55
+[18
 
 ]
-LaTeX Font Info:    Font shape `OMX/mdbch/m/n' will be
-(Font)              scaled to size 8.64006pt on input line 357.
-LaTeX Font Info:    Font shape `OMX/mdbch/m/n' will be
-(Font)              scaled to size 6.72005pt on input line 357.
-LaTeX Font Info:    Font shape `OMX/mdbch/m/n' will be
-(Font)              scaled to size 4.80003pt on input line 357.
-LaTeX Font Info:    Font shape `MDA/mdbch/b/n' will be
-(Font)              scaled to size 8.64006pt on input line 357.
-LaTeX Font Info:    Font shape `MDA/mdbch/b/n' will be
-(Font)              scaled to size 6.72005pt on input line 357.
-LaTeX Font Info:    Font shape `MDA/mdbch/b/n' will be
-(Font)              scaled to size 4.80003pt on input line 357.
+Overfull \hbox (4.1063pt too wide) detected at line 203
+  [] [][][][][][][][][][] [][][][][][][][] [][][][][][][][][][][][][][][] [][][][][][][][][] [][][][][][][][][] [][][][][][][][][]  
+ []
+
+
+Overfull \hbox (4.1063pt too wide) has occurred while \output is active
+  [] [][][][][][][][][][] [][][][][][][][] [][][][][][][][][][][][][][][] [][][][][][][][][] [][][][][][][][][] [][][][][][][][][]  
+ []
+
+[19
+
+{c:/Users/jonny/AppData/Roaming/TinyTeX/texmf-dist/fonts/enc/dvips/arev/arevoml.enc}]
+Overfull \hbox (4.1063pt too wide) has occurred while \output is active
+  [] [][][][][][][][][][] [][][][][][][][] [][][][][][][][][][][][][][][] [][][][][][][][][] [][][][][][][][][] [][][][][][][][][]  
+ []
+
+[20
+
+]
+Overfull \hbox (4.1063pt too wide) has occurred while \output is active
+  [] [][][][][][][][][][] [][][][][][][][] [][][][][][][][][][][][][][][] [][][][][][][][][] [][][][][][][][][] [][][][][][][][][]  
+ []
+
+[21
+
+]
+Overfull \hbox (4.1063pt too wide) has occurred while \output is active
+  [] [][][][][][][][][][] [][][][][][][][] [][][][][][][][][][][][][][][] [][][][][][][][][] [][][][][][][][][] [][][][][][][][][]  
+ []
+
+[22
+
+]
+Overfull \hbox (4.1063pt too wide) detected at line 214
+  [] [][][][][][][][][][] [][][][][][][][] [][][][][][][][][][][][][][][] [][][][][][][][][] [][][][][][][][][] [][][][][][][][][]  
+ []
+
+
+Overfull \hbox (4.1063pt too wide) has occurred while \output is active
+  [] [][][][][][][][][][] [][][][][][][][] [][][][][][][][][][][][][][][] [][][][][][][][][] [][][][][][][][][] [][][][][][][][][]  
+ []
+
+[23
+
+]
+Overfull \hbox (4.1063pt too wide) detected at line 230
+  [] [][][][][][][][][][] [][][][][][][][] [][][][][][][][][][][][][][][] [][][][][][][][][] [][][][][][][][][] [][][][][][][][][]  
+ []
+
+
+Overfull \hbox (4.1063pt too wide) has occurred while \output is active
+  [] [][][][][][][][][][] [][][][][][][][] [][][][][][][][][][][][][][][] [][][][][][][][][] [][][][][][][][][] [][][][][][][][][]  
+ []
+
+[24
+
+]
+Overfull \hbox (4.1063pt too wide) has occurred while \output is active
+  [] [][][][][][][][][][] [][][][][][][][] [][][][][][][][][][][][][][][] [][][][][][][][][] [][][][][][][][][] [][][][][][][][][]  
+ []
+
+[25
+
+]
+Overfull \hbox (4.1063pt too wide) has occurred while \output is active
+  [] [][][][][][][][][][] [][][][][][][][] [][][][][][][][][][][][][][][] [][][][][][][][][] [][][][][][][][][] [][][][][][][][][]  
+ []
+
+[26
+
+]
+Overfull \hbox (4.1063pt too wide) has occurred while \output is active
+  [] [][][][][][][][][][] [][][][][][][][] [][][][][][][][][][][][][][][] [][][][][][][][][] [][][][][][][][][] [][][][][][][][][]  
+ []
+
+[27
+
+]
+Overfull \hbox (4.1063pt too wide) has occurred while \output is active
+  [] [][][][][][][][][][] [][][][][][][][] [][][][][][][][][][][][][][][] [][][][][][][][][] [][][][][][][][][] [][][][][][][][][]  
+ []
+
+[28
+
+]
+Overfull \hbox (4.1063pt too wide) detected at line 257
+  [] [][][][][][][][][][] [][][][][][][][] [][][][][][][][][][][][][][][] [][][][][][][][][] [][][][][][][][][] [][][][][][][][][]  
+ []
+
+
+Overfull \hbox (4.1063pt too wide) has occurred while \output is active
+  [] [][][][][][][][][][] [][][][][][][][] [][][][][][][][][][][][][][][] [][][][][][][][][] [][][][][][][][][] [][][][][][][][][]  
+ []
+
+[29
+
+]
+Overfull \hbox (4.1063pt too wide) has occurred while \output is active
+  [] [][][][][][][][][][] [][][][][][][][] [][][][][][][][][][][][][][][] [][][][][][][][][] [][][][][][][][][] [][][][][][][][][]  
+ []
+
+[30
+
+]
+Overfull \hbox (4.1063pt too wide) has occurred while \output is active
+  [] [][][][][][][][][][] [][][][][][][][] [][][][][][][][][][][][][][][] [][][][][][][][][] [][][][][][][][][] [][][][][][][][][]  
+ []
+
+[31
+
+]
+Overfull \hbox (4.1063pt too wide) has occurred while \output is active
+  [] [][][][][][][][][][] [][][][][][][][] [][][][][][][][][][][][][][][] [][][][][][][][][] [][][][][][][][][] [][][][][][][][][]  
+ []
+
+[32
+
+]
+Overfull \hbox (4.1063pt too wide) has occurred while \output is active
+  [] [][][][][][][][][][] [][][][][][][][] [][][][][][][][][][][][][][][] [][][][][][][][][] [][][][][][][][][] [][][][][][][][][]  
+ []
+
+[33
+
+]
+Overfull \hbox (4.1063pt too wide) has occurred while \output is active
+  [] [][][][][][][][][][] [][][][][][][][] [][][][][][][][][][][][][][][] [][][][][][][][][] [][][][][][][][][] [][][][][][][][][]  
+ []
+
+[34
+
+]
+Overfull \hbox (4.1063pt too wide) has occurred while \output is active
+  [] [][][][][][][][][][] [][][][][][][][] [][][][][][][][][][][][][][][] [][][][][][][][][] [][][][][][][][][] [][][][][][][][][]  
+ []
+
+[35
+
+]
+Overfull \hbox (4.1063pt too wide) has occurred while \output is active
+  [] [][][][][][][][][][] [][][][][][][][] [][][][][][][][][][][][][][][] [][][][][][][][][] [][][][][][][][][] [][][][][][][][][]  
+ []
+
+[36
+
+]
+Overfull \hbox (4.1063pt too wide) has occurred while \output is active
+  [] [][][][][][][][][][] [][][][][][][][] [][][][][][][][][][][][][][][] [][][][][][][][][] [][][][][][][][][] [][][][][][][][][]  
+ []
+
+[37
+
+]
+Overfull \hbox (4.1063pt too wide) detected at line 270
+  [] [][][][][][][][][][] [][][][][][][][] [][][][][][][][][][][][][][][] [][][][][][][][][] [][][][][][][][][] [][][][][][][][][]  
+ []
+
+
+Overfull \hbox (4.1063pt too wide) has occurred while \output is active
+  [] [][][][][][][][][][] [][][][][][][][] [][][][][][][][][][][][][][][] [][][][][][][][][] [][][][][][][][][] [][][][][][][][][]  
+ []
+
+[38
+
+]
+Overfull \hbox (4.1063pt too wide) detected at line 295
+  [] [][][][][][][][][][] [][][][][][][][] [][][][][][][][][][][][][][][] [][][][][][][][][] [][][][][][][][][] [][][][][][][][][]  
+ []
+
+
+Overfull \hbox (4.1063pt too wide) has occurred while \output is active
+  [] [][][][][][][][][][] [][][][][][][][] [][][][][][][][][][][][][][][] [][][][][][][][][] [][][][][][][][][] [][][][][][][][][]  
+ []
+
+[39
+
+]
+Overfull \hbox (4.1063pt too wide) has occurred while \output is active
+  [] [][][][][][][][][][] [][][][][][][][] [][][][][][][][][][][][][][][] [][][][][][][][][] [][][][][][][][][] [][][][][][][][][]  
+ []
+
+[40
+
+]
+Overfull \hbox (4.1063pt too wide) has occurred while \output is active
+  [] [][][][][][][][][][] [][][][][][][][] [][][][][][][][][][][][][][][] [][][][][][][][][] [][][][][][][][][] [][][][][][][][][]  
+ []
+
+[41
+
+]
+Overfull \hbox (4.1063pt too wide) has occurred while \output is active
+  [] [][][][][][][][][][] [][][][][][][][] [][][][][][][][][][][][][][][] [][][][][][][][][] [][][][][][][][][] [][][][][][][][][]  
+ []
+
+[42
+
+]
+Overfull \hbox (4.1063pt too wide) has occurred while \output is active
+  [] [][][][][][][][][][] [][][][][][][][] [][][][][][][][][][][][][][][] [][][][][][][][][] [][][][][][][][][] [][][][][][][][][]  
+ []
+
+[43
+
+]
+Overfull \hbox (4.1063pt too wide) has occurred while \output is active
+  [] [][][][][][][][][][] [][][][][][][][] [][][][][][][][][][][][][][][] [][][][][][][][][] [][][][][][][][][] [][][][][][][][][]  
+ []
+
+[44
+
+]
+Overfull \hbox (4.1063pt too wide) has occurred while \output is active
+  [] [][][][][][][][][][] [][][][][][][][] [][][][][][][][][][][][][][][] [][][][][][][][][] [][][][][][][][][] [][][][][][][][][]  
+ []
+
+[45
+
+]
+Overfull \hbox (4.1063pt too wide) has occurred while \output is active
+  [] [][][][][][][][][][] [][][][][][][][] [][][][][][][][][][][][][][][] [][][][][][][][][] [][][][][][][][][] [][][][][][][][][]  
+ []
+
+[46
+
+]
+Overfull \hbox (4.1063pt too wide) has occurred while \output is active
+  [] [][][][][][][][][][] [][][][][][][][] [][][][][][][][][][][][][][][] [][][][][][][][][] [][][][][][][][][] [][][][][][][][][]  
+ []
+
+[47
+
+]
+Overfull \hbox (4.1063pt too wide) has occurred while \output is active
+  [] [][][][][][][][][][] [][][][][][][][] [][][][][][][][][][][][][][][] [][][][][][][][][] [][][][][][][][][] [][][][][][][][][]  
+ []
+
+[48
+
+]
+Overfull \hbox (4.1063pt too wide) detected at line 297
+  [] [][][][][][][][][][] [][][][][][][][] [][][][][][][][][][][][][][][] [][][][][][][][][] [][][][][][][][][] [][][][][][][][][]  
+ []
+
+
+Overfull \hbox (4.1063pt too wide) has occurred while \output is active
+  [] [][][][][][][][][][] [][][][][][][][] [][][][][][][][][][][][][][][] [][][][][][][][][] [][][][][][][][][] [][][][][][][][][]  
+ []
+
+[49
+
+]
+Overfull \hbox (4.1063pt too wide) detected at line 319
+  [] [][][][][][][][][][] [][][][][][][][] [][][][][][][][][][][][][][][] [][][][][][][][][] [][][][][][][][][] [][][][][][][][][]  
+ []
+
+
+Overfull \hbox (4.1063pt too wide) has occurred while \output is active
+  [] [][][][][][][][][][] [][][][][][][][] [][][][][][][][][][][][][][][] [][][][][][][][][] [][][][][][][][][] [][][][][][][][][]  
+ []
+
+[50
+
+]
+Overfull \hbox (4.1063pt too wide) has occurred while \output is active
+  [] [][][][][][][][][][] [][][][][][][][] [][][][][][][][][][][][][][][] [][][][][][][][][] [][][][][][][][][] [][][][][][][][][]  
+ []
+
+[51
+
+]
+Overfull \hbox (4.1063pt too wide) has occurred while \output is active
+  [] [][][][][][][][][][] [][][][][][][][] [][][][][][][][][][][][][][][] [][][][][][][][][] [][][][][][][][][] [][][][][][][][][]  
+ []
+
+[52
+
+]
+Overfull \hbox (4.1063pt too wide) detected at line 336
+  [] [][][][][][][][][][] [][][][][][][][] [][][][][][][][][][][][][][][] [][][][][][][][][] [][][][][][][][][] [][][][][][][][][]  
+ []
+
+
+Overfull \hbox (4.1063pt too wide) has occurred while \output is active
+  [] [][][][][][][][][][] [][][][][][][][] [][][][][][][][][][][][][][][] [][][][][][][][][] [][][][][][][][][] [][][][][][][][][]  
+ []
+
+[53
+
+]
+Overfull \hbox (4.1063pt too wide) has occurred while \output is active
+  [] [][][][][][][][][][] [][][][][][][][] [][][][][][][][][][][][][][][] [][][][][][][][][] [][][][][][][][][] [][][][][][][][][]  
+ []
+
+[54
+
+]
+Overfull \hbox (4.1063pt too wide) has occurred while \output is active
+  [] [][][][][][][][][][] [][][][][][][][] [][][][][][][][][][][][][][][] [][][][][][][][][] [][][][][][][][][] [][][][][][][][][]  
+ []
+
+[55
+
+]
+Overfull \hbox (4.1063pt too wide) has occurred while \output is active
+  [] [][][][][][][][][][] [][][][][][][][] [][][][][][][][][][][][][][][] [][][][][][][][][] [][][][][][][][][] [][][][][][][][][]  
+ []
+
 [56
 
-] [57
+]
+Overfull \hbox (4.1063pt too wide) has occurred while \output is active
+  [] [][][][][][][][][][] [][][][][][][][] [][][][][][][][][][][][][][][] [][][][][][][][][] [][][][][][][][][] [][][][][][][][][]  
+ []
 
-] [58
+[57
 
-] [59
+]
+Overfull \hbox (4.1063pt too wide) detected at line 371
+  [] [][][][][][][][][][] [][][][][][][][] [][][][][][][][][][][][][][][] [][][][][][][][][] [][][][][][][][][] [][][][][][][][][]  
+ []
 
-] [60
+LaTeX Font Info:    Font shape `OMX/mdbch/m/n' will be
+(Font)              scaled to size 8.64006pt on input line 371.
+LaTeX Font Info:    Font shape `OMX/mdbch/m/n' will be
+(Font)              scaled to size 6.72005pt on input line 371.
+LaTeX Font Info:    Font shape `OMX/mdbch/m/n' will be
+(Font)              scaled to size 4.80003pt on input line 371.
+LaTeX Font Info:    Font shape `MDA/mdbch/b/n' will be
+(Font)              scaled to size 8.64006pt on input line 371.
+LaTeX Font Info:    Font shape `MDA/mdbch/b/n' will be
+(Font)              scaled to size 6.72005pt on input line 371.
+LaTeX Font Info:    Font shape `MDA/mdbch/b/n' will be
+(Font)              scaled to size 4.80003pt on input line 371.
 
-] [61
+Overfull \hbox (4.1063pt too wide) has occurred while \output is active
+  [] [][][][][][][][][][] [][][][][][][][] [][][][][][][][][][][][][][][] [][][][][][][][][] [][][][][][][][][] [][][][][][][][][]  
+ []
 
-] [62
+[58
 
-] [63
+]
+Overfull \hbox (4.1063pt too wide) has occurred while \output is active
+  [] [][][][][][][][][][] [][][][][][][][] [][][][][][][][][][][][][][][] [][][][][][][][][] [][][][][][][][][] [][][][][][][][][]  
+ []
 
-] [64
+[59
 
-] [65
+]
+Overfull \hbox (4.1063pt too wide) has occurred while \output is active
+  [] [][][][][][][][][][] [][][][][][][][] [][][][][][][][][][][][][][][] [][][][][][][][][] [][][][][][][][][] [][][][][][][][][]  
+ []
 
-] [66
+[60
 
-] [67
+]
+Overfull \hbox (4.1063pt too wide) has occurred while \output is active
+  [] [][][][][][][][][][] [][][][][][][][] [][][][][][][][][][][][][][][] [][][][][][][][][] [][][][][][][][][] [][][][][][][][][]  
+ []
 
-] [68
+[61
+
+]
+Overfull \hbox (4.1063pt too wide) has occurred while \output is active
+  [] [][][][][][][][][][] [][][][][][][][] [][][][][][][][][][][][][][][] [][][][][][][][][] [][][][][][][][][] [][][][][][][][][]  
+ []
+
+[62
+
+]
+Overfull \hbox (4.1063pt too wide) has occurred while \output is active
+  [] [][][][][][][][][][] [][][][][][][][] [][][][][][][][][][][][][][][] [][][][][][][][][] [][][][][][][][][] [][][][][][][][][]  
+ []
+
+[63
+
+]
+Overfull \hbox (4.1063pt too wide) has occurred while \output is active
+  [] [][][][][][][][][][] [][][][][][][][] [][][][][][][][][][][][][][][] [][][][][][][][][] [][][][][][][][][] [][][][][][][][][]  
+ []
+
+[64
+
+]
+Overfull \hbox (4.1063pt too wide) has occurred while \output is active
+  [] [][][][][][][][][][] [][][][][][][][] [][][][][][][][][][][][][][][] [][][][][][][][][] [][][][][][][][][] [][][][][][][][][]  
+ []
+
+[65
+
+]
+Overfull \hbox (4.1063pt too wide) has occurred while \output is active
+  [] [][][][][][][][][][] [][][][][][][][] [][][][][][][][][][][][][][][] [][][][][][][][][] [][][][][][][][][] [][][][][][][][][]  
+ []
+
+[66
+
+]
+Overfull \hbox (4.1063pt too wide) has occurred while \output is active
+  [] [][][][][][][][][][] [][][][][][][][] [][][][][][][][][][][][][][][] [][][][][][][][][] [][][][][][][][][] [][][][][][][][][]  
+ []
+
+[67
+
+]
+Overfull \hbox (4.1063pt too wide) detected at line 386
+  [] [][][][][][][][][][] [][][][][][][][] [][][][][][][][][][][][][][][] [][][][][][][][][] [][][][][][][][][] [][][][][][][][][]  
+ []
+
+
+Overfull \hbox (4.1063pt too wide) has occurred while \output is active
+  [] [][][][][][][][][][] [][][][][][][][] [][][][][][][][][][][][][][][] [][][][][][][][][] [][][][][][][][][] [][][][][][][][][]  
+ []
+
+[68
+
+]
+Overfull \hbox (4.1063pt too wide) has occurred while \output is active
+  [] [][][][][][][][][][] [][][][][][][][] [][][][][][][][][][][][][][][] [][][][][][][][][] [][][][][][][][][] [][][][][][][][][]  
+ []
+
+[69
+
+]
+Overfull \hbox (4.1063pt too wide) has occurred while \output is active
+  [] [][][][][][][][][][] [][][][][][][][] [][][][][][][][][][][][][][][] [][][][][][][][][] [][][][][][][][][] [][][][][][][][][]  
+ []
+
+[70
 
 ]
 
 pdfTeX warning: pdflatex.exe (file ./Phone_Kerala.pdf): PDF inclusion: found PDF version <1.7>, but at most version <1.5> allowed
-<Phone_Kerala.pdf, id=5121, 379.4175pt x 416.30531pt>
+<Phone_Kerala.pdf, id=5711, 379.4175pt x 416.30531pt>
 File: Phone_Kerala.pdf Graphic file (type pdf)
 <use Phone_Kerala.pdf>
-Package pdftex.def Info: Phone_Kerala.pdf  used on input line 375.
+Package pdftex.def Info: Phone_Kerala.pdf  used on input line 389.
 (pdftex.def)             Requested size: 379.41656pt x 416.30429pt.
 
 
 pdfTeX warning: pdflatex.exe (file ./Phone_Kerala.pdf): PDF inclusion: found PDF version <1.7>, but at most version <1.5> allowed
 File: Phone_Kerala.pdf Graphic file (type pdf)
 <use Phone_Kerala.pdf>
-Package pdftex.def Info: Phone_Kerala.pdf  used on input line 375.
+Package pdftex.def Info: Phone_Kerala.pdf  used on input line 389.
 (pdftex.def)             Requested size: 379.41656pt x 416.30429pt.
 
 
@@ -1509,43 +1947,43 @@ pdfTeX warning: pdflatex.exe (file ./Phone_Kerala.pdf): PDF inclusion: found PDF
 
 
 pdfTeX warning: pdflatex.exe (file ./Phone_Kerala.pdf): PDF inclusion: found PDF version <1.7>, but at most version <1.5> allowed
-<Phone_Kerala.pdf, id=5124, page=1, 379.4175pt x 416.30531pt>
+<Phone_Kerala.pdf, id=5714, page=1, 379.4175pt x 416.30531pt>
 File: Phone_Kerala.pdf Graphic file (type pdf)
 <use Phone_Kerala.pdf, page 1>
-Package pdftex.def Info: Phone_Kerala.pdf , page1 used on input line 375.
+Package pdftex.def Info: Phone_Kerala.pdf , page1 used on input line 389.
 (pdftex.def)             Requested size: 379.41656pt x 416.30429pt.
 File: Phone_Kerala.pdf Graphic file (type pdf)
 <use Phone_Kerala.pdf, page 1>
-Package pdftex.def Info: Phone_Kerala.pdf , page1 used on input line 375.
+Package pdftex.def Info: Phone_Kerala.pdf , page1 used on input line 389.
 (pdftex.def)             Requested size: 249.12527pt x 273.34578pt.
 File: Phone_Kerala.pdf Graphic file (type pdf)
 <use Phone_Kerala.pdf, page 1>
-Package pdftex.def Info: Phone_Kerala.pdf , page1 used on input line 375.
+Package pdftex.def Info: Phone_Kerala.pdf , page1 used on input line 389.
 (pdftex.def)             Requested size: 249.12527pt x 273.34578pt.
 File: Phone_Kerala.pdf Graphic file (type pdf)
 <use Phone_Kerala.pdf, page 1>
-Package pdftex.def Info: Phone_Kerala.pdf , page1 used on input line 375.
+Package pdftex.def Info: Phone_Kerala.pdf , page1 used on input line 389.
 (pdftex.def)             Requested size: 249.12527pt x 273.34578pt.
 File: Phone_Kerala.pdf Graphic file (type pdf)
 <use Phone_Kerala.pdf, page 1>
-Package pdftex.def Info: Phone_Kerala.pdf , page1 used on input line 375.
+Package pdftex.def Info: Phone_Kerala.pdf , page1 used on input line 389.
 (pdftex.def)             Requested size: 249.12527pt x 273.34578pt.
-[69
+[71
 
  <./Phone_Kerala.pdf>]
 
 pdfTeX warning: pdflatex.exe (file ./Phone_Prices.pdf): PDF inclusion: found PDF version <1.7>, but at most version <1.5> allowed
-<Phone_Prices.pdf, id=5134, 530.73282pt x 405.01312pt>
+<Phone_Prices.pdf, id=5724, 530.73282pt x 405.01312pt>
 File: Phone_Prices.pdf Graphic file (type pdf)
 <use Phone_Prices.pdf>
-Package pdftex.def Info: Phone_Prices.pdf  used on input line 378.
+Package pdftex.def Info: Phone_Prices.pdf  used on input line 392.
 (pdftex.def)             Requested size: 530.73152pt x 405.01212pt.
 
 
 pdfTeX warning: pdflatex.exe (file ./Phone_Prices.pdf): PDF inclusion: found PDF version <1.7>, but at most version <1.5> allowed
 File: Phone_Prices.pdf Graphic file (type pdf)
 <use Phone_Prices.pdf>
-Package pdftex.def Info: Phone_Prices.pdf  used on input line 378.
+Package pdftex.def Info: Phone_Prices.pdf  used on input line 392.
 (pdftex.def)             Requested size: 530.73152pt x 405.01212pt.
 
 
@@ -1553,129 +1991,408 @@ pdfTeX warning: pdflatex.exe (file ./Phone_Prices.pdf): PDF inclusion: found PDF
 
 
 pdfTeX warning: pdflatex.exe (file ./Phone_Prices.pdf): PDF inclusion: found PDF version <1.7>, but at most version <1.5> allowed
-<Phone_Prices.pdf, id=5137, page=1, 530.73282pt x 405.01312pt>
+<Phone_Prices.pdf, id=5727, page=1, 530.73282pt x 405.01312pt>
 File: Phone_Prices.pdf Graphic file (type pdf)
 <use Phone_Prices.pdf, page 1>
-Package pdftex.def Info: Phone_Prices.pdf , page1 used on input line 378.
+Package pdftex.def Info: Phone_Prices.pdf , page1 used on input line 392.
 (pdftex.def)             Requested size: 530.73152pt x 405.01212pt.
 File: Phone_Prices.pdf Graphic file (type pdf)
 <use Phone_Prices.pdf, page 1>
-Package pdftex.def Info: Phone_Prices.pdf , page1 used on input line 378.
+Package pdftex.def Info: Phone_Prices.pdf , page1 used on input line 392.
 (pdftex.def)             Requested size: 357.93765pt x 273.14957pt.
 File: Phone_Prices.pdf Graphic file (type pdf)
 <use Phone_Prices.pdf, page 1>
-Package pdftex.def Info: Phone_Prices.pdf , page1 used on input line 378.
+Package pdftex.def Info: Phone_Prices.pdf , page1 used on input line 392.
 (pdftex.def)             Requested size: 357.93765pt x 273.14957pt.
 File: Phone_Prices.pdf Graphic file (type pdf)
 <use Phone_Prices.pdf, page 1>
-Package pdftex.def Info: Phone_Prices.pdf , page1 used on input line 378.
+Package pdftex.def Info: Phone_Prices.pdf , page1 used on input line 392.
 (pdftex.def)             Requested size: 357.93765pt x 273.14957pt.
 File: Phone_Prices.pdf Graphic file (type pdf)
 <use Phone_Prices.pdf, page 1>
-Package pdftex.def Info: Phone_Prices.pdf , page1 used on input line 378.
+Package pdftex.def Info: Phone_Prices.pdf , page1 used on input line 392.
 (pdftex.def)             Requested size: 357.93765pt x 273.14957pt.
-[70 <./Phone_Prices.pdf>] [71] [72
+[72 <./Phone_Prices.pdf>]
+Overfull \hbox (4.1063pt too wide) detected at line 411
+  [] [][][][][][][][][][] [][][][][][][][] [][][][][][][][][][][][][][][] [][][][][][][][][] [][][][][][][][][] [][][][][][][][][]  
+ []
 
-] [73
 
-] [74
+Overfull \hbox (4.1063pt too wide) has occurred while \output is active
+  [] [][][][][][][][][][] [][][][][][][][] [][][][][][][][][][][][][][][] [][][][][][][][][] [][][][][][][][][] [][][][][][][][][]  
+ []
 
-] [75
+[73]
+Overfull \hbox (4.1063pt too wide) has occurred while \output is active
+  [] [][][][][][][][][][] [][][][][][][][] [][][][][][][][][][][][][][][] [][][][][][][][][] [][][][][][][][][] [][][][][][][][][]  
+ []
 
-] [76
-
-] [77
-
-] [78
-
-] [79
-
-] [80
-
-] [81
-
-] [82
-
-] [83
-
-] [84
-
-] [85
-
-] [86
-
-] [87
-
-] [88
-
-] [89
-
-] [90
-
-] [91
-
-] [92
-
-] [93
-
-] [94
-
-] [95
-
-] [96
-
-{c:/Users/jonny/AppData/Roaming/TinyTeX/texmf-dist/fonts/enc/dvips/arev/arevot1.enc}] [97
-
-] [98
-
-] [99
-
-] [100
-
-] [101
-
-] [102
-
-] [103
-
-] [104
-
-] [105
-
-] [106
-
-] [107
+[74
 
 ]
-<figure/unnamed-chunk-1-1.pdf, id=7874, 1003.75pt x 582.175pt>
-File: figure/unnamed-chunk-1-1.pdf Graphic file (type pdf)
-<use figure/unnamed-chunk-1-1.pdf>
-Package pdftex.def Info: figure/unnamed-chunk-1-1.pdf  used on input line 518.
-(pdftex.def)             Requested size: 354.19536pt x 205.43436pt.
+Overfull \hbox (4.1063pt too wide) has occurred while \output is active
+  [] [][][][][][][][][][] [][][][][][][][] [][][][][][][][][][][][][][][] [][][][][][][][][] [][][][][][][][][] [][][][][][][][][]  
+ []
+
+[75
+
+]
+Overfull \hbox (4.1063pt too wide) has occurred while \output is active
+  [] [][][][][][][][][][] [][][][][][][][] [][][][][][][][][][][][][][][] [][][][][][][][][] [][][][][][][][][] [][][][][][][][][]  
+ []
+
+[76
+
+]
+Overfull \hbox (4.1063pt too wide) has occurred while \output is active
+  [] [][][][][][][][][][] [][][][][][][][] [][][][][][][][][][][][][][][] [][][][][][][][][] [][][][][][][][][] [][][][][][][][][]  
+ []
+
+[77
+
+]
+Overfull \hbox (4.1063pt too wide) has occurred while \output is active
+  [] [][][][][][][][][][] [][][][][][][][] [][][][][][][][][][][][][][][] [][][][][][][][][] [][][][][][][][][] [][][][][][][][][]  
+ []
+
+[78
+
+]
+Overfull \hbox (4.1063pt too wide) has occurred while \output is active
+  [] [][][][][][][][][][] [][][][][][][][] [][][][][][][][][][][][][][][] [][][][][][][][][] [][][][][][][][][] [][][][][][][][][]  
+ []
+
+[79
+
+]
+Overfull \hbox (4.1063pt too wide) detected at line 430
+  [] [][][][][][][][][][] [][][][][][][][] [][][][][][][][][][][][][][][] [][][][][][][][][] [][][][][][][][][] [][][][][][][][][]  
+ []
+
+
+Overfull \hbox (4.1063pt too wide) has occurred while \output is active
+  [] [][][][][][][][][][] [][][][][][][][] [][][][][][][][][][][][][][][] [][][][][][][][][] [][][][][][][][][] [][][][][][][][][]  
+ []
+
+[80
+
+]
+Overfull \hbox (4.1063pt too wide) has occurred while \output is active
+  [] [][][][][][][][][][] [][][][][][][][] [][][][][][][][][][][][][][][] [][][][][][][][][] [][][][][][][][][] [][][][][][][][][]  
+ []
+
+[81
+
+]
+Overfull \hbox (4.1063pt too wide) has occurred while \output is active
+  [] [][][][][][][][][][] [][][][][][][][] [][][][][][][][][][][][][][][] [][][][][][][][][] [][][][][][][][][] [][][][][][][][][]  
+ []
+
+[82
+
+]
+Overfull \hbox (4.1063pt too wide) has occurred while \output is active
+  [] [][][][][][][][][][] [][][][][][][][] [][][][][][][][][][][][][][][] [][][][][][][][][] [][][][][][][][][] [][][][][][][][][]  
+ []
+
+[83
+
+]
+Overfull \hbox (4.1063pt too wide) has occurred while \output is active
+  [] [][][][][][][][][][] [][][][][][][][] [][][][][][][][][][][][][][][] [][][][][][][][][] [][][][][][][][][] [][][][][][][][][]  
+ []
+
+[84
+
+]
+Overfull \hbox (4.1063pt too wide) has occurred while \output is active
+  [] [][][][][][][][][][] [][][][][][][][] [][][][][][][][][][][][][][][] [][][][][][][][][] [][][][][][][][][] [][][][][][][][][]  
+ []
+
+[85
+
+]
+Overfull \hbox (4.1063pt too wide) detected at line 432
+  [] [][][][][][][][][][] [][][][][][][][] [][][][][][][][][][][][][][][] [][][][][][][][][] [][][][][][][][][] [][][][][][][][][]  
+ []
+
+
+Overfull \hbox (4.1063pt too wide) has occurred while \output is active
+  [] [][][][][][][][][][] [][][][][][][][] [][][][][][][][][][][][][][][] [][][][][][][][][] [][][][][][][][][] [][][][][][][][][]  
+ []
+
+[86
+
+]
+Overfull \hbox (4.1063pt too wide) detected at line 441
+  [] [][][][][][][][][][] [][][][][][][][] [][][][][][][][][][][][][][][] [][][][][][][][][] [][][][][][][][][] [][][][][][][][][]  
+ []
+
+
+Overfull \hbox (4.1063pt too wide) has occurred while \output is active
+  [] [][][][][][][][][][] [][][][][][][][] [][][][][][][][][][][][][][][] [][][][][][][][][] [][][][][][][][][] [][][][][][][][][]  
+ []
+
+[87
+
+]
+Overfull \hbox (4.1063pt too wide) has occurred while \output is active
+  [] [][][][][][][][][][] [][][][][][][][] [][][][][][][][][][][][][][][] [][][][][][][][][] [][][][][][][][][] [][][][][][][][][]  
+ []
+
+[88
+
+]
+Overfull \hbox (4.1063pt too wide) detected at line 457
+  [] [][][][][][][][][][] [][][][][][][][] [][][][][][][][][][][][][][][] [][][][][][][][][] [][][][][][][][][] [][][][][][][][][]  
+ []
+
+
+Overfull \hbox (4.1063pt too wide) has occurred while \output is active
+  [] [][][][][][][][][][] [][][][][][][][] [][][][][][][][][][][][][][][] [][][][][][][][][] [][][][][][][][][] [][][][][][][][][]  
+ []
+
+[89
+
+]
+Overfull \hbox (4.1063pt too wide) has occurred while \output is active
+  [] [][][][][][][][][][] [][][][][][][][] [][][][][][][][][][][][][][][] [][][][][][][][][] [][][][][][][][][] [][][][][][][][][]  
+ []
+
+[90
+
+]
+Overfull \hbox (4.1063pt too wide) has occurred while \output is active
+  [] [][][][][][][][][][] [][][][][][][][] [][][][][][][][][][][][][][][] [][][][][][][][][] [][][][][][][][][] [][][][][][][][][]  
+ []
+
+[91
+
+]
+Overfull \hbox (4.1063pt too wide) has occurred while \output is active
+  [] [][][][][][][][][][] [][][][][][][][] [][][][][][][][][][][][][][][] [][][][][][][][][] [][][][][][][][][] [][][][][][][][][]  
+ []
+
+[92
+
+]
+Overfull \hbox (4.1063pt too wide) detected at line 479
+  [] [][][][][][][][][][] [][][][][][][][] [][][][][][][][][][][][][][][] [][][][][][][][][] [][][][][][][][][] [][][][][][][][][]  
+ []
+
+
+Overfull \hbox (4.1063pt too wide) has occurred while \output is active
+  [] [][][][][][][][][][] [][][][][][][][] [][][][][][][][][][][][][][][] [][][][][][][][][] [][][][][][][][][] [][][][][][][][][]  
+ []
+
+[93
+
+]
+Overfull \hbox (4.1063pt too wide) has occurred while \output is active
+  [] [][][][][][][][][][] [][][][][][][][] [][][][][][][][][][][][][][][] [][][][][][][][][] [][][][][][][][][] [][][][][][][][][]  
+ []
+
+[94
+
+]
+Overfull \hbox (4.1063pt too wide) has occurred while \output is active
+  [] [][][][][][][][][][] [][][][][][][][] [][][][][][][][][][][][][][][] [][][][][][][][][] [][][][][][][][][] [][][][][][][][][]  
+ []
+
+[95
+
+]
+Overfull \hbox (4.1063pt too wide) has occurred while \output is active
+  [] [][][][][][][][][][] [][][][][][][][] [][][][][][][][][][][][][][][] [][][][][][][][][] [][][][][][][][][] [][][][][][][][][]  
+ []
+
+[96
+
+]
+Overfull \hbox (4.1063pt too wide) has occurred while \output is active
+  [] [][][][][][][][][][] [][][][][][][][] [][][][][][][][][][][][][][][] [][][][][][][][][] [][][][][][][][][] [][][][][][][][][]  
+ []
+
+[97
+
+]
+Overfull \hbox (4.1063pt too wide) has occurred while \output is active
+  [] [][][][][][][][][][] [][][][][][][][] [][][][][][][][][][][][][][][] [][][][][][][][][] [][][][][][][][][] [][][][][][][][][]  
+ []
+
+[98
+
+]
+Overfull \hbox (4.1063pt too wide) detected at line 499
+  [] [][][][][][][][][][] [][][][][][][][] [][][][][][][][][][][][][][][] [][][][][][][][][] [][][][][][][][][] [][][][][][][][][]  
+ []
+
+
+Overfull \hbox (4.1063pt too wide) has occurred while \output is active
+  [] [][][][][][][][][][] [][][][][][][][] [][][][][][][][][][][][][][][] [][][][][][][][][] [][][][][][][][][] [][][][][][][][][]  
+ []
+
+[99
+
+{c:/Users/jonny/AppData/Roaming/TinyTeX/texmf-dist/fonts/enc/dvips/arev/arevot1.enc}]
+Overfull \hbox (4.1063pt too wide) has occurred while \output is active
+  [] [][][][][][][][][][] [][][][][][][][] [][][][][][][][][][][][][][][] [][][][][][][][][] [][][][][][][][][] [][][][][][][][][]  
+ []
+
+[100
+
+]
+Overfull \hbox (4.1063pt too wide) has occurred while \output is active
+  [] [][][][][][][][][][] [][][][][][][][] [][][][][][][][][][][][][][][] [][][][][][][][][] [][][][][][][][][] [][][][][][][][][]  
+ []
+
+[101
+
+]
+Overfull \hbox (4.1063pt too wide) has occurred while \output is active
+  [] [][][][][][][][][][] [][][][][][][][] [][][][][][][][][][][][][][][] [][][][][][][][][] [][][][][][][][][] [][][][][][][][][]  
+ []
+
+[102
+
+]
+Overfull \hbox (4.1063pt too wide) has occurred while \output is active
+  [] [][][][][][][][][][] [][][][][][][][] [][][][][][][][][][][][][][][] [][][][][][][][][] [][][][][][][][][] [][][][][][][][][]  
+ []
+
+[103
+
+]
+Overfull \hbox (4.1063pt too wide) has occurred while \output is active
+  [] [][][][][][][][][][] [][][][][][][][] [][][][][][][][][][][][][][][] [][][][][][][][][] [][][][][][][][][] [][][][][][][][][]  
+ []
+
+[104
+
+]
+Overfull \hbox (4.1063pt too wide) has occurred while \output is active
+  [] [][][][][][][][][][] [][][][][][][][] [][][][][][][][][][][][][][][] [][][][][][][][][] [][][][][][][][][] [][][][][][][][][]  
+ []
+
+[105
+
+]
+Overfull \hbox (4.1063pt too wide) detected at line 519
+  [] [][][][][][][][][][] [][][][][][][][] [][][][][][][][][][][][][][][] [][][][][][][][][] [][][][][][][][][] [][][][][][][][][]  
+ []
+
+
+Overfull \hbox (4.1063pt too wide) has occurred while \output is active
+  [] [][][][][][][][][][] [][][][][][][][] [][][][][][][][][][][][][][][] [][][][][][][][][] [][][][][][][][][] [][][][][][][][][]  
+ []
+
+[106
+
+]
+Overfull \hbox (4.1063pt too wide) has occurred while \output is active
+  [] [][][][][][][][][][] [][][][][][][][] [][][][][][][][][][][][][][][] [][][][][][][][][] [][][][][][][][][] [][][][][][][][][]  
+ []
+
+[107
+
+]
+Overfull \hbox (4.1063pt too wide) has occurred while \output is active
+  [] [][][][][][][][][][] [][][][][][][][] [][][][][][][][][][][][][][][] [][][][][][][][][] [][][][][][][][][] [][][][][][][][][]  
+ []
+
 [108
 
- <./figure/unnamed-chunk-1-1.pdf>]
-<figure/unnamed-chunk-2-1.pdf, id=8000, 2449.15pt x 1485.55pt>
-File: figure/unnamed-chunk-2-1.pdf Graphic file (type pdf)
-<use figure/unnamed-chunk-2-1.pdf>
-Package pdftex.def Info: figure/unnamed-chunk-2-1.pdf  used on input line 531.
-(pdftex.def)             Requested size: 354.19536pt x 214.82121pt.
+]
+Overfull \hbox (4.1063pt too wide) has occurred while \output is active
+  [] [][][][][][][][][][] [][][][][][][][] [][][][][][][][][][][][][][][] [][][][][][][][][] [][][][][][][][][] [][][][][][][][][]  
+ []
+
 [109
 
- <./figure/unnamed-chunk-2-1.pdf>]
-<figure/unnamed-chunk-3-1.pdf, id=8128, 1003.75pt x 582.175pt>
-File: figure/unnamed-chunk-3-1.pdf Graphic file (type pdf)
-<use figure/unnamed-chunk-3-1.pdf>
-Package pdftex.def Info: figure/unnamed-chunk-3-1.pdf  used on input line 545.
-(pdftex.def)             Requested size: 354.19536pt x 205.43436pt.
+]
+Overfull \hbox (4.1063pt too wide) has occurred while \output is active
+  [] [][][][][][][][][][] [][][][][][][][] [][][][][][][][][][][][][][][] [][][][][][][][][] [][][][][][][][][] [][][][][][][][][]  
+ []
+
 [110
 
- <./figure/unnamed-chunk-3-1.pdf>] [111
+]
+Overfull \hbox (4.1063pt too wide) detected at line 525
+  [] [][][][][][][][][][] [][][][][][][][] [][][][][][][][][][][][][][][] [][][][][][][][][] [][][][][][][][][] [][][][][][][][][]  
+ []
 
-] [112
+<graph1.png, id=8772, 1204.5pt x 1204.5pt>
+File: graph1.png Graphic file (type png)
+<use graph1.png>
+Package pdftex.def Info: graph1.png  used on input line 525.
+(pdftex.def)             Requested size: 212.51936pt x 212.5183pt.
+
+Overfull \hbox (4.1063pt too wide) has occurred while \output is active
+  [] [][][][][][][][][][] [][][][][][][][] [][][][][][][][][][][][][][][] [][][][][][][][][] [][][][][][][][][] [][][][][][][][][]  
+ []
+
+[111
+
+ <./graph1.png>]
+Overfull \hbox (4.1063pt too wide) detected at line 531
+  [] [][][][][][][][][][] [][][][][][][][] [][][][][][][][][][][][][][][] [][][][][][][][][] [][][][][][][][][] [][][][][][][][][]  
+ []
+
+<graph2.png, id=8900, 1204.5pt x 1204.5pt>
+File: graph2.png Graphic file (type png)
+<use graph2.png>
+Package pdftex.def Info: graph2.png  used on input line 531.
+(pdftex.def)             Requested size: 212.51936pt x 212.5183pt.
+
+Overfull \hbox (4.1063pt too wide) has occurred while \output is active
+  [] [][][][][][][][][][] [][][][][][][][] [][][][][][][][][][][][][][][] [][][][][][][][][] [][][][][][][][][] [][][][][][][][][]  
+ []
+
+[112
+
+ <./graph2.png>]
+Overfull \hbox (4.1063pt too wide) detected at line 538
+  [] [][][][][][][][][][] [][][][][][][][] [][][][][][][][][][][][][][][] [][][][][][][][][] [][][][][][][][][] [][][][][][][][][]  
+ []
+
+<graph3.png, id=9026, 1204.5pt x 1204.5pt>
+File: graph3.png Graphic file (type png)
+<use graph3.png>
+Package pdftex.def Info: graph3.png  used on input line 538.
+(pdftex.def)             Requested size: 212.51936pt x 212.5183pt.
+
+Overfull \hbox (4.1063pt too wide) has occurred while \output is active
+  [] [][][][][][][][][][] [][][][][][][][] [][][][][][][][][][][][][][][] [][][][][][][][][] [][][][][][][][][] [][][][][][][][][]  
+ []
+
+[113
+
+ <./graph3.png>]
+Overfull \hbox (4.1063pt too wide) detected at line 551
+  [] [][][][][][][][][][] [][][][][][][][] [][][][][][][][][][][][][][][] [][][][][][][][][] [][][][][][][][][] [][][][][][][][][]  
+ []
+
+
+Overfull \hbox (4.1063pt too wide) has occurred while \output is active
+  [] [][][][][][][][][][] [][][][][][][][] [][][][][][][][][][][][][][][] [][][][][][][][][] [][][][][][][][][] [][][][][][][][][]  
+ []
+
+[114
 
 ]
-Underfull \hbox (badness 10000) in paragraph at lines 581--581
+Overfull \hbox (4.1063pt too wide) has occurred while \output is active
+  [] [][][][][][][][][][] [][][][][][][][] [][][][][][][][][][][][][][][] [][][][][][][][][] [][][][][][][][][] [][][][][][][][][]  
+ []
+
+[115
+
+]
+Overfull \hbox (4.1063pt too wide) detected at line 574
+  [] [][][][][][][][][][] [][][][][][][][] [][][][][][][][][][][][][][][] [][][][][][][][][] [][][][][][][][][] [][][][][][][][][]  
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 574--574
 []|\T1/fav/m/sc/10.95 Does choco-late cause
  []
 
@@ -1683,224 +2400,662 @@ Underfull \hbox (badness 10000) in paragraph at lines 581--581
 pdfTeX warning (ext4): destination with the same identifier (name{tab:addlabel}) has been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.581 \end{frame}
-                  [113
-
-]
-Underfull \hbox (badness 10000) in paragraph at lines 581--581
-[]|\T1/fav/m/sc/10.95 Does choco-late cause
+l.574 \end{frame}
+                 
+Overfull \hbox (4.1063pt too wide) has occurred while \output is active
+  [] [][][][][][][][][][] [][][][][][][][] [][][][][][][][][][][][][][][] [][][][][][][][][] [][][][][][][][][] [][][][][][][][][]  
  []
 
-[114
-
-]
-<figure/explanation1-1.pdf, id=8611, 1003.75pt x 582.175pt>
-File: figure/explanation1-1.pdf Graphic file (type pdf)
-<use figure/explanation1-1.pdf>
-Package pdftex.def Info: figure/explanation1-1.pdf  used on input line 612.
-(pdftex.def)             Requested size: 172.09767pt x 99.81235pt.
-<figure/explanation2-1.pdf, id=8612, 1003.75pt x 582.175pt>
-File: figure/explanation2-1.pdf Graphic file (type pdf)
-<use figure/explanation2-1.pdf>
-Package pdftex.def Info: figure/explanation2-1.pdf  used on input line 612.
-(pdftex.def)             Requested size: 172.09767pt x 99.81235pt.
-[115
-
- <./figure/explanation1-1.pdf> <./figure/explanation2-1.pdf>]
-File: figure/explanation1-1.pdf Graphic file (type pdf)
-<use figure/explanation1-1.pdf>
-Package pdftex.def Info: figure/explanation1-1.pdf  used on input line 612.
-(pdftex.def)             Requested size: 172.09767pt x 99.81235pt.
-File: figure/explanation2-1.pdf Graphic file (type pdf)
-<use figure/explanation2-1.pdf>
-Package pdftex.def Info: figure/explanation2-1.pdf  used on input line 612.
-(pdftex.def)             Requested size: 172.09767pt x 99.81235pt.
 [116
 
 ]
-File: figure/explanation1-1.pdf Graphic file (type pdf)
-<use figure/explanation1-1.pdf>
-Package pdftex.def Info: figure/explanation1-1.pdf  used on input line 612.
-(pdftex.def)             Requested size: 172.09767pt x 99.81235pt.
-File: figure/explanation2-1.pdf Graphic file (type pdf)
-<use figure/explanation2-1.pdf>
-Package pdftex.def Info: figure/explanation2-1.pdf  used on input line 612.
-(pdftex.def)             Requested size: 172.09767pt x 99.81235pt.
+Underfull \hbox (badness 10000) in paragraph at lines 574--574
+[]|\T1/fav/m/sc/10.95 Does choco-late cause
+ []
+
+
+Overfull \hbox (4.1063pt too wide) has occurred while \output is active
+  [] [][][][][][][][][][] [][][][][][][][] [][][][][][][][][][][][][][][] [][][][][][][][][] [][][][][][][][][] [][][][][][][][][]  
+ []
+
 [117
 
 ]
-File: figure/explanation1-1.pdf Graphic file (type pdf)
-<use figure/explanation1-1.pdf>
-Package pdftex.def Info: figure/explanation1-1.pdf  used on input line 612.
-(pdftex.def)             Requested size: 172.09767pt x 99.81235pt.
-File: figure/explanation2-1.pdf Graphic file (type pdf)
-<use figure/explanation2-1.pdf>
-Package pdftex.def Info: figure/explanation2-1.pdf  used on input line 612.
-(pdftex.def)             Requested size: 172.09767pt x 99.81235pt.
+Overfull \hbox (4.1063pt too wide) detected at line 601
+  [] [][][][][][][][][][] [][][][][][][][] [][][][][][][][][][][][][][][] [][][][][][][][][] [][][][][][][][][] [][][][][][][][][]  
+ []
+
+<graph4.png, id=9534, 1204.5pt x 1204.5pt>
+File: graph4.png Graphic file (type png)
+<use graph4.png>
+Package pdftex.def Info: graph4.png  used on input line 601.
+(pdftex.def)             Requested size: 159.38683pt x 159.38412pt.
+<graph5.png, id=9535, 1204.5pt x 1204.5pt>
+File: graph5.png Graphic file (type png)
+<use graph5.png>
+Package pdftex.def Info: graph5.png  used on input line 601.
+(pdftex.def)             Requested size: 159.38683pt x 159.38412pt.
+
+Overfull \vbox (31.04935pt too high) detected at line 601
+ []
+
+
+Overfull \hbox (4.1063pt too wide) has occurred while \output is active
+  [] [][][][][][][][][][] [][][][][][][][] [][][][][][][][][][][][][][][] [][][][][][][][][] [][][][][][][][][] [][][][][][][][][]  
+ []
+
 [118
 
-]
-File: figure/explanation1-1.pdf Graphic file (type pdf)
-<use figure/explanation1-1.pdf>
-Package pdftex.def Info: figure/explanation1-1.pdf  used on input line 612.
-(pdftex.def)             Requested size: 172.09767pt x 99.81235pt.
-File: figure/explanation2-1.pdf Graphic file (type pdf)
-<use figure/explanation2-1.pdf>
-Package pdftex.def Info: figure/explanation2-1.pdf  used on input line 612.
-(pdftex.def)             Requested size: 172.09767pt x 99.81235pt.
+ <./graph4.png> <./graph5.png>]
+File: graph4.png Graphic file (type png)
+<use graph4.png>
+Package pdftex.def Info: graph4.png  used on input line 601.
+(pdftex.def)             Requested size: 159.38683pt x 159.38412pt.
+File: graph5.png Graphic file (type png)
+<use graph5.png>
+Package pdftex.def Info: graph5.png  used on input line 601.
+(pdftex.def)             Requested size: 159.38683pt x 159.38412pt.
+
+Overfull \vbox (31.04935pt too high) detected at line 601
+ []
+
+
+Overfull \hbox (4.1063pt too wide) has occurred while \output is active
+  [] [][][][][][][][][][] [][][][][][][][] [][][][][][][][][][][][][][][] [][][][][][][][][] [][][][][][][][][] [][][][][][][][][]  
+ []
+
 [119
 
 ]
-File: figure/explanation1-1.pdf Graphic file (type pdf)
-<use figure/explanation1-1.pdf>
-Package pdftex.def Info: figure/explanation1-1.pdf  used on input line 612.
-(pdftex.def)             Requested size: 172.09767pt x 99.81235pt.
-File: figure/explanation2-1.pdf Graphic file (type pdf)
-<use figure/explanation2-1.pdf>
-Package pdftex.def Info: figure/explanation2-1.pdf  used on input line 612.
-(pdftex.def)             Requested size: 172.09767pt x 99.81235pt.
+File: graph4.png Graphic file (type png)
+<use graph4.png>
+Package pdftex.def Info: graph4.png  used on input line 601.
+(pdftex.def)             Requested size: 159.38683pt x 159.38412pt.
+File: graph5.png Graphic file (type png)
+<use graph5.png>
+Package pdftex.def Info: graph5.png  used on input line 601.
+(pdftex.def)             Requested size: 159.38683pt x 159.38412pt.
+
+Overfull \vbox (31.04935pt too high) detected at line 601
+ []
+
+
+Overfull \hbox (4.1063pt too wide) has occurred while \output is active
+  [] [][][][][][][][][][] [][][][][][][][] [][][][][][][][][][][][][][][] [][][][][][][][][] [][][][][][][][][] [][][][][][][][][]  
+ []
+
 [120
 
 ]
-<figure/explanation1b-1.pdf, id=9057, 1003.75pt x 582.175pt>
-File: figure/explanation1b-1.pdf Graphic file (type pdf)
-<use figure/explanation1b-1.pdf>
-Package pdftex.def Info: figure/explanation1b-1.pdf  used on input line 638.
-(pdftex.def)             Requested size: 172.09767pt x 99.81235pt.
-<figure/explanation2b-1.pdf, id=9058, 1003.75pt x 582.175pt>
-File: figure/explanation2b-1.pdf Graphic file (type pdf)
-<use figure/explanation2b-1.pdf>
-Package pdftex.def Info: figure/explanation2b-1.pdf  used on input line 638.
-(pdftex.def)             Requested size: 172.09767pt x 99.81235pt.
+File: graph4.png Graphic file (type png)
+<use graph4.png>
+Package pdftex.def Info: graph4.png  used on input line 601.
+(pdftex.def)             Requested size: 159.38683pt x 159.38412pt.
+File: graph5.png Graphic file (type png)
+<use graph5.png>
+Package pdftex.def Info: graph5.png  used on input line 601.
+(pdftex.def)             Requested size: 159.38683pt x 159.38412pt.
+
+Overfull \vbox (31.04935pt too high) detected at line 601
+ []
+
+
+Overfull \hbox (4.1063pt too wide) has occurred while \output is active
+  [] [][][][][][][][][][] [][][][][][][][] [][][][][][][][][][][][][][][] [][][][][][][][][] [][][][][][][][][] [][][][][][][][][]  
+ []
+
 [121
 
- <./figure/explanation1b-1.pdf> <./figure/explanation2b-1.pdf>]
-<figure/explanation1c-1.pdf, id=9195, 1003.75pt x 582.175pt>
-File: figure/explanation1c-1.pdf Graphic file (type pdf)
-<use figure/explanation1c-1.pdf>
-Package pdftex.def Info: figure/explanation1c-1.pdf  used on input line 664.
-(pdftex.def)             Requested size: 172.09767pt x 99.81235pt.
-<figure/explanation2c-1.pdf, id=9196, 1003.75pt x 582.175pt>
-File: figure/explanation2c-1.pdf Graphic file (type pdf)
-<use figure/explanation2c-1.pdf>
-Package pdftex.def Info: figure/explanation2c-1.pdf  used on input line 664.
-(pdftex.def)             Requested size: 172.09767pt x 99.81235pt.
+]
+File: graph4.png Graphic file (type png)
+<use graph4.png>
+Package pdftex.def Info: graph4.png  used on input line 601.
+(pdftex.def)             Requested size: 159.38683pt x 159.38412pt.
+File: graph5.png Graphic file (type png)
+<use graph5.png>
+Package pdftex.def Info: graph5.png  used on input line 601.
+(pdftex.def)             Requested size: 159.38683pt x 159.38412pt.
+
+Overfull \vbox (31.04935pt too high) detected at line 601
+ []
+
+
+Overfull \hbox (4.1063pt too wide) has occurred while \output is active
+  [] [][][][][][][][][][] [][][][][][][][] [][][][][][][][][][][][][][][] [][][][][][][][][] [][][][][][][][][] [][][][][][][][][]  
+ []
+
 [122
 
- <./figure/explanation1c-1.pdf> <./figure/explanation2c-1.pdf>] [123
+]
+File: graph4.png Graphic file (type png)
+<use graph4.png>
+Package pdftex.def Info: graph4.png  used on input line 601.
+(pdftex.def)             Requested size: 159.38683pt x 159.38412pt.
+File: graph5.png Graphic file (type png)
+<use graph5.png>
+Package pdftex.def Info: graph5.png  used on input line 601.
+(pdftex.def)             Requested size: 159.38683pt x 159.38412pt.
 
-{c:/Users/jonny/AppData/Roaming/TinyTeX/texmf-dist/fonts/enc/dvips/arev/arevoms.enc}] [124
+Overfull \vbox (31.04935pt too high) detected at line 601
+ []
 
-] [125
 
-] [126
+Overfull \hbox (4.1063pt too wide) has occurred while \output is active
+  [] [][][][][][][][][][] [][][][][][][][] [][][][][][][][][][][][][][][] [][][][][][][][][] [][][][][][][][][] [][][][][][][][][]  
+ []
 
-] [127
+[123
 
-] [128
+]
+Overfull \hbox (4.1063pt too wide) detected at line 623
+  [] [][][][][][][][][][] [][][][][][][][] [][][][][][][][][][][][][][][] [][][][][][][][][] [][][][][][][][][] [][][][][][][][][]  
+ []
 
-] [129
+<graph6.png, id=9992, 1204.5pt x 1204.5pt>
+File: graph6.png Graphic file (type png)
+<use graph6.png>
+Package pdftex.def Info: graph6.png  used on input line 623.
+(pdftex.def)             Requested size: 159.38683pt x 159.38412pt.
+<graph7.png, id=9993, 1204.5pt x 1204.5pt>
+File: graph7.png Graphic file (type png)
+<use graph7.png>
+Package pdftex.def Info: graph7.png  used on input line 623.
+(pdftex.def)             Requested size: 159.38683pt x 159.38412pt.
 
-] [130
+Overfull \vbox (31.04935pt too high) detected at line 623
+ []
 
-] [131
 
-] [132
+Overfull \hbox (4.1063pt too wide) has occurred while \output is active
+  [] [][][][][][][][][][] [][][][][][][][] [][][][][][][][][][][][][][][] [][][][][][][][][] [][][][][][][][][] [][][][][][][][][]  
+ []
 
-] [133
+[124
 
-] [134
+ <./graph6.png> <./graph7.png>]
+Overfull \hbox (4.1063pt too wide) detected at line 645
+  [] [][][][][][][][][][] [][][][][][][][] [][][][][][][][][][][][][][][] [][][][][][][][][] [][][][][][][][][] [][][][][][][][][]  
+ []
 
-] [135
+<graph8.png, id=10121, 1204.5pt x 1204.5pt>
+File: graph8.png Graphic file (type png)
+<use graph8.png>
+Package pdftex.def Info: graph8.png  used on input line 645.
+(pdftex.def)             Requested size: 159.38683pt x 159.38412pt.
+<graph9.png, id=10122, 1204.5pt x 1204.5pt>
+File: graph9.png Graphic file (type png)
+<use graph9.png>
+Package pdftex.def Info: graph9.png  used on input line 645.
+(pdftex.def)             Requested size: 159.38683pt x 159.38412pt.
 
-] [136
+Overfull \vbox (31.04935pt too high) detected at line 645
+ []
 
-] [137
 
-] [138
+Overfull \hbox (4.1063pt too wide) has occurred while \output is active
+  [] [][][][][][][][][][] [][][][][][][][] [][][][][][][][][][][][][][][] [][][][][][][][][] [][][][][][][][][] [][][][][][][][][]  
+ []
 
-] [139
+[125
 
-] [140
+ <./graph8.png> <./graph9.png>]
+Overfull \hbox (4.1063pt too wide) detected at line 647
+  [] [][][][][][][][][][] [][][][][][][][] [][][][][][][][][][][][][][][] [][][][][][][][][] [][][][][][][][][] [][][][][][][][][]  
+ []
 
-] [141
 
-] [142
+Overfull \hbox (4.1063pt too wide) has occurred while \output is active
+  [] [][][][][][][][][][] [][][][][][][][] [][][][][][][][][][][][][][][] [][][][][][][][][] [][][][][][][][][] [][][][][][][][][]  
+ []
 
-] [143
+[126
 
-] [144
+]
+Overfull \hbox (4.1063pt too wide) detected at line 667
+  [] [][][][][][][][][][] [][][][][][][][] [][][][][][][][][][][][][][][] [][][][][][][][][] [][][][][][][][][] [][][][][][][][][]  
+ []
 
-] [145
 
-] [146
+Overfull \hbox (4.1063pt too wide) has occurred while \output is active
+  [] [][][][][][][][][][] [][][][][][][][] [][][][][][][][][][][][][][][] [][][][][][][][][] [][][][][][][][][] [][][][][][][][][]  
+ []
 
-] [147
+[127
 
-] [148
+{c:/Users/jonny/AppData/Roaming/TinyTeX/texmf-dist/fonts/enc/dvips/arev/arevoms.enc}]
+Overfull \hbox (4.1063pt too wide) has occurred while \output is active
+  [] [][][][][][][][][][] [][][][][][][][] [][][][][][][][][][][][][][][] [][][][][][][][][] [][][][][][][][][] [][][][][][][][][]  
+ []
 
-] [149
+[128
 
-] [150
+]
+Overfull \hbox (4.1063pt too wide) has occurred while \output is active
+  [] [][][][][][][][][][] [][][][][][][][] [][][][][][][][][][][][][][][] [][][][][][][][][] [][][][][][][][][] [][][][][][][][][]  
+ []
 
-] [151
+[129
 
-] [152
+]
+Overfull \hbox (4.1063pt too wide) has occurred while \output is active
+  [] [][][][][][][][][][] [][][][][][][][] [][][][][][][][][][][][][][][] [][][][][][][][][] [][][][][][][][][] [][][][][][][][][]  
+ []
 
-] [153
+[130
 
-] [154
+]
+Overfull \hbox (4.1063pt too wide) has occurred while \output is active
+  [] [][][][][][][][][][] [][][][][][][][] [][][][][][][][][][][][][][][] [][][][][][][][][] [][][][][][][][][] [][][][][][][][][]  
+ []
 
-] [155
+[131
 
-] [156
+]
+Overfull \hbox (4.1063pt too wide) detected at line 681
+  [] [][][][][][][][][][] [][][][][][][][] [][][][][][][][][][][][][][][] [][][][][][][][][] [][][][][][][][][] [][][][][][][][][]  
+ []
 
-] [157
 
-] [158
+Overfull \hbox (4.1063pt too wide) has occurred while \output is active
+  [] [][][][][][][][][][] [][][][][][][][] [][][][][][][][][][][][][][][] [][][][][][][][][] [][][][][][][][][] [][][][][][][][][]  
+ []
 
-] [159
+[132
 
-] [160
+]
+Overfull \hbox (4.1063pt too wide) has occurred while \output is active
+  [] [][][][][][][][][][] [][][][][][][][] [][][][][][][][][][][][][][][] [][][][][][][][][] [][][][][][][][][] [][][][][][][][][]  
+ []
 
-] [161
+[133
 
-] [162
+]
+Overfull \hbox (4.1063pt too wide) has occurred while \output is active
+  [] [][][][][][][][][][] [][][][][][][][] [][][][][][][][][][][][][][][] [][][][][][][][][] [][][][][][][][][] [][][][][][][][][]  
+ []
 
-] [163
+[134
 
-] [164
+]
+Overfull \hbox (4.1063pt too wide) detected at line 694
+  [] [][][][][][][][][][] [][][][][][][][] [][][][][][][][][][][][][][][] [][][][][][][][][] [][][][][][][][][] [][][][][][][][][]  
+ []
 
-] [165
 
-] [166
+Overfull \hbox (4.1063pt too wide) has occurred while \output is active
+  [] [][][][][][][][][][] [][][][][][][][] [][][][][][][][][][][][][][][] [][][][][][][][][] [][][][][][][][][] [][][][][][][][][]  
+ []
 
-] [167
+[135
 
-] [168
+]
+Overfull \hbox (4.1063pt too wide) has occurred while \output is active
+  [] [][][][][][][][][][] [][][][][][][][] [][][][][][][][][][][][][][][] [][][][][][][][][] [][][][][][][][][] [][][][][][][][][]  
+ []
 
-] [169
+[136
 
-] [170
+]
+Overfull \hbox (4.1063pt too wide) has occurred while \output is active
+  [] [][][][][][][][][][] [][][][][][][][] [][][][][][][][][][][][][][][] [][][][][][][][][] [][][][][][][][][] [][][][][][][][][]  
+ []
 
-] [171
+[137
 
-] [172
+]
+Overfull \hbox (4.1063pt too wide) detected at line 723
+  [] [][][][][][][][][][] [][][][][][][][] [][][][][][][][][][][][][][][] [][][][][][][][][] [][][][][][][][][] [][][][][][][][][]  
+ []
+
+
+Overfull \hbox (4.1063pt too wide) has occurred while \output is active
+  [] [][][][][][][][][][] [][][][][][][][] [][][][][][][][][][][][][][][] [][][][][][][][][] [][][][][][][][][] [][][][][][][][][]  
+ []
+
+[138
+
+]
+Overfull \hbox (4.1063pt too wide) has occurred while \output is active
+  [] [][][][][][][][][][] [][][][][][][][] [][][][][][][][][][][][][][][] [][][][][][][][][] [][][][][][][][][] [][][][][][][][][]  
+ []
+
+[139
+
+]
+Overfull \hbox (4.1063pt too wide) has occurred while \output is active
+  [] [][][][][][][][][][] [][][][][][][][] [][][][][][][][][][][][][][][] [][][][][][][][][] [][][][][][][][][] [][][][][][][][][]  
+ []
+
+[140
+
+]
+Overfull \hbox (4.1063pt too wide) has occurred while \output is active
+  [] [][][][][][][][][][] [][][][][][][][] [][][][][][][][][][][][][][][] [][][][][][][][][] [][][][][][][][][] [][][][][][][][][]  
+ []
+
+[141
+
+]
+Overfull \hbox (4.1063pt too wide) detected at line 748
+  [] [][][][][][][][][][] [][][][][][][][] [][][][][][][][][][][][][][][] [][][][][][][][][] [][][][][][][][][] [][][][][][][][][]  
+ []
+
+
+Overfull \hbox (4.1063pt too wide) has occurred while \output is active
+  [] [][][][][][][][][][] [][][][][][][][] [][][][][][][][][][][][][][][] [][][][][][][][][] [][][][][][][][][] [][][][][][][][][]  
+ []
+
+[142
+
+]
+Overfull \hbox (4.1063pt too wide) has occurred while \output is active
+  [] [][][][][][][][][][] [][][][][][][][] [][][][][][][][][][][][][][][] [][][][][][][][][] [][][][][][][][][] [][][][][][][][][]  
+ []
+
+[143
+
+]
+Overfull \hbox (4.1063pt too wide) has occurred while \output is active
+  [] [][][][][][][][][][] [][][][][][][][] [][][][][][][][][][][][][][][] [][][][][][][][][] [][][][][][][][][] [][][][][][][][][]  
+ []
+
+[144
+
+]
+Overfull \hbox (4.1063pt too wide) has occurred while \output is active
+  [] [][][][][][][][][][] [][][][][][][][] [][][][][][][][][][][][][][][] [][][][][][][][][] [][][][][][][][][] [][][][][][][][][]  
+ []
+
+[145
+
+]
+Overfull \hbox (4.1063pt too wide) detected at line 767
+  [] [][][][][][][][][][] [][][][][][][][] [][][][][][][][][][][][][][][] [][][][][][][][][] [][][][][][][][][] [][][][][][][][][]  
+ []
+
+
+Overfull \hbox (4.1063pt too wide) has occurred while \output is active
+  [] [][][][][][][][][][] [][][][][][][][] [][][][][][][][][][][][][][][] [][][][][][][][][] [][][][][][][][][] [][][][][][][][][]  
+ []
+
+[146
+
+]
+Overfull \hbox (4.1063pt too wide) has occurred while \output is active
+  [] [][][][][][][][][][] [][][][][][][][] [][][][][][][][][][][][][][][] [][][][][][][][][] [][][][][][][][][] [][][][][][][][][]  
+ []
+
+[147
+
+]
+Overfull \hbox (4.1063pt too wide) detected at line 783
+  [] [][][][][][][][][][] [][][][][][][][] [][][][][][][][][][][][][][][] [][][][][][][][][] [][][][][][][][][] [][][][][][][][][]  
+ []
+
+
+Overfull \hbox (4.1063pt too wide) has occurred while \output is active
+  [] [][][][][][][][][][] [][][][][][][][] [][][][][][][][][][][][][][][] [][][][][][][][][] [][][][][][][][][] [][][][][][][][][]  
+ []
+
+[148
+
+]
+Overfull \hbox (4.1063pt too wide) has occurred while \output is active
+  [] [][][][][][][][][][] [][][][][][][][] [][][][][][][][][][][][][][][] [][][][][][][][][] [][][][][][][][][] [][][][][][][][][]  
+ []
+
+[149
+
+]
+Overfull \hbox (4.1063pt too wide) detected at line 785
+  [] [][][][][][][][][][] [][][][][][][][] [][][][][][][][][][][][][][][] [][][][][][][][][] [][][][][][][][][] [][][][][][][][][]  
+ []
+
+
+Overfull \hbox (4.1063pt too wide) has occurred while \output is active
+  [] [][][][][][][][][][] [][][][][][][][] [][][][][][][][][][][][][][][] [][][][][][][][][] [][][][][][][][][] [][][][][][][][][]  
+ []
+
+[150
+
+]
+Overfull \hbox (4.1063pt too wide) detected at line 807
+  [] [][][][][][][][][][] [][][][][][][][] [][][][][][][][][][][][][][][] [][][][][][][][][] [][][][][][][][][] [][][][][][][][][]  
+ []
+
+
+Overfull \hbox (4.1063pt too wide) has occurred while \output is active
+  [] [][][][][][][][][][] [][][][][][][][] [][][][][][][][][][][][][][][] [][][][][][][][][] [][][][][][][][][] [][][][][][][][][]  
+ []
+
+[151
+
+]
+Overfull \hbox (4.1063pt too wide) has occurred while \output is active
+  [] [][][][][][][][][][] [][][][][][][][] [][][][][][][][][][][][][][][] [][][][][][][][][] [][][][][][][][][] [][][][][][][][][]  
+ []
+
+[152
+
+]
+Overfull \hbox (4.1063pt too wide) has occurred while \output is active
+  [] [][][][][][][][][][] [][][][][][][][] [][][][][][][][][][][][][][][] [][][][][][][][][] [][][][][][][][][] [][][][][][][][][]  
+ []
+
+[153
+
+]
+Overfull \hbox (4.1063pt too wide) has occurred while \output is active
+  [] [][][][][][][][][][] [][][][][][][][] [][][][][][][][][][][][][][][] [][][][][][][][][] [][][][][][][][][] [][][][][][][][][]  
+ []
+
+[154
+
+]
+Overfull \hbox (4.1063pt too wide) has occurred while \output is active
+  [] [][][][][][][][][][] [][][][][][][][] [][][][][][][][][][][][][][][] [][][][][][][][][] [][][][][][][][][] [][][][][][][][][]  
+ []
+
+[155
+
+]
+Overfull \hbox (4.1063pt too wide) has occurred while \output is active
+  [] [][][][][][][][][][] [][][][][][][][] [][][][][][][][][][][][][][][] [][][][][][][][][] [][][][][][][][][] [][][][][][][][][]  
+ []
+
+[156
+
+]
+Overfull \hbox (4.1063pt too wide) has occurred while \output is active
+  [] [][][][][][][][][][] [][][][][][][][] [][][][][][][][][][][][][][][] [][][][][][][][][] [][][][][][][][][] [][][][][][][][][]  
+ []
+
+[157
+
+]
+Overfull \hbox (4.1063pt too wide) detected at line 819
+  [] [][][][][][][][][][] [][][][][][][][] [][][][][][][][][][][][][][][] [][][][][][][][][] [][][][][][][][][] [][][][][][][][][]  
+ []
+
+
+Overfull \hbox (4.1063pt too wide) has occurred while \output is active
+  [] [][][][][][][][][][] [][][][][][][][] [][][][][][][][][][][][][][][] [][][][][][][][][] [][][][][][][][][] [][][][][][][][][]  
+ []
+
+[158
+
+]
+Overfull \hbox (4.1063pt too wide) detected at line 831
+  [] [][][][][][][][][][] [][][][][][][][] [][][][][][][][][][][][][][][] [][][][][][][][][] [][][][][][][][][] [][][][][][][][][]  
+ []
+
+
+Overfull \hbox (4.1063pt too wide) has occurred while \output is active
+  [] [][][][][][][][][][] [][][][][][][][] [][][][][][][][][][][][][][][] [][][][][][][][][] [][][][][][][][][] [][][][][][][][][]  
+ []
+
+[159
+
+]
+Overfull \hbox (4.1063pt too wide) detected at line 852
+  [] [][][][][][][][][][] [][][][][][][][] [][][][][][][][][][][][][][][] [][][][][][][][][] [][][][][][][][][] [][][][][][][][][]  
+ []
+
+
+Overfull \hbox (4.1063pt too wide) has occurred while \output is active
+  [] [][][][][][][][][][] [][][][][][][][] [][][][][][][][][][][][][][][] [][][][][][][][][] [][][][][][][][][] [][][][][][][][][]  
+ []
+
+[160
+
+]
+Overfull \hbox (4.1063pt too wide) has occurred while \output is active
+  [] [][][][][][][][][][] [][][][][][][][] [][][][][][][][][][][][][][][] [][][][][][][][][] [][][][][][][][][] [][][][][][][][][]  
+ []
+
+[161
+
+]
+Overfull \hbox (4.1063pt too wide) has occurred while \output is active
+  [] [][][][][][][][][][] [][][][][][][][] [][][][][][][][][][][][][][][] [][][][][][][][][] [][][][][][][][][] [][][][][][][][][]  
+ []
+
+[162
+
+]
+Overfull \hbox (4.1063pt too wide) has occurred while \output is active
+  [] [][][][][][][][][][] [][][][][][][][] [][][][][][][][][][][][][][][] [][][][][][][][][] [][][][][][][][][] [][][][][][][][][]  
+ []
+
+[163
+
+]
+Overfull \hbox (4.1063pt too wide) has occurred while \output is active
+  [] [][][][][][][][][][] [][][][][][][][] [][][][][][][][][][][][][][][] [][][][][][][][][] [][][][][][][][][] [][][][][][][][][]  
+ []
+
+[164
+
+]
+Overfull \hbox (4.1063pt too wide) has occurred while \output is active
+  [] [][][][][][][][][][] [][][][][][][][] [][][][][][][][][][][][][][][] [][][][][][][][][] [][][][][][][][][] [][][][][][][][][]  
+ []
+
+[165
+
+]
+Overfull \hbox (4.1063pt too wide) has occurred while \output is active
+  [] [][][][][][][][][][] [][][][][][][][] [][][][][][][][][][][][][][][] [][][][][][][][][] [][][][][][][][][] [][][][][][][][][]  
+ []
+
+[166
+
+]
+Overfull \hbox (4.1063pt too wide) detected at line 867
+  [] [][][][][][][][][][] [][][][][][][][] [][][][][][][][][][][][][][][] [][][][][][][][][] [][][][][][][][][] [][][][][][][][][]  
+ []
+
+
+Overfull \hbox (4.1063pt too wide) has occurred while \output is active
+  [] [][][][][][][][][][] [][][][][][][][] [][][][][][][][][][][][][][][] [][][][][][][][][] [][][][][][][][][] [][][][][][][][][]  
+ []
+
+[167
+
+]
+Overfull \hbox (4.1063pt too wide) has occurred while \output is active
+  [] [][][][][][][][][][] [][][][][][][][] [][][][][][][][][][][][][][][] [][][][][][][][][] [][][][][][][][][] [][][][][][][][][]  
+ []
+
+[168
+
+]
+Overfull \hbox (4.1063pt too wide) has occurred while \output is active
+  [] [][][][][][][][][][] [][][][][][][][] [][][][][][][][][][][][][][][] [][][][][][][][][] [][][][][][][][][] [][][][][][][][][]  
+ []
+
+[169
+
+]
+Overfull \hbox (4.1063pt too wide) has occurred while \output is active
+  [] [][][][][][][][][][] [][][][][][][][] [][][][][][][][][][][][][][][] [][][][][][][][][] [][][][][][][][][] [][][][][][][][][]  
+ []
+
+[170
+
+]
+Overfull \hbox (4.1063pt too wide) detected at line 883
+  [] [][][][][][][][][][] [][][][][][][][] [][][][][][][][][][][][][][][] [][][][][][][][][] [][][][][][][][][] [][][][][][][][][]  
+ []
+
+
+Overfull \hbox (4.1063pt too wide) has occurred while \output is active
+  [] [][][][][][][][][][] [][][][][][][][] [][][][][][][][][][][][][][][] [][][][][][][][][] [][][][][][][][][] [][][][][][][][][]  
+ []
+
+[171
+
+]
+Overfull \hbox (4.1063pt too wide) has occurred while \output is active
+  [] [][][][][][][][][][] [][][][][][][][] [][][][][][][][][][][][][][][] [][][][][][][][][] [][][][][][][][][] [][][][][][][][][]  
+ []
+
+[172
+
+]
+Overfull \hbox (4.1063pt too wide) has occurred while \output is active
+  [] [][][][][][][][][][] [][][][][][][][] [][][][][][][][][][][][][][][] [][][][][][][][][] [][][][][][][][][] [][][][][][][][][]  
+ []
+
+[173
+
+]
+Overfull \hbox (4.1063pt too wide) has occurred while \output is active
+  [] [][][][][][][][][][] [][][][][][][][] [][][][][][][][][][][][][][][] [][][][][][][][][] [][][][][][][][][] [][][][][][][][][]  
+ []
+
+[174
+
+]
+Overfull \hbox (4.1063pt too wide) detected at line 898
+  [] [][][][][][][][][][] [][][][][][][][] [][][][][][][][][][][][][][][] [][][][][][][][][] [][][][][][][][][] [][][][][][][][][]  
+ []
+
+
+Overfull \hbox (4.1063pt too wide) has occurred while \output is active
+  [] [][][][][][][][][][] [][][][][][][][] [][][][][][][][][][][][][][][] [][][][][][][][][] [][][][][][][][][] [][][][][][][][][]  
+ []
+
+[175
+
+]
+Overfull \hbox (4.1063pt too wide) has occurred while \output is active
+  [] [][][][][][][][][][] [][][][][][][][] [][][][][][][][][][][][][][][] [][][][][][][][][] [][][][][][][][][] [][][][][][][][][]  
+ []
+
+[176
+
+]
+Overfull \hbox (4.1063pt too wide) has occurred while \output is active
+  [] [][][][][][][][][][] [][][][][][][][] [][][][][][][][][][][][][][][] [][][][][][][][][] [][][][][][][][][] [][][][][][][][][]  
+ []
+
+[177
 
 ]
 
 pdfTeX warning: pdflatex.exe (file ./Paper_summary_template.pdf): PDF inclusion: found PDF version <1.7>, but at most version <1.5> allowed
-<Paper_summary_template.pdf, id=13136, 614.295pt x 794.97pt>
+<Paper_summary_template.pdf, id=14561, 614.295pt x 794.97pt>
 File: Paper_summary_template.pdf Graphic file (type pdf)
 <use Paper_summary_template.pdf>
-Package pdftex.def Info: Paper_summary_template.pdf  used on input line 920.
+Package pdftex.def Info: Paper_summary_template.pdf  used on input line 901.
 (pdftex.def)             Requested size: 614.29349pt x 794.96806pt.
 
 
 pdfTeX warning: pdflatex.exe (file ./Paper_summary_template.pdf): PDF inclusion: found PDF version <1.7>, but at most version <1.5> allowed
 File: Paper_summary_template.pdf Graphic file (type pdf)
 <use Paper_summary_template.pdf>
-Package pdftex.def Info: Paper_summary_template.pdf  used on input line 920.
+Package pdftex.def Info: Paper_summary_template.pdf  used on input line 901.
 (pdftex.def)             Requested size: 614.29349pt x 794.96806pt.
 
 
@@ -1908,43 +3063,43 @@ pdfTeX warning: pdflatex.exe (file ./Paper_summary_template.pdf): PDF inclusion:
 
 
 pdfTeX warning: pdflatex.exe (file ./Paper_summary_template.pdf): PDF inclusion: found PDF version <1.7>, but at most version <1.5> allowed
-<Paper_summary_template.pdf, id=13139, page=1, 614.295pt x 794.97pt>
+<Paper_summary_template.pdf, id=14564, page=1, 614.295pt x 794.97pt>
 File: Paper_summary_template.pdf Graphic file (type pdf)
 <use Paper_summary_template.pdf, page 1>
-Package pdftex.def Info: Paper_summary_template.pdf , page1 used on input line 920.
+Package pdftex.def Info: Paper_summary_template.pdf , page1 used on input line 901.
 (pdftex.def)             Requested size: 614.29349pt x 794.96806pt.
 File: Paper_summary_template.pdf Graphic file (type pdf)
 <use Paper_summary_template.pdf, page 1>
-Package pdftex.def Info: Paper_summary_template.pdf , page1 used on input line 920.
+Package pdftex.def Info: Paper_summary_template.pdf , page1 used on input line 901.
 (pdftex.def)             Requested size: 211.32272pt x 273.47647pt.
 File: Paper_summary_template.pdf Graphic file (type pdf)
 <use Paper_summary_template.pdf, page 1>
-Package pdftex.def Info: Paper_summary_template.pdf , page1 used on input line 920.
+Package pdftex.def Info: Paper_summary_template.pdf , page1 used on input line 901.
 (pdftex.def)             Requested size: 211.32272pt x 273.47647pt.
 File: Paper_summary_template.pdf Graphic file (type pdf)
 <use Paper_summary_template.pdf, page 1>
-Package pdftex.def Info: Paper_summary_template.pdf , page1 used on input line 920.
+Package pdftex.def Info: Paper_summary_template.pdf , page1 used on input line 901.
 (pdftex.def)             Requested size: 211.32272pt x 273.47647pt.
 File: Paper_summary_template.pdf Graphic file (type pdf)
 <use Paper_summary_template.pdf, page 1>
-Package pdftex.def Info: Paper_summary_template.pdf , page1 used on input line 920.
+Package pdftex.def Info: Paper_summary_template.pdf , page1 used on input line 901.
 (pdftex.def)             Requested size: 211.32272pt x 273.47647pt.
-[173
+[178
 
  <./Paper_summary_template.pdf>]
 
 pdfTeX warning: pdflatex.exe (file ./Paper_summary_template_Putnam.pdf): PDF inclusion: found PDF version <1.7>, but at most version <1.5> allowed
-<Paper_summary_template_Putnam.pdf, id=13173, 614.295pt x 794.97pt>
+<Paper_summary_template_Putnam.pdf, id=14597, 614.295pt x 794.97pt>
 File: Paper_summary_template_Putnam.pdf Graphic file (type pdf)
 <use Paper_summary_template_Putnam.pdf>
-Package pdftex.def Info: Paper_summary_template_Putnam.pdf  used on input line 923.
+Package pdftex.def Info: Paper_summary_template_Putnam.pdf  used on input line 904.
 (pdftex.def)             Requested size: 614.29349pt x 794.96806pt.
 
 
 pdfTeX warning: pdflatex.exe (file ./Paper_summary_template_Putnam.pdf): PDF inclusion: found PDF version <1.7>, but at most version <1.5> allowed
 File: Paper_summary_template_Putnam.pdf Graphic file (type pdf)
 <use Paper_summary_template_Putnam.pdf>
-Package pdftex.def Info: Paper_summary_template_Putnam.pdf  used on input line 923.
+Package pdftex.def Info: Paper_summary_template_Putnam.pdf  used on input line 904.
 (pdftex.def)             Requested size: 614.29349pt x 794.96806pt.
 
 
@@ -1952,65 +3107,152 @@ pdfTeX warning: pdflatex.exe (file ./Paper_summary_template_Putnam.pdf): PDF inc
 
 
 pdfTeX warning: pdflatex.exe (file ./Paper_summary_template_Putnam.pdf): PDF inclusion: found PDF version <1.7>, but at most version <1.5> allowed
-<Paper_summary_template_Putnam.pdf, id=13176, page=1, 614.295pt x 794.97pt>
+<Paper_summary_template_Putnam.pdf, id=14600, page=1, 614.295pt x 794.97pt>
 File: Paper_summary_template_Putnam.pdf Graphic file (type pdf)
 <use Paper_summary_template_Putnam.pdf, page 1>
-Package pdftex.def Info: Paper_summary_template_Putnam.pdf , page1 used on input line 923.
+Package pdftex.def Info: Paper_summary_template_Putnam.pdf , page1 used on input line 904.
 (pdftex.def)             Requested size: 614.29349pt x 794.96806pt.
 File: Paper_summary_template_Putnam.pdf Graphic file (type pdf)
 <use Paper_summary_template_Putnam.pdf, page 1>
-Package pdftex.def Info: Paper_summary_template_Putnam.pdf , page1 used on input line 923.
+Package pdftex.def Info: Paper_summary_template_Putnam.pdf , page1 used on input line 904.
 (pdftex.def)             Requested size: 211.32272pt x 273.47647pt.
 File: Paper_summary_template_Putnam.pdf Graphic file (type pdf)
 <use Paper_summary_template_Putnam.pdf, page 1>
-Package pdftex.def Info: Paper_summary_template_Putnam.pdf , page1 used on input line 923.
+Package pdftex.def Info: Paper_summary_template_Putnam.pdf , page1 used on input line 904.
 (pdftex.def)             Requested size: 211.32272pt x 273.47647pt.
 File: Paper_summary_template_Putnam.pdf Graphic file (type pdf)
 <use Paper_summary_template_Putnam.pdf, page 1>
-Package pdftex.def Info: Paper_summary_template_Putnam.pdf , page1 used on input line 923.
+Package pdftex.def Info: Paper_summary_template_Putnam.pdf , page1 used on input line 904.
 (pdftex.def)             Requested size: 211.32272pt x 273.47647pt.
 File: Paper_summary_template_Putnam.pdf Graphic file (type pdf)
 <use Paper_summary_template_Putnam.pdf, page 1>
-Package pdftex.def Info: Paper_summary_template_Putnam.pdf , page1 used on input line 923.
+Package pdftex.def Info: Paper_summary_template_Putnam.pdf , page1 used on input line 904.
 (pdftex.def)             Requested size: 211.32272pt x 273.47647pt.
-[174 <./Paper_summary_template_Putnam.pdf>] [175] [176
+[179 <./Paper_summary_template_Putnam.pdf>]
+Overfull \hbox (4.1063pt too wide) detected at line 906
+  [] [][][][][][][][][][] [][][][][][][][] [][][][][][][][][][][][][][][] [][][][][][][][][] [][][][][][][][][] [][][][][][][][][]  
+ []
 
-] [177
 
-] [178
+Overfull \hbox (4.1063pt too wide) has occurred while \output is active
+  [] [][][][][][][][][][] [][][][][][][][] [][][][][][][][][][][][][][][] [][][][][][][][][] [][][][][][][][][] [][][][][][][][][]  
+ []
 
-] [179
+[180]
+Overfull \hbox (4.1063pt too wide) detected at line 928
+  [] [][][][][][][][][][] [][][][][][][][] [][][][][][][][][][][][][][][] [][][][][][][][][] [][][][][][][][][] [][][][][][][][][]  
+ []
 
-] [180
 
-] [181
+Overfull \hbox (4.1063pt too wide) has occurred while \output is active
+  [] [][][][][][][][][][] [][][][][][][][] [][][][][][][][][][][][][][][] [][][][][][][][][] [][][][][][][][][] [][][][][][][][][]  
+ []
 
-] [182
+[181
 
-] [183
+]
+Overfull \hbox (4.1063pt too wide) has occurred while \output is active
+  [] [][][][][][][][][][] [][][][][][][][] [][][][][][][][][][][][][][][] [][][][][][][][][] [][][][][][][][][] [][][][][][][][][]  
+ []
 
-] [184
+[182
 
-] [185
+]
+Overfull \hbox (4.1063pt too wide) has occurred while \output is active
+  [] [][][][][][][][][][] [][][][][][][][] [][][][][][][][][][][][][][][] [][][][][][][][][] [][][][][][][][][] [][][][][][][][][]  
+ []
 
-] [186
+[183
 
-] [187
+]
+Overfull \hbox (4.1063pt too wide) has occurred while \output is active
+  [] [][][][][][][][][][] [][][][][][][][] [][][][][][][][][][][][][][][] [][][][][][][][][] [][][][][][][][][] [][][][][][][][][]  
+ []
+
+[184
+
+]
+Overfull \hbox (4.1063pt too wide) has occurred while \output is active
+  [] [][][][][][][][][][] [][][][][][][][] [][][][][][][][][][][][][][][] [][][][][][][][][] [][][][][][][][][] [][][][][][][][][]  
+ []
+
+[185
+
+]
+Overfull \hbox (4.1063pt too wide) has occurred while \output is active
+  [] [][][][][][][][][][] [][][][][][][][] [][][][][][][][][][][][][][][] [][][][][][][][][] [][][][][][][][][] [][][][][][][][][]  
+ []
+
+[186
+
+]
+Overfull \hbox (4.1063pt too wide) has occurred while \output is active
+  [] [][][][][][][][][][] [][][][][][][][] [][][][][][][][][][][][][][][] [][][][][][][][][] [][][][][][][][][] [][][][][][][][][]  
+ []
+
+[187
+
+]
+Overfull \hbox (4.1063pt too wide) has occurred while \output is active
+  [] [][][][][][][][][][] [][][][][][][][] [][][][][][][][][][][][][][][] [][][][][][][][][] [][][][][][][][][] [][][][][][][][][]  
+ []
+
+[188
+
+]
+Overfull \hbox (4.1063pt too wide) detected at line 945
+  [] [][][][][][][][][][] [][][][][][][][] [][][][][][][][][][][][][][][] [][][][][][][][][] [][][][][][][][][] [][][][][][][][][]  
+ []
+
+
+Overfull \hbox (4.1063pt too wide) has occurred while \output is active
+  [] [][][][][][][][][][] [][][][][][][][] [][][][][][][][][][][][][][][] [][][][][][][][][] [][][][][][][][][] [][][][][][][][][]  
+ []
+
+[189
+
+]
+Overfull \hbox (4.1063pt too wide) has occurred while \output is active
+  [] [][][][][][][][][][] [][][][][][][][] [][][][][][][][][][][][][][][] [][][][][][][][][] [][][][][][][][][] [][][][][][][][][]  
+ []
+
+[190
+
+]
+Overfull \hbox (4.1063pt too wide) has occurred while \output is active
+  [] [][][][][][][][][][] [][][][][][][][] [][][][][][][][][][][][][][][] [][][][][][][][][] [][][][][][][][][] [][][][][][][][][]  
+ []
+
+[191
+
+]
+Overfull \hbox (4.1063pt too wide) has occurred while \output is active
+  [] [][][][][][][][][][] [][][][][][][][] [][][][][][][][][][][][][][][] [][][][][][][][][] [][][][][][][][][] [][][][][][][][][]  
+ []
+
+[192
+
+]
+Overfull \hbox (4.1063pt too wide) has occurred while \output is active
+  [] [][][][][][][][][][] [][][][][][][][] [][][][][][][][][][][][][][][] [][][][][][][][][] [][][][][][][][][] [][][][][][][][][]  
+ []
+
+[193
 
 ]
 
 pdfTeX warning: pdflatex.exe (file ./Polity.pdf): PDF inclusion: found PDF version <1.7>, but at most version <1.5> allowed
-<Polity.pdf, id=14138, 602.25pt x 437.38406pt>
+<Polity.pdf, id=15748, 602.25pt x 437.38406pt>
 File: Polity.pdf Graphic file (type pdf)
 <use Polity.pdf>
-Package pdftex.def Info: Polity.pdf  used on input line 967.
+Package pdftex.def Info: Polity.pdf  used on input line 948.
 (pdftex.def)             Requested size: 602.24852pt x 437.38298pt.
 
 
 pdfTeX warning: pdflatex.exe (file ./Polity.pdf): PDF inclusion: found PDF version <1.7>, but at most version <1.5> allowed
 File: Polity.pdf Graphic file (type pdf)
 <use Polity.pdf>
-Package pdftex.def Info: Polity.pdf  used on input line 967.
+Package pdftex.def Info: Polity.pdf  used on input line 948.
 (pdftex.def)             Requested size: 602.24852pt x 437.38298pt.
 
 
@@ -2018,99 +3260,275 @@ pdfTeX warning: pdflatex.exe (file ./Polity.pdf): PDF inclusion: found PDF versi
 
 
 pdfTeX warning: pdflatex.exe (file ./Polity.pdf): PDF inclusion: found PDF version <1.7>, but at most version <1.5> allowed
-<Polity.pdf, id=14141, page=1, 602.25pt x 437.38406pt>
+<Polity.pdf, id=15751, page=1, 602.25pt x 437.38406pt>
 File: Polity.pdf Graphic file (type pdf)
 <use Polity.pdf, page 1>
-Package pdftex.def Info: Polity.pdf , page1 used on input line 967.
+Package pdftex.def Info: Polity.pdf , page1 used on input line 948.
 (pdftex.def)             Requested size: 602.24852pt x 437.38298pt.
 File: Polity.pdf Graphic file (type pdf)
 <use Polity.pdf, page 1>
-Package pdftex.def Info: Polity.pdf , page1 used on input line 967.
+Package pdftex.def Info: Polity.pdf , page1 used on input line 948.
 (pdftex.def)             Requested size: 364.3394pt x 264.60149pt.
 File: Polity.pdf Graphic file (type pdf)
 <use Polity.pdf, page 1>
-Package pdftex.def Info: Polity.pdf , page1 used on input line 967.
+Package pdftex.def Info: Polity.pdf , page1 used on input line 948.
 (pdftex.def)             Requested size: 364.3394pt x 264.60149pt.
 File: Polity.pdf Graphic file (type pdf)
 <use Polity.pdf, page 1>
-Package pdftex.def Info: Polity.pdf , page1 used on input line 967.
+Package pdftex.def Info: Polity.pdf , page1 used on input line 948.
 (pdftex.def)             Requested size: 364.3394pt x 264.60149pt.
 File: Polity.pdf Graphic file (type pdf)
 <use Polity.pdf, page 1>
-Package pdftex.def Info: Polity.pdf , page1 used on input line 967.
+Package pdftex.def Info: Polity.pdf , page1 used on input line 948.
 (pdftex.def)             Requested size: 364.3394pt x 264.60149pt.
-[188
+[194
 
  <./Polity.pdf>]
-<Venezuala_binary.png, id=14152, 779.54158pt x 562.73157pt>
+<Venezuala_binary.png, id=15763, 779.54158pt x 562.73157pt>
 File: Venezuala_binary.png Graphic file (type png)
 <use Venezuala_binary.png>
-Package pdftex.def Info: Venezuala_binary.png  used on input line 970.
+Package pdftex.def Info: Venezuala_binary.png  used on input line 951.
 (pdftex.def)             Requested size: 354.19536pt x 255.68262pt.
+
+Overfull \hbox (4.1063pt too wide) detected at line 965
+  [] [][][][][][][][][][] [][][][][][][][] [][][][][][][][][][][][][][][] [][][][][][][][][] [][][][][][][][][] [][][][][][][][][]  
+ []
+
 
 Overfull \vbox (14.05771pt too high) has occurred while \output is active []
 
-[189 <./Venezuala_binary.png>] [190] [191
 
-] [192
+Overfull \hbox (4.1063pt too wide) has occurred while \output is active
+  [] [][][][][][][][][][] [][][][][][][][] [][][][][][][][][][][][][][][] [][][][][][][][][] [][][][][][][][][] [][][][][][][][][]  
+ []
 
-] [193
+[195 <./Venezuala_binary.png>]
+Overfull \hbox (4.1063pt too wide) has occurred while \output is active
+  [] [][][][][][][][][][] [][][][][][][][] [][][][][][][][][][][][][][][] [][][][][][][][][] [][][][][][][][][] [][][][][][][][][]  
+ []
 
-] [194
+[196]
+Overfull \hbox (4.1063pt too wide) has occurred while \output is active
+  [] [][][][][][][][][][] [][][][][][][][] [][][][][][][][][][][][][][][] [][][][][][][][][] [][][][][][][][][] [][][][][][][][][]  
+ []
 
-] [195
+[197
 
-] [196
+]
+Overfull \hbox (4.1063pt too wide) has occurred while \output is active
+  [] [][][][][][][][][][] [][][][][][][][] [][][][][][][][][][][][][][][] [][][][][][][][][] [][][][][][][][][] [][][][][][][][][]  
+ []
 
-] [197
+[198
 
-] [198
+]
+Overfull \hbox (4.1063pt too wide) has occurred while \output is active
+  [] [][][][][][][][][][] [][][][][][][][] [][][][][][][][][][][][][][][] [][][][][][][][][] [][][][][][][][][] [][][][][][][][][]  
+ []
 
-] [199
+[199
 
-] [200
+]
+Overfull \hbox (4.1063pt too wide) detected at line 978
+  [] [][][][][][][][][][] [][][][][][][][] [][][][][][][][][][][][][][][] [][][][][][][][][] [][][][][][][][][] [][][][][][][][][]  
+ []
 
-] [201
 
-] [202
+Overfull \hbox (4.1063pt too wide) has occurred while \output is active
+  [] [][][][][][][][][][] [][][][][][][][] [][][][][][][][][][][][][][][] [][][][][][][][][] [][][][][][][][][] [][][][][][][][][]  
+ []
 
-] [203
+[200
 
-] [204
+]
+Overfull \hbox (4.1063pt too wide) has occurred while \output is active
+  [] [][][][][][][][][][] [][][][][][][][] [][][][][][][][][][][][][][][] [][][][][][][][][] [][][][][][][][][] [][][][][][][][][]  
+ []
 
-] [205
+[201
 
-] [206
+]
+Overfull \hbox (4.1063pt too wide) has occurred while \output is active
+  [] [][][][][][][][][][] [][][][][][][][] [][][][][][][][][][][][][][][] [][][][][][][][][] [][][][][][][][][] [][][][][][][][][]  
+ []
 
-] [207
+[202
 
-] [208
+]
+Overfull \hbox (4.1063pt too wide) has occurred while \output is active
+  [] [][][][][][][][][][] [][][][][][][][] [][][][][][][][][][][][][][][] [][][][][][][][][] [][][][][][][][][] [][][][][][][][][]  
+ []
 
-] [209
+[203
 
-] [210
+]
+Overfull \hbox (4.1063pt too wide) detected at line 1000
+  [] [][][][][][][][][][] [][][][][][][][] [][][][][][][][][][][][][][][] [][][][][][][][][] [][][][][][][][][] [][][][][][][][][]  
+ []
 
-] [211
 
-] [212
+Overfull \hbox (4.1063pt too wide) has occurred while \output is active
+  [] [][][][][][][][][][] [][][][][][][][] [][][][][][][][][][][][][][][] [][][][][][][][][] [][][][][][][][][] [][][][][][][][][]  
+ []
 
-] [213
+[204
 
-] [214
+]
+Overfull \hbox (4.1063pt too wide) has occurred while \output is active
+  [] [][][][][][][][][][] [][][][][][][][] [][][][][][][][][][][][][][][] [][][][][][][][][] [][][][][][][][][] [][][][][][][][][]  
+ []
 
-] [215
+[205
 
-] [216
+]
+Overfull \hbox (4.1063pt too wide) has occurred while \output is active
+  [] [][][][][][][][][][] [][][][][][][][] [][][][][][][][][][][][][][][] [][][][][][][][][] [][][][][][][][][] [][][][][][][][][]  
+ []
 
-] [217
+[206
 
-] [218
+]
+Overfull \hbox (4.1063pt too wide) has occurred while \output is active
+  [] [][][][][][][][][][] [][][][][][][][] [][][][][][][][][][][][][][][] [][][][][][][][][] [][][][][][][][][] [][][][][][][][][]  
+ []
 
-] [219
+[207
 
-] [220
+]
+Overfull \hbox (4.1063pt too wide) has occurred while \output is active
+  [] [][][][][][][][][][] [][][][][][][][] [][][][][][][][][][][][][][][] [][][][][][][][][] [][][][][][][][][] [][][][][][][][][]  
+ []
 
-] [221
+[208
+
+]
+Overfull \hbox (4.1063pt too wide) has occurred while \output is active
+  [] [][][][][][][][][][] [][][][][][][][] [][][][][][][][][][][][][][][] [][][][][][][][][] [][][][][][][][][] [][][][][][][][][]  
+ []
+
+[209
+
+]
+Overfull \hbox (4.1063pt too wide) has occurred while \output is active
+  [] [][][][][][][][][][] [][][][][][][][] [][][][][][][][][][][][][][][] [][][][][][][][][] [][][][][][][][][] [][][][][][][][][]  
+ []
+
+[210
+
+]
+Overfull \hbox (4.1063pt too wide) detected at line 1027
+  [] [][][][][][][][][][] [][][][][][][][] [][][][][][][][][][][][][][][] [][][][][][][][][] [][][][][][][][][] [][][][][][][][][]  
+ []
+
+
+Overfull \hbox (4.1063pt too wide) has occurred while \output is active
+  [] [][][][][][][][][][] [][][][][][][][] [][][][][][][][][][][][][][][] [][][][][][][][][] [][][][][][][][][] [][][][][][][][][]  
+ []
+
+[211
+
+]
+Overfull \hbox (4.1063pt too wide) has occurred while \output is active
+  [] [][][][][][][][][][] [][][][][][][][] [][][][][][][][][][][][][][][] [][][][][][][][][] [][][][][][][][][] [][][][][][][][][]  
+ []
+
+[212
+
+]
+Overfull \hbox (4.1063pt too wide) has occurred while \output is active
+  [] [][][][][][][][][][] [][][][][][][][] [][][][][][][][][][][][][][][] [][][][][][][][][] [][][][][][][][][] [][][][][][][][][]  
+ []
+
+[213
+
+]
+Overfull \hbox (4.1063pt too wide) has occurred while \output is active
+  [] [][][][][][][][][][] [][][][][][][][] [][][][][][][][][][][][][][][] [][][][][][][][][] [][][][][][][][][] [][][][][][][][][]  
+ []
+
+[214
+
+]
+Overfull \hbox (4.1063pt too wide) has occurred while \output is active
+  [] [][][][][][][][][][] [][][][][][][][] [][][][][][][][][][][][][][][] [][][][][][][][][] [][][][][][][][][] [][][][][][][][][]  
+ []
+
+[215
+
+]
+Overfull \hbox (4.1063pt too wide) has occurred while \output is active
+  [] [][][][][][][][][][] [][][][][][][][] [][][][][][][][][][][][][][][] [][][][][][][][][] [][][][][][][][][] [][][][][][][][][]  
+ []
+
+[216
+
+]
+Overfull \hbox (4.1063pt too wide) has occurred while \output is active
+  [] [][][][][][][][][][] [][][][][][][][] [][][][][][][][][][][][][][][] [][][][][][][][][] [][][][][][][][][] [][][][][][][][][]  
+ []
+
+[217
+
+]
+Overfull \hbox (4.1063pt too wide) detected at line 1055
+  [] [][][][][][][][][][] [][][][][][][][] [][][][][][][][][][][][][][][] [][][][][][][][][] [][][][][][][][][] [][][][][][][][][]  
+ []
+
+
+Overfull \hbox (4.1063pt too wide) has occurred while \output is active
+  [] [][][][][][][][][][] [][][][][][][][] [][][][][][][][][][][][][][][] [][][][][][][][][] [][][][][][][][][] [][][][][][][][][]  
+ []
+
+[218
+
+]
+Overfull \hbox (4.1063pt too wide) has occurred while \output is active
+  [] [][][][][][][][][][] [][][][][][][][] [][][][][][][][][][][][][][][] [][][][][][][][][] [][][][][][][][][] [][][][][][][][][]  
+ []
+
+[219
+
+]
+Overfull \hbox (4.1063pt too wide) has occurred while \output is active
+  [] [][][][][][][][][][] [][][][][][][][] [][][][][][][][][][][][][][][] [][][][][][][][][] [][][][][][][][][] [][][][][][][][][]  
+ []
+
+[220
+
+]
+Overfull \hbox (4.1063pt too wide) has occurred while \output is active
+  [] [][][][][][][][][][] [][][][][][][][] [][][][][][][][][][][][][][][] [][][][][][][][][] [][][][][][][][][] [][][][][][][][][]  
+ []
+
+[221
+
+]
+Overfull \hbox (4.1063pt too wide) has occurred while \output is active
+  [] [][][][][][][][][][] [][][][][][][][] [][][][][][][][][][][][][][][] [][][][][][][][][] [][][][][][][][][] [][][][][][][][][]  
+ []
+
+[222
+
+]
+Overfull \hbox (4.1063pt too wide) has occurred while \output is active
+  [] [][][][][][][][][][] [][][][][][][][] [][][][][][][][][][][][][][][] [][][][][][][][][] [][][][][][][][][] [][][][][][][][][]  
+ []
+
+[223
+
+]
+Overfull \hbox (4.1063pt too wide) has occurred while \output is active
+  [] [][][][][][][][][][] [][][][][][][][] [][][][][][][][][][][][][][][] [][][][][][][][][] [][][][][][][][][] [][][][][][][][][]  
+ []
+
+[224
+
+]
+Overfull \hbox (4.1063pt too wide) has occurred while \output is active
+  [] [][][][][][][][][][] [][][][][][][][] [][][][][][][][][][][][][][][] [][][][][][][][][] [][][][][][][][][] [][][][][][][][][]  
+ []
+
+[225
 
 ]
 \tf@nav=\write6
@@ -2137,18 +3555,18 @@ Package rerunfilecheck Info: File `Slides_Day_1_2024_v1.out' has not changed.
 (rerunfilecheck)             Checksum: F7FE0CBF23AE6F70B75AA61C50738614;727.
  ) 
 Here is how much of TeX's memory you used:
- 27479 strings out of 476112
- 542611 string characters out of 5792536
- 1964528 words of memory out of 5000000
- 48472 multiletter control sequences out of 15000+600000
+ 27514 strings out of 476112
+ 541951 string characters out of 5792536
+ 1967528 words of memory out of 5000000
+ 48499 multiletter control sequences out of 15000+600000
  642232 words of font info for 173 fonts, out of 8000000 for 9000
  14 hyphenation exceptions out of 8191
- 101i,19n,107p,636b,812s stack positions out of 10000i,1000n,20000p,200000b,200000s
+ 101i,19n,107p,636b,816s stack positions out of 10000i,1000n,20000p,200000b,200000s
 <c:/Users/jonny/AppData/Roaming/TinyTeX/texmf-dist/fonts/type1/public/arev/ArevSans-Bold.pfb><c:/Users/jonny/AppData/Roaming/TinyTeX/texmf-dist/fonts/type1/public/arev/ArevSans-BoldOblique.pfb><c:/Users/jonny/AppData/Roaming/TinyTeX/texmf-dist/fonts/type1/public/arev/ArevSans-Oblique.pfb><c:/Users/jonny/AppData/Roaming/TinyTeX/texmf-dist/fonts/type1/public/arev/ArevSans-Roman.pfb><c:/Users/jonny/AppData/Roaming/TinyTeX/texmf-dist/fonts/type1/public/mathdesign/mdbch/md-chb7t.pfb><c:/Users/jonny/AppData/Roaming/TinyTeX/texmf-dist/fonts/type1/public/mathdesign/mdbch/md-chb7y.pfb><c:/Users/jonny/AppData/Roaming/TinyTeX/texmf-dist/fonts/type1/public/mathdesign/mdbch/md-chbma.pfb>
-Output written on Slides_Day_1_2024_v1.pdf (221 pages, 1312968 bytes).
+Output written on Slides_Day_1_2024_v1.pdf (225 pages, 1776875 bytes).
 PDF statistics:
- 16724 PDF objects out of 18468 (max. 8388607)
- 13310 compressed objects within 134 object streams
- 450 named destinations out of 1000 (max. 500000)
+ 18247 PDF objects out of 18468 (max. 8388607)
+ 14376 compressed objects within 144 object streams
+ 458 named destinations out of 1000 (max. 500000)
  241 words of extra memory for PDF output out of 10000 (max. 10000000)
 

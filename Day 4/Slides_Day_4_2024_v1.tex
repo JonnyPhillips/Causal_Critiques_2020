@@ -1,0 +1,694 @@
+% Font options: 10pm, 11pt, 12pt
+% Align headings left instead of center: nocenter
+\documentclass[xcolor=x11names,compress]{beamer}\usepackage[]{graphicx}\usepackage[]{xcolor}
+% maxwidth is the original width if it is less than linewidth
+% otherwise use linewidth (to make sure the graphics do not exceed the margin)
+\makeatletter
+\def\maxwidth{ %
+  \ifdim\Gin@nat@width>\linewidth
+    \linewidth
+  \else
+    \Gin@nat@width
+  \fi
+}
+\makeatother
+
+\definecolor{fgcolor}{rgb}{0.345, 0.345, 0.345}
+\newcommand{\hlnum}[1]{\textcolor[rgb]{0.686,0.059,0.569}{#1}}%
+\newcommand{\hlstr}[1]{\textcolor[rgb]{0.192,0.494,0.8}{#1}}%
+\newcommand{\hlcom}[1]{\textcolor[rgb]{0.678,0.584,0.686}{\textit{#1}}}%
+\newcommand{\hlopt}[1]{\textcolor[rgb]{0,0,0}{#1}}%
+\newcommand{\hlstd}[1]{\textcolor[rgb]{0.345,0.345,0.345}{#1}}%
+\newcommand{\hlkwa}[1]{\textcolor[rgb]{0.161,0.373,0.58}{\textbf{#1}}}%
+\newcommand{\hlkwb}[1]{\textcolor[rgb]{0.69,0.353,0.396}{#1}}%
+\newcommand{\hlkwc}[1]{\textcolor[rgb]{0.333,0.667,0.333}{#1}}%
+\newcommand{\hlkwd}[1]{\textcolor[rgb]{0.737,0.353,0.396}{\textbf{#1}}}%
+\let\hlipl\hlkwb
+
+\usepackage{framed}
+\makeatletter
+\newenvironment{kframe}{%
+ \def\at@end@of@kframe{}%
+ \ifinner\ifhmode%
+  \def\at@end@of@kframe{\end{minipage}}%
+  \begin{minipage}{\columnwidth}%
+ \fi\fi%
+ \def\FrameCommand##1{\hskip\@totalleftmargin \hskip-\fboxsep
+ \colorbox{shadecolor}{##1}\hskip-\fboxsep
+     % There is no \\@totalrightmargin, so:
+     \hskip-\linewidth \hskip-\@totalleftmargin \hskip\columnwidth}%
+ \MakeFramed {\advance\hsize-\width
+   \@totalleftmargin\z@ \linewidth\hsize
+   \@setminipage}}%
+ {\par\unskip\endMakeFramed%
+ \at@end@of@kframe}
+\makeatother
+
+\definecolor{shadecolor}{rgb}{.97, .97, .97}
+\definecolor{messagecolor}{rgb}{0, 0, 0}
+\definecolor{warningcolor}{rgb}{1, 0, 1}
+\definecolor{errorcolor}{rgb}{1, 0, 0}
+\newenvironment{knitrout}{}{} % an empty environment to be redefined in TeX
+
+\usepackage{alltt}
+%\documentclass[xcolor=x11names,compress,handout]{beamer}
+\usepackage[]{graphicx}
+\usepackage[]{color}
+\usepackage{booktabs}
+\usepackage{hyperref}
+\usepackage{tikz}
+\usepackage{multirow}
+\usepackage{dcolumn}
+\usepackage{bigstrut}
+\usepackage{amsmath} 
+\usepackage{xcolor,colortbl}
+\usepackage{amssymb}
+%\newcommand{\done}{\cellcolor{teal}#1}
+
+%% Beamer Layout %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\useoutertheme[subsection=false,shadow]{miniframes}
+\useinnertheme{default}
+\usefonttheme{serif}
+\usepackage{Arev}
+\usepackage{pdfpages}
+
+\setbeamerfont{title like}{shape=\scshape}
+\setbeamerfont{frametitle}{shape=\scshape, size=\normalsize}
+
+\definecolor{dkblue}{RGB}{0,0,102}
+
+\setbeamercolor*{lower separation line head}{bg=dkblue} 
+\setbeamercolor*{normal text}{fg=black,bg=white} 
+\setbeamercolor*{alerted text}{fg=red} 
+\setbeamercolor*{example text}{fg=black} 
+\setbeamercolor*{structure}{fg=black} 
+ 
+\setbeamercolor*{palette tertiary}{fg=black,bg=black!10} 
+\setbeamercolor*{palette quaternary}{fg=black,bg=black!10} 
+
+\renewcommand{\(}{\begin{columns}}
+\renewcommand{\)}{\end{columns}}
+\newcommand{\<}[1]{\begin{column}{#1}}
+\renewcommand{\>}{\end{column}}
+
+\setbeamertemplate{navigation symbols}{} 
+\setbeamertemplate{footline}[frame number]
+\setbeamertemplate{caption}{\raggedright\insertcaption\par}
+
+\setbeamersize{text margin left=5pt,text margin right=5pt}
+
+\setbeamercolor{block title}{use=structure,fg=white,bg=structure.fg!75!orange}
+\setbeamercolor{block body}{parent=normal text,use=block title,bg=block title.bg!10!bg}
+
+\AtBeginSection{\frame{\sectionpage}}
+\usepackage{xcolor}
+\hypersetup{
+    colorlinks,
+    linkcolor={red!50!black},
+    citecolor={blue!50!black},
+    urlcolor={blue!80!black}
+}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+\title{Interpreting and Critiquing Causal Evidence}
+\subtitle{Day 4 - How much are we Learning?}
+\author{Jonathan Phillips}
+\IfFileExists{upquote.sty}{\usepackage{upquote}}{}
+\begin{document}
+
+\frame{\titlepage}
+
+\section{Introduction}
+
+\begin{frame}
+\frametitle{How much are we Learning?}
+\begin{itemize}
+\item Everything we have discussed so far has been about the \textbf{accuracy} of a causal claim
+\pause
+\item But not every study is as valuable to political science
+\pause
+\item We \textit{learn} more from some studies than from others
+\pause
+\begin{enumerate}
+\item \textbf{Reliability/Robustness} of the claim
+\pause
+\item \textbf{Reproducibility} of the claim
+\pause
+\item Scope - \textbf{Generalizability} - of the claim
+\end{enumerate}
+\end{itemize}
+\end{frame}
+
+\section{Robustness}
+
+\begin{frame}
+\frametitle{Robustness}
+\begin{itemize}
+\item For simplicity, we publish a paper with a 'final' result
+\pause
+\begin{itemize}
+\item 1\% extra GDP growth increases the President's chance of re-election by 5\%
+\pause
+\end{itemize}
+\item But how \textbf{confident} are we in these figures?
+\pause
+\item Good studies include estimates of uncertainty
+\pause
+\begin{itemize}
+\item 1\% extra GDP growth increases the President's chance of re-election by 5\% with a standard deviation of 0.2\%
+\pause
+\end{itemize}
+\item But these confidence intervals are usually for a \textit{single} methodology and a fixed set of assumptions
+\end{itemize}
+\end{frame}
+
+\begin{frame}
+\frametitle{Robustness}
+\begin{itemize}
+\item What if our assumptions were wrong?
+\pause
+\item How much would our results change if we used a different methodology?
+\pause
+\begin{itemize}
+\item Including different controls
+\pause
+\item Including alternative measures of the variables
+\pause
+\item Including or excluding outliers
+\pause
+\item Including a different functional form for the regression
+\pause
+\end{itemize}
+\item If we can change all these things and still get the same answers, our result is \textbf{reliable} and \textbf{robust}
+\end{itemize}
+\end{frame}
+
+\begin{frame}
+\frametitle{Robustness}
+\begin{itemize}
+\item For example, Michalpoulos and Papaioannou (2013) show that more centralized pre-colonial societies in Africa have more economic activity today
+\pause
+\item Robustness tests include:
+\begin{itemize}
+\item Extra controls for disease, land, natural resources
+\item Alternative model for spatial autocorrelation
+\item Country fixed effects to focus only on within-country variation
+\item Comparing only neighbouring societies
+\item Alternative codings of centralized pre-colonial societies
+\item Alternative measures of economic activity (nightlights etc.)
+\item Different units of analysis - grid squares instead of ethnic territories
+\end{itemize}
+\end{itemize}
+\end{frame}
+
+\begin{frame}
+\frametitle{Robustness}
+\begin{itemize}
+\item Robustness tests help avoid \textbf{researcher bias}
+\pause
+\begin{itemize}
+\item Running 200 models with different covariates
+\pause
+\item Only reporting one that is significant
+\pause
+\item But even if there was \textbf{no causal effect} in the data, \textit{by chance} we would expect 10 models to produce significant effects
+\end{itemize}
+\end{itemize}
+\end{frame}
+
+%altonji et al sensitivity analysis
+\section{Reproducibility}
+
+
+\begin{frame}
+\frametitle{Reproducibility}
+\begin{enumerate}
+\item If we take the same data and apply the same method, do we get the same result?
+\pause
+\begin{itemize}
+\item Often, no! Only 35\% replication rate in Brazilian political science journals (Avelino and Desposato 2018)
+\pause
+\item And that's for the papers where we have access to the data and code
+\pause
+\end{itemize}
+\item If we take \textbf{another} sample of data and apply the same method, do we get the same result?
+\begin{itemize}
+\item Very rarely done
+\end{itemize}
+\end{enumerate}
+\end{frame}
+
+\begin{frame}
+\frametitle{Reproducibility}
+\begin{itemize}
+\item The egap metakata project on information and accountability conducted 6 experiments in 5 countries
+\pause
+\begin{itemize}
+\item Can giving voters information improve electoral accountability?
+\item Existing literature suggested conflicting results
+\item Similar experiment and analysis across diverse settings
+\pause
+\item NO effects in any country
+\end{itemize}
+\pause
+\item Robustness and Reproducibility: \href{https://egap.shinyapps.io/metaketa_shiny/}{Metaketa Interactive}
+\end{itemize}
+\end{frame}
+
+\begin{frame}
+\frametitle{Reproducibility}
+\begin{itemize}
+\item A big problem for reproducibility is \textbf{publication bias}
+\pause
+\begin{itemize}
+\item Lots of researchers perform lots of studies
+\pause
+\item Some find positive results, some negative, many 'null' findings
+\pause
+\item But journals want readers, and readers like positive results
+\pause
+\item So only the positive results get published
+\pause
+\end{itemize}
+\item If you're reading a paper, think of the ten other papers you're \textit{not} reading that tried the same thing and found no effect
+\end{itemize}
+\end{frame}
+
+\begin{frame}
+\frametitle{Reproducibility}
+\begin{itemize}
+\item Publication bias is a \textbf{huge} problem
+\pause
+\item Compare the frequency of results in APSR and AJPS just above and below the 1.96 test statistic (for 5\% significance)
+\pause
+\item Many more values just below the threshold
+\pause
+\item Less than 1 in 32 billion chance this happened by chance!
+\end{itemize}
+\end{frame}
+
+\setbeamercolor{background canvas}{bg=}
+\includepdf[pages={1}, scale=0.8]{Pub_Bias.pdf}
+
+
+\begin{frame}
+\frametitle{Reproducibility}
+\begin{itemize}
+\item One solution is \textbf{Pre-registration}
+\pause
+\begin{itemize}
+\item Submit your study design to a website - what you will analyse and how
+\pause
+\item Everyone knows who is researching what, and if they published or not
+\pause
+\item Researchers are also less tempted to 'pick' their preferred analysis after seeing the data
+\pause
+\item Eg. \href{https://egap.org/content/registration}{EGAP Pre-Registration}
+\end{itemize}
+\end{itemize}
+\end{frame}
+
+\section{Generalizability}
+
+\begin{frame}
+\frametitle{Generalizability}
+\begin{itemize}
+\item But even if studies are robust and reproducible, \textbf{how much} are we learning?
+\pause
+\item We can learn very little even from a precise, bias-free study:
+\pause
+\begin{itemize}
+\item \href{https://www.improbable.com/ig/winners}{IgNobel Prize}
+\item "Suicide rates are linked to the amount of country music played on the radio"
+\item "Is using voodoo dolls effective?"
+\item "Why do old men have big ears?"
+\item "How exposure to a crocodile encourages people to gamble"
+\end{itemize}
+\end{itemize}
+\end{frame}
+
+\begin{frame}
+\frametitle{Generalizability}
+\begin{itemize}
+\item \textbf{Internal Validity}
+\begin{itemize}
+\item Are the conclusions of the study accurate \textit{within} the sample?
+\pause
+\item Are the assumptions valid, is our causal effect biased?
+\pause
+\item Is the conclusion reliable if we use slightly different assumptions?
+\pause
+\end{itemize}
+\item \textbf{External Validity}
+\begin{itemize}
+\item How far can the results 'travel' outside of the study sample?
+\pause
+\begin{enumerate}
+\item Does the study reflect a wider population?
+\pause
+\item How big, representative and interesting is that wider population?
+\end{enumerate}
+\end{itemize}
+\end{itemize}
+\end{frame}
+
+\begin{frame}
+\frametitle{Generalizability}
+\begin{itemize}
+\item For example, Chattopadhyay and Duflo (2004) argue that women leaders invest more in education using data from an experiment in 265 villages in two states in India (West Bengal and Rajasthan)
+\pause
+\item But does the conclusion apply to:
+\pause
+\begin{enumerate}
+\item 265 different villages?
+\pause
+\item Different states?
+\pause
+\item Different countries?
+\pause
+\item Different years?
+\end{enumerate}
+\end{itemize}
+\end{frame}
+
+\begin{frame}
+\frametitle{Generalizability}
+\begin{itemize}
+\item Most studies are designed with generalizability in mind:
+\pause
+\begin{itemize}
+\item Representative Samples are drawn from a target population
+\pause
+\item We use \textbf{statistical inference} to extend our conclusions from the sample to the population
+\pause
+\begin{itemize}
+\item Note this only works if we know all the units (hidden tribes etc.)
+\pause
+\end{itemize}
+\item But Chattopadhyay and Duflo (2004) was not a representative sample of villages
+\pause
+\item Their widely-cited paper \textit{only} applies to Birbhum and Udaipur districts
+\pause
+\item We have no evidence of how women leaders govern elsewhere in India or the world
+\end{itemize}
+\end{itemize}
+\end{frame}
+
+\begin{frame}
+\frametitle{Generalizability}
+\begin{itemize}
+\item Specific causal research designs also restrict the scope of our findings
+\pause
+\begin{itemize}
+\item Precisely because we had to restrict our sample to find appropriate counterfactuals
+\pause
+\item The new comparisons are often less representative or interesting
+\pause
+\end{itemize}
+\item Instead of an \textbf{Average Treatment Effect (ATE)} they represent a \textbf{Local Average Treatment Effect (LATE)}
+\pause
+\begin{itemize}
+\item A treatment effect applicable only to those units who were affected by the 'random' part of treatment: \textbf{compliers}
+\end{itemize}
+\end{itemize}
+\end{frame}
+
+\section{By Method}
+
+\begin{frame}
+\frametitle{Field Experiments}
+\begin{itemize}
+\item Implementation is limited to a small sample, often non-representative
+\pause
+\begin{itemize}
+\item Due to costs, consent
+\pause
+\end{itemize}
+\item And the findings \textit{only} apply to that sample
+\pause
+\item Or maybe only to a sub-group of that sample
+\end{itemize}
+\end{frame}
+
+\begin{frame}
+\frametitle{Field Experiments}
+\begin{itemize}
+\item \textbf{External Validity} in Field Experiments:
+\pause
+\begin{itemize}
+\item What \textbf{theory} are we testing? We can't accumulate knowledge without theory. The causal mechanisms are still a black box.
+\pause
+\begin{itemize}
+\item ``Focused on \textit{whether} projects work instead of on \textit{why} they work'' (Deaton 2009)
+\end{itemize}
+\pause
+\item Limited \textbf{portability} of findings - context matters for the treatment effects:
+\pause
+\begin{itemize}
+\item Eg. CCTs improve child health \textit{only} where clinics are available, people are sufficiently educated, etc.
+\end{itemize}
+\pause
+\item How much do the results depend on researcher oversight?
+\end{itemize}
+\end{itemize}
+\end{frame}
+
+\begin{frame}
+\frametitle{Lab Experiments}
+\begin{itemize}
+\item Problems generalizing from the lab:
+\pause
+\begin{itemize}
+\item \textbf{Hawthorne effect}: Lab context influences behaviour, social desirability bias
+\pause
+\item \textbf{Context effects}: The real-world always provides more information, more history
+\pause
+\item \textbf{Process effects}: People care \textit{how} decisions are made
+\pause
+\item \textbf{Selection effects}: Actors in specific roles are rarely representative samples, 'WEIRD' or pro-social lab subjects
+\end{itemize}
+\end{itemize}
+\end{frame}
+
+\begin{frame}
+\frametitle{Lab Experiments}
+\begin{itemize}
+\item The lab differs from the field:
+\pause
+\begin{itemize}
+\item The stakes
+\item The norms
+\item The degree of scrutiny (Levitt and List 2006, ``You tip more when you're on a date'')
+\item The sample of individuals
+\item The degree of anonymity
+\end{itemize}
+\end{itemize}
+\end{frame}
+
+\begin{frame}
+\frametitle{Lab Experiments}
+\begin{itemize}
+\item Many studies find more cooperation in the lab than in the real world
+\pause
+\begin{itemize}
+\item Scrutiny increases cooperation
+\pause
+\item Anonymity reduces cooperation
+\pause
+\item That's interesting in itself! We can manipulate the degree of scrutiny/anonymity etc.
+\end{itemize}
+\end{itemize}
+\end{frame}
+
+\begin{frame}
+\frametitle{Conjoint Survey Experiments}
+\begin{itemize}
+\item Hainmueller et al 2013 - How do attitudes to immigrants depend on immigrant characteristics?
+\pause
+\item Vary education, profession, language, gender, national origin, etc.
+\pause
+\item Profiles
+\begin{itemize}
+\item Attributes
+\begin{itemize}
+\item Values
+\pause
+\end{itemize}
+\end{itemize}
+\item Randomize attribute order to prevent bias
+\end{itemize}
+\end{frame}
+
+\setbeamercolor{background canvas}{bg=}
+\includepdf[pages={6}]{Jens.pdf}
+
+\setbeamercolor{background canvas}{bg=}
+\includepdf[pages={21}]{Jens.pdf}
+
+\begin{frame}
+\frametitle{Conjoint Survey Experiments}
+\begin{itemize}
+\item How realistic are the responses?
+\pause
+\begin{itemize}
+\item Not a \textbf{behavioural} measure; nothing 'at stake'
+\pause
+\item Social desirability bias
+\pause
+\item Not like the real-world
+\pause
+\end{itemize}
+\item Hainmueller et al 2014 - compare conjoint responses to a Swiss referendum
+\pause
+\item Citizens voted on specific naturalization applicants (Really!)
+\end{itemize}
+\end{frame}
+
+\begin{frame}
+\frametitle{Conjoint Survey Experiments}
+\includegraphics[width=0.8\textwidth]{Conjoint_Swiss.png}
+\end{frame}
+
+\begin{frame}
+\frametitle{Conjoint Survey Experiments}
+\begin{itemize}
+\item Marginal effects are quite similar
+\pause
+\item But note the conjoint method still hugely under-estimated the overall rejection rate
+\item 21\% versus 37\% in reality
+\end{itemize}
+\end{frame}
+
+\begin{frame}
+\frametitle{Regression Discontinuity}
+\begin{itemize}
+\item The LATE estimate is for those people who were so close to the discontinuity that whether they were treated or not is basically random
+\pause
+\begin{itemize}
+\item Even though those cases are rare (eg. tied elections)
+\pause
+\item Even though we use data from a lot more people to estimate the LATE
+\pause
+\end{itemize}
+\item Do we care about those people at the discontinuity?
+\pause
+\begin{itemize}
+\item It depends on our research/policy question
+\pause
+\item A trade-off between representativeness and accuracy of our estimates
+\end{itemize}
+\end{itemize}
+\end{frame}
+
+\begin{frame}
+\frametitle{Regression Discontinuity}
+\begin{itemize}
+\item Titiunik et al (2011) 
+\pause
+\begin{itemize}
+\item -6\% incumbency effect
+\pause
+\item But this does \textbf{not} mean that there is a negative incumbency effect in most Brazilian municipalities
+\pause
+\item Only about 500 out of 5,570 municipalities had 'close' elections (within +/-3\%)
+\pause
+\item Those municipalities were more urban, southern and wealthy than the rest
+\pause
+\item We do not learn anything about places where the result was a landslide (70-80\%)
+\pause
+\begin{itemize}
+\item But these are the places where incumbents probably benefitted a lot!
+\end{itemize}
+\end{itemize}
+\end{itemize}
+\end{frame}
+
+\begin{frame}
+\frametitle{Regression Discontinuity}
+\includegraphics[width=0.6\textwidth]{rd_LATE_map.png}
+\end{frame}
+
+\begin{frame}
+\frametitle{Regression Discontinuity}
+\begin{itemize}
+\item Similarly, geographic regression discontinuities only tells us the effect of living on one side of the border \textit{for people who live by the border}
+\pause
+\begin{itemize}
+\item But who chooses to live by a border? People who like rural areas, migrants etc.
+\pause
+\item Self-selection bias has come back!
+\end{itemize}
+\end{itemize}
+\end{frame}
+
+\begin{frame}
+\frametitle{Instrumental Variables}
+\begin{itemize}
+\item Instrumental Variables also estimate LATE
+\begin{itemize}
+\item A causal effect estimate for \textbf{compliers}, units that received treatment \textit{because of variation in the instrument}
+\item "Better LATE than never"
+\end{itemize}
+\item Compliers
+\item Always-takers
+\item Never-takers
+\item Defiers
+\end{itemize}
+\end{frame}
+
+\begin{frame}
+\frametitle{Instrumental Variables}
+\begin{itemize}
+\item Critique of \textbf{Opportunism} (Deaton 2009):
+\pause
+\begin{itemize}
+\item If we use 'convenient' instruments, our causal effect and complier population are out of our control and might not be interesting
+\pause
+\item A risk of chasing impressive research designs instead of asking important questions
+\end{itemize}
+\end{itemize}
+\end{frame}
+
+\begin{frame}
+\frametitle{Observational Studies}
+\begin{itemize}
+\item Less Internal Validity
+\pause
+\item More External Validity (the treatment effect applies to our full sample)
+\pause
+\item But even in observational studies, different units contribute differently to our estimated causal effect (Aronow and Samii 2006)
+\pause
+\begin{itemize}
+\item The 'effective sample' depends on the weights regression gives to each unit
+\pause
+\item More weight to units whose treatment values are not well explained by covariates
+\end{itemize}
+\end{itemize}
+\end{frame}
+
+\begin{frame}
+\frametitle{Regression Discontinuity}
+\includegraphics[width=\textwidth]{Effective_Sample.png}
+\end{frame}
+
+
+\begin{frame}
+\frametitle{Learning in Political Science}
+\begin{itemize}
+\item So how much can we learn?
+\pause
+\begin{itemize}
+\item We have to make careful judgments based on internal and external validity
+\pause
+\item Ideally combining multiple methodologies to compare low-bias low-generalizibility evidence with high-bias high-generalizability evidence
+\pause
+\item Some topics maybe we simply cannot learn very much.
+\end{itemize}
+\end{itemize}
+\end{frame} 
+
+\end{document}
+ 
+ % effects of causes vs. reverse

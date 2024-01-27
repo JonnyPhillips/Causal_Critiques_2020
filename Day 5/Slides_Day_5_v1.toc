@@ -1,3 +1,0 @@
-\beamer@sectionintoc {1}{Constructive Critiques}{2}{0}{1}
-\beamer@sectionintoc {2}{Constructive Style}{16}{0}{2}
-\beamer@sectionintoc {3}{Constructive Content}{38}{0}{3}

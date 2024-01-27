@@ -14,10 +14,6 @@ For each of the scenarios below, suggest a plausible omitted variable that could
 
 1. Increased chocolate consumption raises the number of nobel prizes
 
-```{r, out.width="400px", fig.cap="", fig.align="center"}
-include_graphics("Chocolate.png")
-```
-
 2. Right-wing governments cause an increase in racist incidents
 
 3. Living in Arkansas makes you more likely to vote for Trump
@@ -26,11 +22,11 @@ include_graphics("Chocolate.png")
 
 5. Large natural resource revenues cause authoritarianism
 
-For each of the scenarios below, is reverse causation a risk?
+For each of the scenarios below, is reverse causation a plausible risk?
 
 6. Democracy causes development
 
-7. British colonialism causes an independent judiciary today
+7. British colonialism causes an independent judiciary
 
 8. Fast economic growth causes re-election of the government
 

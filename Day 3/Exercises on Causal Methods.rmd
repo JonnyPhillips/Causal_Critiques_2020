@@ -9,7 +9,7 @@ output: html_document
 knitr::opts_chunk$set(echo = TRUE)
 ```
 
-The following are observational studies that have been conducted by political scientists. Propose an alternative methodology (an experiment or quasi-experiment) that might support a more convincing causal argument in each context, and describe the assumptions required for the methodology to be successful:
+The following are observational studies that have been conducted by political scientists. Propose an alternative methodology (an experiment or natural experiment) that might support a more convincing causal argument in each context, and describe the assumptions required for the methodology to be successful:
 
 1. Voters with more information about politicians' performance are more likely to reward good governance.
 

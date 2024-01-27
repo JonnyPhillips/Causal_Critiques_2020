@@ -49,6 +49,20 @@
 
 \setbeamersize{text margin left=5pt,text margin right=5pt}
 
+
+\setbeamercolor{block title}{use=structure,fg=white,bg=structure.fg!75!orange}
+\setbeamercolor{block body}{parent=normal text,use=block title,bg=block title.bg!10!bg}
+
+\AtBeginSection{\frame{\sectionpage}}
+\usepackage{xcolor}
+\hypersetup{
+    colorlinks,
+    linkcolor={red!50!black},
+    citecolor={blue!50!black},
+    urlcolor={blue!80!black}
+}
+
+
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 <<Setup,echo=FALSE,warning=FALSE,message=FALSE>>=
@@ -469,8 +483,10 @@ graph <-
   add_node(label="Civil \n Society", node_aes=node_aes(fixedsize=F, fontcolor="black")) %>% 
   add_node(label="Quality of \n Government", node_aes=node_aes(fixedsize=F, fontcolor="black")) %>%  add_edge(from="Civil \n Society",to="Quality of \n Government", edge_aes=edge_aes(color="black"))
 
-render_graph(graph)
+#render_graph(graph)
+#export_graph(graph, "Day 1/graph1.png", file_type="png", width=1200, height=1200)
 @
+\includegraphics[width=0.6\textwidth]{graph1.png}
 \end{frame}
 
 \begin{frame}
@@ -481,8 +497,10 @@ graph <-
   add_global_graph_attrs("graph", "rankdir", "LR") %>%
   add_node(label="Civil \n Society", node_aes=node_aes(fixedsize=F, fontcolor="black")) %>% add_node(label="Trust", node_aes=node_aes(fixedsize=F, fill="MediumSeaGreen", fontcolor="black"))  %>% 
   add_node(label="Quality of \n Government", node_aes=node_aes(fixedsize=F, fontcolor="black")) %>% add_edge(from="Civil \n Society",to="Trust", edge_aes=edge_aes(color="black")) %>% add_edge(from="Trust",to="Quality of \n Government", edge_aes=edge_aes(color="black"))
-render_graph(graph, width=2400, height=1400)
+#render_graph(graph, width=2400, height=1400)
+#export_graph(graph, "Day 1/graph2.png", file_type="png", width=1200, height=1200)
 @
+\includegraphics[width=0.6\textwidth]{graph2.png}
 \end{frame}
 
 
@@ -493,9 +511,10 @@ graph <-
   create_graph() %>%
   add_global_graph_attrs("graph", "rankdir", "LR") %>%
   add_node(label="Civil \n Society", node_aes=node_aes(fixedsize=F, fontcolor="black")) %>% add_node(label="Quality of \n Government",node_aes=node_aes(fixedsize=F, fontcolor="black")) %>% add_edge(from="Civil \n Society",to="Quality of \n Government", edge_aes=edge_aes(color="black")) %>% add_node(label="Wealth",node_aes=node_aes(fixedsize=F, fill="Coral", fontcolor="black")) %>% add_edge(from="Wealth", to="Civil \n Society", edge_aes=edge_aes(color="black")) %>% add_edge(from="Wealth", to="Quality of \n Government", edge_aes=edge_aes(color="black"))
-render_graph(graph)
-
+#render_graph(graph)
+#export_graph(graph, "Day 1/graph3.png", file_type="png", width=1200, height=1200)
 @
+\includegraphics[width=0.6\textwidth]{graph3.png}
 \end{frame}
 
 \begin{frame}
@@ -540,7 +559,7 @@ render_graph(graph)
 \item Two perspectives on explanation:
 \end{itemize}
 \begin{multicols}{2}
-<<explanation1,echo=FALSE,warning=FALSE,message=FALSE,fig.keep='high',fig.height=4, fig.width=6>>=
+<<explanation1,echo=FALSE,warning=FALSE,message=FALSE,fig.keep='high'>>=
 nodes <- tibble(id=1:5,
                 label=c("Nobel \nLaureates","Chocolate","Education","Wealth","Geography"),
                       color="aqua")
@@ -548,10 +567,12 @@ nodes <- tibble(id=1:5,
 edges <- tibble(from=c(2,3,4,5,5,5),
                 to=c(1,1,1,2,3,4))
 
-create_graph(nodes,edges, attr_theme = NULL) %>% add_global_graph_attrs('rankdir', 'LR', 'graph') %>% 
-    set_edge_attrs(edge_attr=color, values="black") %>% 
-  render_graph()
+#create_graph(nodes,edges, attr_theme = NULL) %>% add_global_graph_attrs('rankdir', 'LR', 'graph') %>% 
+#    set_edge_attrs(edge_attr=color, values="black") %>% 
+#  export_graph("Day 1/graph4.png", file_type="png", width=1200, height=1200)
+
 @
+\includegraphics[width=0.45\textwidth]{graph4.png}
 \pause
 \begin{itemize}
 \item Identifying the source of \textbf{ALL} of the variation in Nobel Laureates
@@ -560,7 +581,7 @@ create_graph(nodes,edges, attr_theme = NULL) %>% add_global_graph_attrs('rankdir
 \end{itemize}
 \pause
 \columnbreak
-<<explanation2,echo=FALSE,warning=FALSE,message=FALSE,fig.keep='high',fig.height=2.5, fig.width=4>>=
+<<explanation2,echo=FALSE,warning=FALSE,message=FALSE,fig.keep='high'>>=
 nodes <- tibble(id=1:2,
                 label=c("Chocolate","Nobel \nLaureates"),
                       color="aqua")
@@ -568,10 +589,11 @@ nodes <- tibble(id=1:2,
 edges <- tibble(from=c(1),
                 to=c(2))
 
-create_graph(nodes,edges, attr_theme = NULL) %>% add_global_graph_attrs('rankdir', 'LR', 'graph') %>% 
-  set_edge_attrs(edge_attr=color, values="black") %>% 
-  render_graph()
+#create_graph(nodes,edges, attr_theme = NULL) %>% add_global_graph_attrs('rankdir', 'LR', 'graph') %>% 
+#  set_edge_attrs(edge_attr=color, values="black") %>% 
+#  export_graph("Day 1/graph5.png", file_type="png", width=1200, height=1200)
 @
+\includegraphics[width=0.45\textwidth]{graph5.png}
 \pause
 \begin{itemize}
 \item Identifying how much \textbf{ONE} variable causes variation in Nobel Laureates
@@ -595,10 +617,11 @@ nodes <- tibble(id=1:5,
 edges <- tibble(from=c(2,3,4,5,5,5),
                 to=c(1,1,1,2,3,4))
 
-create_graph(nodes,edges, attr_theme = NULL) %>% add_global_graph_attrs('rankdir', 'LR', 'graph') %>% 
-    set_edge_attrs(edge_attr=color, values="black") %>% 
-  render_graph()
+#create_graph(nodes,edges, attr_theme = NULL) %>% add_global_graph_attrs('rankdir', 'LR', 'graph') %>% 
+#    set_edge_attrs(edge_attr=color, values="black") %>% 
+#  export_graph("Day 1/graph6.png", file_type="png", width=1200, height=1200)
 @
+\includegraphics[width=0.45\textwidth]{graph6.png}
 \begin{itemize}
 \item Identifying the source of \textbf{ALL} of the variation in Nobel Laureates
 \item An infinite task!
@@ -612,11 +635,12 @@ nodes <- tibble(id=1:2,
 edges <- tibble(from=c(1),
                 to=c(2))
 
-create_graph(nodes,edges, attr_theme = NULL) %>% add_global_graph_attrs('rankdir', 'LR', 'graph') %>% 
-  set_edge_attrs(edge_attr=color, values="black") %>% 
-  set_edge_attrs(edge_attr=penwidth, values=10) %>% 
-  render_graph()
+#create_graph(nodes,edges, attr_theme = NULL) %>% add_global_graph_attrs('rankdir', 'LR', 'graph') %>% 
+#  set_edge_attrs(edge_attr=color, values="black") %>% 
+#  set_edge_attrs(edge_attr=penwidth, values=10) %>% 
+#  export_graph("Day 1/graph7.png", file_type="png", width=1200, height=1200)
 @
+\includegraphics[width=0.45\textwidth]{graph7.png}
 \begin{itemize}
 \item Identifying how much \textbf{ONE} variable causes variation in Nobel Laureates
 \item This we can do!
@@ -638,10 +662,11 @@ nodes <- tibble(id=1:5,
 edges <- tibble(from=c(2,3,4,5,5,5),
                 to=c(1,1,1,2,3,4))
 
-create_graph(nodes,edges, attr_theme = NULL) %>% add_global_graph_attrs('rankdir', 'LR', 'graph') %>% 
-    set_edge_attrs(edge_attr=color, values="black") %>% 
-  render_graph()
+#create_graph(nodes,edges, attr_theme = NULL) %>% add_global_graph_attrs('rankdir', 'LR', 'graph') %>% 
+#    set_edge_attrs(edge_attr=color, values="black") %>% 
+#    export_graph("Day 1/graph8.png", file_type="png", width=1200, height=1200)
 @
+\includegraphics[width=0.45\textwidth]{graph8.png}
 \begin{itemize}
 \item Identifying the source of \textbf{ALL} of the variation in Nobel Laureates
 \item An infinite task!
@@ -655,11 +680,12 @@ nodes <- tibble(id=1:2,
 edges <- tibble(from=c(1),
                 to=c(2))
 
-create_graph(nodes,edges, attr_theme = NULL) %>% add_global_graph_attrs('rankdir', 'LR', 'graph') %>% 
-  set_edge_attrs(edge_attr=color, values="black") %>% 
-  set_edge_attrs(edge_attr=penwidth, values=0) %>% 
-  render_graph()
+#create_graph(nodes,edges, attr_theme = NULL) %>% add_global_graph_attrs('rankdir', 'LR', 'graph') %>% 
+#  set_edge_attrs(edge_attr=color, values="black") %>% 
+#  set_edge_attrs(edge_attr=penwidth, values=0) %>% 
+#  export_graph("Day 1/graph9.png", file_type="png", width=1200, height=1200)
 @
+\includegraphics[width=0.45\textwidth]{graph9.png}
 \begin{itemize}
 \item Identifying how much \textbf{ONE} variable causes variation in Nobel Laureates
 \item This we can do!

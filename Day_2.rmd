@@ -9,9 +9,12 @@ output: html_document
 knitr::opts_chunk$set(echo = TRUE)
 ```
 
-## **Day 2: Fundamental Critiques** 
+How can we know that X causes Y? We review the framework of causal inference and why most academic studies *cannot* prove that X causes Y. We practice making the three fundamental critiques: omitted variables, reverse causation and selection bias.
 
-How can we know that X causes Y? We review the framework of causal inference and why most academic studies *cannot* prove that X causes Y. We practice making the three fundamental causal critiques: omitted variables, reverse causation and selection bias.
+## Morning
+
+1. [Lecture Slides](https://jonnyphillips.github.io/Causal_Critiques_2020/Day 2/Slides_Day_2_2024_v1.pdf)
+2. [Exercises on Fundamental Critiques](https://jonnyphillips.github.io/Causal_Critiques_2020/Day 2/Day_2_exercises.html)
 
 *Readings:* 
 
@@ -21,26 +24,18 @@ Press), Ch.3
 - Guido W. Imbens and Donald B Rubin. Causal Inference for Statistics, Social, and Biomedical Sciences. 2015. Chapter 1
 - [optional] Przeworksi, Adam (2005), "Is the Science of Comparative Politics Possible?", in Carles Boix and Susan C. Stokes (eds.), Oxford Handbook of Comparative Politics
 
-*Lab Exercise:* We practice making rapid critiques of a series of political science studies.
-
-*Lab Replication Exercise:* We analyze our replication data to explore the limitations of observational research designs and understand the treatment assignment mechanism. 
-
-## Morning
-
-1. [Lecture Slides](https://jonnyphillips.github.io/Causal_Critiques_2020/Day 2/Slides_Day_2_v7.pdf)
-2. [Exercises on Fundamental Critiques](https://jonnyphillips.github.io/Causal_Critiques_2020/Day 2/Day_2_exercises.html)
 
 ## Afternoon - Practicing Critiques
 
-Imagine you are asked to review some articles for a journal. In pairs, actively read the following papers and prepare multiple critiques of each study, which you will present later. Try to critique each paper for (i) omitted variable bias, (ii) self-selection bias and (iii) reverse causation. Include a causal diagram which highlights the problems you have identified.
+Imagine you are asked to review some articles for a journal. In groups, actively read the following papers and prepare multiple critiques of each study, which you will present later. Try to critique each paper for (i) omitted variable bias, (ii) self-selection bias and (iii) reverse causation. Include a causal diagram which highlights the problems you have identified. The readings are available on the Summer School portal. 
 
-a. [Maoz and Russett 1993](https://jonnyphillips.github.io/Causal_Critiques_2020/Day 2/Papers for Critique/Maoz and Russett 1993.pdf)
-b. [Ross 2001](https://jonnyphillips.github.io/Causal_Critiques_2020/Day 2/Papers for Critique/Ross 2001.pdf)
-c. [Cruz and Schneider 2017](https://jonnyphillips.github.io/Causal_Critiques_2020/Day 2/Papers for Critique/Cruz_Schneider_2017.pdf)   
+a. Maoz and Russett 1993
+b. Ross 2001
+c. Cruz and Schneider 2017
 
 ## Afternoon - Critiquing the Data
 
-Using your dataset from Day 1, what would the answer to our research question be using an 'observational' methodology? 
+We analyze our replication data to explore the limitations of observational research designs and understand the treatment assignment mechanism. For the Titiunik research paper, what would the answer to our research question be using an 'observational' methodology? 
 
 1. Conduct a basic regression of incumbency status on (your measure of) electoral performance in 2004. Interpret the results. (Hint: Make sure your measure of distance to the tied election has negative values for the losers).
 
@@ -48,7 +43,7 @@ Using your dataset from Day 1, what would the answer to our research question be
 
 3. Briefly describe the treatment assignment process for all of the units in the data. How is the treatment assignment process different for units close to the discontinuity threshold (where winning margin is close to zero)?
 
-4. One causal critique might be that there is omitted variable bias: More effective or popular parties are more likely to become incumbents and also to perform better at the next election. Draw a causal diagram (DAG) to represent the effect we wish to estimate and the risk of omitted variable bias.
+4. One critique might be that there is omitted variable bias: More effective or popular parties are more likely to become incumbents and also to perform better at the next election. Draw a causal diagram (DAG) to represent the effect we wish to estimate and the risk of omitted variable bias.
 
 5. To try and adjust for omitted variable bias, add a control for party (equivalently, a fixed effect for party). How does this affect the results?
 
@@ -56,6 +51,6 @@ Using your dataset from Day 1, what would the answer to our research question be
 
 7. What happens if you add all the controls at the same time?
 
-8. A different causal critique is that there may be selection bias. Perhaps incumbent parties who realized they are unpopular decided not to run again? We do not have these parties in our 2004 dataset. To estimate how severe this problem *might* be, calculate what percentage of incumbent parties who ran in 2000 decided NOT to run again in 2004. (You may have to open the original datasets from Day 1 again, depending on how you joined your data). Is this high or low?
+8. A different critique is that there may be selection bias. Perhaps incumbent parties who realized they are unpopular decided not to run again? We do not have these parties in our 2004 dataset. To estimate how severe this problem *might* be, calculate what percentage of incumbent parties who ran in 2000 decided NOT to run again in 2004. (You may have to open the original datasets from Day 1 again, depending on how you joined your data). Is this high or low?
 
 9. We don't have any polling data from just before the 2004 elections to understand if weak parties were more likely to not run, but we can use the results of the 2000 election to try and identify 'weaker' and 'stronger' parties. Did incumbent parties that ran again in 2004 receive a higher share of the vote in 2000 that those that decided not to run again in 2004?

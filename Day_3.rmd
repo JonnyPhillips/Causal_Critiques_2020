@@ -9,9 +9,12 @@ output: html_document
 knitr::opts_chunk$set(echo = TRUE)
 ```
 
-## **Day 3: Assessing Causal Evidence** 
-
 We review a range of causal methodology research designs, the assumptions on which they are based and their connection to specific statistical models. We practice repeatedly assessing if these assumptions have been met.
+
+## Morning
+
+1. [Lecture Slides](https://jonnyphillips.github.io/Causal_Critiques_2020/Day 3/Slides_Day_3_2024_v1.pdf)
+2. [Exercises on Causal Methods](https://jonnyphillips.github.io/Causal_Critiques_2020/Day 3/Exercises_on_Causal_Methods.html)
 
 *Readings:* 
 
@@ -21,29 +24,20 @@ W.W. Norton & Company, 2012. Ch. 1
 - Brady, Henry E. (2004), Data-Set Observations versus Causal-Process Observations: The 2000 U.S. Presidential Election
 - [optional] Andrew Eggers, Olle Folke, Anthony Fowler, Jens Hainmueller, Andrew B Hall, and James M Snyder (2013). On the Validity of the Regression Discontinuity Design for Estimating Electoral Effects : New Evidence from Over 40,000 Close Races.
 
-*Lab Exercise:* We work in teams to critique papers' assumptions, and the evidence to support those assumptions.
-
-*Lab Replication Exercise:* We interrogate the data to replicate the findings of our study and understand the validity of its assumptions. 
-
-## Morning
-
-1. [Lecture Slides](https://jonnyphillips.github.io/Causal_Critiques_2020/Day 3/Slides_Day_3_v4.pdf)
-2. [Exercises on Causal Methods](https://jonnyphillips.github.io/Causal_Critiques_2020/Day 3/Exercises_on_Causal_Methods.html)
-
 ## Afternoon - Practicing Critiques
 
-For each of the papers below:
+We work in teams to critique papers' assumptions, and the evidence to support those assumptions. For each of the papers below:
 
-(a) Identify what type of methodology the author is using.
+(a) Identify what type of methodology/research design the author is using.
 (b) List the assumptions that are required for the methodology to produce valid causal estimates in this context.
 (b) Write a critique of the methodology, highlighting whether there is any evidence that the assumptions are met. 
 (c) Suggest any alternative explanations which might also be consistent with the research findings.
 (d) On a scale of 0-10, how much do you believe the findings of the paper?
 
-1. [Titiunik 2011](https://jonnyphillips.github.io/Causal_Critiques_2020/Day 1/Papers/Titiunik 2011.pdf)
-2. [De La O 2013](https://jonnyphillips.github.io/Causal_Critiques_2020/Day 3/Papers for Critique/De_la_O_Do.pdf)
-3. [Kane et al 2004](https://jonnyphillips.github.io/Causal_Critiques_2020/Day 3/Papers for Critique/Kane et al 2004.pdf)
-4. [Carnegie and Marinov 2017](https://jonnyphillips.github.io/Causal_Critiques_2020/Day 3/Papers for Critique/Carnegie and Marinov 2017.pdf)
+1. Titiunik 2011
+2. De La O 2013
+3. Kane et al 2004
+4. Carnegie and Marinov 2017
 
 ## Afternoon - Critiquing the Data
 

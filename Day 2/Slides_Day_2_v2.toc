@@ -1,4 +1,0 @@
-\beamer@sectionintoc {1}{Introduction}{2}{0}{1}
-\beamer@sectionintoc {2}{Causal Inference}{51}{0}{2}
-\beamer@sectionintoc {3}{Observational Data}{97}{0}{3}
-\beamer@sectionintoc {4}{3 Critiques}{117}{0}{4}

@@ -9,8 +9,11 @@ output: html_document
 knitr::opts_chunk$set(echo = TRUE)
 ```
 
-## **Day 5: Constructive Critiques**
 We consider various strategies and techniques for overcoming weaknesses in an argument. These include the use of alternative research designs, complementary qualitative data, deriving multiple tests from theory, uncovering ‘hidden’ units, robustness tests, heterogeneity tests and placebo tests. We also talk about how to frame and articulate critiques in ways which motivate rather than discourage.
+
+## Morning
+
+1. [Lecture Slides](https://jonnyphillips.github.io/Causal_Critiques_2020/Day 5/Slides_Day_5_2024_v1.pdf)
 
 *Readings:* 
 
@@ -19,15 +22,9 @@ We consider various strategies and techniques for overcoming weaknesses in an ar
 - Kosec, Katrina (2011), Politics and Preschool The Political Economy of Investment in Pre-Primary Education
 - [optional] Miller, Beth et al (2017), How To Be a Peer Reviewer: A Guide for Recent and Soon-to-be PhDs, Political Science & Politics
 
-*Lab Exercise:* Students present a research paper of their own, or a paper allocated by the teacher if preferred, making the most convincing causal case possible. Other students then present constructive critiques and suggest improvements. 
-
-## Morning
-
-1. [Lecture Slides](https://jonnyphillips.github.io/Causal_Critiques_2020/Day 5/Slides_Day_5_v1.pdf)
-
 ## Afternoon - Practicing Critiques
 
-We will continue with your individual presentations of your own/assigned papers, and the rest of the class will be tasked with providing constructive critiques.
+Students present a research paper of their own, or a paper allocated by the teacher if preferred, making the most convincing causal case possible. Other students then present constructive critiques and suggest improvements. 
 
 ## Afternoon - Critiquing the Data
 

@@ -275,34 +275,42 @@ $(document).ready(function () {
 </div>
 
 
+<p>How can we know that X causes Y? We review the framework of causal inference and why most academic studies <em>cannot</em> prove that X causes Y. We practice making the three fundamental critiques: omitted variables, reverse causation and selection bias.</p>
 <div id="morning" class="section level2">
 <h2>Morning</h2>
 <ol style="list-style-type: decimal">
-<li><a href="https://jonnyphillips.github.io/Causal_Critiques_2020/Day%202/Slides_Day_2_v7.pdf">Lecture Slides</a></li>
+<li><a href="https://jonnyphillips.github.io/Causal_Critiques_2020/Day%202/Slides_Day_2_2024_v1.pdf">Lecture Slides</a></li>
 <li><a href="https://jonnyphillips.github.io/Causal_Critiques_2020/Day%202/Day_2_exercises.html">Exercises on Fundamental Critiques</a></li>
 </ol>
+<p><em>Readings:</em></p>
+<ul>
+<li>Barbara Geddes. How the Cases You Choose Affect the Answers You Get: Selection Bias in Comparative Politics. 1990.</li>
+<li>King, Gary, Robert Keohane and Sidney Verba, Designing Social Inquiry (Princeton U Press), Ch.3</li>
+<li>Guido W. Imbens and Donald B Rubin. Causal Inference for Statistics, Social, and Biomedical Sciences. 2015. Chapter 1</li>
+<li>[optional] Przeworksi, Adam (2005), “Is the Science of Comparative Politics Possible?”, in Carles Boix and Susan C. Stokes (eds.), Oxford Handbook of Comparative Politics</li>
+</ul>
 </div>
 <div id="afternoon---practicing-critiques" class="section level2">
 <h2>Afternoon - Practicing Critiques</h2>
-<p>Imagine you are asked to review some articles for a journal. In pairs, actively read the following papers and prepare multiple critiques of each study, which you will present later. Try to critique each paper for (i) omitted variable bias, (ii) self-selection bias and (iii) reverse causation. Include a causal diagram which highlights the problems you have identified.</p>
+<p>Imagine you are asked to review some articles for a journal. In groups, actively read the following papers and prepare multiple critiques of each study, which you will present later. Try to critique each paper for (i) omitted variable bias, (ii) self-selection bias and (iii) reverse causation. Include a causal diagram which highlights the problems you have identified. The readings are available on the Summer School portal.</p>
 <ol style="list-style-type: lower-alpha">
-<li><a href="https://jonnyphillips.github.io/Causal_Critiques_2020/Day%202/Papers%20for%20Critique/Maoz%20and%20Russett%201993.pdf">Maoz and Russett 1993</a></li>
-<li><a href="https://jonnyphillips.github.io/Causal_Critiques_2020/Day%202/Papers%20for%20Critique/Ross%202001.pdf">Ross 2001</a></li>
-<li><a href="https://jonnyphillips.github.io/Causal_Critiques_2020/Day%202/Papers%20for%20Critique/Cruz_Schneider_2017.pdf">Cruz and Schneider 2017</a></li>
+<li>Maoz and Russett 1993</li>
+<li>Ross 2001</li>
+<li>Cruz and Schneider 2017</li>
 </ol>
 </div>
 <div id="afternoon---critiquing-the-data" class="section level2">
 <h2>Afternoon - Critiquing the Data</h2>
-<p>Using your dataset from Day 1, what would the answer to our research question be using an ‘observational’ methodology?</p>
+<p>We analyze our replication data to explore the limitations of observational research designs and understand the treatment assignment mechanism. For the Titiunik research paper, what would the answer to our research question be using an ‘observational’ methodology?</p>
 <ol style="list-style-type: decimal">
 <li><p>Conduct a basic regression of incumbency status on (your measure of) electoral performance in 2004. Interpret the results. (Hint: Make sure your measure of distance to the tied election has negative values for the losers).</p></li>
 <li><p>Are these results consistent with the findings in Titiunik 2011?</p></li>
 <li><p>Briefly describe the treatment assignment process for all of the units in the data. How is the treatment assignment process different for units close to the discontinuity threshold (where winning margin is close to zero)?</p></li>
-<li><p>One causal critique might be that there is omitted variable bias: More effective or popular parties are more likely to become incumbents and also to perform better at the next election. Draw a causal diagram (DAG) to represent the effect we wish to estimate and the risk of omitted variable bias.</p></li>
+<li><p>One critique might be that there is omitted variable bias: More effective or popular parties are more likely to become incumbents and also to perform better at the next election. Draw a causal diagram (DAG) to represent the effect we wish to estimate and the risk of omitted variable bias.</p></li>
 <li><p>To try and adjust for omitted variable bias, add a control for party (equivalently, a fixed effect for party). How does this affect the results?</p></li>
 <li><p>We probably want a wider range of controls. There are some for each municipality in <a href="https://jonnyphillips.github.io/Causal_Critiques_2020/Replication/Mun_data.csv">this file from IBGE</a>. Download this file, merge it into your existing dataset using the municipality code. Then add controls for population, IDHM (Human Development Index) and PIB (GDP per capita) to your regression, one at a time. How does this affect your results?</p></li>
 <li><p>What happens if you add all the controls at the same time?</p></li>
-<li><p>A different causal critique is that there may be selection bias. Perhaps incumbent parties who realized they are unpopular decided not to run again? We do not have these parties in our 2004 dataset. To estimate how severe this problem <em>might</em> be, calculate what percentage of incumbent parties who ran in 2000 decided NOT to run again in 2004. (You may have to open the original datasets from Day 1 again, depending on how you joined your data). Is this high or low?</p></li>
+<li><p>A different critique is that there may be selection bias. Perhaps incumbent parties who realized they are unpopular decided not to run again? We do not have these parties in our 2004 dataset. To estimate how severe this problem <em>might</em> be, calculate what percentage of incumbent parties who ran in 2000 decided NOT to run again in 2004. (You may have to open the original datasets from Day 1 again, depending on how you joined your data). Is this high or low?</p></li>
 <li><p>We don’t have any polling data from just before the 2004 elections to understand if weak parties were more likely to not run, but we can use the results of the 2000 election to try and identify ‘weaker’ and ‘stronger’ parties. Did incumbent parties that ran again in 2004 receive a higher share of the vote in 2000 that those that decided not to run again in 2004?</p></li>
 </ol>
 </div>
