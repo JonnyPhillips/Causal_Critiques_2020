@@ -34,27 +34,20 @@ We work in teams to critique papers' assumptions, and the evidence to support th
 (c) Suggest any alternative explanations which might also be consistent with the research findings.
 (d) On a scale of 0-10, how much do you believe the findings of the paper?
 
-1. Titiunik 2011
-2. De La O 2013
-3. Kane et al 2004
-4. Carnegie and Marinov 2017
+1. De La O 2013
+2. Kane et al 2004
+3. Carnegie and Marinov 2017
 
 ## Afternoon - Critiquing the Data
 
-To overcome the causal problems we saw yesterday, Titiunik implements a regression discontinuity. 
+To overcome the causal problems we saw yesterday, Titiunik implements a regression discontinuity.  
 
-1. Draw the causal diagram (DAG) which Titiunik is assuming to be true in close elections.
+1. Implement the regression discontinuity using your measure of 'close elections' in 2000, the indicator of incumbency status in 2000 and the measure of electoral performance in 2004.  
+2. Interpret the findings of the regression discontinuity. How do they differ from the observational results in Day 1?  
 
-2. Implement the regression discontinuity using your measure of 'close elections', your indicator of incumbency status and your measure of electoral performance in 2004.
+Now let's go back and check our assumptions for the regression discontinuity design to see if we should trust these new results:  
 
-3. Interpret the findings of the regression discontinuity. How do they differ from the observational results in Day 2?
-
-4. One assumption of our regression discontinuity is that comparing incumbents that just won and lost elections in 2000 will produce 'balance' on potential omitted variables. There are thousands of variables we could check, but let's assess balance on the size of the municipality by comparing the number of voters in 2000 within 5\% of a tied election.
-
-5. How does the balance close to the threshold compare with the balance of winners and losers in the full dataset?
-
-6. Check for balance within 5\% of the threshold on other characteristics of the municipalities between treated and control units using [this file from IBGE](https://jonnyphillips.github.io/Causal_Critiques_2020/Replication/Mun_data.csv). The variables are population, IDHM (Human Development Index) and PIB (GDP per capita)
-
-7. Another assumption of regression discontinuity is that parties cannot manipulate their 'score' on the running variable. We can assess this by checking for continuity (in contrast to lumping) in the distribution of the running variable either side of the threshold, in our case winning margin in 2000. Test this assumption by implementing a McCrary density test (DCdensity in the 'rdd' library). What do the results show?
- 
-8. Using any qualitative knowledge you may have, do you think it is possible for parties in this context to precisely control their winning margin by one or two percentage points? 
+3. One assumption of our regression discontinuity is that comparing incumbents that just won and lost elections in 2000 will produce 'balance' on potential omitted variables. There are thousands of variables we could check, but let's assess balance on the size of the municipality by comparing the number of voters in 2000 within 5\% of a tied election.  
+4. How does the balance close to the threshold compare with the balance of winners and losers in the full dataset?  
+5. Check for balance within 5\% of the threshold on other characteristics of the municipalities between treated and control units using the variables population, IDHM (Human Development Index) and PIB (GDP per capita).
+6. Another assumption of regression discontinuity is that parties cannot manipulate their 'score' on the running variable - their vote share. We can assess this by checking for continuity in the distribution of the variable measuring distance to the threshold, in our case winning margin in 2000. Test this assumption by implementing a McCrary density test (DCdensity in the ‘rdd’ library). What do the results show?

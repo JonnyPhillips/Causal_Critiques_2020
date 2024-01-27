@@ -301,7 +301,6 @@ $(document).ready(function () {
 <li>On a scale of 0-10, how much do you believe the findings of the paper?</li>
 </ol>
 <ol style="list-style-type: decimal">
-<li>Titiunik 2011</li>
 <li>De La O 2013</li>
 <li>Kane et al 2004</li>
 <li>Carnegie and Marinov 2017</li>
@@ -311,14 +310,18 @@ $(document).ready(function () {
 <h2>Afternoon - Critiquing the Data</h2>
 <p>To overcome the causal problems we saw yesterday, Titiunik implements a regression discontinuity.</p>
 <ol style="list-style-type: decimal">
-<li><p>Draw the causal diagram (DAG) which Titiunik is assuming to be true in close elections.</p></li>
-<li><p>Implement the regression discontinuity using your measure of ‘close elections’, your indicator of incumbency status and your measure of electoral performance in 2004.</p></li>
-<li><p>Interpret the findings of the regression discontinuity. How do they differ from the observational results in Day 2?</p></li>
-<li><p>One assumption of our regression discontinuity is that comparing incumbents that just won and lost elections in 2000 will produce ‘balance’ on potential omitted variables. There are thousands of variables we could check, but let’s assess balance on the size of the municipality by comparing the number of voters in 2000 within 5% of a tied election.</p></li>
-<li><p>How does the balance close to the threshold compare with the balance of winners and losers in the full dataset?</p></li>
-<li><p>Check for balance within 5% of the threshold on other characteristics of the municipalities between treated and control units using <a href="https://jonnyphillips.github.io/Causal_Critiques_2020/Replication/Mun_data.csv">this file from IBGE</a>. The variables are population, IDHM (Human Development Index) and PIB (GDP per capita)</p></li>
-<li><p>Another assumption of regression discontinuity is that parties cannot manipulate their ‘score’ on the running variable. We can assess this by checking for continuity (in contrast to lumping) in the distribution of the running variable either side of the threshold, in our case winning margin in 2000. Test this assumption by implementing a McCrary density test (DCdensity in the ‘rdd’ library). What do the results show?</p></li>
-<li><p>Using any qualitative knowledge you may have, do you think it is possible for parties in this context to precisely control their winning margin by one or two percentage points?</p></li>
+<li>Implement the regression discontinuity using your measure of ‘close elections’ in 2000, the indicator of incumbency status in 2000 and the measure of electoral performance in 2004.<br />
+</li>
+<li>Interpret the findings of the regression discontinuity. How do they differ from the observational results in Day 1?</li>
+</ol>
+<p>Now let’s go back and check our assumptions for the regression discontinuity design to see if we should trust these new results:</p>
+<ol start="3" style="list-style-type: decimal">
+<li>One assumption of our regression discontinuity is that comparing incumbents that just won and lost elections in 2000 will produce ‘balance’ on potential omitted variables. There are thousands of variables we could check, but let’s assess balance on the size of the municipality by comparing the number of voters in 2000 within 5% of a tied election.<br />
+</li>
+<li>How does the balance close to the threshold compare with the balance of winners and losers in the full dataset?<br />
+</li>
+<li>Check for balance within 5% of the threshold on other characteristics of the municipalities between treated and control units using the variables population, IDHM (Human Development Index) and PIB (GDP per capita).</li>
+<li>Another assumption of regression discontinuity is that parties cannot manipulate their ‘score’ on the running variable - their vote share. We can assess this by checking for continuity in the distribution of the variable measuring distance to the threshold, in our case winning margin in 2000. Test this assumption by implementing a McCrary density test (DCdensity in the ‘rdd’ library). What do the results show?</li>
 </ol>
 </div>
 

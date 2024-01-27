@@ -33,12 +33,34 @@ Press), pp. 3-28
 ## Afternoon - Practicing Critiques
 
 We will practice rapidly reading, understanding and summarizing academic arguments. You should complete the [Paper Summary Template](https://jonnyphillips.github.io/Causal_Critiques_2020/Day 1/Paper_summary_template.pdf) for two of the following papers (available on the Summer School portal):  
-a. Titiunik 2011  
-b. Maoz and Russett 1993
-c. Ross 2001
-d. Cruz and Schneider 2017
-e. Carnegie and Marinov 2017
+1. Titiunik 2011  
+2. Gulzar et al. 2023  
+3. Klasnja & Pop-Eleches 2023  
+4. Novaes 2023  
+5. Barceló & Barón 2024
   
 ## Afternoon - Critiquing the Data
 
-For the next five days we will use the study by [Titiunik 2011](https://jonnyphillips.github.io/Causal_Critiques_2020/Day 1/Papers/Titiunik 2011.pdf) to help understand what is happening in the data when we make a causal argument/critique.
+For the next five days we will use the study by Titiunik 2011 to help understand what is happening in the data when we make a causal argument/critique.
+
+The research question is “Does incumbency in Brazil improve your performance at the next election?”. The research methodology is a regression discontinuity comparing close winners and losers. Answer the questions below to start getting a sense of the data, the authors’ choices, and empirical strategies. 
+
+Let’s begin analyzing the information provided in the paper:  
+
+1. What is the data sample used to answer the research question? What alternative data samples might have been used?  
+2. What is the measure of how “close” were the winners and losers to the threshold (of a tied election)? What different measures could have been used?
+
+Now, let’s take a look at the dataset:  
+
+3. What is the unit of analysis in the dataset? What alternative units of analysis could have been used?  
+4. How many observations are in the dataset?  
+5. Compare the variables of interest reported in the paper with the dataset columns. Which variables in the dataset reflect those discussed in the article? 
+
+Let's start exploring the data. What would the answer to our research question be using an ‘observational’ methodology?  
+
+6. Using variables from the dataset, conduct a basic regression of incumbency status on electoral performance in 2004.  Interpret the results.   
+*Hint: Generate a table with the regression outputs and compare their coefficients and standard errors.*  
+7. Compare your results with the findings in Titiunik 2011. Are the results consistent? How do they differ?  
+
+*Extra task:* if you have any time left, begin working on your individual presentations for Friday! What is your research question? What hypothesis are you testing? Which research design would be appropriate to test it?
+

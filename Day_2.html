@@ -293,7 +293,7 @@ $(document).ready(function () {
 <div id="afternoon---practicing-critiques" class="section level2">
 <h2>Afternoon - Practicing Critiques</h2>
 <p>Imagine you are asked to review some articles for a journal. In groups, actively read the following papers and prepare multiple critiques of each study, which you will present later. Try to critique each paper for (i) omitted variable bias, (ii) self-selection bias and (iii) reverse causation. Include a causal diagram which highlights the problems you have identified. The readings are available on the Summer School portal.</p>
-<ol style="list-style-type: lower-alpha">
+<ol style="list-style-type: decimal">
 <li>Maoz and Russett 1993</li>
 <li>Ross 2001</li>
 <li>Cruz and Schneider 2017</li>
@@ -301,17 +301,26 @@ $(document).ready(function () {
 </div>
 <div id="afternoon---critiquing-the-data" class="section level2">
 <h2>Afternoon - Critiquing the Data</h2>
-<p>We analyze our replication data to explore the limitations of observational research designs and understand the treatment assignment mechanism. For the Titiunik research paper, what would the answer to our research question be using an ‘observational’ methodology?</p>
+<p>Yesterday we ran the observational regression to answer the question: “Does incumbency in Brazil improve your performance at the next election?”. Today we will consider some reasons why our results might not give us a good answer to that question.</p>
+<p>Let’s start with why some observations are ‘treated’ and others ‘control’.</p>
 <ol style="list-style-type: decimal">
-<li><p>Conduct a basic regression of incumbency status on (your measure of) electoral performance in 2004. Interpret the results. (Hint: Make sure your measure of distance to the tied election has negative values for the losers).</p></li>
-<li><p>Are these results consistent with the findings in Titiunik 2011?</p></li>
-<li><p>Briefly describe the treatment assignment process for all of the units in the data. How is the treatment assignment process different for units close to the discontinuity threshold (where winning margin is close to zero)?</p></li>
-<li><p>One critique might be that there is omitted variable bias: More effective or popular parties are more likely to become incumbents and also to perform better at the next election. Draw a causal diagram (DAG) to represent the effect we wish to estimate and the risk of omitted variable bias.</p></li>
-<li><p>To try and adjust for omitted variable bias, add a control for party (equivalently, a fixed effect for party). How does this affect the results?</p></li>
-<li><p>We probably want a wider range of controls. There are some for each municipality in <a href="https://jonnyphillips.github.io/Causal_Critiques_2020/Replication/Mun_data.csv">this file from IBGE</a>. Download this file, merge it into your existing dataset using the municipality code. Then add controls for population, IDHM (Human Development Index) and PIB (GDP per capita) to your regression, one at a time. How does this affect your results?</p></li>
-<li><p>What happens if you add all the controls at the same time?</p></li>
-<li><p>A different critique is that there may be selection bias. Perhaps incumbent parties who realized they are unpopular decided not to run again? We do not have these parties in our 2004 dataset. To estimate how severe this problem <em>might</em> be, calculate what percentage of incumbent parties who ran in 2000 decided NOT to run again in 2004. (You may have to open the original datasets from Day 1 again, depending on how you joined your data). Is this high or low?</p></li>
-<li><p>We don’t have any polling data from just before the 2004 elections to understand if weak parties were more likely to not run, but we can use the results of the 2000 election to try and identify ‘weaker’ and ‘stronger’ parties. Did incumbent parties that ran again in 2004 receive a higher share of the vote in 2000 that those that decided not to run again in 2004?</p></li>
+<li>Briefly describe the treatment assignment process for all of the units in the data.<br />
+</li>
+<li>How is the treatment assignment process different for units close to the discontinuity threshold (where winning margin is close to zero)?</li>
+</ol>
+<p>One causal critique might be that there is confounding/omitted variable bias: More effective or popular parties are more likely to become incumbents and also to perform better at the next election.</p>
+<ol start="3" style="list-style-type: decimal">
+<li>To try and adjust for this, add a control for party (equivalently, a fixed effect for party). How does this affect the results?<br />
+</li>
+<li>We probably want a wider range of controls to address other sources of omitted variable bias. Add controls for population, IDHM (Human Development Index) and PIB (GDP per capita) to your regression, one at a time. How does this affect your results?<br />
+</li>
+<li>What happens if you add all the controls at the same time?</li>
+</ol>
+<p>A different causal critique is that there may be selection bias. Perhaps incumbent parties who realized they are unpopular decided not to run again?</p>
+<ol start="6" style="list-style-type: decimal">
+<li>We do not have these parties in our 2004 dataset, but to estimate how severe this problem might be, calculate what percentage of incumbent parties who ran in 2000 decided NOT to run again in 2004. Is this high or low?<br />
+</li>
+<li>We also want to know whether the parties that did not compete again were different from those that did. We don’t have any polling data from just before the 2004 elections to understand if weak parties were more likely to not run, but we can use the results of the 2000 election to try and identify ‘weaker’ and ‘stronger’ parties. Did parties that ran again in 2004 receive a higher share of the vote in 2000 that those that decided not to run again in 2004?</li>
 </ol>
 </div>
 

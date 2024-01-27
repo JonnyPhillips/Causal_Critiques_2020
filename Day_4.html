@@ -296,22 +296,24 @@ $(document).ready(function () {
 </div>
 <div id="afternoon---critiquing-the-data" class="section level2">
 <h2>Afternoon - Critiquing the Data</h2>
-<p>How much do we learn from the regression discontinuity results estimated in Day 3? First, we will implement some robustness checks:</p>
+<p>How much do we learn from the regression discontinuity results estimated in Day 3?</p>
+<p>First, we will implement some robustness checks:</p>
 <ol style="list-style-type: decimal">
-<li><p>Our regression discontinuity assumed a <em>linear</em> relationship between winning margin and subsequent electoral performance. Implement an alternative regression discontinuity with a more flexible quadratic relationship. How do the results differ?</p></li>
-<li><p>What about a cubic relationship?</p></li>
-<li><p>An alternative way to implement the regression discontinuity is to limit the data to only those units ‘close’ to the discontinuity. Remove any data that is more than +/-5% from the threshold and run your (linear) regression discontinuity again. How do the results change?</p></li>
-<li><p>Estimating the uncertainty (standard errors) for regression discontinuities is tricky. The ‘correct’ way to do it has been programmed in the ‘rdrobust’ package. Implement the (linear) regression discontinuity in rdrobust and compare the standard errors</p></li>
+<li>Our regression discontinuity assumed a <em>linear</em> relationship between winning margin and subsequent electoral performance. Implement an alternative regression discontinuity with a more flexible quadratic relationship. How do the results differ?<br />
+</li>
+<li>An alternative way to implement the regression discontinuity is to limit the data to only those units ‘close’ to the discontinuity. Remove any data that is more than +/-5% from the threshold and run your (linear) regression discontinuity again. How do the results change?<br />
+</li>
+<li>Estimating the uncertainty (standard errors) for regression discontinuities is tricky. The ‘correct’ way to do it has been programmed in the ‘rdrobust’ package. Implement the (linear) regression discontinuity in rdrobust and compare the standard errors.<br />
+</li>
+<li>If our theory is correct, we should only find an effect at the threshold (distance=0). Use the ‘RDestimate’ function (in the ‘rdd’ library) to perform placebo tests with the threshold set to distance=0.1,-0.1,0.05 and -0.05. What do we learn from this test?</li>
 </ol>
-<p>What about the scope of our conclusions?</p>
+<p>What can we learn about the scope of our conclusions?</p>
 <ol start="5" style="list-style-type: decimal">
-<li><p>To assess how different units near the threshold might be, let’s compare which parties are most represented near to the threshold (+/-5%) with those that win or lose by a landslide (win or lose by more than 20%).</p></li>
-<li><p>Based on the above tests, how generalizable do you believe the findings in Titiunik 2011 to be?</p></li>
+<li>To assess how different units near the threshold might be, let’s compare which parties are most represented near to the threshold (+/-5%) with those that win or lose by a landslide (win or lose by more than 20%).<br />
+</li>
+<li>Based on the above test, how generalizable do you believe the findings in Titiunik 2011 to be?</li>
 </ol>
-<p>We can also replicate the study with a different data sample:</p>
-<ol start="7" style="list-style-type: decimal">
-<li>Use the data for the <a href="https://jonnyphillips.github.io/Causal_Critiques_2020/Replication/2012%20Mayoral%20Elections%20Data.csv">2012</a> and <a href="https://jonnyphillips.github.io/Causal_Critiques_2020/Replication/2016%20Mayoral%20Elections%20Data.csv">2016</a> elections (cleaned and merged data <a href="https://jonnyphillips.github.io/Causal_Critiques_2020/Replication/rdd_data_1216.csv">here</a>) to implement a new (linear) regression discontinuity. Is the relationship the same as the results you estimated for 2000-04?</li>
-</ol>
+<p><em>Extra task:</em> We can further explore the robustness and generalizability of our findings by replicating the study with different data samples. Use the data for the 2012 and 2016 elections to implement a new (linear) regression discontinuity. Is the relationship the same as the results you estimated for 2000-04?</p>
 </div>
 
 

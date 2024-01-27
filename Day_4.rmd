@@ -30,23 +30,18 @@ We look beyond each argument’s own claims to critique the generalizability of 
 
 ## Afternoon - Critiquing the Data
 
-How much do we learn from the regression discontinuity results estimated in Day 3? First, we will implement some robustness checks:
+How much do we learn from the regression discontinuity results estimated in Day 3? 
 
-1. Our regression discontinuity assumed a *linear* relationship between winning margin and subsequent electoral performance. Implement an alternative regression discontinuity with a more flexible quadratic relationship. How do the results differ?
+First, we will implement some robustness checks:  
 
-2. What about a cubic relationship?
+1. Our regression discontinuity assumed a *linear* relationship between winning margin and subsequent electoral performance. Implement an alternative regression discontinuity with a more flexible quadratic relationship. How do the results differ?  
+2. An alternative way to implement the regression discontinuity is to limit the data to only those units 'close' to the discontinuity. Remove any data that is more than +/-5\% from the threshold and run your (linear) regression discontinuity again. How do the results change?  
+3. Estimating the uncertainty (standard errors) for regression discontinuities is tricky. The 'correct' way to do it has been programmed in the 'rdrobust' package. Implement the (linear) regression discontinuity in rdrobust and compare the standard errors.   
+4. If our theory is correct, we should only find an effect at the threshold (distance=0). Use the ‘RDestimate’ function (in the ‘rdd’ library) to perform placebo tests with the threshold set to distance=0.1,-0.1,0.05 and -0.05. What do we learn from this test?
 
-3. An alternative way to implement the regression discontinuity is to limit the data to only those units 'close' to the discontinuity. Remove any data that is more than +/-5\% from the threshold and run your (linear) regression discontinuity again. How do the results change?
+What can we learn about the scope of our conclusions?
 
-4. Estimating the uncertainty (standard errors) for regression discontinuities is tricky. The 'correct' way to do it has been programmed in the 'rdrobust' package. Implement the (linear) regression discontinuity in rdrobust and compare the standard errors 
+5. To assess how different units near the threshold might be, let's compare which parties are most represented near to the threshold (+/-5\%) with those that win or lose by a landslide (win or lose by more than 20\%).  
+6. Based on the above test, how generalizable do you believe the findings in Titiunik 2011 to be?  
 
-What about the scope of our conclusions?
-
-5. To assess how different units near the threshold might be, let's compare which parties are most represented near to the threshold (+/-5\%) with those that win or lose by a landslide (win or lose by more than 20\%).
-
-6. Based on the above tests, how generalizable do you believe the findings in Titiunik 2011 to be?
-
-We can also replicate the study with a different data sample:
-
-7. Use the data for the [2012](https://jonnyphillips.github.io/Causal_Critiques_2020/Replication/2012 Mayoral Elections Data.csv) and [2016](https://jonnyphillips.github.io/Causal_Critiques_2020/Replication/2016 Mayoral Elections Data.csv) elections (cleaned and merged data [here](https://jonnyphillips.github.io/Causal_Critiques_2020/Replication/rdd_data_1216.csv)) to implement a new (linear) regression discontinuity. Is the relationship the same as the results you estimated for 2000-04?
-
+*Extra task:* We can further explore the robustness and generalizability of our findings by replicating the study with different data samples. Use the data for the 2012 and 2016 elections to implement a new (linear) regression discontinuity. Is the relationship the same as the results you estimated for 2000-04?
