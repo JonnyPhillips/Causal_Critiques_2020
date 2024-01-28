@@ -1,0 +1,14 @@
+---
+title: "Exercises on Policy Interpretation"
+#author: "JP"
+#date: "January 22, 2019"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+The paper by Boas and Hidalgo 2010 (accessible in the portal of the Summer School) uses a regression discontinuity and matching to argue that elected politicians are more likely to receive community radio licences, and that politicians with community radio licences have a much higher chance of being elected. Based on this study, the Ministry of Communications has proposed to ban all candidates for elected office from owning radio licences. 
+
+Your task is to write a report for the Ministry: Should this ban go ahead? Does the evidence from Boas and Hidalgo provide strong justification for this ban? What do we learn and what do we *not* learn from their research?
