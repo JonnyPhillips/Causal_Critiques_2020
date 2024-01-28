@@ -44,4 +44,4 @@ What can we learn about the scope of our conclusions?
 5. To assess how different units near the threshold might be, let's compare which parties are most represented near to the threshold (+/-5\%) with those that win or lose by a landslide (win or lose by more than 20\%).  
 6. Based on the above test, how generalizable do you believe the findings in Titiunik 2011 to be?  
 
-*Extra task:* We can further explore the robustness and generalizability of our findings by replicating the study with different data samples. Use the data for the 2012 and 2016 elections to implement a new (linear) regression discontinuity. Is the relationship the same as the results you estimated for 2000-04?
+*Extra task:* We can further explore the robustness and generalizability of our findings by replicating the study with different data samples. Use the [data for the 2012 and 2016 elections](https://jonnyphillips.github.io/Causal_Critiques_2020/Replication/2024/Data Replication 2012 2016.csv) to implement a new (linear) regression discontinuity. Is the relationship the same as the results you estimated for 2000-04?

@@ -1,7 +1,7 @@
-name: "Making Causal Critiques 2020"
+name: "Making Causal Critiques 2024"
 output_dir: "."
 navbar:
-  title: "Making Causal Critiques 2020"
+  title: "Making Causal Critiques 2024"
   left:
     - text: "Syllabus"
       icon: fa-book-open

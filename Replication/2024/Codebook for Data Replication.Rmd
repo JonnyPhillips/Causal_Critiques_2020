@@ -1,0 +1,25 @@
+---
+title: "Codebook: Data for Titiunik (2011) Replication"
+#author: "GFA"
+#date: "January 27, 2024"
+output: html_document
+---
+
+This codebook refers to the data frame "Data_Replication.csv."
+
+It contains the electoral results of the Brazilian elections of 2000 and 2004.
+
+```{r echo=FALSE, message=FALSE, warning=FALSE, paged.print=TRUE}
+library(tidyverse)
+library(dplyr)
+library(knitr)
+"variable" <- c("UF", "COD_MUN_IBGE", "SIGLA_PARTIDO", "QTDE_VOTOS_2000", "vote_pct_2000", "rank_2000", "win_margin_2000", "Incumbent_2000", "vote_pct_2004", "NOME", "POP_201", "IDHM_10", "PIB_PER", "Electorate_2000")
+variable <- as_tibble(variable)
+"description" <- c("State where elections took place", "IBGE's identification number for each municipality where elections took place", "Party abbreviation", "Number of votes given to each party (2000)", "Percentage of votes given to each party (2000)", "Decrescent order of votes received by the party", "Winning (if positive) or losing (if negative) margin (2004)", "Whether this party won the 2000 elections", "Percentage of votes given to each party (2004)", "Municipality's name", "Municipal population", "Human Development Index by municipality", "GDP per capita by municipality", "Number of voters in the 2000 elections")
+description <- as_tibble(description)
+
+"table" <- bind_cols(variable, description)
+table <- rename(table, Variable=value...1)
+table <- rename(table, Description=value...2)
+kable(table[1:14, ])
+```

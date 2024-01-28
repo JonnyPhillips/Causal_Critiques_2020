@@ -26,10 +26,6 @@ Press), pp. 3-28
 - Gerring, John (2005), "Causation: A Unified Framework for the Social Sciences", Journal of Theoretical Politics, 17:2
 - [optional] Hall, Peter, “Aligning Ontology and Methodology,” in James Mahoney and Dietrich Rueschemeyer, eds. Comparative Historical Analysis in the Social Sciences (Cambridge, 2003), pp. 373-404.
 
-*Lab Exercise:* We practice quickly deconstructing the complex arguments of published papers into simple categories, causal statements and causal diagrams.
-
-*Lab Replication Exercise:* We familiarize ourselves with a published research paper to understand the research question, research design and key features of the data. 
-
 ## Afternoon - Practicing Critiques
 
 We will practice rapidly reading, understanding and summarizing academic arguments. You should complete the [Paper Summary Template](https://jonnyphillips.github.io/Causal_Critiques_2020/Day 1/Paper_summary_template.pdf) for two of the following papers (available on the Summer School portal):  
@@ -41,7 +37,7 @@ We will practice rapidly reading, understanding and summarizing academic argumen
   
 ## Afternoon - Critiquing the Data
 
-For the next five days we will use the study by Titiunik 2011 to help understand what is happening in the data when we make a causal argument/critique.
+For the next five days we will use the study by Titiunik 2011 to help understand what is happening in the data when we make a causal argument/critique. We will use [the prepared dataset available here](https://jonnyphillips.github.io/Causal_Critiques_2020/Replication/2024/Data_Replication.csv), and to understand the variables please refer to [the codebook here](https://jonnyphillips.github.io/Causal_Critiques_2020/Replication/2024/Codebook-for-Data-Replication.html).
 
 The research question is “Does incumbency in Brazil improve your performance at the next election?”. The research methodology is a regression discontinuity comparing close winners and losers. Answer the questions below to start getting a sense of the data, the authors’ choices, and empirical strategies. 
 
