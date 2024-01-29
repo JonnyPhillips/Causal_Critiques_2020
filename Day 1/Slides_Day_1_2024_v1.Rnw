@@ -754,6 +754,7 @@ edges <- tibble(from=c(1),
 \pause
 \end{itemize}
 \item \textbf{Denying the antecedent}: Negating the premise does not negate the conclusion
+\pause
 \begin{itemize}
 \item All policemen wear hats. This person is not a policeman. Therefore this person is not wearing a hat.
 \item There are alternative explanations!
@@ -803,10 +804,10 @@ edges <- tibble(from=c(1),
 \begin{enumerate}
 \setcounter{enumi}{6}
 \item \textbf{Fallacy of Composition}: Extending what is true of part to being true of the whole
-\pause
 \begin{itemize}
 \item Eg. "If someone stands up at a football match, they can see better. Therefore, if everyone stands up, they can all see better."
 \end{itemize}
+\pause
 \item \textbf{Appeal to ignorance}: Absence of evidence is not evidence of absence
 \begin{itemize}
 \item Eg. "There is no evidence that social distancing can reduce the transmission of coronavirus, therefore is does not work"
@@ -821,12 +822,40 @@ edges <- tibble(from=c(1),
 \item Some political science arguments are logically inconsistent:
 \begin{itemize}
 \item Voters are rational - they choose the politician that is best for them. Therefore we always elect the best politicians.
-\end{itemize}
 \pause
+\item Two democracies have never fought a war - therefore war between democracies is impossible
+\pause
+\end{itemize}
+\end{itemize}
+\end{frame}
+
+\begin{frame}
+\frametitle{Consistent Conclusions}
+\begin{itemize}
+\item Some political science arguments are logically inconsistent:
+\begin{itemize}
+\item If we are in a democracy and voters are given information about a politician being corrupt, they are more likely to vote against that politician
+\pause
+\item But what information did they have previously?
+\pause
+\item Is the information credible?
+\pause
+\item How different are the alternative candidates?
+\pause
+\item How do voters interpret corruption?
+\pause
+\item Who is everyone else voting for?
+\end{itemize}
+\end{itemize}
+\end{frame}
+
+\begin{frame}
+\frametitle{Consistent Conclusions}
+\begin{itemize}
 \item Of course the other possibility is that the \textbf{premise is false}
 \begin{itemize}
 \item That the explanatory variable/assumption is not present in a specific case
-\item But that's a different critique
+\item But that's a different type of critique
 \end{itemize}
 \end{itemize}
 \end{frame}
@@ -850,6 +879,7 @@ edges <- tibble(from=c(1),
 \item What \textbf{methodology} produced the evidence?
 \pause
 \item What is the \textbf{scope} of the argument's application?
+\pause
 \end{itemize}
 \item Critiques depend on understanding the building blocks of an argument
 \end{itemize}
@@ -1060,6 +1090,9 @@ electoral outcomes. I provide evidence suggesting that, \textbf{by increasing an
 \item Regression with controls
 \pause
 \item Matching
+\pause
+\item Difference-in-Differences
+\pause
 \end{itemize}
 \end{itemize}
 \begin{itemize}
@@ -1089,7 +1122,6 @@ electoral outcomes. I provide evidence suggesting that, \textbf{by increasing an
 \pause
 \item Regression Discontinuity
 \pause
-\item Difference-in-Differences
 \end{itemize}
 \end{itemize}
 \begin{itemize}

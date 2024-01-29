@@ -2,5 +2,5 @@
 \beamer@sectionintoc {2}{Evidence}{49}{0}{2}
 \beamer@sectionintoc {3}{Causation}{86}{0}{3}
 \beamer@sectionintoc {4}{Consistent Conclusions}{126}{0}{4}
-\beamer@sectionintoc {5}{Deconstructing Papers}{150}{0}{5}
-\beamer@sectionintoc {6}{Fundamental Critiques}{180}{0}{6}
+\beamer@sectionintoc {5}{Deconstructing Papers}{159}{0}{5}
+\beamer@sectionintoc {6}{Fundamental Critiques}{190}{0}{6}
