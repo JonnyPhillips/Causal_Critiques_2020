@@ -13,7 +13,7 @@ How can we know that X causes Y? We review the framework of causal inference and
 
 ## Morning
 
-1. [Lecture Slides](https://jonnyphillips.github.io/Causal_Critiques_2020/Day 2/Slides_Day_2_2024_v1.pdf)
+1. [Lecture Slides](https://jonnyphillips.github.io/Causal_Critiques_2020/Day 2/Slides_Day_2_2024_v3.pdf)
 2. [Exercises on Fundamental Critiques](https://jonnyphillips.github.io/Causal_Critiques_2020/Day 2/Day_2_exercises.html)
 
 *Readings:* 

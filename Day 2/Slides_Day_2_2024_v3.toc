@@ -1,0 +1,4 @@
+\beamer@sectionintoc {1}{Introduction}{2}{0}{1}
+\beamer@sectionintoc {2}{Causal Inference}{27}{0}{2}
+\beamer@sectionintoc {3}{Treatment Assignment}{82}{0}{3}
+\beamer@sectionintoc {4}{3 Critiques}{100}{0}{4}
