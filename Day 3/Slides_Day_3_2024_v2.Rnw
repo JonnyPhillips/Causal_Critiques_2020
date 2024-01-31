@@ -101,11 +101,16 @@ library(xtable)
 \item Field Experiments
 \item Lab Experiments
 \item Survey Experiments
+\pause
 \end{itemize}
 \item Natural Experiments
 \begin{itemize}
 \item Instrumental Variables
-\item Regresssion Discontinuity
+\item Regression Discontinuity
+\pause
+\end{itemize}
+\item Not-quite natural experiments
+\begin{itemize}
 \item Difference-in-DIfferences
 \end{itemize}
 \end{itemize}
@@ -164,42 +169,9 @@ library(xtable)
 \begin{frame}
 \frametitle{Field Experiments}
 \begin{itemize}
-\item Why does randomization help us achieve causal inference?
-\begin{itemize}
-\item We want to estimate:
-\end{itemize}
-\begin{eqnarray}
-E(Y_1 - Y_0)
-\end{eqnarray}
-\pause
-\begin{itemize}
-\item Our data provides:
-\end{itemize}
-\begin{eqnarray}
-E(Y_1|D=1)\text{ ,  }E(Y_0|D=0)
-\end{eqnarray}
-\pause
-\begin{itemize}
-\item With randomization, $Y_1, Y_0 \perp D$:
-\pause
-\end{itemize}
-\begin{eqnarray}
-E(Y_1|D=1) &=& E(Y_1) \pause \\
-E(Y_0|D=0) &=& E(Y_0) \pause \\
-E(Y_1|D=1) - E(Y_0|D=0) &=& E(Y_1) - E(Y_0) \pause \\
-&=& E(Y_1 - Y_0)
-\end{eqnarray}
-\end{itemize}
-\end{frame}
-
-\begin{frame}
-\frametitle{Field Experiments}
-\begin{itemize}
-\item But these are just \textbf{expectations} (averages)
-\pause
-\begin{itemize}
 \item \textbf{On average}, potential outcomes will be balanced
 \pause
+\begin{itemize}
 \item More likely in larger samples
 \pause
 \item We cannot measure potential outcomes
@@ -218,7 +190,7 @@ E(Y_1|D=1) - E(Y_0|D=0) &=& E(Y_1) - E(Y_0) \pause \\
 \begin{itemize}
 \item Comparison of means: t-test to test significance
 \item Regression achieves the same thing
-\item $Y_i \sim \alpha + \beta D_i + \epsilon_i$ 
+\item $Y_i = \alpha + \beta D_i + \epsilon_i$ 
 \end{itemize}
 \end{itemize}
 \end{frame}
@@ -228,8 +200,21 @@ E(Y_1|D=1) - E(Y_0|D=0) &=& E(Y_1) - E(Y_0) \pause \\
 \begin{itemize}
 \item Assumptions
 \begin{itemize}
-\item \textbf{Compliance with randomization} - Treatment was truly random and accepted
+\item \textbf{Randomization respected in implementation}
+\pause
+\item \textbf{Compliance with randomization} - Treatment \textit{accepted}
+\pause
+\begin{itemize}
+\item Very rare to have full compliance!
+\item Compliance is not likely to be random, creating bias
+\pause
+\end{itemize}
 \item \textbf{No Spillovers (SUTVA)} - Treatment of one unit doesn't affect potential outcomes of other units
+\pause
+\begin{itemize}
+\item If I receive a vaccine, that reduces the risks to everyone
+\item If you are given information about a policy, you might pass it on to your family
+\end{itemize}
 \end{itemize}
 \end{itemize}
 \end{frame}
@@ -241,36 +226,13 @@ E(Y_1|D=1) - E(Y_0|D=0) &=& E(Y_1) - E(Y_0) \pause \\
 \pause
 \begin{itemize}
 \item Small sample sizes still prevent inference
-\item Ethics
-\item Logistics/Finance
+\item Ethical/financial constraints
 \item Some treatments can't be manipulated (history)
-\item Lack of control over treatment content and context - is it informative?
-\item Long-term/scale effects/adaptation?
+\item Scale effects - is the effect the same when implemented by a government?
+\item Hawthorne effects - people react to being part of an experiment
+\item Generalizability/external validity often poor
+\item No information about the mechanism
 \end{itemize}
-\end{itemize}
-\end{frame}
-
-\begin{frame}
-\frametitle{Field Experiments}
-\begin{itemize}
-\item Limitations of Field Experiments: \textbf{Internal Validity}
-\pause
-\begin{itemize}
-\item No guarantee of actual balance
-\item Unbiased but imprecise; variation still high if lots of other variables also affect Y
-\item Hawthorne effect: participants adapt behaviour in experiments
-\item Biased measurement if not double-blind
-\item \textit{Average} Treatment Effect can be skewed by Outliers
-\item Complications of non-compliance, attrition
-\end{itemize}
-\end{itemize}
-\end{frame}
-
-\begin{frame}
-\frametitle{Field Experiments}
-\begin{itemize}
-\item All these complications mean we need lots of assumptions and background knowledge
-\item Just as with other methodologies
 \end{itemize}
 \end{frame}
 
@@ -311,18 +273,8 @@ E(Y_1|D=1) - E(Y_0|D=0) &=& E(Y_1) - E(Y_0) \pause \\
 \item An 'instrument' is a variable which assigns \textit{part of} treatment in an 'as-if' random way
 \pause
 \begin{itemize}
-\item Or at least in a way which is 'exogenous' - not related to omitted variables
 \item Even if other variables \textbf{also} affect treatment
 \end{itemize}
-\end{itemize}
-\end{frame}
-
-\begin{frame}
-\frametitle{Instrumental Variables}
-\begin{itemize}
-\item We can use the instrument to isolate 'as-if' random variation in treatment, and use that to estimate the effect of treatment on the outcome
-\pause
-\item NOT the effect of the instrument on the outcome
 \end{itemize}
 \end{frame}
 
@@ -379,7 +331,7 @@ E(Y_1|D=1) - E(Y_0|D=0) &=& E(Y_1) - E(Y_0) \pause \\
 \item Instrumental Variables Methodology:
 \pause
 \begin{enumerate}
-\item Use an all-in-one package, eg. \textit{ivreg} in the \textit{AER} package
+\item Use an all-in-one package
 \begin{itemize}
 \item Specify the formula: $Y ~ D | Instrument$
 \pause
@@ -411,6 +363,21 @@ E(Y_1|D=1) - E(Y_0|D=0) &=& E(Y_1) - E(Y_0) \pause \\
 \pause
 \item We call our causal effect estimate a 'Local Average Treatment Effect' (LATE)
 \item 'Local' to the units whose treatment status actually changed
+\end{itemize}
+\end{itemize}
+\end{frame}
+
+
+\begin{frame}
+\frametitle{Instrumental Variables}
+\begin{itemize}
+\item Limitations:
+\begin{itemize}
+\item Most treatments do not have a valid instrument
+\item The exclusion restriction is not testable
+\item The conclusion has narrow scope/generalizability - LATE
+\item Low precision
+\item No information about the mechanism
 \end{itemize}
 \end{itemize}
 \end{frame}
@@ -487,6 +454,8 @@ chart_local_linear <- ggplot() + geom_point(data=data,aes(x=run_var_lumpy,y=outc
 \begin{itemize}
 \item Regression Discontinuity
 \begin{itemize}
+\item What is the treatment assignment mechanism for passing an exam?
+\pause
 \item Treatment assignment is 'as-if' random only \textbf{really close to the threshold}
 \pause
 \[
@@ -517,7 +486,7 @@ D_i=
 \item Age cutoffs
 \item Policy eligibility rules
 \item Close elections
-\item Adminsitrative boundaries
+\item Administrative boundaries
 \end{itemize}
 \end{itemize}
 \end{frame}
@@ -543,7 +512,7 @@ D_i=
 \pause
 \item Potential outcomes vary continuously (are independent of treatment) at the threshold
 \pause
-\item Units cannot precisely 'manipulate' their score and sort either side of the threshold
+\item Units cannot precisely 'manipulate' their score and self-select to either side of the threshold
 \pause
 \item The threshold is not chosen strategically
 \pause
@@ -579,13 +548,13 @@ DCdensity(data$run_var,cutpoint=threshold)
 abline(v=75,add=TRUE,col="red")
 @
 \begin{center}
-\includegraphics[scale=2]{figure/Density-2.pdf}
+\includegraphics[scale=1]{figure/Density-2.pdf}
 \end{center}
 \end{frame}
 
 \begin{frame}
 \begin{itemize}
-\item \textbf{'Parametric' regression discontinuity:} Uses all the data and estimates:
+\item The regression discontinuity analysis:
 $$Y_i = \alpha + \beta_1 Running\_Variable_i + \beta_2 Treatment_i + \epsilon_i$$
 \pause
 \begin{itemize}
@@ -616,15 +585,6 @@ chart_binned_data
 \end{frame}
 
 \begin{frame}
-\frametitle{Difference-in-Means}
-\begin{center}
-<<chart3, echo=FALSE,fig.keep='high',fig.height=3.2, fig.width=3.2, warning=FALSE, message=FALSE>>=
-chart_dif_in_means
-@
-\end{center}
-\end{frame}
-
-\begin{frame}
 \frametitle{Parametric Regression - Linear}
 \begin{center}
 <<chart4, echo=FALSE,fig.keep='high',fig.height=3.2, fig.width=3.2, warning=FALSE, message=FALSE>>=
@@ -644,12 +604,12 @@ chart_non_linear_param
 
 \begin{frame}
 \begin{itemize}
-\item Why does RD estimate a \textbf{Local} Average Treatment Effect?
+\item \textbf{Interpretation:}
 \pause
 \begin{itemize}
-\item Treatment assignment is only random at the threshold
+\item Treatment assignment is only as-if random at the threshold
 \pause
-\item Our estimates only apply to units close to the threshold
+\item Our estimates are only applicable/generalizable to units close to the threshold: a \textbf{Local Average Treatment Effect}
 \pause
 \item Units far from the threshold are very different for a reason, and causal effects are likely to be different
 \end{itemize}
@@ -663,10 +623,19 @@ chart_non_linear_param
 \begin{itemize}
 \item Risk of sorting/manipulation
 \pause
-\item Lots of alternative specifications so no single simple test
+\item Low generalizability - LATE
+\begin{itemize}
+\item What if most elections are landslides?
+\end{itemize}
+\pause
+\item Lots of alternative specifications so no single simple test - publication bias?
 \pause
 \item Opportunistic regression discontinuities may not identify a useful causal effect or for a relevant group
+\begin{itemize}
+\item Researchers often 'look' for where they can run a regression discontinuity, even if it doesn't answer their research question
+\end{itemize}
 \pause
+\item No information about the mechanism
 \end{itemize}
 \end{itemize}
 \end{frame}
@@ -748,7 +717,7 @@ data <- data %>% add_row(Unit="Counterfactual",Before=Base_control+Confounding,A
 \pause
 \item We can measure how much other factors changed over time if we have units that were not exposed to treatment
 \pause
-\item There is nothing 'random' here, but we are more easily able to limit the risk of omitted variables
+\item There is nothing 'as-if random' here, but we are more easily able to limit the risk of omitted variables
 \end{itemize}
 \end{frame}
 
@@ -814,23 +783,11 @@ data2  %>% ggplot() + geom_line(aes(x=Time,y=Outcome,group=Unit,color=Unit)) +
 \begin{frame}
 \frametitle{Difference-in-Differences}
 \begin{itemize}
-\item We're now comparing \textit{changes} (differences), not \textit{levels} of the outcome
-\begin{itemize}
-\item Most omitted variables affect 'levels', so this makes our counterfactuals more plausible
-\begin{itemize}
-\item Eg. different laws affect growth rates, not the change in growth over time
-\end{itemize}
-\item And crucially, we can remove omitted variables even for \textit{unobserved} confounders
-\end{itemize}
-\end{itemize}
-\end{frame}
-
-\begin{frame}
-\frametitle{Difference-in-Differences}
-\begin{itemize}
-\item Difference-in-differences only removes \textbf{time-invariant ('levels') confounders}
+\item Difference-in-differences removes \textbf{time-invariant ('levels') confounders}
 \pause
 \begin{itemize}
+\item Even if they are unobserved/unmeasured
+\pause
 \item Most omitted variables affect 'levels', so this makes our counterfactuals more plausible
 \pause
 \item Eg. different laws affect growth rates, not the change in growth over time
@@ -840,7 +797,7 @@ data2  %>% ggplot() + geom_line(aes(x=Time,y=Outcome,group=Unit,color=Unit)) +
 \pause
 \item Factors that affect the \textbf{trend} in the outcome \textit{differentially} in treated and control units
 \pause
-\item Eg. Even before Brexit, the UK had falling growth while growth in the eurozone was improving
+\item Eg. Even before Brexit, the UK had falling growth while growth in the eurozone was improving due to differences in investment/productivity
 \end{itemize}
 \end{frame}
 
@@ -850,7 +807,7 @@ data2  %>% ggplot() + geom_line(aes(x=Time,y=Outcome,group=Unit,color=Unit)) +
 \begin{itemize}
 \item Estimating Difference-in-Differences
 \pause
-\item Time (Before and after) and treatment status (treated and control) are just variables in our data
+\item Time (Before and after treatment) and treatment status (treated and control) are just variables in our data
 \pause
 \item We know how to do a regression for the effect of treatment status on the outcome
 \end{itemize}
@@ -871,12 +828,15 @@ $$ Y_{it} = \alpha + \gamma D_i + \delta T_t + \beta D_i * T_t $$
 \item Assumptions Required:
 \begin{enumerate}
 \item \textbf{No Spillovers} (SUTVA)
+\pause
 \item \textbf{No time-varying confounders} (Parallel trends)
+\pause
 \item \textbf{Well-defined treatment} (many things changed at the same time!)
 \begin{itemize}
 \item Eg. The UK also announced new rules to regulate the
 banking sector on the same day as Brexit
 \end{itemize}
+\pause
 \item \textbf{Groups are stable} (eg. no migration due to treatment)
 \end{enumerate}
 \end{itemize}
@@ -936,6 +896,22 @@ data6$Time <- factor(data6$Time,c("Earlier","Before","After"))
 data6 %>% ggplot() + geom_line(aes(x=Time,y=Outcome,group=Unit,color=Unit)) +
   theme_classic() + ylim(0,13)
 @
+\end{frame}
+
+\begin{frame}
+\frametitle{Difference-in-Differences}
+\begin{itemize}
+\item \textbf{Limitations:}
+\begin{itemize}
+\item Not a true natural experimental method 
+\pause
+\item Reliant on no time-varying confounders/parallel trends assumption
+\pause
+\item Often we have no control units - everyone gets treated at the same time
+\pause
+\item No information about the mechanism
+\end{itemize}
+\end{itemize}
 \end{frame}
 
 \begin{frame}

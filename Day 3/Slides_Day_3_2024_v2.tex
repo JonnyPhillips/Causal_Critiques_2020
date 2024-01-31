@@ -1,6 +1,56 @@
 % Font options: 10pm, 11pt, 12pt
 % Align headings left instead of center: nocenter
-\documentclass[xcolor=x11names,compress]{beamer}
+\documentclass[xcolor=x11names,compress]{beamer}\usepackage[]{graphicx}\usepackage[]{xcolor}
+% maxwidth is the original width if it is less than linewidth
+% otherwise use linewidth (to make sure the graphics do not exceed the margin)
+\makeatletter
+\def\maxwidth{ %
+  \ifdim\Gin@nat@width>\linewidth
+    \linewidth
+  \else
+    \Gin@nat@width
+  \fi
+}
+\makeatother
+
+\definecolor{fgcolor}{rgb}{0.345, 0.345, 0.345}
+\newcommand{\hlnum}[1]{\textcolor[rgb]{0.686,0.059,0.569}{#1}}%
+\newcommand{\hlstr}[1]{\textcolor[rgb]{0.192,0.494,0.8}{#1}}%
+\newcommand{\hlcom}[1]{\textcolor[rgb]{0.678,0.584,0.686}{\textit{#1}}}%
+\newcommand{\hlopt}[1]{\textcolor[rgb]{0,0,0}{#1}}%
+\newcommand{\hlstd}[1]{\textcolor[rgb]{0.345,0.345,0.345}{#1}}%
+\newcommand{\hlkwa}[1]{\textcolor[rgb]{0.161,0.373,0.58}{\textbf{#1}}}%
+\newcommand{\hlkwb}[1]{\textcolor[rgb]{0.69,0.353,0.396}{#1}}%
+\newcommand{\hlkwc}[1]{\textcolor[rgb]{0.333,0.667,0.333}{#1}}%
+\newcommand{\hlkwd}[1]{\textcolor[rgb]{0.737,0.353,0.396}{\textbf{#1}}}%
+\let\hlipl\hlkwb
+
+\usepackage{framed}
+\makeatletter
+\newenvironment{kframe}{%
+ \def\at@end@of@kframe{}%
+ \ifinner\ifhmode%
+  \def\at@end@of@kframe{\end{minipage}}%
+  \begin{minipage}{\columnwidth}%
+ \fi\fi%
+ \def\FrameCommand##1{\hskip\@totalleftmargin \hskip-\fboxsep
+ \colorbox{shadecolor}{##1}\hskip-\fboxsep
+     % There is no \\@totalrightmargin, so:
+     \hskip-\linewidth \hskip-\@totalleftmargin \hskip\columnwidth}%
+ \MakeFramed {\advance\hsize-\width
+   \@totalleftmargin\z@ \linewidth\hsize
+   \@setminipage}}%
+ {\par\unskip\endMakeFramed%
+ \at@end@of@kframe}
+\makeatother
+
+\definecolor{shadecolor}{rgb}{.97, .97, .97}
+\definecolor{messagecolor}{rgb}{0, 0, 0}
+\definecolor{warningcolor}{rgb}{1, 0, 1}
+\definecolor{errorcolor}{rgb}{1, 0, 0}
+\newenvironment{knitrout}{}{} % an empty environment to be redefined in TeX
+
+\usepackage{alltt}
 %\documentclass[xcolor=x11names,compress,handout]{beamer}
 \usepackage[]{graphicx}
 \usepackage[]{color}
@@ -61,18 +111,13 @@
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-<<Setup,echo=FALSE,warning=FALSE,message=FALSE>>=
-library(tidyverse)
-library(broom)
-library(MatchIt)
-library(xtable)
-@
+
 
 
 \title{Interpreting and Critiquing Causal Evidence}
 \subtitle{Day 3 - Assessing Causal Evidence}
 \author{Jonathan Phillips}
-
+\IfFileExists{upquote.sty}{\usepackage{upquote}}{}
 \begin{document}
 
 \frame{\titlepage}
@@ -101,11 +146,16 @@ library(xtable)
 \item Field Experiments
 \item Lab Experiments
 \item Survey Experiments
+\pause
 \end{itemize}
 \item Natural Experiments
 \begin{itemize}
 \item Instrumental Variables
-\item Regresssion Discontinuity
+\item Regression Discontinuity
+\pause
+\end{itemize}
+\item Not-quite natural experiments
+\begin{itemize}
 \item Difference-in-DIfferences
 \end{itemize}
 \end{itemize}
@@ -164,42 +214,9 @@ library(xtable)
 \begin{frame}
 \frametitle{Field Experiments}
 \begin{itemize}
-\item Why does randomization help us achieve causal inference?
-\begin{itemize}
-\item We want to estimate:
-\end{itemize}
-\begin{eqnarray}
-E(Y_1 - Y_0)
-\end{eqnarray}
-\pause
-\begin{itemize}
-\item Our data provides:
-\end{itemize}
-\begin{eqnarray}
-E(Y_1|D=1)\text{ ,  }E(Y_0|D=0)
-\end{eqnarray}
-\pause
-\begin{itemize}
-\item With randomization, $Y_1, Y_0 \perp D$:
-\pause
-\end{itemize}
-\begin{eqnarray}
-E(Y_1|D=1) &=& E(Y_1) \pause \\
-E(Y_0|D=0) &=& E(Y_0) \pause \\
-E(Y_1|D=1) - E(Y_0|D=0) &=& E(Y_1) - E(Y_0) \pause \\
-&=& E(Y_1 - Y_0)
-\end{eqnarray}
-\end{itemize}
-\end{frame}
-
-\begin{frame}
-\frametitle{Field Experiments}
-\begin{itemize}
-\item But these are just \textbf{expectations} (averages)
-\pause
-\begin{itemize}
 \item \textbf{On average}, potential outcomes will be balanced
 \pause
+\begin{itemize}
 \item More likely in larger samples
 \pause
 \item We cannot measure potential outcomes
@@ -218,7 +235,7 @@ E(Y_1|D=1) - E(Y_0|D=0) &=& E(Y_1) - E(Y_0) \pause \\
 \begin{itemize}
 \item Comparison of means: t-test to test significance
 \item Regression achieves the same thing
-\item $Y_i \sim \alpha + \beta D_i + \epsilon_i$ 
+\item $Y_i = \alpha + \beta D_i + \epsilon_i$ 
 \end{itemize}
 \end{itemize}
 \end{frame}
@@ -228,8 +245,21 @@ E(Y_1|D=1) - E(Y_0|D=0) &=& E(Y_1) - E(Y_0) \pause \\
 \begin{itemize}
 \item Assumptions
 \begin{itemize}
-\item \textbf{Compliance with randomization} - Treatment was truly random and accepted
+\item \textbf{Randomization respected in implementation}
+\pause
+\item \textbf{Compliance with randomization} - Treatment \textit{accepted}
+\pause
+\begin{itemize}
+\item Very rare to have full compliance!
+\item Compliance is not likely to be random, creating bias
+\pause
+\end{itemize}
 \item \textbf{No Spillovers (SUTVA)} - Treatment of one unit doesn't affect potential outcomes of other units
+\pause
+\begin{itemize}
+\item If I receive a vaccine, that reduces the risks to everyone
+\item If you are given information about a policy, you might pass it on to your family
+\end{itemize}
 \end{itemize}
 \end{itemize}
 \end{frame}
@@ -241,36 +271,13 @@ E(Y_1|D=1) - E(Y_0|D=0) &=& E(Y_1) - E(Y_0) \pause \\
 \pause
 \begin{itemize}
 \item Small sample sizes still prevent inference
-\item Ethics
-\item Logistics/Finance
+\item Ethical/financial constraints
 \item Some treatments can't be manipulated (history)
-\item Lack of control over treatment content and context - is it informative?
-\item Long-term/scale effects/adaptation?
+\item Scale effects - is the effect the same when implemented by a government?
+\item Hawthorne effects - people react to being part of an experiment
+\item Generalizability/external validity often poor
+\item No information about the mechanism
 \end{itemize}
-\end{itemize}
-\end{frame}
-
-\begin{frame}
-\frametitle{Field Experiments}
-\begin{itemize}
-\item Limitations of Field Experiments: \textbf{Internal Validity}
-\pause
-\begin{itemize}
-\item No guarantee of actual balance
-\item Unbiased but imprecise; variation still high if lots of other variables also affect Y
-\item Hawthorne effect: participants adapt behaviour in experiments
-\item Biased measurement if not double-blind
-\item \textit{Average} Treatment Effect can be skewed by Outliers
-\item Complications of non-compliance, attrition
-\end{itemize}
-\end{itemize}
-\end{frame}
-
-\begin{frame}
-\frametitle{Field Experiments}
-\begin{itemize}
-\item All these complications mean we need lots of assumptions and background knowledge
-\item Just as with other methodologies
 \end{itemize}
 \end{frame}
 
@@ -311,18 +318,8 @@ E(Y_1|D=1) - E(Y_0|D=0) &=& E(Y_1) - E(Y_0) \pause \\
 \item An 'instrument' is a variable which assigns \textit{part of} treatment in an 'as-if' random way
 \pause
 \begin{itemize}
-\item Or at least in a way which is 'exogenous' - not related to omitted variables
 \item Even if other variables \textbf{also} affect treatment
 \end{itemize}
-\end{itemize}
-\end{frame}
-
-\begin{frame}
-\frametitle{Instrumental Variables}
-\begin{itemize}
-\item We can use the instrument to isolate 'as-if' random variation in treatment, and use that to estimate the effect of treatment on the outcome
-\pause
-\item NOT the effect of the instrument on the outcome
 \end{itemize}
 \end{frame}
 
@@ -379,7 +376,7 @@ E(Y_1|D=1) - E(Y_0|D=0) &=& E(Y_1) - E(Y_0) \pause \\
 \item Instrumental Variables Methodology:
 \pause
 \begin{enumerate}
-\item Use an all-in-one package, eg. \textit{ivreg} in the \textit{AER} package
+\item Use an all-in-one package
 \begin{itemize}
 \item Specify the formula: $Y ~ D | Instrument$
 \pause
@@ -415,53 +412,22 @@ E(Y_1|D=1) - E(Y_0|D=0) &=& E(Y_1) - E(Y_0) \pause \\
 \end{itemize}
 \end{frame}
 
-<<rdd_diag, echo=FALSE, warning=FALSE, message=FALSE>>=
-library(tidyverse)
-library(ggplot2)
-library(rdd)
 
-N <- 10000
-run_var <- rnorm(N,70,8)
-#plot(density(run_var))
-threshold <- 75
-
-data <- data.frame(run_var)
-data$treatment <- ifelse(data$run_var>=threshold,1,0)
-
-data$outcome <- data$run_var + 10*data$treatment + rnorm(N,0,10)
-
-chart_raw_data <- ggplot() + geom_point(data=data,aes(x=run_var,y=outcome), size=0.1) + geom_vline(xintercept=threshold,col="red") + theme_classic() + xlim(40,100)
-
-data <- data %>% mutate(run_var_lumpy=round(run_var/2)*2) %>% 
-  group_by(run_var_lumpy) %>% 
-  mutate(outcome_lumpy=mean(outcome,na.rm=TRUE))
-
-chart_binned_data <- ggplot() + geom_point(data=data,aes(x=run_var_lumpy,y=outcome_lumpy)) + theme_classic() + geom_vline(xintercept=threshold,col="red") + xlim(40,100)
-
-#Dif in means
-bw <- 5
-data_bw <- data %>% filter(run_var>threshold-bw & run_var<threshold+bw)
-
-dif_in_means <- data_bw %>% group_by(treatment) %>% summarise(mean_outcome=mean(outcome,na.rm=TRUE))
-
-dif_in_means$y_start <- dif_in_means$mean_outcome
-dif_in_means$y_end <- dif_in_means$mean_outcome
-dif_in_means$x_start <- c(threshold-bw,threshold)
-dif_in_means$x_end <- c(threshold,threshold+bw)
-
-chart_dif_in_means <- ggplot() + geom_point(data=data_bw,aes(x=run_var_lumpy,y=outcome_lumpy))  + geom_point(data=data,aes(x=run_var_lumpy,y=outcome_lumpy),size=0.1) + theme_classic() + geom_vline(xintercept=threshold,col="red") + xlim(40,100) + geom_vline(xintercept=threshold-bw,col="red", alpha=0.5) + geom_vline(xintercept=threshold+bw,col="red",alpha=0.5) + geom_segment(data=dif_in_means,aes(x=x_start,y=y_start,xend=x_end,yend=y_end)) + xlab("Running Variable (Test Score)") + ylab("Outcome") + ylim(40,120)
-
-chart_linear_param <- ggplot() + geom_point(data=data,aes(x=run_var_lumpy,y=outcome_lumpy)) + theme_classic() + geom_vline(xintercept=threshold,col="red") + xlim(40,100) + geom_smooth(data=data[data$run_var<threshold,],aes(x=run_var,y=outcome),method="lm") + geom_smooth(data=data[data$run_var>threshold,],aes(x=run_var,y=outcome),method="lm")+ ylim(40,120) + xlab("Running Variable (Test Score)") + ylab("Outcome")
-
-chart_non_linear_param <- ggplot() + geom_point(data=data,aes(x=run_var_lumpy,y=outcome_lumpy)) + theme_classic() + geom_vline(xintercept=threshold,col="red") + xlim(40,100) + geom_smooth(data=data[data$run_var<threshold,],aes(x=run_var,y=outcome),method="loess") + geom_smooth(data=data[data$run_var>threshold,],aes(x=run_var,y=outcome),method="loess")+ ylim(40,120) + xlab("Running Variable (Test Score)") + ylab("Outcome")
-
-chart_local_linear <- ggplot() + geom_point(data=data,aes(x=run_var_lumpy,y=outcome_lumpy),size=0.1) + theme_classic() + geom_vline(xintercept=threshold,col="red") + xlim(40,100) + geom_point(data=data_bw,aes(x=run_var_lumpy,y=outcome_lumpy))+ geom_vline(xintercept=threshold-bw,col="red", alpha=0.5) + geom_vline(xintercept=threshold+bw,col="red",alpha=0.5) + geom_smooth(data=data_bw[data_bw$run_var<threshold,],aes(x=run_var,y=outcome),method="lm") + geom_smooth(data=data_bw[data_bw$run_var>threshold,],aes(x=run_var,y=outcome),method="lm")
-
-#chart_local_non_linear <- ggplot() + geom_point(data=data,aes(x=run_var_lumpy,y=outcome_lumpy),size=0.1) + theme_classic() + geom_vline(xintercept=threshold,col="red") + xlim(40,100) + geom_point(data=data_bw,aes(x=run_var_lumpy,y=outcome_lumpy))+ geom_vline(xintercept=threshold-bw,col="red", alpha=0.5) + geom_vline(xintercept=threshold+bw,col="red",alpha=0.5) + geom_smooth(data=data_bw[data_bw$run_var<threshold,],aes(x=run_var,y=outcome),method="loess") + geom_smooth(data=data_bw[data_bw$run_var>threshold,],aes(x=run_var,y=outcome),method="loess")
+\begin{frame}
+\frametitle{Instrumental Variables}
+\begin{itemize}
+\item Limitations:
+\begin{itemize}
+\item Most treatments do not have a valid instrument
+\item The exclusion restriction is not testable
+\item The conclusion has narrow scope/generalizability - LATE
+\item Low precision
+\item No information about the mechanism
+\end{itemize}
+\end{itemize}
+\end{frame}
 
 
-
-@
 
 \section{Regression Discontinuities}
 
@@ -487,6 +453,8 @@ chart_local_linear <- ggplot() + geom_point(data=data,aes(x=run_var_lumpy,y=outc
 \begin{itemize}
 \item Regression Discontinuity
 \begin{itemize}
+\item What is the treatment assignment mechanism for passing an exam?
+\pause
 \item Treatment assignment is 'as-if' random only \textbf{really close to the threshold}
 \pause
 \[
@@ -517,7 +485,7 @@ D_i=
 \item Age cutoffs
 \item Policy eligibility rules
 \item Close elections
-\item Adminsitrative boundaries
+\item Administrative boundaries
 \end{itemize}
 \end{itemize}
 \end{frame}
@@ -543,7 +511,7 @@ D_i=
 \pause
 \item Potential outcomes vary continuously (are independent of treatment) at the threshold
 \pause
-\item Units cannot precisely 'manipulate' their score and sort either side of the threshold
+\item Units cannot precisely 'manipulate' their score and self-select to either side of the threshold
 \pause
 \item The threshold is not chosen strategically
 \pause
@@ -573,19 +541,15 @@ D_i=
 \item We can check for sorting with a density test
 \item If units are bunched just above the threshold, this suggests manipulation
 \end{itemize}
-<<Density, echo=FALSE,fig.keep='high',fig.height=7, fig.width=7, warning=FALSE, message=FALSE, include=FALSE>>=
-library(rdd)
-DCdensity(data$run_var,cutpoint=threshold)
-abline(v=75,add=TRUE,col="red")
-@
+
 \begin{center}
-\includegraphics[scale=2]{figure/Density-2.pdf}
+\includegraphics[scale=1]{figure/Density-2.pdf}
 \end{center}
 \end{frame}
 
 \begin{frame}
 \begin{itemize}
-\item \textbf{'Parametric' regression discontinuity:} Uses all the data and estimates:
+\item The regression discontinuity analysis:
 $$Y_i = \alpha + \beta_1 Running\_Variable_i + \beta_2 Treatment_i + \epsilon_i$$
 \pause
 \begin{itemize}
@@ -600,56 +564,51 @@ $$Y_i = \alpha + \beta_1 Running\_Variable_i + \beta_2 Treatment_i + \epsilon_i$
 \begin{frame}
 \frametitle{Raw Data}
 \begin{center}
-<<chart1, echo=FALSE,fig.keep='high',fig.height=3.2, fig.width=3.2, warning=FALSE, message=FALSE>>=
-chart_raw_data
-@
+\begin{knitrout}
+\definecolor{shadecolor}{rgb}{0.969, 0.969, 0.969}\color{fgcolor}
+\includegraphics[width=\maxwidth]{figure/chart1-1} 
+\end{knitrout}
 \end{center}
 \end{frame}
 
 \begin{frame}
 \frametitle{'Binned' Data}
 \begin{center}
-<<chart2, echo=FALSE,fig.keep='high',fig.height=3.2, fig.width=3.2, warning=FALSE, message=FALSE>>=
-chart_binned_data
-@
-\end{center}
-\end{frame}
-
-\begin{frame}
-\frametitle{Difference-in-Means}
-\begin{center}
-<<chart3, echo=FALSE,fig.keep='high',fig.height=3.2, fig.width=3.2, warning=FALSE, message=FALSE>>=
-chart_dif_in_means
-@
+\begin{knitrout}
+\definecolor{shadecolor}{rgb}{0.969, 0.969, 0.969}\color{fgcolor}
+\includegraphics[width=\maxwidth]{figure/chart2-1} 
+\end{knitrout}
 \end{center}
 \end{frame}
 
 \begin{frame}
 \frametitle{Parametric Regression - Linear}
 \begin{center}
-<<chart4, echo=FALSE,fig.keep='high',fig.height=3.2, fig.width=3.2, warning=FALSE, message=FALSE>>=
-chart_linear_param
-@
+\begin{knitrout}
+\definecolor{shadecolor}{rgb}{0.969, 0.969, 0.969}\color{fgcolor}
+\includegraphics[width=\maxwidth]{figure/chart4-1} 
+\end{knitrout}
 \end{center}
 \end{frame}
 
 \begin{frame}
 \frametitle{Parametric Regression - Non-linear}
 \begin{center}
-<<chart5, echo=FALSE,fig.keep='high',fig.height=3.2, fig.width=3.2, warning=FALSE, message=FALSE>>=
-chart_non_linear_param
-@
+\begin{knitrout}
+\definecolor{shadecolor}{rgb}{0.969, 0.969, 0.969}\color{fgcolor}
+\includegraphics[width=\maxwidth]{figure/chart5-1} 
+\end{knitrout}
 \end{center}
 \end{frame}
 
 \begin{frame}
 \begin{itemize}
-\item Why does RD estimate a \textbf{Local} Average Treatment Effect?
+\item \textbf{Interpretation:}
 \pause
 \begin{itemize}
-\item Treatment assignment is only random at the threshold
+\item Treatment assignment is only as-if random at the threshold
 \pause
-\item Our estimates only apply to units close to the threshold
+\item Our estimates are only applicable/generalizable to units close to the threshold: a \textbf{Local Average Treatment Effect}
 \pause
 \item Units far from the threshold are very different for a reason, and causal effects are likely to be different
 \end{itemize}
@@ -663,10 +622,19 @@ chart_non_linear_param
 \begin{itemize}
 \item Risk of sorting/manipulation
 \pause
-\item Lots of alternative specifications so no single simple test
+\item Low generalizability - LATE
+\begin{itemize}
+\item What if most elections are landslides?
+\end{itemize}
+\pause
+\item Lots of alternative specifications so no single simple test - publication bias?
 \pause
 \item Opportunistic regression discontinuities may not identify a useful causal effect or for a relevant group
+\begin{itemize}
+\item Researchers often 'look' for where they can run a regression discontinuity, even if it doesn't answer their research question
+\end{itemize}
 \pause
+\item No information about the mechanism
 \end{itemize}
 \end{itemize}
 \end{frame}
@@ -706,19 +674,7 @@ chart_non_linear_param
 \end{itemize}
 \end{frame}
 
-<<DinD, echo=FALSE, warning=FALSE, message=FALSE>>=
-library(tidyverse)
 
-Base_control <- 3
-Confounding <- 3
-Trend <- 2
-Effect <- 4
-
-data <- data.frame(c("Control","Treated"),c(Base_control,Base_control+Confounding),c(Base_control+Trend,Base_control+Confounding+Trend+Effect))
-colnames(data) <- c("Unit","Before","After")
-
-data <- data %>% add_row(Unit="Counterfactual",Before=Base_control+Confounding,After=Base_control+Confounding+Trend)
-@
 
 \section{Difference-in-Differences}
 
@@ -748,36 +704,33 @@ data <- data %>% add_row(Unit="Counterfactual",Before=Base_control+Confounding,A
 \pause
 \item We can measure how much other factors changed over time if we have units that were not exposed to treatment
 \pause
-\item There is nothing 'random' here, but we are more easily able to limit the risk of omitted variables
+\item There is nothing 'as-if random' here, but we are more easily able to limit the risk of omitted variables
 \end{itemize}
 \end{frame}
 
 \begin{frame}
 \frametitle{Difference-in-Differences}
-<<DinD_chart1, echo=FALSE,fig.keep='high',fig.height=2.5, fig.width=5, warning=FALSE, message=FALSE>>=
-data2 <- data %>% gather("Before","After",key="Time",value="Outcome")
-
-data2 <- data2 %>% mutate(Time=factor(Time,levels=c("Before","After")))
-data2 %>% filter(Unit=="Control") %>% ggplot() + geom_line(aes(x=Time,y=Outcome,group=Unit,color=Unit)) +
-  theme_classic() + ylim(0,13)
-@
+\begin{knitrout}
+\definecolor{shadecolor}{rgb}{0.969, 0.969, 0.969}\color{fgcolor}
+\includegraphics[width=\maxwidth]{figure/DinD_chart1-1} 
+\end{knitrout}
 \end{frame}
 
 
 \begin{frame}
 \frametitle{Difference-in-Differences}
-<<DinD_chart1b, echo=FALSE, ,fig.keep='high',fig.height=2.5, fig.width=5, warning=FALSE, message=FALSE>>=
-data2 %>% filter(Unit!="Counterfactual") %>% ggplot() + geom_line(aes(x=Time,y=Outcome,group=Unit,color=Unit)) +
-  theme_classic() + ylim(0,13)
-@
+\begin{knitrout}
+\definecolor{shadecolor}{rgb}{0.969, 0.969, 0.969}\color{fgcolor}
+\includegraphics[width=\maxwidth]{figure/DinD_chart1b-1} 
+\end{knitrout}
 \end{frame}
 
 \begin{frame}
 \frametitle{Difference-in-Differences}
-<<DinD_chart1c, echo=FALSE, ,fig.keep='high',fig.height=2.5, fig.width=5, warning=FALSE, message=FALSE>>=
-data2  %>% ggplot() + geom_line(aes(x=Time,y=Outcome,group=Unit,color=Unit)) +
-  theme_classic() + ylim(0,13)
-@
+\begin{knitrout}
+\definecolor{shadecolor}{rgb}{0.969, 0.969, 0.969}\color{fgcolor}
+\includegraphics[width=\maxwidth]{figure/DinD_chart1c-1} 
+\end{knitrout}
 \end{frame}
 
 \begin{frame}
@@ -814,23 +767,11 @@ data2  %>% ggplot() + geom_line(aes(x=Time,y=Outcome,group=Unit,color=Unit)) +
 \begin{frame}
 \frametitle{Difference-in-Differences}
 \begin{itemize}
-\item We're now comparing \textit{changes} (differences), not \textit{levels} of the outcome
-\begin{itemize}
-\item Most omitted variables affect 'levels', so this makes our counterfactuals more plausible
-\begin{itemize}
-\item Eg. different laws affect growth rates, not the change in growth over time
-\end{itemize}
-\item And crucially, we can remove omitted variables even for \textit{unobserved} confounders
-\end{itemize}
-\end{itemize}
-\end{frame}
-
-\begin{frame}
-\frametitle{Difference-in-Differences}
-\begin{itemize}
-\item Difference-in-differences only removes \textbf{time-invariant ('levels') confounders}
+\item Difference-in-differences removes \textbf{time-invariant ('levels') confounders}
 \pause
 \begin{itemize}
+\item Even if they are unobserved/unmeasured
+\pause
 \item Most omitted variables affect 'levels', so this makes our counterfactuals more plausible
 \pause
 \item Eg. different laws affect growth rates, not the change in growth over time
@@ -840,7 +781,7 @@ data2  %>% ggplot() + geom_line(aes(x=Time,y=Outcome,group=Unit,color=Unit)) +
 \pause
 \item Factors that affect the \textbf{trend} in the outcome \textit{differentially} in treated and control units
 \pause
-\item Eg. Even before Brexit, the UK had falling growth while growth in the eurozone was improving
+\item Eg. Even before Brexit, the UK had falling growth while growth in the eurozone was improving due to differences in investment/productivity
 \end{itemize}
 \end{frame}
 
@@ -850,7 +791,7 @@ data2  %>% ggplot() + geom_line(aes(x=Time,y=Outcome,group=Unit,color=Unit)) +
 \begin{itemize}
 \item Estimating Difference-in-Differences
 \pause
-\item Time (Before and after) and treatment status (treated and control) are just variables in our data
+\item Time (Before and after treatment) and treatment status (treated and control) are just variables in our data
 \pause
 \item We know how to do a regression for the effect of treatment status on the outcome
 \end{itemize}
@@ -871,12 +812,15 @@ $$ Y_{it} = \alpha + \gamma D_i + \delta T_t + \beta D_i * T_t $$
 \item Assumptions Required:
 \begin{enumerate}
 \item \textbf{No Spillovers} (SUTVA)
+\pause
 \item \textbf{No time-varying confounders} (Parallel trends)
+\pause
 \item \textbf{Well-defined treatment} (many things changed at the same time!)
 \begin{itemize}
 \item Eg. The UK also announced new rules to regulate the
 banking sector on the same day as Brexit
 \end{itemize}
+\pause
 \item \textbf{Groups are stable} (eg. no migration due to treatment)
 \end{enumerate}
 \end{itemize}
@@ -912,30 +856,34 @@ banking sector on the same day as Brexit
 
 \begin{frame}
 \frametitle{Difference-in-Differences}
-<<DinD_chart6, echo=FALSE, ,fig.keep='high',fig.height=2.5, fig.width=5, warning=FALSE, message=FALSE>>=
-data5 <- data2 %>% filter(Unit!="Counterfactual") %>% 
-  add_row(Unit="Treated",Time="Earlier",Outcome=4) %>%
-  add_row(Unit="Control",Time="Earlier",Outcome=1)
-  
-data5$Time <- factor(data5$Time,c("Earlier","Before","After"))
-
-data5 %>% ggplot() + geom_line(aes(x=Time,y=Outcome,group=Unit,color=Unit)) +
-  theme_classic() + ylim(0,13)
-@
+\begin{knitrout}
+\definecolor{shadecolor}{rgb}{0.969, 0.969, 0.969}\color{fgcolor}
+\includegraphics[width=\maxwidth]{figure/DinD_chart6-1} 
+\end{knitrout}
 \end{frame}
 
 \begin{frame}
 \frametitle{Difference-in-Differences}
-<<DinD_chart7, echo=FALSE, ,fig.keep='high',fig.height=2.5, fig.width=5, warning=FALSE, message=FALSE>>=
-data6 <- data2 %>% 
-  add_row(Unit="Treated",Time="Earlier",Outcome=4) %>%
-  add_row(Unit="Control",Time="Earlier",Outcome=1)
-  
-data6$Time <- factor(data6$Time,c("Earlier","Before","After"))
+\begin{knitrout}
+\definecolor{shadecolor}{rgb}{0.969, 0.969, 0.969}\color{fgcolor}
+\includegraphics[width=\maxwidth]{figure/DinD_chart7-1} 
+\end{knitrout}
+\end{frame}
 
-data6 %>% ggplot() + geom_line(aes(x=Time,y=Outcome,group=Unit,color=Unit)) +
-  theme_classic() + ylim(0,13)
-@
+\begin{frame}
+\frametitle{Difference-in-Differences}
+\begin{itemize}
+\item \textbf{Limitations:}
+\begin{itemize}
+\item Not a true natural experimental method 
+\pause
+\item Reliant on no time-varying confounders/parallel trends assumption
+\pause
+\item Often we have no control units - everyone gets treated at the same time
+\pause
+\item No information about the mechanism
+\end{itemize}
+\end{itemize}
 \end{frame}
 
 \begin{frame}

@@ -13,7 +13,7 @@ We review a range of causal methodology research designs, the assumptions on whi
 
 ## Morning
 
-1. [Lecture Slides](https://jonnyphillips.github.io/Causal_Critiques_2020/Day 3/Slides_Day_3_2024_v1.pdf)
+1. [Lecture Slides](https://jonnyphillips.github.io/Causal_Critiques_2020/Day 3/Slides_Day_3_2024_v2.pdf)
 2. [Exercises on Causal Methods](https://jonnyphillips.github.io/Causal_Critiques_2020/Day 3/Exercises_on_Causal_Methods.html)
 
 *Readings:* 
